@@ -29,6 +29,6 @@ public class NewGameScript : MonoBehaviour {
 	{
 		GetComponent<AudioSource>().PlayOneShot(sound);
 		yield return new WaitForSeconds (.3f);
-		Application.LoadLevel("tutorial");
+		Application.LoadLevel("TommyTestingScene");
 	}
 }

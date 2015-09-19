@@ -308,8 +308,12 @@ MonoBehaviour:
   srchSpd: 5
   attkSpd: 7
   reactRange: 0
-  killRange: 0
   playRef: {fileID: 1454117268}
+  qMark: {fileID: 21300000, guid: 39e7ea6943873bc448abc3ad171c787d, type: 3}
+  xMark: {fileID: 21300000, guid: 50092724ab62a4047b4248b173d4292e, type: 3}
+  qSound: {fileID: 8300000, guid: b7c69624f81239d42912c73e4ad05c8f, type: 3}
+  xSound: {fileID: 8300000, guid: 2117bbe085425c54fbec0038db30c9fb, type: 3}
+  fSound: {fileID: 8300000, guid: 7dd69e72652113c4fb83560bee5ac830, type: 3}
 --- !u!1 &659473904
 GameObject:
   m_ObjectHideFlags: 0
