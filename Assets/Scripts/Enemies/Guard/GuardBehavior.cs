@@ -41,6 +41,8 @@ public class GuardBehavior : EnemyBase {
 	public Sprite qMark, xMark;
 	public AudioClip qSound, xSound, fSound;
 
+	float attkPause = 0.0f;
+
 
 
 	// Use this for initialization
@@ -66,28 +68,30 @@ public class GuardBehavior : EnemyBase {
 		//	temp.GetComponent<LadderNavigatorBehavior>().target = targPos;
 		//	pathfinding = true;
 		//}
+		if (attkPause > 0.0f) {
+			attkPause -= Time.deltaTime;
+		} else {
+			switch (currState) {
+			case ENMY_STATES.PATROL:
+				PatrolBehavior (playRef);
+				break;
 
-		switch (currState)
-		{
-		case ENMY_STATES.PATROL:
-			PatrolBehavior (playRef);
-			break;
+			case ENMY_STATES.SEARCH:
+				SearchBehavior (playRef);
+				break;
 
-		case ENMY_STATES.SEARCH:
-			SearchBehavior(playRef);
-			break;
+			case ENMY_STATES.ATTACK:
+				AttackBehavior (playRef);
+				break;
 
-		case ENMY_STATES.ATTACK:
-			AttackBehavior(playRef);
-			break;
+			case ENMY_STATES.COORD:
+				CoordinatedBehavior (playRef);
+				break;
 
-		case ENMY_STATES.COORD:
-			CoordinatedBehavior(playRef);
-			break;
-
-		default:
-			PatrolBehavior(playRef);
-			break;
+			default:
+				PatrolBehavior (playRef);
+				break;
+			}
 		}
 	}
 
@@ -267,6 +271,9 @@ public class GuardBehavior : EnemyBase {
 			    && Mathf.Abs (player.GetComponent<Transform>().position.y - GetComponent<Transform>().position.y) < .5f)
 			{
 				player.GetComponent<PlayerController>().PlayerDeath(TYPE_DEATH.MELEE);
+
+				GetComponentInChildren<ParticleSystem>().Play();
+				attkPause = 0.6f;
 
 				ChangeENMYState(ENMY_STATES.PATROL);
 			}
