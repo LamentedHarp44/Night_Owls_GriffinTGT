@@ -22,6 +22,20 @@ public class PlayerController : MonoBehaviour {
 	//  and allowing the elevator to know whether the unit is moving up or down.
 	public LAD_MOVEMENT ladMove = LAD_MOVEMENT.STAY;
 
+
+    public int lives;
+    public int lightLevel;
+
+    //variable for pausing the game
+    public static bool gamePause = false;
+    public bool pauseMenuToggle = false;
+    public GameObject pauseMenu;
+
+    //variable for cooling down
+    public bool cooled;
+    public GameObject cooldown; 
+
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -40,6 +54,14 @@ public class PlayerController : MonoBehaviour {
 			Use ();
 		else if (Input.GetKeyDown ("q"))
 			GetComponent<Invisiblilityscript> ().Invisibility ();
+
+        //cooldownEffect
+        else if (Input.GetKeyDown("p") && cooled == false)
+        {
+            cooled = true;
+            Debug.Log("pressed");
+            cooldown.GetComponent<CoolDownHud>().coolDown();
+        }
 
 		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space)) 
 		{
