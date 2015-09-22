@@ -22,7 +22,7 @@ public class LevelDoorsBehavior : MonoBehaviour {
 		if (condition == FindObjectOfType<PlayerController> ().GetCompletedLevel () && !open) {
 			//open the door
 			open = true;
-
+			GetComponentInChildren<AudioSource>().Play ();
 			this.GetComponent<Animator>().SetTrigger("OpenUp");
 		}
 
