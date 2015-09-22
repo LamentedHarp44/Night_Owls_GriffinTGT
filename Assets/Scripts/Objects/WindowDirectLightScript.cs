@@ -4,10 +4,12 @@ using System.Collections;
 public class WindowDirectLightScript : MonoBehaviour {
 
 	public GameObject player;
+	public int lightLvl;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+	{
+		lightLvl = 3;
 	}
 	
 	// Update is called once per frame
@@ -19,7 +21,8 @@ public class WindowDirectLightScript : MonoBehaviour {
 	{
 		if (other.tag == "Player") 
 		{
-			player.GetComponent<PlayerController>().lightExpo += 3;
+			player.GetComponent<PlayerController>().lightExpo += lightLvl;
+			player.GetComponent<Invisiblilityscript>().SetExposure(player.GetComponent<Invisiblilityscript>().LightExposure() + lightLvl);
 		}
 	}
 
@@ -27,7 +30,8 @@ public class WindowDirectLightScript : MonoBehaviour {
 	{
 		if (other.tag == "Player") 
 		{
-			player.GetComponent<PlayerController>().lightExpo -= 3;
+			player.GetComponent<Invisiblilityscript>().SetExposure(player.GetComponent<Invisiblilityscript>().LightExposure() - lightLvl);
+			player.GetComponent<PlayerController>().lightExpo -= lightLvl;
 		}
 	}
 

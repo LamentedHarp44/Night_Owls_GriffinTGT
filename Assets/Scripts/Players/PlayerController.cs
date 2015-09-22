@@ -3,6 +3,7 @@ using System.Collections;
 
 public enum TYPE_DEATH {MELEE = 0, RANGED, SWARM};
 public enum LAD_MOVEMENT {DOWN, STAY, UP};
+public enum LVL_CMPLT {TUTORIAL, LVL_ONE, LVL_TWO, LVL_THREE, LVL_FOUR, LVL_FIVE, LVL_SIX, LVL_SEVEN, LVL_EIGHT, LVL_NINE}
 
 public class PlayerController : MonoBehaviour {
 	float moveSpeed;
@@ -11,7 +12,8 @@ public class PlayerController : MonoBehaviour {
 	public GameObject usable;
 	char upgrades;
 	public int lightExpo;
-	//*public Transform mainSpawn;*//
+	public Transform mainSpawn;
+	public LVL_CMPLT lastCompleted = 0;
 
 	//Jump variables
 	float jumpForce = 600f;
@@ -22,27 +24,13 @@ public class PlayerController : MonoBehaviour {
 	//  and allowing the elevator to know whether the unit is moving up or down.
 	public LAD_MOVEMENT ladMove = LAD_MOVEMENT.STAY;
 
-
-    public int lives;
-    public int lightLevel;
-
-    //variable for pausing the game
-    public static bool gamePause = false;
-    public bool pauseMenuToggle = false;
-    public GameObject pauseMenu;
-
-    //variable for cooling down
-    public bool cooled;
-    public GameObject cooldown; 
-
-
 	// Use this for initialization
 	void Start () 
 	{
 		moveSpeed = 5.0f;
 		onLadder = false;
 		usable = null;
-		//*transform.position = mainSpawn.transform.position;*//
+		transform.position = mainSpawn.transform.position;
 	}
 	
 	// Update is called once per frame
@@ -55,46 +43,11 @@ public class PlayerController : MonoBehaviour {
 		else if (Input.GetKeyDown ("q"))
 			GetComponent<Invisiblilityscript> ().Invisibility ();
 
-        //cooldownEffect
-        else if (Input.GetKeyDown("p") && cooled == false)
-        {
-            cooled = true;
-            Debug.Log("pressed");
-            cooldown.GetComponent<CoolDownHud>().coolDown();
-        }
-
-        // call pause menu
-        else if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            pauseMenuToggle = !pauseMenuToggle;
-
-
-            if (pauseMenuToggle)
-            {
-                pauseMenu.GetComponent<CanvasGroup>().alpha = 1;
-                pauseMenu.GetComponent<CanvasGroup>().interactable = true;
-
-
-            }
-            else
-            {
-                pauseMenu.GetComponent<CanvasGroup>().alpha = 0;
-                pauseMenu.GetComponent<CanvasGroup>().interactable = false;
-            }
-        }
-
-       
-
 		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space)) 
 		{
 			jumpNumber = 1;
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
 		}
-
-        if (gamePause)
-            Time.timeScale = 0;
-        else
-            Time.timeScale = 1;
 
 
 	}
@@ -158,7 +111,7 @@ public class PlayerController : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.tag != "Enemy" && col.gameObject.tag != "world")
+		if (col.gameObject.tag != "Enemy" && col.gameObject.tag != "Floor")
 			usable = col.gameObject;
 
 		if (col.gameObject.tag == "Floor" || col.gameObject.tag == "chest") 
@@ -185,5 +138,10 @@ public class PlayerController : MonoBehaviour {
 	public LAD_MOVEMENT GetLadMovement()
 	{
 		return ladMove;
+	}
+
+	public LVL_CMPLT GetCompletedLevel()
+	{
+		return lastCompleted;
 	}
 }
