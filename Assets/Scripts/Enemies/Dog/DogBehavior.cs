@@ -13,8 +13,10 @@ public class DogBehavior : MonoBehaviour {
 	float atkSpeed;
 	public ENMY_STATES state;
 	public GameObject Player;
+	public GameObject Alert;
 	public float delay;
 	public float leash;
+	public float alertDelay;
 	public Vector3 anchor;
 	public bool scent;
 	public Vector3 target;
@@ -40,6 +42,7 @@ public class DogBehavior : MonoBehaviour {
 		detRange = 2.0f;
 		searchTime = 5.0f;
 		atkTime = 3.0f;
+		alertDelay = .5f;
 	}
 	
 	// Update is called once per frame
@@ -88,21 +91,30 @@ public class DogBehavior : MonoBehaviour {
 
 	void SearchBehavior ()
 	{
-		Vector3 temp = transform.position;
-
-		if (transform.position.x < target.x && !face)
-			face = true;
-		else if (transform.position.x > target.x && face)
-			face = false;
-
-		if (face)
-			temp.x += srchSpeed * Time.deltaTime;
+		if (alertDelay > 0) 
+		{
+			alertDelay -= Time.deltaTime;
+			Alert.GetComponent<SpriteRenderer>().enabled = true;
+		} 
 		else 
-			temp.x -= srchSpeed * Time.deltaTime;
+		{
+			Alert.GetComponent<SpriteRenderer>().enabled = false;
+		
+			Vector3 temp = transform.position;
 
-		transform.position = temp;
+			if (transform.position.x < target.x && !face)
+				face = true;
+			else if (transform.position.x > target.x && face)
+				face = false;
+
+			if (face)
+				temp.x += srchSpeed * Time.deltaTime;
+			else 
+				temp.x -= srchSpeed * Time.deltaTime;
+
+			transform.position = temp;
+		}
 	}
-
 	void AttackBehavior ()
 	{
 		Vector3 temp = transform.position;
@@ -164,6 +176,7 @@ public class DogBehavior : MonoBehaviour {
 			{
 				target = targ.transform.position;
 				state = ENMY_STATES.SEARCH;
+				alertDelay = .5f;
 				GetComponent<AudioSource>().Stop();
 				GetComponent<AudioSource>().PlayOneShot(growl);
 			}
