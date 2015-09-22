@@ -4,10 +4,11 @@ using System.Collections;
 public class WindowFadingLightScript : MonoBehaviour {
 
 	public GameObject player;
+	public int lightLvl;
 	
 	// Use this for initialization
 	void Start () {
-		
+		lightLvl = 2;
 	}
 	
 	// Update is called once per frame
@@ -19,7 +20,8 @@ public class WindowFadingLightScript : MonoBehaviour {
 	{
 		if (other.tag == "Player") 
 		{
-			player.GetComponent<PlayerController>().lightExpo += 2;
+			player.GetComponent<PlayerController>().lightExpo += lightLvl;
+			player.GetComponent<Invisiblilityscript>().SetExposure(player.GetComponent<Invisiblilityscript>().LightExposure() + lightLvl);
 		}
 	}
 	
@@ -27,7 +29,8 @@ public class WindowFadingLightScript : MonoBehaviour {
 	{
 		if (other.tag == "Player") 
 		{
-			player.GetComponent<PlayerController>().lightExpo -= 2;
+			player.GetComponent<Invisiblilityscript>().SetExposure(player.GetComponent<Invisiblilityscript>().LightExposure() - lightLvl);
+			player.GetComponent<PlayerController>().lightExpo -= lightLvl;
 		}
 	}
 }
