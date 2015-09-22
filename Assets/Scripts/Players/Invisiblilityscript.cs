@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public enum lightLevel {invisible = 0, dark =1, shadow = 2, normal = 3, full = 4, bright = 5}
+public enum LIGHT_LEVEL {invisible = 0, dark =1, shadow = 2, normal = 3, full = 4, bright = 5}
 
 public class Invisiblilityscript : MonoBehaviour {
 
@@ -12,7 +12,7 @@ public class Invisiblilityscript : MonoBehaviour {
 	public float fullDuration = 3;
 	public float cooldown = 30;
 	public float fullCooldown = 30;
-
+	
 	// Use this for initialization
 	void Start () {
 	
@@ -21,6 +21,9 @@ public class Invisiblilityscript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+
+
+
 		if (invisActive) 
 		{
 			duration -= Time.deltaTime;
@@ -50,7 +53,7 @@ public class Invisiblilityscript : MonoBehaviour {
 
 	public void Invisibility()
 	{
-		if (!onCooldown) 
+		if (!onCooldown && !invisActive) 
 		{
 			invisActive = true;
 			curLight -= 1;

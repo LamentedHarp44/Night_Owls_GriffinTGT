@@ -2,7 +2,7 @@
 using System.Collections;
 
 //  This enum will be used to identify which state the unit is in
-public enum ENMY_STATES {PATROL, SEARCH, ATTACK, COORD, ASLEEP, AWAKE, SWARM};
+public enum ENMY_STATES {PATROL, SEARCH, ATTACK, COORD, ASLEEP, AWAKE, SWARM, RESET};
 
 
 
