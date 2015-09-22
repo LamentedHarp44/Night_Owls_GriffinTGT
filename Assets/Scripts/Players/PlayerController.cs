@@ -3,6 +3,7 @@ using System.Collections;
 
 public enum TYPE_DEATH {MELEE = 0, RANGED, SWARM};
 public enum LAD_MOVEMENT {DOWN, STAY, UP};
+public enum LVL_CMPLT {TUTORIAL, LVL_ONE, LVL_TWO, LVL_THREE, LVL_FOUR, LVL_FIVE, LVL_SIX, LVL_SEVEN, LVL_EIGHT, LVL_NINE}
 
 public class PlayerController : MonoBehaviour {
 	float moveSpeed;
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour {
 	char upgrades;
 	public int lightExpo;
 	public Transform mainSpawn;
+	public LVL_CMPLT lastCompleted = 0;
 
 	//Jump variables
 	float jumpForce = 600f;
@@ -136,5 +138,10 @@ public class PlayerController : MonoBehaviour {
 	public LAD_MOVEMENT GetLadMovement()
 	{
 		return ladMove;
+	}
+
+	public LVL_CMPLT GetCompletedLevel()
+	{
+		return lastCompleted;
 	}
 }

@@ -8,6 +8,9 @@ TagManager:
   - Elevator
   - PatrollingGuard
   - Ladder
+  - Floor
+  - Trap Door
+  - Exit
   layers:
   - Default
   - TransparentFX
@@ -47,4 +50,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1843012349
+    locked: 0
+  - name: Foreground
+    uniqueID: 1010634217
     locked: 0
