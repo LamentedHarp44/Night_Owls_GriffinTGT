@@ -8,6 +8,10 @@ TagManager:
   - Elevator
   - PatrollingGuard
   - Ladder
+  - Cooldown
+  - pauseAlert
+  - approachAlert
+  - New Tag
   layers:
   - Default
   - TransparentFX

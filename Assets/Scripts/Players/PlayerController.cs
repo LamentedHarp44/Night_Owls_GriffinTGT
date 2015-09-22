@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
 	public GameObject usable;
 	char upgrades;
 	public int lightExpo;
-	public Transform mainSpawn;
+	//*public Transform mainSpawn;*//
 
 	//Jump variables
 	float jumpForce = 600f;
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour {
 		moveSpeed = 5.0f;
 		onLadder = false;
 		usable = null;
-		transform.position = mainSpawn.transform.position;
+		//*transform.position = mainSpawn.transform.position;*//
 	}
 	
 	// Update is called once per frame
@@ -83,16 +83,18 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        if (gamePause)
-            Time.timeScale = 0;
-        else
-            Time.timeScale = 1;
+       
 
 		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space)) 
 		{
 			jumpNumber = 1;
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
 		}
+
+        if (gamePause)
+            Time.timeScale = 0;
+        else
+            Time.timeScale = 1;
 
 
 	}
