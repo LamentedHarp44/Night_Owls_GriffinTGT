@@ -8,6 +8,8 @@ TagManager:
   - Elevator
   - PatrollingGuard
   - Ladder
+  - world
+  - Floor
   layers:
   - Default
   - TransparentFX

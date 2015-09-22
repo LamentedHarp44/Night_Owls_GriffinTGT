@@ -21,6 +21,9 @@ public class Invisiblilityscript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+
+
+
 		if (invisActive) 
 		{
 			duration -= Time.deltaTime;

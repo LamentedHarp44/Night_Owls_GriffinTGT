@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.tag != "Enemy" && col.gameObject.tag != "world")
+		if (col.gameObject.tag != "Enemy" && col.gameObject.tag != "Floor")
 			usable = col.gameObject;
 
 		if (col.gameObject.tag == "Floor" || col.gameObject.tag == "chest") 
