@@ -21,6 +21,10 @@ public class DogBehavior : MonoBehaviour {
 	public float detRange;
 	public float searchTime;
 	public float atkTime;
+	public AudioClip growl;
+	public AudioClip bark;
+	public AudioClip sniff;
+	public AudioClip whimper;
 	// Use this for initialization
 	void Start () 
 	{
@@ -132,8 +136,12 @@ public class DogBehavior : MonoBehaviour {
 
 		transform.position = temp;
 
-		if (transform.position.x + .1 > anchor.x || transform.position.x - .1 < anchor.x)
+		if (transform.position.x + .1 > anchor.x || transform.position.x - .1 < anchor.x) 
+		{
 			state = ENMY_STATES.PATROL;
+			GetComponent<AudioSource>().Stop ();
+			GetComponent<AudioSource>().PlayOneShot(sniff);
+		}
 	}
 
 
@@ -156,6 +164,8 @@ public class DogBehavior : MonoBehaviour {
 			{
 				target = targ.transform.position;
 				state = ENMY_STATES.SEARCH;
+				GetComponent<AudioSource>().Stop();
+				GetComponent<AudioSource>().PlayOneShot(growl);
 			}
 			else return;
 		} 
@@ -168,6 +178,8 @@ public class DogBehavior : MonoBehaviour {
 
 			if (targ.collider != null && targ.collider.gameObject.tag == "Player")
 			{
+				GetComponent<AudioSource>().Stop ();
+				GetComponent<AudioSource>().PlayOneShot(bark);
 				state = ENMY_STATES.ATTACK;
 				return;
 			}
@@ -190,6 +202,8 @@ public class DogBehavior : MonoBehaviour {
 				{
 					searchTime = 5.0f;
 					state = ENMY_STATES.RESET;
+					GetComponent<AudioSource>().Stop ();
+					GetComponent<AudioSource>().PlayOneShot(whimper);
 				}
 				else return;
 			}
@@ -209,6 +223,8 @@ public class DogBehavior : MonoBehaviour {
 				{
 					atkTime = 3.0f;
 					state = ENMY_STATES.SEARCH;
+					GetComponent<AudioSource>().Stop();
+					GetComponent<AudioSource>().PlayOneShot(growl);
 				}
 			}
 			else return;
