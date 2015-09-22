@@ -3,9 +3,9 @@ using System.Collections;
 
 public class PotionScript : MonoBehaviour {
 
-	public AudioClip sound;
 	bool triggered = false;
 	GameObject exitDoor;
+	public AudioSource soundEFX;
 	
 	// Use this for initialization
 	void Start () 
@@ -33,7 +33,7 @@ public class PotionScript : MonoBehaviour {
 	{
 		if (other.tag == "Player") 
 		{
-			GetComponent<AudioSource>().PlayOneShot(sound);
+			soundEFX.Play();
 			triggered = true;
 			exitDoor.GetComponent<ExitDoorScript>().Lock = false;
 		}
