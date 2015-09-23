@@ -38,14 +38,16 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		Movement ();
+		if(GetComponentInChildren<GrappleHookScript>().shot == false)
+			Movement ();
 
 		if (Input.GetKey ("e"))
 			Use ();
 		else if (Input.GetKeyDown ("q"))
 			GetComponent<Invisiblilityscript> ().Invisibility ();
 
-		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space) && grounded == true) 
+		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space) && grounded == true
+		    && GetComponentInChildren<GrappleHookScript>().shot == false) 
 		{
 			jumpNumber = 1;
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));

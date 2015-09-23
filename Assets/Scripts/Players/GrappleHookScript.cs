@@ -35,12 +35,12 @@ public class GrappleHookScript : MonoBehaviour {
 		{
 			transform.position = startPos.transform.position;
 			collided = false;
-			timer = 0;		
-			player.GetComponent<PlayerController>().grounded = true;
+			timer = 0;
 		}
 
+
 		//Shooting the gun
-		if (Input.GetKeyDown (KeyCode.Mouse0) && shot == false) 
+		if (Input.GetKeyDown (KeyCode.Mouse0) && shot == false && player.GetComponent<PlayerController>().grounded == true) 
 		{
 			//Taking the cursor position and firing the grapple hook in that position at a constant speed.
 //			position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -50,7 +50,6 @@ public class GrappleHookScript : MonoBehaviour {
 //			direction = direction.normalized;
 
 			GetComponent<Rigidbody2D>().AddForce(transform.right * 500);
-			player.GetComponent<PlayerController>().grounded = false;
 
 			//Rotating the hook so it faces the direction shot
 			//Quaternion rotation = Quaternion.Euler( 0, 0, Mathf.Atan2 ( position.y, position.x )* Mathf.Rad2Deg);
