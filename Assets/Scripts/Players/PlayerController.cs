@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 
 	//Jump variables
 	float jumpForce = 600f;
+	public bool grounded;
 	float jumpNumber = 0;
 
 	//  The us of a ladder involves locking x-axis movement
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour {
 		onLadder = false;
 		usable = null;
 		transform.position = mainSpawn.transform.position;
+		grounded = true;
 	}
 	
 	// Update is called once per frame
@@ -43,10 +45,11 @@ public class PlayerController : MonoBehaviour {
 		else if (Input.GetKeyDown ("q"))
 			GetComponent<Invisiblilityscript> ().Invisibility ();
 
-		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space)) 
+		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space) && grounded == true) 
 		{
 			jumpNumber = 1;
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+			grounded = false;
 		}
 
 
@@ -117,6 +120,7 @@ public class PlayerController : MonoBehaviour {
 		if (col.gameObject.tag == "Floor" || col.gameObject.tag == "chest") 
 		{
 			jumpNumber = 0;
+			grounded = true;
 		}
 	}
 
