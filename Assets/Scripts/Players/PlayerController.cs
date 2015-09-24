@@ -18,12 +18,12 @@ public class PlayerController : MonoBehaviour {
 	public int lives;
 	public int lightLevel;
 
-	int level;
-
 	//Jump variables
 	float jumpForce = 600f;
 	public bool grounded;
 	float jumpNumber = 0;
+
+	int level;
 
 	//  The us of a ladder involves locking x-axis movement
 	//bool horizLock;
@@ -106,8 +106,8 @@ public class PlayerController : MonoBehaviour {
 		else
 			Time.timeScale = 1;
 
-
-		DontDestroyOnLoad (this.gameObject);
+		if(lives != 0)
+			DontDestroyOnLoad (this.gameObject);
 
 	}
 
@@ -156,7 +156,7 @@ public class PlayerController : MonoBehaviour {
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
 		transform.position = mainSpawn.transform.position;
 		lives--;
-		if (lives == 0)
+		if (lives == 0) 
 		{
 			Application.LoadLevel(level);
 			lives = 3;
