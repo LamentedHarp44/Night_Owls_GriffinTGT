@@ -103,6 +103,9 @@ public class PlayerController : MonoBehaviour {
 		else
 			Time.timeScale = 1;
 
+
+		DontDestroyOnLoad (this.gameObject);
+
 	}
 
 
