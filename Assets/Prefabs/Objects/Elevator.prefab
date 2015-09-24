@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11407314}
   m_Layer: 0
   m_Name: Elevator
-  m_TagString: Untagged
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,8 +24,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0977983475, y: -2.07299995, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -8.77799988, y: -.579999983, z: 0}
+  m_LocalScale: {x: 1.6860497, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -39,9 +39,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .00840187073, y: -.0279614925}
+  m_Offset: {x: -.0320065394, y: -.0279614925}
   serializedVersion: 2
-  m_Size: {x: .500418365, y: .0599940419}
+  m_Size: {x: .406007111, y: .0599940419}
 --- !u!114 &11407314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33256344845546478c6aad3bdad9cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+  user: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

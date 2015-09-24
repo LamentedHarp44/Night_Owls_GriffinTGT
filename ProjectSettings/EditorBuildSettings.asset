@@ -15,9 +15,31 @@ EditorBuildSettings:
     path: Assets/Scenes/Options Menu.unity
   - enabled: 1
     path: Assets/Scenes/Credits Menu.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Shop Menu.unity
+  - enabled: 1
+    path: Assets/Scenes/Hub World.unity
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+  - enabled: 1
+    path: Assets/Scenes/level2.unity
+  - enabled: 1
+    path: Assets/Scenes/level3.unity
+  - enabled: 1
+    path: Assets/Scenes/level4.unity
+  - enabled: 1
+    path: Assets/Scenes/level5.unity
+  - enabled: 1
+    path: Assets/Scenes/level6.unity
+  - enabled: 1
+    path: Assets/Scenes/level7.unity
+  - enabled: 1
+    path: Assets/Scenes/level8.unity
+  - enabled: 1
+    path: Assets/Scenes/level9.unity
   - enabled: 0
     path: Assets/Scenes/EricTestingScene.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TommyTestingScene.unity
+  - enabled: 0
+    path: Assets/Scenes/level9.unity
