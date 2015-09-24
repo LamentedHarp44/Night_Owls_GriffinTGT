@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public enum TYPE_DEATH {MELEE = 0, RANGED, SWARM};
@@ -143,8 +143,7 @@ public class PlayerController : MonoBehaviour {
 	//					which actions to take.
 	public void PlayerDeath(TYPE_DEATH method)
 	{
-		if (method == TYPE_DEATH.MELEE)
-		  this.GetComponent<Invisiblilityscript> ().SetExposure (0);
+		//if (method == TYPE_DEATH.MELEE)
 
 		GetComponentInChildren<ParticleSystem> ().Play ();
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
