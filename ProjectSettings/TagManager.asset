@@ -13,6 +13,8 @@ TagManager:
   - Exit
   - chest
   - Wall
+  - CraneTop
+  - Crate
   layers:
   - Default
   - TransparentFX
