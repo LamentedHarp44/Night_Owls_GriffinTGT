@@ -1505,7 +1505,7 @@ GameObject:
   - 61: {fileID: 791669835}
   m_Layer: 0
   m_Name: Cube (8)
-  m_TagString: Floor
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
