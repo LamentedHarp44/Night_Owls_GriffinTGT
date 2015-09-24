@@ -208,6 +208,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c38babb644894dd4f940e904afbbed36, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &374690734 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 168328, guid: 9a7141f3768ff9345867c4cf14062c46, type: 2}
+  m_PrefabInternal: {fileID: 770120784}
 --- !u!1001 &451116168
 Prefab:
   m_ObjectHideFlags: 0
@@ -300,124 +304,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 413356, guid: 52078642029c6664ab9989a34200c9f8, type: 2}
   m_PrefabInternal: {fileID: 481341339}
---- !u!1 &517250181
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 517250183}
-  - 212: {fileID: 517250182}
-  - 114: {fileID: 517250186}
-  - 50: {fileID: 517250185}
-  - 61: {fileID: 517250184}
-  - 232: {fileID: 517250187}
-  m_Layer: 0
-  m_Name: Grapple Hook
-  m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &517250182
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 517250181}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 12cc5a96b8b592a4b937d0887f80c1b1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!4 &517250183
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 517250181}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.41669106, y: .12310762, z: 0}
-  m_LocalScale: {x: 1.22639525, y: .928669691, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1644025631}
-  m_RootOrder: 0
---- !u!61 &517250184
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 517250181}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: .316989422, y: -.0243734177}
-  serializedVersion: 2
-  m_Size: {x: .607267082, y: .706934571}
---- !u!50 &517250185
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 517250181}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &517250186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 517250181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d90c54845de42842a670fed81683e50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootSpeed: 15
-  shootDistance: 5
-  shot: 0
-  grappleGun: {fileID: 1644025630}
-  startPos: {fileID: 857570743}
-  player: {fileID: 1819228234}
-  timer: 0
---- !u!232 &517250187
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 517250181}
-  m_Enabled: 1
-  m_EnableCollision: 1
-  m_ConnectedRigidBody: {fileID: 1644025633}
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_Distance: 5
-  m_MaxDistanceOnly: 1
 --- !u!4 &631907504 stripped
 Transform:
   m_PrefabParentObject: {fileID: 490688, guid: 96543900ac6559e47b0ddae534c00cbb, type: 2}
@@ -556,47 +442,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &857570743
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 857570744}
-  - 61: {fileID: 857570745}
-  m_Layer: 0
-  m_Name: Grapple Hook Start
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &857570744
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 857570743}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.39787364, y: .120309755, z: .099999994}
-  m_LocalScale: {x: -2.68819857, y: 2.79789472, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1644025631}
-  m_RootOrder: 1
---- !u!61 &857570745
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 857570743}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: -.0199999996, y: -.00155863166}
-  serializedVersion: 2
-  m_Size: {x: .0590637773, y: .103366792}
 --- !u!1001 &933905313
 Prefab:
   m_ObjectHideFlags: 0
@@ -965,91 +810,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68f06b80a16ebd24f901076f1763349b, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1644025630
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1644025631}
-  - 212: {fileID: 1644025632}
-  - 50: {fileID: 1644025633}
-  - 114: {fileID: 1644025634}
-  m_Layer: 0
-  m_Name: Grapple Gun
-  m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1644025631
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1644025630}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .211000443, y: .49999994, z: -.099999994}
-  m_LocalScale: {x: -.371996313, y: .357411593, z: 1}
-  m_Children:
-  - {fileID: 517250183}
-  - {fileID: 857570744}
-  m_Father: {fileID: 770120785}
-  m_RootOrder: 1
---- !u!212 &1644025632
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1644025630}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 12cc5a96b8b592a4b937d0887f80c1b1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!50 &1644025633
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1644025630}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1644025634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1644025630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da3f93810a5c3024e81b73be9c2e349e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1720811094
 Prefab:
   m_ObjectHideFlags: 0
@@ -1228,7 +988,7 @@ Prefab:
     - target: {fileID: 11414378, guid: 26557cc8c33506c4fae2b4b415553d8e, type: 2}
       propertyPath: grappleHook
       value: 
-      objectReference: {fileID: 517250181}
+      objectReference: {fileID: 374690734}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26557cc8c33506c4fae2b4b415553d8e, type: 2}
   m_IsPrefabParent: 0
