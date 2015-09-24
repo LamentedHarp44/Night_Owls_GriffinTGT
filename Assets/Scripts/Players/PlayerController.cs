@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour {
 	
 	//variable for cooling down
 	public bool cooled;
+	//public float cooldown;
 	public GameObject cooldown; 
 
 
@@ -55,15 +56,19 @@ public class PlayerController : MonoBehaviour {
 
 		if (Input.GetKey ("e"))
 			Use ();
-		else if (Input.GetKeyDown ("q"))
-			GetComponent<Invisiblilityscript> ().Invisibility ();
-
 		//cooldownEffect
-		else if (Input.GetKeyDown ("p") && cooled == false) {
-			cooled=true;
-			Debug.Log("pressed");
+		else if (Input.GetKeyDown ("q")) {
+			GetComponent<Invisiblilityscript> ().Invisibility ();
+			//cooled=true;
+			//Debug.Log("pressed");
 			cooldown.GetComponent<CoolDownHud> ().coolDown ();
 		}
+		//cooldownEffect
+		//else if (Input.GetKeyDown ("p") && cooled == false) {
+			//cooled=true;
+			//Debug.Log("pressed");
+			//cooldown.GetComponent<CoolDownHud> ().coolDown ();
+		//}
 
 
 		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space)) 
@@ -135,10 +140,14 @@ public class PlayerController : MonoBehaviour {
 	public void PlayerDeath(TYPE_DEATH method)
 	{
 		if (method == TYPE_DEATH.MELEE)
-			this.GetComponent<Invisiblilityscript> ().SetExposure (0);
+		  this.GetComponent<Invisiblilityscript> ().SetExposure (0);
 
 		GetComponentInChildren<ParticleSystem> ().Play ();
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
+
+		lives--;
+		if (lives == 0)
+			lives = 3;
 	}
 
 	void Use()

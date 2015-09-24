@@ -7,52 +7,54 @@ public class CoolDownHud : MonoBehaviour {
 	//variables for cooldown power timer
 	float coolDownTimer;
 	float cstartTimer;
-	int countDown=3;
+	//int countDown=30;
 	float targetTime;
 	public GameObject coolText;
-
+	float cooldown;
 	// Use this for initialization
 	void Start () {
-		coolDownTimer = 0.0f;
-		cstartTimer = 0.0f;
 		player = GameObject.FindWithTag ("Player");
 		coolText=GameObject.FindWithTag ("Cooldown");
+		coolDownTimer = 0.0f;
+		cstartTimer = 0.0f;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (targetTime > 0) {
+		/*if (targetTime > 0) {
 
-			if (coolDownTimer > targetTime)
+			
+			if(player.GetComponent<Invisiblilityscript>().cooldown>targetTime)
+			//if (coolDownTimer > targetTime)
 			{
 				targetTime =0.0f;
-				coolDownTimer = 0.0f;
+				//coolDownTimer = 0.0f;
+				player.GetComponent<Invisiblilityscript>().cooldown=0.0f;
 				cstartTimer = 0.0f;
 				coolText.GetComponent<Text> ().text = " ";
 				player.GetComponent<PlayerController> ().cooled = false;
 			}
 			else
 			{
-			coolDownTimer = Time.realtimeSinceStartup;
-			
-			float i = coolDownTimer - cstartTimer;
+			//coolDownTimer = Time.realtimeSinceStartup;
+			player.GetComponent<Invisiblilityscript>().cooldown=Time.realtimeSinceStartup;
+			float i=player.GetComponent<Invisiblilityscript>().cooldown- cstartTimer;
+			//float i = coolDownTimer - cstartTimer;
 				coolText.GetComponent<Text> ().text = ((int)(countDown - i) +1).ToString();
 			}
-		}
+		}*/
+		coolDown ();
+		coolText.GetComponent<Text> ().text = "Cool Down: "+((int)cooldown).ToString();
+
 	}
 
 	public void coolDown(){
-		coolDownTimer = Time.realtimeSinceStartup;
-		cstartTimer = Time.realtimeSinceStartup;
-		
-		//while (coolDownTimer-cstartTimer<=countDown) 
-		//coolDownTimer = Time.realtimeSinceStartup;
-		targetTime = cstartTimer + countDown;
-		
-		
-		//coolDownTimer = 0.0f;
-		//cstartTimer = 0.0f;
-		//coolText.GetComponent<Text> ().text = " ";
-		//player.GetComponent<PlayerController> ().cooled = false;
+		//player.GetComponent<Invisiblilityscript>().cooldown=Time.realtimeSinceStartup;
+		//cstartTimer = Time.realtimeSinceStartup;
+		//targetTime = cstartTimer + countDown;
+		//player.GetComponent<Invisiblilityscript>().cooldown;
+		cooldown=player.GetComponent<Invisiblilityscript>().cooldown;
+	
 	}
 }

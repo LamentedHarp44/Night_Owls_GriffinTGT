@@ -8,12 +8,14 @@ public class LightMeterHUDScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindWithTag ("Player");
-		lightLevel=player.GetComponent<PlayerController>().lightLevel;
+		//lightLevel=player.GetComponent<PlayerController>().lightLevel;
+		lightLevel = player.GetComponent<Invisiblilityscript> ().LightExposure ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		lightLevel=player.GetComponent<PlayerController>().lightLevel;
+		//lightLevel=player.GetComponent<PlayerController>().lightLevel;
+		lightLevel = player.GetComponent<Invisiblilityscript> ().LightExposure ();
 	}
 
 
