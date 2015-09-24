@@ -28,7 +28,7 @@ public class GuardBehavior : EnemyBase {
 	//bool pathfinding = false;
 
 	//  The position toward which the guard will walk in search and attack modes
-	Vector3 targPos;
+	public Vector3 targPos;
 
 	//  The direction the unit is going to move when on a ladder
 	LAD_MOVEMENT ladMove = LAD_MOVEMENT.STAY;
@@ -220,10 +220,10 @@ public class GuardBehavior : EnemyBase {
 	{
 		//  Step One:
 		//			The unit moves toward the last known position.
-		if (targPos.x < GetComponent<Transform> ().position.x && CheckSign (srchSpd))
-			srchSpd = -srchSpd;
-		else if (targPos.x > GetComponent<Transform> ().position.x && !CheckSign (srchSpd))
-			srchSpd = -srchSpd;
+		if (targPos.x < GetComponent<Transform> ().position.x && CheckSign (attkSpd))
+			attkSpd = -attkSpd;
+		else if (targPos.x > GetComponent<Transform> ().position.x && !CheckSign (attkSpd))
+			attkSpd = -attkSpd;
 
 		GetComponent<Transform> ().position += new Vector3 (attkSpd, 0, 0) * Time.deltaTime;
 

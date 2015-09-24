@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour {
 
 	//Jump variables
 	float jumpForce = 600f;
+	public bool grounded;
 	float jumpNumber = 0;
 
 	//  The us of a ladder involves locking x-axis movement
@@ -47,12 +48,14 @@ public class PlayerController : MonoBehaviour {
 		transform.position = mainSpawn.transform.position;
 		lives = 3;
 		lightLevel = 0;
+		grounded = true;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		Movement ();
+		if(GetComponentInChildren<GrappleHookScript>().shot == false)
+			Movement ();
 
 		if (Input.GetKey ("e"))
 			Use ();
@@ -70,11 +73,12 @@ public class PlayerController : MonoBehaviour {
 			//cooldown.GetComponent<CoolDownHud> ().coolDown ();
 		//}
 
-
-		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space)) 
+		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space) && grounded == true
+		    && GetComponentInChildren<GrappleHookScript>().shot == false) 
 		{
 			jumpNumber = 1;
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+			grounded = false;
 		}
 
 		// call pause menu
@@ -170,6 +174,7 @@ public class PlayerController : MonoBehaviour {
 		if (col.gameObject.tag == "Floor" || col.gameObject.tag == "chest") 
 		{
 			jumpNumber = 0;
+			grounded = true;
 		}
 	}
 

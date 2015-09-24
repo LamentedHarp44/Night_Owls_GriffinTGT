@@ -11,6 +11,8 @@ TagManager:
   - Floor
   - Trap Door
   - Exit
+  - chest
+  - Wall
   layers:
   - Default
   - TransparentFX
