@@ -11,6 +11,11 @@ TagManager:
   - Floor
   - Trap Door
   - Exit
+  - chest
+  - approachAlert
+  - pauseAlert
+  - pauseMaenu
+  - click
   layers:
   - Default
   - TransparentFX

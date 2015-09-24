@@ -108,11 +108,13 @@ public class DrunkGuardScript : MonoBehaviour {
 			alert.mute = true;
 			alert.Play ();
 		}
+
 		if (shot) {
 			//audSnore.mute = true;
 			Shot ();
 			GetComponentInChildren<ParticleSystem> ().Play ();
 			shot=false;
+			//Destroy(this.gameObject);
 		}
 		//DetectCollision (player);
 		//*aniController.SetBool ("Timer", time);*//

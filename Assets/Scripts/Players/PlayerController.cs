@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour {
 		transform.position = mainSpawn.transform.position;
 		lives = 3;
 		lightLevel = 0;
+
 	}
 	
 	// Update is called once per frame
