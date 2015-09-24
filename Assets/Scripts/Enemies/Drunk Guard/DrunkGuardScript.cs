@@ -26,7 +26,7 @@ public class DrunkGuardScript : MonoBehaviour {
 	public bool idle;
 	public float dt;
 	int playerLight;
-
+	bool Destroy;
 	/*Player.GetComponent<Invisiblilityscript> ().VisCheck();
 	 */
 
@@ -58,7 +58,7 @@ public class DrunkGuardScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        
 		animaterTimer += Time.deltaTime;
 
 		//Sleeping to awake
@@ -114,6 +114,7 @@ public class DrunkGuardScript : MonoBehaviour {
 			Shot ();
 			GetComponentInChildren<ParticleSystem> ().Play ();
 			shot=false;
+			//Destroy=true;
 			//Destroy(this.gameObject);
 		}
 		//DetectCollision (player);

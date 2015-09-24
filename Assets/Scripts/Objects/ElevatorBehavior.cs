@@ -33,9 +33,8 @@ public class ElevatorBehavior : MonoBehaviour {
 			}
 		}
 
-		if (parent != null) {
-			if (this.GetComponent<Transform> ().position.y > parent.GetComponent<Transform> ().position.y + parent.GetComponent<Transform> ().localScale.y + 0.2f
-			    || Mathf.Abs(this.GetComponent<Transform>().position.x - user.GetComponent<Transform>().position.x) > 1.0f)
+		if (parent != null && user != null) {
+			if (Mathf.Abs(this.GetComponent<Transform>().position.x - user.GetComponent<Transform>().position.x) > 1.0f)
 				Destroy (this.gameObject);
 		}
 	}

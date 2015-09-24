@@ -12,6 +12,8 @@ TagManager:
   - Trap Door
   - Exit
   - chest
+  - Wall
+  - chest
   - approachAlert
   - pauseAlert
   - pauseMaenu
