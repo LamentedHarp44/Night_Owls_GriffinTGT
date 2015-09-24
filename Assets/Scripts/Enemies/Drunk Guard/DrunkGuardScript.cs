@@ -26,7 +26,7 @@ public class DrunkGuardScript : MonoBehaviour {
 	public bool idle;
 	public float dt;
 	int playerLight;
-
+	bool Destroy;
 	/*Player.GetComponent<Invisiblilityscript> ().VisCheck();
 	 */
 
@@ -58,7 +58,7 @@ public class DrunkGuardScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        
 		animaterTimer += Time.deltaTime;
 
 		//Sleeping to awake
@@ -108,11 +108,14 @@ public class DrunkGuardScript : MonoBehaviour {
 			alert.mute = true;
 			alert.Play ();
 		}
+
 		if (shot) {
 			//audSnore.mute = true;
 			Shot ();
 			GetComponentInChildren<ParticleSystem> ().Play ();
 			shot=false;
+			//Destroy=true;
+			//Destroy(this.gameObject);
 		}
 		//DetectCollision (player);
 		//*aniController.SetBool ("Timer", time);*//
@@ -159,10 +162,11 @@ public class DrunkGuardScript : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll)
 	{   Vector3 tempG = transform.position;
 		Vector3 tempP = player.transform.position;
-		if (coll.CompareTag ("Player") && playerLight == 0)
+		playerLight = player.GetComponent<Invisiblilityscript> ().LightExposure ();
+ 	    if (coll.CompareTag ("Player") && playerLight <= 0)
 			myColliders.enabled = false;
 
-		else if (coll.CompareTag ("Player") && playerLight != 0) {
+		else if (coll.CompareTag ("Player") && playerLight > 0) {
 
 			if (player.transform.position.x>=this.transform.position.x)
 				tempP.x = tempG.x + 1.0f;

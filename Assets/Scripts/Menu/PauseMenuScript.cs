@@ -13,6 +13,7 @@ public class PauseMenuScript : MonoBehaviour {
 	Button[] buttons;
 	GameObject pauseAlert; 
 
+
 	void Start () {
 		canvas = GetComponent<Canvas>();
 		buttons = canvas.GetComponentsInChildren<Button>();
@@ -30,13 +31,14 @@ public class PauseMenuScript : MonoBehaviour {
 
 
 		}
+
 	}
 
 	void OnPauseGame ()
 	{
 		PlayerController.gamePause = true;
 		pauseAlert.GetComponent<Text> ().text = "Game Paused";
-		
+
 	}
 
 	void OnResumeGame ()
@@ -55,7 +57,6 @@ public class PauseMenuScript : MonoBehaviour {
 	void ExitLevel(){
 		Application.LoadLevel ("level7"); 
 
-		
 	}
 
 
