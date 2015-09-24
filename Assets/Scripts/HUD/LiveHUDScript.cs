@@ -25,7 +25,7 @@ public class LiveHUDScript : MonoBehaviour {
 	void OnGUI()
 	{
 		for (int i=0; i<lives; i++) {
-			GUI.DrawTexture (new Rect (i * 90 + 50, 50, 81, 66), inputTexture);
+			GUI.DrawTexture (new Rect (i * 40 + 45, 45, 40, 33), inputTexture);
 		}
 	}
 

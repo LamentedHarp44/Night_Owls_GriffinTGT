@@ -13,8 +13,13 @@ TagManager:
   - Exit
   - chest
   - Wall
+  - chest
   - CraneTop
   - Crate
+  - approachAlert
+  - pauseAlert
+  - pauseMaenu
+  - click
   layers:
   - Default
   - TransparentFX
