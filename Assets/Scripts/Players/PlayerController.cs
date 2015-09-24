@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour {
 	public Transform mainSpawn;
 	public LVL_CMPLT lastCompleted = 0;
 
+	public int lives;
+	public int lightLevel;
+
 	//Jump variables
 	float jumpForce = 600f;
 	public bool grounded;
@@ -25,6 +28,17 @@ public class PlayerController : MonoBehaviour {
 	//  and allowing the elevator to know whether the unit is moving up or down.
 	public LAD_MOVEMENT ladMove = LAD_MOVEMENT.STAY;
 
+	//variable for pausing the game
+	public static bool gamePause = false; 
+	public bool pauseMenuToggle=false;
+	public GameObject pauseMenu;
+	
+	//variable for cooling down
+	public bool cooled;
+	//public float cooldown;
+	public GameObject cooldown; 
+
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -32,6 +46,8 @@ public class PlayerController : MonoBehaviour {
 		onLadder = false;
 		usable = null;
 		transform.position = mainSpawn.transform.position;
+		lives = 3;
+		lightLevel = 0;
 		grounded = true;
 	}
 	
@@ -43,8 +59,19 @@ public class PlayerController : MonoBehaviour {
 
 		if (Input.GetKey ("e"))
 			Use ();
-		else if (Input.GetKeyDown ("q"))
+		//cooldownEffect
+		else if (Input.GetKeyDown ("q")) {
 			GetComponent<Invisiblilityscript> ().Invisibility ();
+			//cooled=true;
+			//Debug.Log("pressed");
+			cooldown.GetComponent<CoolDownHud> ().coolDown ();
+		}
+		//cooldownEffect
+		//else if (Input.GetKeyDown ("p") && cooled == false) {
+			//cooled=true;
+			//Debug.Log("pressed");
+			//cooldown.GetComponent<CoolDownHud> ().coolDown ();
+		//}
 
 		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space) && grounded == true
 		    && GetComponentInChildren<GrappleHookScript>().shot == false) 
@@ -54,6 +81,27 @@ public class PlayerController : MonoBehaviour {
 			grounded = false;
 		}
 
+		// call pause menu
+		else if (Input.GetKeyDown (KeyCode.Escape)) {
+			pauseMenuToggle=!pauseMenuToggle;
+			
+			
+			if (pauseMenuToggle){
+				pauseMenu.GetComponent<CanvasGroup>().alpha=1;
+				pauseMenu.GetComponent<CanvasGroup>().interactable=true;
+				
+				
+			}
+			else{
+				pauseMenu.GetComponent<CanvasGroup>().alpha=0;
+				pauseMenu.GetComponent<CanvasGroup>().interactable=false;
+			}
+		}
+		
+		if (gamePause)
+			Time.timeScale = 0;
+		else
+			Time.timeScale = 1;
 
 	}
 
@@ -96,10 +144,14 @@ public class PlayerController : MonoBehaviour {
 	public void PlayerDeath(TYPE_DEATH method)
 	{
 		if (method == TYPE_DEATH.MELEE)
-			this.GetComponent<Invisiblilityscript> ().SetExposure (0);
+		  this.GetComponent<Invisiblilityscript> ().SetExposure (0);
 
 		GetComponentInChildren<ParticleSystem> ().Play ();
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
+
+		lives--;
+		if (lives == 0)
+			lives = 3;
 	}
 
 	void Use()

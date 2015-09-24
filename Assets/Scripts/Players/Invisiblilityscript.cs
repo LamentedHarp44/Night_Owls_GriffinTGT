@@ -10,7 +10,7 @@ public class Invisiblilityscript : MonoBehaviour {
 	bool onCooldown = false;
 	public float duration = 3;
 	public float fullDuration = 3;
-	public float cooldown = 30;
+	public float cooldown = 0;
 	public float fullCooldown = 30;
 	
 	// Use this for initialization
