@@ -162,10 +162,11 @@ public class DrunkGuardScript : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll)
 	{   Vector3 tempG = transform.position;
 		Vector3 tempP = player.transform.position;
-		if (coll.CompareTag ("Player") && playerLight == 0)
+		playerLight = player.GetComponent<Invisiblilityscript> ().LightExposure ();
+ 	    if (coll.CompareTag ("Player") && playerLight <= 0)
 			myColliders.enabled = false;
 
-		else if (coll.CompareTag ("Player") && playerLight != 0) {
+		else if (coll.CompareTag ("Player") && playerLight > 0) {
 
 			if (player.transform.position.x>=this.transform.position.x)
 				tempP.x = tempG.x + 1.0f;
