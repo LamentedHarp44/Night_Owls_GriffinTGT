@@ -5991,6 +5991,10 @@ Prefab:
       propertyPath: m_Name
       value: Level  1 Door
       objectReference: {fileID: 0}
+    - target: {fileID: 11498468, guid: 0631cdac1542ead4ba073004f9c69e63, type: 2}
+      propertyPath: toLvl
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0631cdac1542ead4ba073004f9c69e63, type: 2}
   m_IsPrefabParent: 0
@@ -7071,6 +7075,10 @@ Prefab:
     - target: {fileID: 11498468, guid: 0631cdac1542ead4ba073004f9c69e63, type: 2}
       propertyPath: condition
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11498468, guid: 0631cdac1542ead4ba073004f9c69e63, type: 2}
+      propertyPath: toLvl
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0631cdac1542ead4ba073004f9c69e63, type: 2}
