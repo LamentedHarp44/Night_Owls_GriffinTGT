@@ -6,7 +6,7 @@ public enum LAD_MOVEMENT {DOWN, STAY, UP};
 public enum LVL_CMPLT {TUTORIAL, LVL_ONE, LVL_TWO, LVL_THREE, LVL_FOUR, LVL_FIVE, LVL_SIX, LVL_SEVEN, LVL_EIGHT, LVL_NINE}
 
 public class PlayerController : MonoBehaviour {
-	float moveSpeed;
+	public float moveSpeed;
 	public bool onLadder;
 	public int loot;
 	public GameObject usable;
@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour {
 
 	public int lives;
 	public int lightLevel;
+
+	int level;
 
 	//Jump variables
 	float jumpForce = 600f;
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour {
 		lives = 3;
 		lightLevel = 0;
 		grounded = true;
+		level = Application.loadedLevel;
 	}
 	
 	// Update is called once per frame
@@ -154,7 +157,10 @@ public class PlayerController : MonoBehaviour {
 		transform.position = mainSpawn.transform.position;
 		lives--;
 		if (lives == 0)
+		{
+			Application.LoadLevel(level);
 			lives = 3;
+		}
 	}
 
 	void Use()
