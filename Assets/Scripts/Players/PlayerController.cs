@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public enum TYPE_DEATH {MELEE = 0, RANGED, SWARM};

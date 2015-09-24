@@ -4,21 +4,20 @@ using System.Collections;
 public class containerscript : MonoBehaviour {
 
 
-	float normDelay = 5.0f;
-	float delay = 5.0f;
-	int value = 10;
-	GameObject loot = null;
+	float normDelay;
+	public float delay;
+	public int value;
+	GameObject loot;
 	public Sprite opened;
 	public AudioClip pick;
 	public AudioClip open;
 	public AudioClip hit;
 	bool is_playing;
 	// Use this for initialization
-	public void SetUp (float _delay, int _value, GameObject _loot) 
+	public void SetUp (float _delay, int _value) 
 	{
 		delay = normDelay = _delay;
 		value = _value;
-		loot = _loot;
 	}
 	
 	// Update is called once per frame
@@ -57,9 +56,11 @@ public class containerscript : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		GetComponent<AudioSource> ().clip = hit;
-		GetComponent<AudioSource> ().Play ();
-		GetComponent<AudioSource> ().loop = false;
+		if (col.gameObject.tag == "Player") {
+			GetComponent<AudioSource> ().clip = hit;
+			GetComponent<AudioSource> ().Play ();
+			GetComponent<AudioSource> ().loop = false;
+		}
 	}
 
 }

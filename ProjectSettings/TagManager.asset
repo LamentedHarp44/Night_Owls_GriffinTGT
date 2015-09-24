@@ -14,6 +14,8 @@ TagManager:
   - chest
   - Wall
   - chest
+  - CraneTop
+  - Crate
   - approachAlert
   - pauseAlert
   - pauseMaenu
