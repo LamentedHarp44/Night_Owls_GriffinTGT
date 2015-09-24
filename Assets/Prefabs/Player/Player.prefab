@@ -107,7 +107,14 @@ MonoBehaviour:
   usable: {fileID: 0}
   lightExpo: 0
   mainSpawn: {fileID: 0}
+  lastCompleted: 0
+  lives: 0
+  lightLevel: 0
   ladMove: 1
+  pauseMenuToggle: 0
+  pauseMenu: {fileID: 0}
+  cooled: 0
+  cooldown: {fileID: 0}
 --- !u!114 &11448392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -298,7 +305,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4280098168
+        rgba: 4280640855
       minMaxState: 0
     startSize:
       scalar: .25
@@ -1240,7 +1247,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: InitialModule.startColor.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InitialModule.startColor.maxColor.rgba
+      value: 4280640855
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 189654}
