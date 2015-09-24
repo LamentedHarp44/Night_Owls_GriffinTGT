@@ -6,7 +6,7 @@ public enum LAD_MOVEMENT {DOWN, STAY, UP};
 public enum LVL_CMPLT {TUTORIAL, LVL_ONE, LVL_TWO, LVL_THREE, LVL_FOUR, LVL_FIVE, LVL_SIX, LVL_SEVEN, LVL_EIGHT, LVL_NINE}
 
 public class PlayerController : MonoBehaviour {
-	float moveSpeed;
+	public float moveSpeed;
 	public bool onLadder;
 	public int loot;
 	public GameObject usable;
@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour {
 	//public float cooldown;
 	public GameObject cooldown; 
 
+	int level;
 
 	// Use this for initialization
 	void Start () 
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour {
 		lives = 3;
 		lightLevel = 0;
 		grounded = true;
+		level = Application.loadedLevel;
 	}
 	
 	// Update is called once per frame
@@ -149,8 +151,11 @@ public class PlayerController : MonoBehaviour {
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
 
 		lives--;
-		if (lives == 0)
+		if (lives == 0) 
+		{
 			lives = 3;
+			Application.LoadLevel(level);
+		}
 	}
 
 	void Use()
@@ -170,7 +175,7 @@ public class PlayerController : MonoBehaviour {
 		if (col.gameObject.tag != "Enemy" && col.gameObject.tag != "Floor")
 			usable = col.gameObject;
 
-		if (col.gameObject.tag == "Floor" || col.gameObject.tag == "chest") 
+		if (col.gameObject.tag == "Floor" || col.gameObject.tag == "chest" || col.gameObject.tag == "Crate") 
 		{
 			jumpNumber = 0;
 			grounded = true;
