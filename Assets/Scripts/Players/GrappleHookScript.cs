@@ -13,11 +13,14 @@ public class GrappleHookScript : MonoBehaviour {
 	public GameObject grappleGun;
 	public GameObject startPos;
 	public GameObject player;
-	float distanceShot = 0;
+	//float distanceShot = 0;
 	public float timer = 0;
 	Vector2 position;
 	Vector2 direction;
 
+	//Vertical Attachment Variables
+	public bool verticalAnchorStruck = false;
+	//bool UGPurchased = false;
 
 	// Use this for initialization
 	void Start () 
@@ -37,33 +40,61 @@ public class GrappleHookScript : MonoBehaviour {
 			transform.position = startPos.transform.position;
 			collided = false;
 			timer = 0;
+			verticalAnchorStruck = false;
 		}
 
 
 		//Shooting the gun
-		if (Input.GetKeyDown (KeyCode.Mouse0) && shot == false && player.GetComponent<PlayerController>().grounded == true) 
+		if (Input.GetKeyDown (KeyCode.Mouse0) && shot == false && player.GetComponent<PlayerController> ().grounded == true) 
 		{
-			//Taking the cursor position and firing the grapple hook in that position at a constant speed.
-//			position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-//			position = Camera.main.ScreenToWorldPoint(position);
-//			Vector2 temp = new Vector2(startPos.transform.position.x, startPos.transform.position.y);
-//			direction = position - temp;
-//			direction = direction.normalized;
-
-			GetComponent<Rigidbody2D>().AddForce(transform.right * 500);
-
-			//Rotating the hook so it faces the direction shot
-			//Quaternion rotation = Quaternion.Euler( 0, 0, Mathf.Atan2 ( position.y, position.x )* Mathf.Rad2Deg);
-			//transform.rotation = rotation;
+			GetComponent<Rigidbody2D> ().AddForce (transform.right * 500);
 
 			shot = true;
+		} 
+		else if (Input.GetKeyDown (KeyCode.Mouse0) && shot == true)//Canceling the shot (Helps with bad grapple usage).
+		{
+			shot = false;
+			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+			player.GetComponent<Rigidbody2D>().gravityScale = 1;
 		}
+
+
+		//Vertical attachment behavior if the upgrade is purchased.
+		if (shot == true && verticalAnchorStruck == true) //&& UGPurchased == true
+		{
+			//Raising player and lowering hook(hook is a child and moves with parent so needed to offset position).
+			if(Input.GetKey(KeyCode.W))
+			{
+				Vector3 temp = player.transform.position;
+				temp.y += .08f;
+				player.transform.position = temp;
+				Vector3 temp1 = transform.position;
+				temp1.y -= .08f;
+				transform.position = temp1;
+			}
+			else if(Input.GetKey(KeyCode.S))//Lowering player and raising hook
+			{
+				Vector3 temp = player.transform.position;
+				temp.y -= .08f;
+				player.transform.position = temp;
+				Vector3 temp1 = transform.position;
+				temp1.y += .08f;
+				transform.position = temp1;
+			}
+			else if (Input.GetKeyDown (KeyCode.Mouse0))//Detaches the vertical attach mode.
+			{
+				shot = false;
+				player.GetComponent<Rigidbody2D>().gravityScale = 1;
+			}
+		}
+
+
 
 		//Temporary until more solid solution.
 		//If the hook is fired and hits nothing set back to starting position.
 		//----------------
 		if(shot == true && collided == false)
-			timer += Time.deltaTime;
+			timer += Time.fixedDeltaTime;
 
 		if (timer >= .75f && shot == true && collided == false) 
 		{
@@ -98,6 +129,15 @@ public class GrappleHookScript : MonoBehaviour {
 			player.GetComponent<Rigidbody2D>().gravityScale = 1;
 		}
 
+		//Initiating vertical attachment behavior.
+		if (other.tag == "VerticalAnchor" && shot == true)// && UGPurchased == true) 
+		{
+			verticalAnchorStruck = true;
+			collided = true;
+			player.GetComponent<Rigidbody2D>().gravityScale = 0;
+			player.GetComponent<Rigidbody2D>().velocity = new Vector2(10, 0);
+			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		}
 
 
 	}

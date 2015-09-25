@@ -20,7 +20,14 @@ TagManager:
   - pauseAlert
   - pauseMaenu
   - click
+<<<<<<< HEAD
   - Cooldown
+=======
+  - Main Spawn
+  - Railing
+  - VerticalAnchor
+  - ADRange
+>>>>>>> e58acf2f3fbff651baec6f9a10ff13b7b80e04ae
   layers:
   - Default
   - TransparentFX
