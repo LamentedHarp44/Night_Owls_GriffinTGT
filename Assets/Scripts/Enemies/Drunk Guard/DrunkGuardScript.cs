@@ -135,6 +135,7 @@ public class DrunkGuardScript : MonoBehaviour {
 		//player.GetComponent<PlayerController> ().lives -= 1;
 		//if (player.GetComponent<PlayerController> ().lives < 0)
 		//player.GetComponent<PlayerController> ().lives = 3;
+		DestroyObject (player);
 
 	}
 
@@ -169,10 +170,10 @@ public class DrunkGuardScript : MonoBehaviour {
 		else if (coll.CompareTag ("Player") && playerLight > 0) {
 
 			if (player.transform.position.x>=this.transform.position.x)
-				tempP.x = tempG.x + 1.0f;
+				tempP.x = tempG.x + 2.0f;
 
 			else
-				tempP.x = tempG.x - 1.0f;
+				tempP.x = tempG.x - 2.0f;
 			player.transform.position=tempP;
 		}
 	}

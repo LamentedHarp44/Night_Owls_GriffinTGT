@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour {
 	public bool grounded;
 	float jumpNumber = 0;
 
+	int level;
+
 	//  The us of a ladder involves locking x-axis movement
 	//bool horizLock;
 	//  and allowing the elevator to know whether the unit is moving up or down.
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour {
 		lives = 3;
 		lightLevel = 0;
 		grounded = true;
+		level = Application.loadedLevel;
 	}
 	
 	// Update is called once per frame
@@ -103,8 +106,7 @@ public class PlayerController : MonoBehaviour {
 		else
 			Time.timeScale = 1;
 
-
-		DontDestroyOnLoad (this.gameObject);
+		DontDestroyOnLoad (this);
 
 	}
 
@@ -153,8 +155,12 @@ public class PlayerController : MonoBehaviour {
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
 		transform.position = mainSpawn.transform.position;
 		lives--;
-		if (lives == 0)
+		if (lives == 0) 
+		{
+			Destroy(this);
+			Application.LoadLevel(level);
 			lives = 3;
+		}
 	}
 
 	void Use()

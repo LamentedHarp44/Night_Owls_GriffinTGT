@@ -8,6 +8,7 @@ public class GrappleHookScript : MonoBehaviour {
 	public float shootDistance = 5f;
 	public bool shot = false;
 	bool collided = false;
+	float playerReachedHook;
 
 	public GameObject grappleGun;
 	public GameObject startPos;
@@ -70,6 +71,10 @@ public class GrappleHookScript : MonoBehaviour {
 		}
 		//----------------
 
+//		if (shot == true && collided == true && playerReachedHook == false) 
+//		{
+//
+//		}
 	
 
 	}
