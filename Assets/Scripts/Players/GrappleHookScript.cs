@@ -13,7 +13,7 @@ public class GrappleHookScript : MonoBehaviour {
 	public GameObject grappleGun;
 	public GameObject startPos;
 	public GameObject player;
-	float distanceShot = 0;
+	//float distanceShot = 0;
 	public float timer = 0;
 	Vector2 position;
 	Vector2 direction;
@@ -63,7 +63,7 @@ public class GrappleHookScript : MonoBehaviour {
 		//If the hook is fired and hits nothing set back to starting position.
 		//----------------
 		if(shot == true && collided == false)
-			timer += Time.deltaTime;
+			timer += Time.fixedDeltaTime;
 
 		if (timer >= .75f && shot == true && collided == false) 
 		{

@@ -43,11 +43,15 @@ public class DogBehavior : MonoBehaviour {
 		searchTime = 5.0f;
 		atkTime = 3.0f;
 		alertDelay = .5f;
+
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		if (Player == null)
+			Player = GameObject.FindGameObjectWithTag ("Player");
+
 		if (!scent)
 			Detect ();
 		else 
@@ -82,9 +86,9 @@ public class DogBehavior : MonoBehaviour {
 		Vector3 temp = transform.position;
 
 		if (face)
-			temp.x += walkSpeed * Time.deltaTime;
+			temp.x += walkSpeed * Time.fixedDeltaTime;
 		else
-			temp.x -= walkSpeed * Time.deltaTime;
+			temp.x -= walkSpeed * Time.fixedDeltaTime;
 
 		transform.position = temp;		
 	}
@@ -93,7 +97,7 @@ public class DogBehavior : MonoBehaviour {
 	{
 		if (alertDelay > 0) 
 		{
-			alertDelay -= Time.deltaTime;
+			alertDelay -= Time.fixedDeltaTime;
 			Alert.GetComponent<SpriteRenderer>().enabled = true;
 		} 
 		else 
@@ -108,9 +112,9 @@ public class DogBehavior : MonoBehaviour {
 				face = false;
 
 			if (face)
-				temp.x += srchSpeed * Time.deltaTime;
+				temp.x += srchSpeed * Time.fixedDeltaTime;
 			else 
-				temp.x -= srchSpeed * Time.deltaTime;
+				temp.x -= srchSpeed * Time.fixedDeltaTime;
 
 			transform.position = temp;
 		}
@@ -125,9 +129,9 @@ public class DogBehavior : MonoBehaviour {
 			face = false;
 		
 		if (face)
-			temp.x += atkSpeed * Time.deltaTime;
+			temp.x += atkSpeed * Time.fixedDeltaTime;
 		else 
-			temp.x -= atkSpeed * Time.deltaTime;
+			temp.x -= atkSpeed * Time.fixedDeltaTime;
 		
 		transform.position = temp;
 	}
@@ -142,9 +146,9 @@ public class DogBehavior : MonoBehaviour {
 		Vector3 temp = transform.position;
 
 		if (face)
-			temp.x += walkSpeed * Time.deltaTime;
+			temp.x += walkSpeed * Time.fixedDeltaTime;
 		else 
-			temp.x -= walkSpeed * Time.deltaTime;
+			temp.x -= walkSpeed * Time.fixedDeltaTime;
 
 		transform.position = temp;
 
@@ -210,7 +214,7 @@ public class DogBehavior : MonoBehaviour {
 			}
 			else 
 			{
-				searchTime -= Time.deltaTime;
+				searchTime -= Time.fixedDeltaTime;
 				if (searchTime <= 0) 
 				{
 					searchTime = 5.0f;
@@ -230,7 +234,7 @@ public class DogBehavior : MonoBehaviour {
 
 			if(targ.collider == null || targ.collider.gameObject.tag != "Player")
 			{
-				atkTime -= Time.deltaTime;
+				atkTime -= Time.fixedDeltaTime;
 
 				if(atkTime <= 0)
 				{
@@ -255,7 +259,7 @@ public class DogBehavior : MonoBehaviour {
 		} 
 		else if (state == ENMY_STATES.SEARCH) 
 		{
-			delay -= Time.deltaTime;
+			delay -= Time.fixedDeltaTime;
 			if (delay <= 0)
 				state = ENMY_STATES.ATTACK;
 		}

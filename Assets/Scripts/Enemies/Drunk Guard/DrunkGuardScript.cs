@@ -26,7 +26,7 @@ public class DrunkGuardScript : MonoBehaviour {
 	public bool idle;
 	public float dt;
 	int playerLight;
-	bool Destroy;
+	bool destroyU;
 	/*Player.GetComponent<Invisiblilityscript> ().VisCheck();
 	 */
 
@@ -114,8 +114,8 @@ public class DrunkGuardScript : MonoBehaviour {
 			Shot ();
 			GetComponentInChildren<ParticleSystem> ().Play ();
 			shot=false;
-			//Destroy=true;
-			//Destroy(this.gameObject);
+			//destroyU=true;
+			//destroyU(this.gameObject);
 		}
 		//DetectCollision (player);
 		//*aniController.SetBool ("Timer", time);*//
@@ -135,13 +135,16 @@ public class DrunkGuardScript : MonoBehaviour {
 		//player.GetComponent<PlayerController> ().lives -= 1;
 		//if (player.GetComponent<PlayerController> ().lives < 0)
 		//player.GetComponent<PlayerController> ().lives = 3;
-		DestroyObject (player);
+
+		//  WTF	
+
+		//DestroyObject (player);
 
 	}
 
 	void DetectPlayer(){
 		float distance;
-		int a = 0;
+		//int a = 0;
 		distance= Vector3.Distance (player.transform.position, this.transform.position);
 
 		/**awakeAnim.SetFloat("Speed_f",0.0f);**/
