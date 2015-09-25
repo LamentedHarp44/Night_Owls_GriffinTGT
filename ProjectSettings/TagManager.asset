@@ -20,6 +20,8 @@ TagManager:
   - pauseAlert
   - pauseMaenu
   - click
+  - VerticalAnchor
+  - ADRange
   layers:
   - Default
   - TransparentFX

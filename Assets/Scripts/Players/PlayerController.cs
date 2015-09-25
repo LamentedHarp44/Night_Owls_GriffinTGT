@@ -192,6 +192,15 @@ public class PlayerController : MonoBehaviour {
 		usable = null;
 	}
 
+	void OnTriggerStay2D(Collider2D other)
+	{
+		if (other.tag == "ADRange" && GetComponentInChildren<GrappleHookScript> ().verticalAnchorStruck == true) 
+		{
+			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		}
+	}
+
+
 	//  This function is a setter for the horizMove bool
 	//  Parameters:			bool, F = canMove, T = can'tMove
 	//public void LockHorizontalMovement(bool b)
