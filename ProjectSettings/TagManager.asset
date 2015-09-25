@@ -20,10 +20,14 @@ TagManager:
   - pauseAlert
   - pauseMaenu
   - click
+<<<<<<< HEAD
+  - Cooldown
+=======
   - Main Spawn
   - Railing
   - VerticalAnchor
   - ADRange
+>>>>>>> e58acf2f3fbff651baec6f9a10ff13b7b80e04ae
   layers:
   - Default
   - TransparentFX
@@ -58,6 +62,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: DeepBackground
+    uniqueID: 2242335425
+    locked: 0
+  - name: background
+    uniqueID: 258556817
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

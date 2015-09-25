@@ -13,14 +13,23 @@ public class containerscript : MonoBehaviour {
 	public AudioClip open;
 	public AudioClip hit;
 	bool is_playing;
+	bool is_open = false;
 	// Use this for initialization
-	public void SetUp (float _delay, int _value) 
+	public void SetUp () 
 	{
-		delay = normDelay = _delay;
-		value = _value;
+
 	}
 	
 	// Update is called once per frame
+	void Update()
+	{
+		if (normDelay == 0)
+			normDelay = delay = Random.Range (1.0f, 3.0f);
+
+		if (value == 0 && !is_open)
+			value = Random.Range (1, 3) * 50;
+	}
+
 	public float inUse () 
 	{
 		if (!is_playing) 
@@ -43,6 +52,7 @@ public class containerscript : MonoBehaviour {
 		GetComponent<AudioSource> ().loop = false;
 		int temp = value;
 		value = 0;
+		is_open = true;
 		GetComponent<SpriteRenderer> ().sprite = opened;
 		return temp;
 	}
