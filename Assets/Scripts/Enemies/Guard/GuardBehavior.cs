@@ -554,9 +554,11 @@ public class GuardBehavior : EnemyBase {
 			if (currState == ENMY_STATES.PATROL)
 				wlkSpd = -wlkSpd;
 
-			else if (currState == ENMY_STATES.SEARCH || currState == ENMY_STATES.ATTACK)
+			else
 			{
-				targPos = collider.transform.position;
+				ChangeENMYState(ENMY_STATES.PATROL);
+
+				wlkSpd = - wlkSpd;
 			}
 		}
 	}
