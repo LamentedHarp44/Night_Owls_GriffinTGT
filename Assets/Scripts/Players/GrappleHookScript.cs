@@ -13,14 +13,14 @@ public class GrappleHookScript : MonoBehaviour {
 	public GameObject grappleGun;
 	public GameObject startPos;
 	public GameObject player;
-	float distanceShot = 0;
+	//float distanceShot = 0;
 	public float timer = 0;
 	Vector2 position;
 	Vector2 direction;
 
 	//Vertical Attachment Variables
 	public bool verticalAnchorStruck = false;
-	bool UGPurchased = false;
+	//bool UGPurchased = false;
 
 	// Use this for initialization
 	void Start () 
@@ -66,19 +66,19 @@ public class GrappleHookScript : MonoBehaviour {
 			if(Input.GetKey(KeyCode.W))
 			{
 				Vector3 temp = player.transform.position;
-				temp.y += .1f;
+				temp.y += .08f;
 				player.transform.position = temp;
 				Vector3 temp1 = transform.position;
-				temp1.y -= .1f;
+				temp1.y -= .08f;
 				transform.position = temp1;
 			}
 			else if(Input.GetKey(KeyCode.S))//Lowering player and raising hook
 			{
 				Vector3 temp = player.transform.position;
-				temp.y -= .1f;
+				temp.y -= .08f;
 				player.transform.position = temp;
 				Vector3 temp1 = transform.position;
-				temp1.y += .1f;
+				temp1.y += .08f;
 				transform.position = temp1;
 			}
 			else if (Input.GetKeyDown (KeyCode.Mouse0))//Detaches the vertical attach mode.
