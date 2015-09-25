@@ -141,6 +141,7 @@ public class DrunkGuardScript : MonoBehaviour {
 
 	void DetectPlayer(){
 		float distance;
+		int a = 0;
 		distance= Vector3.Distance (player.transform.position, this.transform.position);
 
 		/**awakeAnim.SetFloat("Speed_f",0.0f);**/
