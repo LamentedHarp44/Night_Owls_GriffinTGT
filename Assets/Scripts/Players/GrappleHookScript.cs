@@ -94,7 +94,7 @@ public class GrappleHookScript : MonoBehaviour {
 		//If the hook is fired and hits nothing set back to starting position.
 		//----------------
 		if(shot == true && collided == false)
-			timer += Time.deltaTime;
+			timer += Time.fixedDeltaTime;
 
 		if (timer >= .75f && shot == true && collided == false) 
 		{

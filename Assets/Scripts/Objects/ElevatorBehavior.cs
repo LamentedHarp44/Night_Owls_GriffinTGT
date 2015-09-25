@@ -18,17 +18,17 @@ public class ElevatorBehavior : MonoBehaviour {
 		if (user != null) {
 			if (user.CompareTag ("Player")) {
 				if (user.GetComponent<PlayerController> ().GetLadMovement () == LAD_MOVEMENT.DOWN) {
-					GetComponent<Transform> ().position += new Vector3 (0.0f, -1.0f, 0.0f) * Time.deltaTime;
+					GetComponent<Transform> ().position += new Vector3 (0.0f, -1.5f, 0.0f) * Time.fixedDeltaTime;
 				} else if (user.GetComponent<PlayerController> ().GetLadMovement () == LAD_MOVEMENT.UP) {
-					GetComponent<Transform> ().position += new Vector3 (0.0f, 1.0f, 0.0f) * Time.deltaTime;
+					GetComponent<Transform> ().position += new Vector3 (0.0f, 1.5f, 0.0f) * Time.fixedDeltaTime;
 				}
 			}
 
 			if (user.CompareTag ("PatrollingGuard")) {
 				if (user.GetComponent<GuardBehavior> ().GetLadMovement () == LAD_MOVEMENT.DOWN) {
-					GetComponent<Transform> ().position += new Vector3 (0.0f, -1.0f, 0.0f) * Time.deltaTime;
+					GetComponent<Transform> ().position += new Vector3 (0.0f, -1.5f, 0.0f) * Time.fixedDeltaTime;
 				} else if (user.GetComponent<GuardBehavior> ().GetLadMovement () == LAD_MOVEMENT.UP) {
-					GetComponent<Transform> ().position += new Vector3 (0.0f, 1.0f, 0.0f) * Time.deltaTime;
+					GetComponent<Transform> ().position += new Vector3 (0.0f, 1.5f, 0.0f) * Time.fixedDeltaTime;
 				}
 			}
 		}

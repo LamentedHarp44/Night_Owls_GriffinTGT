@@ -20,6 +20,8 @@ TagManager:
   - pauseAlert
   - pauseMaenu
   - click
+  - Main Spawn
+  - Railing
   - VerticalAnchor
   - ADRange
   layers:

@@ -3,7 +3,7 @@ using System.Collections;
 
 public enum TYPE_DEATH {MELEE = 0, RANGED, SWARM};
 public enum LAD_MOVEMENT {DOWN, STAY, UP};
-public enum LVL_CMPLT {TUTORIAL, LVL_ONE, LVL_TWO, LVL_THREE, LVL_FOUR, LVL_FIVE, LVL_SIX, LVL_SEVEN, LVL_EIGHT, LVL_NINE}
+public enum LVL_CMPLT {TUTORIAL, LVL_ONE, LVL_TWO, LVL_THREE, LVL_FOUR, LVL_FIVE, LVL_SIX, LVL_SEVEN, LVL_EIGHT, LVL_NINE, NONE}
 
 public class PlayerController : MonoBehaviour {
 	public float moveSpeed;
@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
 	char upgrades;
 	public int lightExpo;
 	public Transform mainSpawn;
-	public LVL_CMPLT lastCompleted = 0;
+	public LVL_CMPLT lastCompleted = LVL_CMPLT.NONE;
 
 	public int lives;
 	public int lightLevel;
@@ -127,9 +127,9 @@ public class PlayerController : MonoBehaviour {
 		//		(i.e. being on a ladder)
 		//  lock their horizontal controls
 		if (Input.GetKey ("a"))
-			temp.x -= moveSpeed * Time.deltaTime;
+			temp.x -= moveSpeed * Time.fixedDeltaTime;
 		else if (Input.GetKey ("d"))
-			temp.x += moveSpeed * Time.deltaTime;
+			temp.x += moveSpeed * Time.fixedDeltaTime;
 		
 
 		if (Input.GetKey("w"))
