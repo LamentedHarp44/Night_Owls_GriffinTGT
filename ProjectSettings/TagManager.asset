@@ -20,6 +20,7 @@ TagManager:
   - pauseAlert
   - pauseMaenu
   - click
+  - Cooldown
   layers:
   - Default
   - TransparentFX
@@ -54,6 +55,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: DeepBackground
+    uniqueID: 2242335425
+    locked: 0
+  - name: background
+    uniqueID: 258556817
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

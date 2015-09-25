@@ -1,9 +1,16 @@
 fileFormatVersion: 2
 guid: c639892eb37cfec4bbf0a9b829497995
-timeCreated: 1443135287
+timeCreated: 1443220264
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Room1
+    21300002: room2
+    21300004: room3
+    21300006: room4
+    21300008: room5
+    21300010: room6
+    21300012: Background sprite1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -48,7 +55,77 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Room1
+      rect:
+        serializedVersion: 2
+        x: 2017
+        y: 1987
+        width: 235
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: room2
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 2191
+        width: 175
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: room3
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 2272
+        width: 255
+        height: 95
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: room4
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 2272
+        width: 223
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: room5
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 2304
+        width: 127
+        height: 97
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: room6
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 2417
+        width: 158
+        height: 94
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Background sprite1
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 3487
+        width: 257
+        height: 119
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
