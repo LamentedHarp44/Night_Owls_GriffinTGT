@@ -6,7 +6,7 @@ public enum LAD_MOVEMENT {DOWN, STAY, UP};
 public enum LVL_CMPLT {TUTORIAL, LVL_ONE, LVL_TWO, LVL_THREE, LVL_FOUR, LVL_FIVE, LVL_SIX, LVL_SEVEN, LVL_EIGHT, LVL_NINE}
 
 public class PlayerController : MonoBehaviour {
-	float moveSpeed;
+	public float moveSpeed;
 	public bool onLadder;
 	public int loot;
 	public GameObject usable;
