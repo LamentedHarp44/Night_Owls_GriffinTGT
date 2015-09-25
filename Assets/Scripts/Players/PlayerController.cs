@@ -106,8 +106,8 @@ public class PlayerController : MonoBehaviour {
 		else
 			Time.timeScale = 1;
 
-		if(lives != 0)
-			DontDestroyOnLoad (this.gameObject);
+		//if(lives != 0)
+		//	DontDestroyOnLoad (this.gameObject);
 
 	}
 
@@ -159,7 +159,7 @@ public class PlayerController : MonoBehaviour {
 		if (lives == 0) 
 		{
 			Application.LoadLevel(level);
-			lives = 3;
+
 		}
 	}
 
