@@ -11,7 +11,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: Griffen The Gentleman Thief
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: c18b03929a898f9449cd2ece05f6f545, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_ShowUnitySplashScreen: 1
   defaultScreenWidth: 1024

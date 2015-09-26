@@ -3,34 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Anchor
-  - Elevator
-  - PatrollingGuard
-  - Ladder
-  - Floor
-  - Trap Door
-  - Exit
-  - chest
-  - Wall
-  - chest
-  - CraneTop
-  - Crate
-  - approachAlert
-  - pauseAlert
-  - pauseMaenu
-  - click
-  - Cooldown
-  - PlugAbility
-  - plugMenu
-  - New Tag
+  tags: []
   layers:
-  - Default
-  - TransparentFX
-  - Ignore Raycast
-  - 
-  - Water
-  - UI
   - 
   - 
   - 
@@ -57,13 +31,10 @@ TagManager:
   - 
   - 
   - 
-  m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
-  - name: Player
-    uniqueID: 1843012349
-    locked: 0
-  - name: Foreground
-    uniqueID: 1010634217
-    locked: 0
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers: []

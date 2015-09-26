@@ -36,6 +36,7 @@ public class PauseMenuScript : MonoBehaviour {
 
 	void OnPauseGame ()
 	{
+
 		PlayerController.gamePause = true;
 		pauseAlert.GetComponent<Text> ().text = "Game Paused";
 

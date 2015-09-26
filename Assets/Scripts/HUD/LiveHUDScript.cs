@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class LiveHUDScript : MonoBehaviour {
-	string texture = "InvisibleMan.png";
+	//string texture = "InvisibleMan.png";
 	public Texture inputTexture;
 	public int lives; 
 	public GameObject player;

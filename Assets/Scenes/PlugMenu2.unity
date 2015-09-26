@@ -166,6 +166,14 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11469436, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: coolText
+      value: 
+      objectReference: {fileID: 315812641}
+    - target: {fileID: 22409388, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 147.699997
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
   m_IsPrefabParent: 0
@@ -322,6 +330,10 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 157538460}
+--- !u!1 &315812641 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 195524, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+  m_PrefabInternal: {fileID: 89824802}
 --- !u!1 &584126521 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 189654, guid: 9a7141f3768ff9345867c4cf14062c46, type: 2}
@@ -906,15 +918,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 448276, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.36999989
+      value: -2.73000002
       objectReference: {fileID: 0}
     - target: {fileID: 448276, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.42000008
+      value: 2.4000001
       objectReference: {fileID: 0}
     - target: {fileID: 448276, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 6.01000023
+      value: 5.94000006
       objectReference: {fileID: 0}
     - target: {fileID: 448276, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
       propertyPath: m_LocalRotation.x
@@ -944,6 +956,14 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 584126521}
+    - target: {fileID: 11447954, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
+      propertyPath: lightLvl
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11497320, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
+      propertyPath: lightLvl
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
   m_IsPrefabParent: 0
@@ -1478,6 +1498,10 @@ Prefab:
       propertyPath: plugMenu
       value: 
       objectReference: {fileID: 129215542}
+    - target: {fileID: 11438696, guid: 9a7141f3768ff9345867c4cf14062c46, type: 2}
+      propertyPath: cooldown
+      value: 
+      objectReference: {fileID: 315812641}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a7141f3768ff9345867c4cf14062c46, type: 2}
   m_IsPrefabParent: 0

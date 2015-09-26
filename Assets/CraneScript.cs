@@ -24,7 +24,7 @@ public class CraneScript : MonoBehaviour {
 		{
 			if(Input.GetKeyDown(KeyCode.E) && inputNumber == 0)
 			{
-				player.GetComponent<PlayerController>().moveSpeed = 0;
+			player.GetComponent<PlayerController>().moveSpeed = 0;
 				grappleHook.GetComponent<GrappleHookScript>().enabled = false;
 				inputNumber = 1;
 			}

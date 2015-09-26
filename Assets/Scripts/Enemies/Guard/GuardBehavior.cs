@@ -55,6 +55,7 @@ public class GuardBehavior : EnemyBase {
 
 		reactRange = 5.0f;
 
+
 		//targPos = playRef.GetComponent<Transform> ().position;
 	}
 
@@ -68,8 +69,11 @@ public class GuardBehavior : EnemyBase {
 		//	temp.GetComponent<LadderNavigatorBehavior>().target = targPos;
 		//	pathfinding = true;
 		//}
+		if (playRef == null)
+			playRef = GameObject.FindGameObjectWithTag ("Player");
+
 		if (attkPause > 0.0f) {
-			attkPause -= Time.deltaTime;
+			attkPause -= Time.fixedDeltaTime;
 		} else {
 			switch (currState) {
 			case ENMY_STATES.PATROL:
@@ -104,7 +108,7 @@ public class GuardBehavior : EnemyBase {
 	{
 		//  Step One:
 		//			The unit moves
-		GetComponent<Transform> ().position += new Vector3 (wlkSpd, 0, 0) * Time.deltaTime;
+		GetComponent<Transform> ().position += new Vector3 (wlkSpd, 0, 0) * Time.fixedDeltaTime;
 
 		//  Step Two:
 		//  		Check for player position relative to the player.
@@ -160,7 +164,7 @@ public class GuardBehavior : EnemyBase {
 		else if (targPos.x > GetComponent<Transform> ().position.x && !CheckSign (srchSpd))
 			srchSpd = -srchSpd;
 
-		GetComponent<Transform> ().position += new Vector3(srchSpd, 0, 0) * Time.deltaTime;
+		GetComponent<Transform> ().position += new Vector3(srchSpd, 0, 0) * Time.fixedDeltaTime;
 
 		//  Step Two:
 		//			Check for player position relative to the player.
@@ -225,7 +229,7 @@ public class GuardBehavior : EnemyBase {
 		else if (targPos.x > GetComponent<Transform> ().position.x && !CheckSign (attkSpd))
 			attkSpd = -attkSpd;
 
-		GetComponent<Transform> ().position += new Vector3 (attkSpd, 0, 0) * Time.deltaTime;
+		GetComponent<Transform> ().position += new Vector3 (attkSpd, 0, 0) * Time.fixedDeltaTime;
 
 		//  Step Two:
 		//			Check for player position relative to the player.
@@ -540,6 +544,21 @@ public class GuardBehavior : EnemyBase {
 				}
 				break;
 			}
+			}
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D collider)
+	{
+		if (collider.CompareTag ("Railing")) {
+			if (currState == ENMY_STATES.PATROL)
+				wlkSpd = -wlkSpd;
+
+			else
+			{
+				ChangeENMYState(ENMY_STATES.PATROL);
+
+				wlkSpd = - wlkSpd;
 			}
 		}
 	}

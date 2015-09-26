@@ -31,6 +31,8 @@ public class ExitDoorScript : MonoBehaviour {
 	{
 		if (other.tag == "Player" && Lock == false) 
 		{
+			other.GetComponent<PlayerController>().lastCompleted = LVL_CMPLT.TUTORIAL;
+
 			Application.LoadLevel(nxtlvl);
 		}
 	}

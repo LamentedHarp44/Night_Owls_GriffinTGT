@@ -5,8 +5,8 @@ using UnityEngine.UI;
 public class CoolDownHud : MonoBehaviour {
 	public GameObject player;
 	//variables for cooldown power timer
-	float coolDownTimer;
-	float cstartTimer;
+	//float coolDownTimer;
+	//float cstartTimer;
 	//int countDown=30;
 	float targetTime;
 	public GameObject coolText;
@@ -15,9 +15,9 @@ public class CoolDownHud : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindWithTag ("Player");
-		coolText=GameObject.FindWithTag ("Cooldown");
-		coolDownTimer = 0.0f;
-		cstartTimer = 0.0f;
+		//coolText=GameObject.FindWithTag ("Cooldown");
+		//coolDownTimer = 0.0f;
+		//cstartTimer = 0.0f;
 
 	}
 	

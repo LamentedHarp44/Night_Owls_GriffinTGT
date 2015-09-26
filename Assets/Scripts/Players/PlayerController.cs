@@ -3,7 +3,7 @@ using System.Collections;
 
 public enum TYPE_DEATH {MELEE = 0, RANGED, SWARM};
 public enum LAD_MOVEMENT {DOWN, STAY, UP};
-public enum LVL_CMPLT {TUTORIAL, LVL_ONE, LVL_TWO, LVL_THREE, LVL_FOUR, LVL_FIVE, LVL_SIX, LVL_SEVEN, LVL_EIGHT, LVL_NINE}
+public enum LVL_CMPLT {TUTORIAL, LVL_ONE, LVL_TWO, LVL_THREE, LVL_FOUR, LVL_FIVE, LVL_SIX, LVL_SEVEN, LVL_EIGHT, LVL_NINE, NONE}
 
 public class PlayerController : MonoBehaviour {
 	public float moveSpeed;
@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
 	char upgrades;
 	public int lightExpo;
 	public Transform mainSpawn;
-	public LVL_CMPLT lastCompleted = 0;
+	public LVL_CMPLT lastCompleted = LVL_CMPLT.NONE;
 
 	public int lives;
 	//public int lightLevel;
@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		
 		if(GetComponentInChildren<GrappleHookScript>().shot == false)
 			Movement ();
 
@@ -117,11 +118,11 @@ public class PlayerController : MonoBehaviour {
 		}
 
 
-		
 		if (gamePause)
 			Time.timeScale = 0;
 		else
 			Time.timeScale = 1;
+
 
 		DontDestroyOnLoad (this);
 
@@ -144,9 +145,9 @@ public class PlayerController : MonoBehaviour {
 		//		(i.e. being on a ladder)
 		//  lock their horizontal controls
 		if (Input.GetKey ("a"))
-			temp.x -= moveSpeed * Time.deltaTime;
+			temp.x -= moveSpeed * Time.fixedDeltaTime;
 		else if (Input.GetKey ("d"))
-			temp.x += moveSpeed * Time.deltaTime;
+			temp.x += moveSpeed * Time.fixedDeltaTime;
 		
 
 		if (Input.GetKey("w"))
@@ -208,6 +209,15 @@ public class PlayerController : MonoBehaviour {
 	{
 		usable = null;
 	}
+
+	void OnTriggerStay2D(Collider2D other)
+	{
+		if (other.tag == "ADRange" && GetComponentInChildren<GrappleHookScript> ().verticalAnchorStruck == true) 
+		{
+			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		}
+	}
+
 
 	//  This function is a setter for the horizMove bool
 	//  Parameters:			bool, F = canMove, T = can'tMove
