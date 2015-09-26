@@ -20,6 +20,10 @@ TagManager:
   - pauseAlert
   - pauseMaenu
   - click
+  - Cooldown
+  - PlugAbility
+  - plugMenu
+  - New Tag
   layers:
   - Default
   - TransparentFX

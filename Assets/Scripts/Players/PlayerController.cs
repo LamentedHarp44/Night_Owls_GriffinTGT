@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour {
 	public LVL_CMPLT lastCompleted = 0;
 
 	public int lives;
-	public int lightLevel;
+	//public int lightLevel;
 
 	//Jump variables
 	float jumpForce = 600f;
@@ -34,6 +34,10 @@ public class PlayerController : MonoBehaviour {
 	public static bool gamePause = false; 
 	public bool pauseMenuToggle=false;
 	public GameObject pauseMenu;
+
+	//variable for plugMenu the game
+	public bool plugMenuToggle=false;
+	public GameObject plugMenu;
 	
 	//variable for cooling down
 	public bool cooled;
@@ -49,7 +53,7 @@ public class PlayerController : MonoBehaviour {
 		usable = null;
 		transform.position = mainSpawn.transform.position;
 		lives = 3;
-		lightLevel = 0;
+		//lightLevel = 0;
 		grounded = true;
 		level = Application.loadedLevel;
 	}
@@ -69,12 +73,23 @@ public class PlayerController : MonoBehaviour {
 			//Debug.Log("pressed");
 			cooldown.GetComponent<CoolDownHud> ().coolDown ();
 		}
-		//cooldownEffect
-		//else if (Input.GetKeyDown ("p") && cooled == false) {
-			//cooled=true;
-			//Debug.Log("pressed");
-			//cooldown.GetComponent<CoolDownHud> ().coolDown ();
-		//}
+
+		//call plug menu
+		else if (Input.GetKeyDown ("z")) {
+			plugMenuToggle=!plugMenuToggle;
+			
+			
+			if (plugMenuToggle){
+				plugMenu.GetComponent<CanvasGroup>().alpha=1;
+				plugMenu.GetComponent<CanvasGroup>().interactable=true;
+				
+				
+			}
+			else{
+				plugMenu.GetComponent<CanvasGroup>().alpha=0;
+				plugMenu.GetComponent<CanvasGroup>().interactable=false;
+			}
+		}
 
 		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space) && grounded == true
 		    && GetComponentInChildren<GrappleHookScript>().shot == false) 
@@ -85,7 +100,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		// call pause menu
-		else if (Input.GetKeyDown (KeyCode.Escape)) {
+		if (Input.GetKeyDown (KeyCode.Escape)) {
 			pauseMenuToggle=!pauseMenuToggle;
 			
 			
@@ -100,6 +115,8 @@ public class PlayerController : MonoBehaviour {
 				pauseMenu.GetComponent<CanvasGroup>().interactable=false;
 			}
 		}
+
+
 		
 		if (gamePause)
 			Time.timeScale = 0;

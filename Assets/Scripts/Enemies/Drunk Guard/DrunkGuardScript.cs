@@ -90,11 +90,11 @@ public class DrunkGuardScript : MonoBehaviour {
 		aniController.SetFloat ("Timer", animaterTimer);
 		aniController.SetBool ("Idle", idle);
 
-		playerLight = player.GetComponent<Invisiblilityscript> ().LightExposure ();
 
 		if (awake){
 			audSnore.mute = true;
-			if(playerLight != 0)
+			playerLight = player.GetComponent<Invisiblilityscript> ().LightExposure ();
+			if(playerLight > 0)
 				DetectPlayer ();}
 
 		else{
@@ -110,9 +110,10 @@ public class DrunkGuardScript : MonoBehaviour {
 		}
 
 		if (shot) {
-			//audSnore.mute = true;
+			audSnore.mute = true;
 			Shot ();
 			GetComponentInChildren<ParticleSystem> ().Play ();
+
 			shot=false;
 			//Destroy=true;
 			//Destroy(this.gameObject);
