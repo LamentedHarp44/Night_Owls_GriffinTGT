@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level Scenes/level9.unity
   - enabled: 0
     path: Assets/Scenes/EricTestingScene.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TommyTestingScene.unity
   - enabled: 0
     path: Assets/Scenes/Level Scenes/level9.unity
