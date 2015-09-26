@@ -67,4 +67,8 @@ public class Invisiblilityscript : MonoBehaviour {
 	{
 		return curLight;
 	}
+
+	public bool IsOnCoolDown(){
+		return onCooldown;
+	}
 }

@@ -11,10 +11,11 @@ public class CoolDownHud : MonoBehaviour {
 	float targetTime;
 	public GameObject coolText;
 	float cooldown;
+	float duration;
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindWithTag ("Player");
-		coolText=GameObject.FindWithTag ("Cooldown");
+		//coolText=GameObject.FindWithTag ("Cooldown");
 		//coolDownTimer = 0.0f;
 		//cstartTimer = 0.0f;
 
@@ -45,7 +46,7 @@ public class CoolDownHud : MonoBehaviour {
 			}
 		}*/
 		coolDown ();
-		coolText.GetComponent<Text> ().text = "Cool Down: "+((int)cooldown).ToString();
+		coolText.GetComponent<Text> ().text = "Cool Down: "+((int)cooldown).ToString()+"   Duration: "+ ((int)duration).ToString();
 
 	}
 
@@ -55,6 +56,6 @@ public class CoolDownHud : MonoBehaviour {
 		//targetTime = cstartTimer + countDown;
 		//player.GetComponent<Invisiblilityscript>().cooldown;
 		cooldown=player.GetComponent<Invisiblilityscript>().cooldown;
-	
+		duration=player.GetComponent<Invisiblilityscript>().duration;
 	}
 }
