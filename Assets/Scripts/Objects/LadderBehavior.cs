@@ -64,7 +64,7 @@ public class LadderBehavior : MonoBehaviour {
 	//  This function will delete an elevator that is no longer in use
 	void DestroyElevator(GameObject elev)
 	{
-		elevators.Remove (elev);
 		Destroy (elev);
+		elevators.Remove (elev);
 	}
 }
