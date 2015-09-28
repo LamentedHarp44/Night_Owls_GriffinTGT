@@ -33,10 +33,10 @@ public class ElevatorBehavior : MonoBehaviour {
 			}
 		}
 
-		if (parent != null && user != null) {
-			if (Mathf.Abs(this.GetComponent<Transform>().position.x - user.GetComponent<Transform>().position.x) > 1.0f)
-				Destroy (this.gameObject);
-		}
+		//if (parent != null && user != null) {
+		//	if (Mathf.Abs(this.GetComponent<Transform>().position.x - user.GetComponent<Transform>().position.x) > parent.GetComponent<Transform>().localScale.x)
+		//		Destroy (this.gameObject);
+		//}
 	}
 
 	void OnCollisionEnter2D(Collision2D coll)

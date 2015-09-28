@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class LadderBehavior : MonoBehaviour {
 
 	//  The ladder will need to have capacity for multiple elevators
 	//  at once.
-	ArrayList elevators = new ArrayList();
+	List<GameObject> elevators = new List<GameObject>();
 
 	//  The ladder also needs to have a copy of an elevator to clone.
 	public GameObject prefab;
@@ -25,6 +26,10 @@ public class LadderBehavior : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
+		for (int i = 0; i < elevators.Count; ++i) {
+			if (elevators[i].gameObject.GetComponent<ElevatorBehavior>().user == coll.gameObject)
+				return;
+		}
 		//  The temporary elevator will spawn at the unit's feet, and then
 		//  be added to the elevators array.
 		GameObject tempElevator;
@@ -47,9 +52,19 @@ public class LadderBehavior : MonoBehaviour {
 		elevators.Add (tempElevator);
 	}
 
+	void OnTriggerExit2D(Collider2D coll)
+	{
+		for (int i = 0; i <= elevators.Count; ++i) {
+			if (elevators [i].gameObject.GetComponent<ElevatorBehavior>().user == coll.gameObject) {
+				DestroyElevator (elevators [i]);
+			}
+		}
+	}
+
 	//  This function will delete an elevator that is no longer in use
 	void DestroyElevator(GameObject elev)
 	{
 		elevators.Remove (elev);
+		Destroy (elev);
 	}
 }
