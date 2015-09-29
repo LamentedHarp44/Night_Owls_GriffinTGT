@@ -57,7 +57,7 @@ public class LadderBehavior : MonoBehaviour {
 
 	void OnTriggerExit2D(Collider2D coll)
 	{
-
+		if (!coll.CompareTag("Untagged"))
 			for (int i = 0; i <= elevators.Count; ++i) 
 			{
 				if (elevators [i].gameObject.GetComponent<ElevatorBehavior> ().user == coll.gameObject) {

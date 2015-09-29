@@ -109,6 +109,8 @@ public class GuardBehavior : EnemyBase {
 		//  Step One:
 		//			The unit moves
 		GetComponent<Transform> ().position += new Vector3 (wlkSpd, 0, 0) * Time.fixedDeltaTime;
+		if (CheckSign (wlkSpd) == CheckSign(transform.localScale.x))
+			transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 
 		//  Step Two:
 		//  		Check for player position relative to the player.
@@ -165,6 +167,9 @@ public class GuardBehavior : EnemyBase {
 			srchSpd = -srchSpd;
 
 		GetComponent<Transform> ().position += new Vector3(srchSpd, 0, 0) * Time.fixedDeltaTime;
+
+		if (CheckSign (srchSpd) == CheckSign(transform.localScale.x))
+			transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 
 		//  Step Two:
 		//			Check for player position relative to the player.
@@ -230,6 +235,9 @@ public class GuardBehavior : EnemyBase {
 			attkSpd = -attkSpd;
 
 		GetComponent<Transform> ().position += new Vector3 (attkSpd, 0, 0) * Time.fixedDeltaTime;
+
+		if (CheckSign (attkSpd) == CheckSign(transform.localScale.x))
+			transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 
 		//  Step Two:
 		//			Check for player position relative to the player.
