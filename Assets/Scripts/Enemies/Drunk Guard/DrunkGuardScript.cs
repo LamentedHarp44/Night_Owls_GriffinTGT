@@ -156,8 +156,9 @@ public class DrunkGuardScript : MonoBehaviour {
 			threaten = false;
 			//approachAlert.GetComponent<Text> ().text = " ";
 		}
-
-		if (threaten && distance < shotDistance) {
+		float playerY = player.transform.position.y;
+		float GuardY= this.transform.position.y;
+		if (threaten && distance < shotDistance && Mathf.Abs(playerY-GuardY)<2.0f) {
 			shot=true;
 		}
 	

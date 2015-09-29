@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class LadderBehavior : MonoBehaviour {
 
 	//  The ladder will need to have capacity for multiple elevators
 	//  at once.
-	ArrayList elevators = new ArrayList();
+	List<GameObject> elevators = new List<GameObject>();
 
 	//  The ladder also needs to have a copy of an elevator to clone.
 	public GameObject prefab;
@@ -25,31 +26,50 @@ public class LadderBehavior : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		//  The temporary elevator will spawn at the unit's feet, and then
-		//  be added to the elevators array.
-		GameObject tempElevator;
+		if (!coll.CompareTag ("Untagged")) 
+		{
+			for (int i = 0; i < elevators.Count; ++i) {
+				if (elevators [i].gameObject.GetComponent<ElevatorBehavior> ().user == coll.gameObject)
+					return;
+			}
+			//  The temporary elevator will spawn at the unit's feet, and then
+			//  be added to the elevators array.
+			GameObject tempElevator;
 
-		//  The elevator needs to be spawned at a very specific point
-		//  X-value:		center of the ladder
-		//  Y-value:		bottom of the player collision/unit
-		//  Z-value:		0.0f
-		Vector3 spawnPoint = new Vector3 (GetComponent<Transform> ().position.x,
+			//  The elevator needs to be spawned at a very specific point
+			//  X-value:		center of the ladder
+			//  Y-value:		bottom of the player collision/unit
+			//  Z-value:		0.0f
+			Vector3 spawnPoint = new Vector3 (GetComponent<Transform> ().position.x,
 		                                 coll.GetComponent<Transform> ().position.y,
 		                                 0.0f);
 
 
-		tempElevator = 
-			Instantiate (prefab,spawnPoint, Quaternion.identity) as GameObject;
+			tempElevator = 
+			Instantiate (prefab, spawnPoint, Quaternion.identity) as GameObject;
 
-		tempElevator.GetComponent<ElevatorBehavior> ().parent = this.gameObject;
-		tempElevator.GetComponent<ElevatorBehavior> ().user = coll.gameObject;
+			tempElevator.GetComponent<ElevatorBehavior> ().parent = this.gameObject;
+			tempElevator.GetComponent<ElevatorBehavior> ().user = coll.gameObject;
 
-		elevators.Add (tempElevator);
+			elevators.Add (tempElevator);
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D coll)
+	{
+
+			for (int i = 0; i <= elevators.Count; ++i) 
+			{
+				if (elevators [i].gameObject.GetComponent<ElevatorBehavior> ().user == coll.gameObject) {
+					DestroyElevator (elevators [i]);
+				}
+			}
 	}
 
 	//  This function will delete an elevator that is no longer in use
 	void DestroyElevator(GameObject elev)
 	{
+		Destroy (elev);
 		elevators.Remove (elev);
 	}
 }
