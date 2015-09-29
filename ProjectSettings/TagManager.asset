@@ -3,31 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Anchor
-  - Elevator
-  - PatrollingGuard
-  - Ladder
-  - Floor
-  - Trap Door
-  - Exit
-  - chest
-  - Wall
-  - chest
-  - CraneTop
-  - Crate
-  - approachAlert
-  - pauseAlert
-  - pauseMaenu
-  - click
-<<<<<<< HEAD
-  - Cooldown
-=======
-  - Main Spawn
-  - Railing
-  - VerticalAnchor
-  - ADRange
->>>>>>> e58acf2f3fbff651baec6f9a10ff13b7b80e04ae
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -62,18 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: DeepBackground
-    uniqueID: 2242335425
+  - name: BackgroundBack
+    uniqueID: 4050235771
     locked: 0
-  - name: background
-    uniqueID: 258556817
+  - name: Background
+    uniqueID: 3279468875
     locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Player
-    uniqueID: 1843012349
-    locked: 0
-  - name: Foreground
-    uniqueID: 1010634217
     locked: 0

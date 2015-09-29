@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
 	public int lightExpo;
 	public Transform mainSpawn;
 	public LVL_CMPLT lastCompleted = LVL_CMPLT.NONE;
-
+	public int ratCount;
 	public int lives;
 	public int lightLevel;
 
