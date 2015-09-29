@@ -3,12 +3,13 @@ using System.Collections;
 
 public class WindowFadingLightScript : MonoBehaviour {
 
-	public GameObject player;
+	GameObject player;
 	public int lightLvl;
 	
 	// Use this for initialization
 	void Start () {
 		lightLvl = 2;
+		player = GameObject.FindWithTag ("Player");
 	}
 	
 	// Update is called once per frame

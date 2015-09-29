@@ -3,13 +3,14 @@ using System.Collections;
 
 public class WindowDirectLightScript : MonoBehaviour {
 
-	public GameObject player;
+	GameObject player;
 	public int lightLvl;
 
 	// Use this for initialization
 	void Start () 
 	{
 		lightLvl = 3;
+		player = GameObject.FindWithTag ("Player");
 	}
 	
 	// Update is called once per frame
