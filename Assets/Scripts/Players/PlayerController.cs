@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
 	public GameObject usable;
 	char upgrades;
 	public int lightExpo;
-	public Transform mainSpawn;
+	Transform mainSpawn;
 	public LVL_CMPLT lastCompleted = LVL_CMPLT.NONE;
 
 	public int lives;
@@ -54,11 +54,13 @@ public class PlayerController : MonoBehaviour {
 		moveSpeed = 5.0f;
 		onLadder = false;
 		usable = null;
+		mainSpawn = GameObject.FindWithTag ("Main Spawn").GetComponent<Transform>();
 		transform.position = mainSpawn.transform.position;
 		lives = 3;
 		//lightLevel = 0;
 		grounded = true;
 		level = Application.loadedLevel;
+
 	}
 	
 	// Update is called once per frame
