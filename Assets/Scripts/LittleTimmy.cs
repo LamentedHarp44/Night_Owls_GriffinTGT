@@ -43,7 +43,7 @@ public class LittleTimmy : MonoBehaviour {
 				GetComponent<Animator> ().SetTrigger ("Hide");
 
 				timmyIsHiding = true;
-			} else if (timmyIsHiding && Mathf.Abs (playerRef.transform.position.x - transform.position.x) > reactionRange || playerIsInvisible) {
+			} else if (timmyIsHiding && Mathf.Abs (playerRef.transform.position.x - transform.position.x) >= reactionRange || playerIsInvisible) {
 				timmyIsHiding = false;
 
 				GetComponent<Animator> ().SetTrigger ("Search");

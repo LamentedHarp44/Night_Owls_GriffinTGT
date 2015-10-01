@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour {
 	public bool moving;
 	public bool onLadder;
 	public int loot;
-	public GameObject usable;
+	public GameObject usable, timmy;
 	char upgrades;
 	public int lightExpo;
 	Transform mainSpawn;
@@ -240,17 +240,17 @@ public class PlayerController : MonoBehaviour {
 
 	void Use()
 	{
-		if (usable == null)
-			return;
+		if (usable != null) {
+			if (usable.tag == "chest") {
+				if (usable.GetComponent<containerscript> ().inUse () <= 0)
+					loot += usable.GetComponent<containerscript> ().Payout ();
+			}
+		}
 
-		if (usable.tag == "chest") {
-			if (usable.GetComponent<containerscript> ().inUse () <= 0)
-				loot += usable.GetComponent<containerscript> ().Payout ();
-		} 
-		else if (usable.tag == "Little Timmy") 
+		if (timmy != null) 
 		{
 			int temp = 0;
-			temp += usable.GetComponent<LittleTimmy>().KnockDown();
+			temp += timmy.GetComponent<LittleTimmy>().KnockDown();
 			if (temp > 0)
 			{
 				loot += temp;
@@ -281,10 +281,8 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.CompareTag("Little Timmy")) 
-		{
-			usable = other.gameObject;
-		}
+		if (other.gameObject.CompareTag("Little Timmy"))
+			timmy = other.gameObject;
 	}
 
 	void OnTriggerStay2D(Collider2D other)
@@ -293,6 +291,12 @@ public class PlayerController : MonoBehaviour {
 		{
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		}
+	}
+
+	void OnTriggerExit2D(Collider2D other)
+	{
+		if (other.gameObject.CompareTag("Little Timmy"))
+			timmy = null;
 	}
 
 
