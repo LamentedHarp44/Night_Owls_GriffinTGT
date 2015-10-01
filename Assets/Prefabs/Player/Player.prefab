@@ -261,6 +261,7 @@ MonoBehaviour:
   mainSpawn: {fileID: 0}
   lastCompleted: 10
   lives: 3
+  numPush: 0
   grounded: 0
   ladMove: 1
   pauseMenuToggle: 0
@@ -283,8 +284,8 @@ MonoBehaviour:
   curLight: 0
   duration: 3
   fullDuration: 3
-  cooldown: 30
-  fullCooldown: 30
+  cooldown: 10
+  fullCooldown: 10
 --- !u!114 &11448844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1520,6 +1521,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_SortingLayerID
       value: 224788143
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cooldown
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: fullCooldown
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
