@@ -15,9 +15,11 @@ public class RatBehavior : MonoBehaviour {
 	public float particle;
 	public Color starter;
 	public AudioClip clip;
+	public float colideTimer;
 	// Use this for initialization
 	void Start () 
 	{
+		colideTimer = 2.0f;
 		clip = GetComponent<AudioSource> ().clip;
 		starter = GetComponentInChildren<ParticleSystem> ().startColor;
 		home = transform.position;
@@ -34,6 +36,18 @@ public class RatBehavior : MonoBehaviour {
 	void Update () 
 	{
 		Launcher ();
+
+		if (GetComponent<CircleCollider2D> ().enabled == false)
+		{
+			colideTimer-= Time.fixedDeltaTime;
+
+			if(colideTimer <= 0)
+			{
+				colideTimer = 2.0f;
+				GetComponent<CircleCollider2D>().enabled = true;
+			}
+		}
+
 		if(player == null)
 			player = GameObject.FindGameObjectWithTag ("Player");
 
@@ -116,19 +130,25 @@ public class RatBehavior : MonoBehaviour {
 			if (player.GetComponent<Invisiblilityscript> ().LightExposure () < 4) {
 				Vector3 temp = transform.position;
 				temp.x = player.transform.position.x + Random.Range (-0.1f, 0.1f);
-				temp.y = player.transform.position.y + Random.Range (-0.1f, 0.1f);
+				temp.y = player.transform.position.y + Random.Range (0.1f, 0.3f);
 				transform.position = temp;
 			} else {
 				atkTimer -= Time.fixedDeltaTime;
 				if (atkTimer <= 0) {
 					attacking = false;
-					Destroy (this.gameObject);
-					player.GetComponent<PlayerController> ().moveSpeed += .5f;
-					player.GetComponent<PlayerController> ().ratCount -= 1;
+				Vector3 temp = transform.position;
+				temp.x = player.transform.position.x - .2f;
+				temp.y = player.transform.position.y + .2f;
+				GetComponent<CircleCollider2D>().enabled = false;
+				GetComponentInChildren<BoxCollider2D>().enabled = true;
+				GetComponent<Rigidbody2D>().gravityScale = 1;
+				player.GetComponent<PlayerController> ().moveSpeed += .5f;
+				player.GetComponent<PlayerController> ().ratCount -= 1;
+				transform.position = temp;
 				} else {
 					Vector3 temp = transform.position;
 					temp.x = player.transform.position.x + Random.Range (-0.1f, 0.1f);
-					temp.y = player.transform.position.y + Random.Range (-.1f, 0.1f);
+					temp.y = player.transform.position.y + Random.Range (.1f, 0.3f);
 					transform.position = temp;
 				}
 			}
@@ -144,6 +164,7 @@ public class RatBehavior : MonoBehaviour {
 			atkTimer = 1.5f;
 			player.GetComponent<PlayerController>().moveSpeed -= .5f;
 			player.GetComponent<PlayerController>().ratCount += 1;
+			GetComponent<Rigidbody2D>().gravityScale = 0;
 
 		}
 	}
