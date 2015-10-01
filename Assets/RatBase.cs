@@ -15,11 +15,16 @@ public class RatBase : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "Floor") {
+		if (col.gameObject.tag == "Floor") 
+		{
 			GetComponentInParent<RatBehavior> ().ground = true;
 			GetComponentInParent<Rigidbody2D> ().velocity = new Vector2 (0f, 0f);
-		} else if (col.gameObject.tag == "Player")
+			GetComponentInParent<RatBehavior>().home = transform.position;
+		}
+		else if (col.gameObject.tag == "Player")
 			GetComponentInParent<RatBehavior> ().Attack ();
+		else if (col.gameObject.tag == "Boss")
+			Destroy (this.gameObject);
 	}
 
 

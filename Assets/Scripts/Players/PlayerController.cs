@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public enum TYPE_DEATH {MELEE = 0, RANGED, SWARM};
+public enum TYPE_DEATH {MELEE = 0, RANGED, SWARM, TRAP};
 public enum LAD_MOVEMENT {DOWN, STAY, UP};
 public enum LVL_CMPLT {TUTORIAL, LVL_ONE, LVL_TWO, LVL_THREE, LVL_FOUR, LVL_FIVE, LVL_SIX, LVL_SEVEN, LVL_EIGHT, LVL_NINE, NONE}
 
@@ -16,12 +16,15 @@ public class PlayerController : MonoBehaviour {
 	public LVL_CMPLT lastCompleted = LVL_CMPLT.NONE;
 	public int ratCount;
 	public int lives;
-	public int lightLevel;
+	//public int lightLevel;
 
 	//Jump variables
 	float jumpForce = 600f;
 	public bool grounded;
 	float jumpNumber = 0;
+
+	bool flip;
+	bool facingRight;
 
 	int level;
 
@@ -34,6 +37,10 @@ public class PlayerController : MonoBehaviour {
 	public static bool gamePause = false; 
 	public bool pauseMenuToggle=false;
 	public GameObject pauseMenu;
+
+	//variable for plugMenu the game
+	public bool plugMenuToggle=false;
+	public GameObject plugMenu;
 	
 	//variable for cooling down
 	public bool cooled;
@@ -49,7 +56,7 @@ public class PlayerController : MonoBehaviour {
 		usable = null;
 		transform.position = mainSpawn.transform.position;
 		lives = 3;
-		lightLevel = 0;
+		//lightLevel = 0;
 		grounded = true;
 		level = Application.loadedLevel;
 	}
@@ -57,6 +64,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		
 		if(GetComponentInChildren<GrappleHookScript>().shot == false)
 			Movement ();
 
@@ -69,13 +77,25 @@ public class PlayerController : MonoBehaviour {
 			//Debug.Log("pressed");
 			cooldown.GetComponent<CoolDownHud> ().coolDown ();
 		}
-		//cooldownEffect
-		//else if (Input.GetKeyDown ("p") && cooled == false) {
-			//cooled=true;
-			//Debug.Log("pressed");
-			//cooldown.GetComponent<CoolDownHud> ().coolDown ();
-		//}
 
+		//call plug menu
+		else if (Input.GetKeyDown ("z")) {
+			plugMenuToggle=!plugMenuToggle;
+			
+			
+			if (plugMenuToggle){
+				plugMenu.GetComponent<CanvasGroup>().alpha=1;
+				plugMenu.GetComponent<CanvasGroup>().interactable=true;
+				
+				
+			}
+			else{
+				plugMenu.GetComponent<CanvasGroup>().alpha=0;
+				plugMenu.GetComponent<CanvasGroup>().interactable=false;
+			}
+		}
+
+		//Jumping
 		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space) && grounded == true
 		    && GetComponentInChildren<GrappleHookScript>().shot == false) 
 		{
@@ -85,7 +105,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		// call pause menu
-		else if (Input.GetKeyDown (KeyCode.Escape)) {
+		if (Input.GetKeyDown (KeyCode.Escape)) {
 			pauseMenuToggle=!pauseMenuToggle;
 			
 			
@@ -100,11 +120,13 @@ public class PlayerController : MonoBehaviour {
 				pauseMenu.GetComponent<CanvasGroup>().interactable=false;
 			}
 		}
-		
+
+
 		if (gamePause)
 			Time.timeScale = 0;
 		else
 			Time.timeScale = 1;
+
 
 		DontDestroyOnLoad (this);
 
@@ -126,11 +148,20 @@ public class PlayerController : MonoBehaviour {
 		//  If there is anything limiting the player's horizontal movement
 		//		(i.e. being on a ladder)
 		//  lock their horizontal controls
-		if (Input.GetKey ("a"))
+		if (Input.GetKey ("a")) 
+		{
 			temp.x -= moveSpeed * Time.fixedDeltaTime;
-		else if (Input.GetKey ("d"))
+
+			facingRight = false;
+			Flip(facingRight);
+		} 
+		else if (Input.GetKey ("d")) 
+		{
 			temp.x += moveSpeed * Time.fixedDeltaTime;
-		
+
+			facingRight = true;
+			Flip(facingRight);
+		}
 
 		if (Input.GetKey("w"))
 			ladMove = LAD_MOVEMENT.UP;
@@ -143,6 +174,23 @@ public class PlayerController : MonoBehaviour {
 		transform.position = temp;
 	}
 
+	//Fliping the player's scale.x to face moving direction.
+	void Flip(bool facing_right)
+	{
+		if (facing_right == true) 
+		{
+			Vector3 scale = transform.localScale;
+			scale.x = 1;
+			transform.localScale = scale;
+		} 
+		else 
+		{
+			Vector3 scale = transform.localScale;
+			scale.x = -1;
+			transform.localScale = scale;
+		}
+	}
+
 	//  This one function will handle the multiple types of death possible to the player
 	//  Parameters:		The function takes in a TYPE_DEATH and uses that to determine
 	//					which actions to take.
@@ -152,15 +200,24 @@ public class PlayerController : MonoBehaviour {
 		  //this.GetComponent<Invisiblilityscript> ().SetExposure (0);
 
 		GetComponentInChildren<ParticleSystem> ().Play ();
+
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
-		transform.position = mainSpawn.transform.position;
 		lives--;
+		StartCoroutine (PlayerDeadRespawn());
 		if (lives == 0) 
 		{
 			Destroy(this);
 			Application.LoadLevel(level);
 			lives = 3;
 		}
+	}
+
+	//The delay for player respawn so it plays blood splatter.
+	public IEnumerator PlayerDeadRespawn()
+	{
+
+		yield return new WaitForSeconds (.5f);
+		transform.position = mainSpawn.transform.position;
 	}
 
 	void Use()

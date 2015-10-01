@@ -47,7 +47,17 @@ public class GrappleHookScript : MonoBehaviour {
 		//Shooting the gun
 		if (Input.GetKeyDown (KeyCode.Mouse0) && shot == false && player.GetComponent<PlayerController> ().grounded == true) 
 		{
-			GetComponent<Rigidbody2D> ().AddForce (transform.right * 500);
+			if(player.transform.localScale.x > 0)
+			{
+				GetComponent<Rigidbody2D> ().AddForce (transform.right * 500);
+			}
+			else
+			{
+				Vector3 temp = transform.right;
+				temp.y = transform.right.y * -1;
+
+				GetComponent<Rigidbody2D> ().AddForce (temp * -500);
+			}
 
 			shot = true;
 		} 
@@ -89,24 +99,15 @@ public class GrappleHookScript : MonoBehaviour {
 		}
 
 
-
-		//Temporary until more solid solution.
 		//If the hook is fired and hits nothing set back to starting position.
-		//----------------
 		if(shot == true && collided == false)
-			timer += Time.fixedDeltaTime;
+			timer += Time.deltaTime;
 
-		if (timer >= .75f && shot == true && collided == false) 
+		if (timer >= .90f && shot == true && collided == false) 
 		{
 			shot = false;
 		}
-		//----------------
 
-//		if (shot == true && collided == true && playerReachedHook == false) 
-//		{
-//
-//		}
-	
 
 	}
 
@@ -117,7 +118,16 @@ public class GrappleHookScript : MonoBehaviour {
 		if (other.tag == "Wall" && shot == true) 
 		{
 			player.GetComponent<Rigidbody2D>().gravityScale = 0;
-			player.GetComponent<Rigidbody2D>().AddForce(transform.right * 500);
+
+			if(player.transform.localScale.x > 0)
+				player.GetComponent<Rigidbody2D>().AddForce(transform.right * 500);
+			else
+			{
+				Vector3 temp = transform.right;
+				temp.y = transform.right.y * -1;
+				player.GetComponent<Rigidbody2D>().AddForce(temp * -500);
+			}
+
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 			collided = true;
 		}
@@ -135,7 +145,18 @@ public class GrappleHookScript : MonoBehaviour {
 			verticalAnchorStruck = true;
 			collided = true;
 			player.GetComponent<Rigidbody2D>().gravityScale = 0;
-			player.GetComponent<Rigidbody2D>().velocity = new Vector2(10, 0);
+
+			if(player.transform.localScale.x > 0)
+				player.GetComponent<Rigidbody2D>().velocity = new Vector2(10, 0);
+			else
+				player.GetComponent<Rigidbody2D>().velocity = new Vector2(-10, 0);
+
+			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		}
+
+		if (other.tag == "Floor") 
+		{
+			shot = false;
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		}
 

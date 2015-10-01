@@ -12,8 +12,14 @@ public class RatBehavior : MonoBehaviour {
 	public float moveDist;
 	public GameObject player;
 	public bool ground;
+	public float particle;
+	public Color starter;
+	public AudioClip clip;
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
+		clip = GetComponent<AudioSource> ().clip;
+		starter = GetComponentInChildren<ParticleSystem> ().startColor;
 		home = transform.position;
 		moveSpeed = 2;
 		facing = true;
@@ -21,11 +27,13 @@ public class RatBehavior : MonoBehaviour {
 		atkTimer = 1.5f;
 		attacking = false;
 		ground = true;
+		particle = 2.0f;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		Launcher ();
 		if(player == null)
 			player = GameObject.FindGameObjectWithTag ("Player");
 
@@ -39,10 +47,24 @@ public class RatBehavior : MonoBehaviour {
 				Movement ();
 
 
+		if (attacking)
+		{
+			particle -= Time.fixedDeltaTime;
+
+			if (particle <= 0)
+			{
+				particle = 2.0f;
+				GetComponentInChildren<ParticleSystem>().startColor = starter;
+				GetComponentInChildren<ParticleSystem>().Play();
+			}
+
+		}
+
 
 
 		if (player.GetComponent<PlayerController> ().ratCount >= 5 && player.GetComponent<Invisiblilityscript> ().LightExposure() < 4) 
 		{
+			GetComponentInChildren<ParticleSystem>().startColor = Color.red;
 			killTimer -= Time.fixedDeltaTime;
 
 			if (killTimer <= 0) 
@@ -52,7 +74,7 @@ public class RatBehavior : MonoBehaviour {
 		} 
 		else
 		{
-			killTimer = 3.0f;
+			killTimer = 30.0f;
 		}
 	}
 
@@ -69,10 +91,11 @@ public class RatBehavior : MonoBehaviour {
 
 			if ((moveDist <= 0 && facing) || home.x + leash < transform.position.x) {
 				facing = false;
-
+				temp2.x *= -1;
 			} 
 			else if ((moveDist <= 0 && !facing) || home.x - leash > transform.position.x) {
 				facing = true;
+				temp2.x = Mathf.Abs(temp2.x);
 			}
 
 
@@ -87,36 +110,35 @@ public class RatBehavior : MonoBehaviour {
 	}
 	public void Attack()
 	{
-		if (player.GetComponent<Invisiblilityscript> ().LightExposure () < 4) 
-		{
-			Vector3 temp = transform.position;
-			temp.x = player.transform.position.x + Random.Range (-0.1f, 0.1f);
-			temp.y = player.transform.position.y + Random.Range (-0.1f, 0.1f);
-			transform.position = temp;
-		}
-		else
-		{
-			atkTimer -= Time.fixedDeltaTime;
-			if(atkTimer <= 0)
-			{
-				attacking = false;
-				Destroy(this.gameObject);
-				player.GetComponent<PlayerController>().moveSpeed += .5f;
-				player.GetComponent<PlayerController>().ratCount -= 1;
-			}
-			else
-			{
+		GetComponent<AudioSource> ().Play ();
+
+
+			if (player.GetComponent<Invisiblilityscript> ().LightExposure () < 4) {
 				Vector3 temp = transform.position;
 				temp.x = player.transform.position.x + Random.Range (-0.1f, 0.1f);
-				temp.y = player.transform.position.y + Random.Range (-.1f, 0.1f);
+				temp.y = player.transform.position.y + Random.Range (-0.1f, 0.1f);
 				transform.position = temp;
+			} else {
+				atkTimer -= Time.fixedDeltaTime;
+				if (atkTimer <= 0) {
+					attacking = false;
+					Destroy (this.gameObject);
+					player.GetComponent<PlayerController> ().moveSpeed += .5f;
+					player.GetComponent<PlayerController> ().ratCount -= 1;
+				} else {
+					Vector3 temp = transform.position;
+					temp.x = player.transform.position.x + Random.Range (-0.1f, 0.1f);
+					temp.y = player.transform.position.y + Random.Range (-.1f, 0.1f);
+					transform.position = temp;
+				}
 			}
-		}
-	}
 
+	}
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "Player") {
+		if (col.gameObject.tag == "Player") 
+		{
+			GetComponent<AudioSource>().PlayOneShot(clip);
 			GetComponentInChildren<BoxCollider2D> ().enabled = false;
 			attacking = true;
 			atkTimer = 1.5f;
@@ -129,11 +151,11 @@ public class RatBehavior : MonoBehaviour {
 	public void Launcher()
 	{
 		//test code
-		//if (Input.GetKeyDown (KeyCode.Backspace)) {
+		if (Input.GetKeyDown (KeyCode.Backspace)) {
 			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (1000f, 1000f));
 
 			ground = false;
-		//}
+		}
 	}
 
 
