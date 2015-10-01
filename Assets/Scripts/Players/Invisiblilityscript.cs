@@ -5,7 +5,7 @@ public enum LIGHT_LEVEL {invisible = 0, dark =1, shadow = 2, normal = 3, full = 
 
 public class Invisiblilityscript : MonoBehaviour {
 
-	public int curLight = 3;
+	public int curLight;
 	bool invisActive = false;
 	bool onCooldown = false;
 	public float duration = 3;
@@ -21,7 +21,7 @@ public class Invisiblilityscript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-
+		curLight = GetComponent<PlayerController> ().lightExpo;
 
 
 		if (invisActive) 

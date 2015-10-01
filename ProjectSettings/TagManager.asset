@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Loader
+  - Wall
+  - Floor
+  - PatrollingGuard
+  - Ladder
+  - Elevator
+  - Main Spawn
+  - chest
+  - Trap Door
+  - Exit
+  - Railing
   layers:
   - Default
   - TransparentFX

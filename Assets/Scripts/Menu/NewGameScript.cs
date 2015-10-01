@@ -29,6 +29,7 @@ public class NewGameScript : MonoBehaviour {
 	{
 		GetComponent<AudioSource>().PlayOneShot(sound);
 		yield return new WaitForSeconds (.3f);
-		Application.LoadLevel("tutorial");
+		//GameObject.FindGameObjectWithTag ("Loader").GetComponent<SceneLoader> ().lvl = 6;
+		Application.LoadLevel("Tutorial");
 	}
 }
