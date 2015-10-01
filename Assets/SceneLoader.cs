@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class SceneLoader : MonoBehaviour {
-	public int lvl;
+	public string lvl;
 
 	// Use this for initialization
 	void Start () {

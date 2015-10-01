@@ -4,7 +4,7 @@ using System.Collections;
 
 public class LevelDoorsBehavior : MonoBehaviour {
 	//  This is which level the door will take the player to
-	public int toLvl;
+	public string toLvl;
 
 	//  This is the condition that needs to be met for the door to open
 	public LVL_CMPLT condition;
@@ -28,7 +28,10 @@ public class LevelDoorsBehavior : MonoBehaviour {
 
 		if (player != null) {
 			if (player.GetComponent<PlayerController>().GetLadMovement() == LAD_MOVEMENT.UP)
-				Application.LoadLevel(toLvl);
+			{
+				GameObject.FindGameObjectWithTag("Loader").GetComponent<SceneLoader>().lvl = toLvl;
+				Application.LoadLevel("Loading Screen");
+			}
 		}
 	}
 
