@@ -101,8 +101,7 @@ public class LittleTimmy : MonoBehaviour {
 	public int KnockDown()
 	{
 		if (playerIsInvisible && playerInCollider && !beenPushedThisLevel && !timmyIsHiding) 
-		{
-			//  Store number of 
+		{ 
 			beenPushedThisLevel = true;
 
 			//  "Trip"
