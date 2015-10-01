@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour {
 
 	int level;
 
+	public AudioSource SFXVolume;
+
 	//  The us of a ladder involves locking x-axis movement
 	//bool horizLock;
 	//  and allowing the elevator to know whether the unit is moving up or down.
@@ -201,7 +203,13 @@ public class PlayerController : MonoBehaviour {
 		//if (method == TYPE_DEATH.MELEE)
 		  //this.GetComponent<Invisiblilityscript> ().SetExposure (0);
 
+		if (method == TYPE_DEATH.TRAP)
+			GetComponentInChildren<ParticleSystem> ().startColor = Color.green;
+		else
+			GetComponentInChildren<ParticleSystem> ().startColor = Color.red;
+
 		GetComponentInChildren<ParticleSystem> ().Play ();
+		SFXVolume.Play ();
 
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
 		lives--;
