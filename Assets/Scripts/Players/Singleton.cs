@@ -13,6 +13,7 @@ public class Singleton : MonoBehaviour {
 			//  Then instantiate one at the spawnpoint
 			Instantiate (prefab, 
 			             GameObject.FindGameObjectWithTag ("Main Spawn").transform.position, Quaternion.identity);
+
 		}
 
 		else 

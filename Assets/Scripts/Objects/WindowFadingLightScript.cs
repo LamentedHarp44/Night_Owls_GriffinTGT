@@ -5,6 +5,7 @@ public class WindowFadingLightScript : MonoBehaviour {
 
 	GameObject player;
 	public int lightLvl;
+
 	
 	// Use this for initialization
 	void Start () {

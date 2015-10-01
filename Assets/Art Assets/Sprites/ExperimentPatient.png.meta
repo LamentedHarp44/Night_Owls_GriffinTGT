@@ -1,0 +1,1111 @@
+fileFormatVersion: 2
+guid: bbd0458a9b7ec7847803620bdcb82f66
+timeCreated: 1443709932
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ExperimentPatient_0
+    21300002: ExperimentPatient_1
+    21300004: ExperimentPatient_2
+    21300006: ExperimentPatient_3
+    21300008: ExperimentPatient_4
+    21300010: ExperimentPatient_5
+    21300012: ExperimentPatient_6
+    21300014: ExperimentPatient_7
+    21300016: ExperimentPatient_8
+    21300018: ExperimentPatient_9
+    21300020: ExperimentPatient_10
+    21300022: ExperimentPatient_11
+    21300024: ExperimentPatient_12
+    21300026: ExperimentPatient_13
+    21300028: ExperimentPatient_14
+    21300030: ExperimentPatient_15
+    21300032: ExperimentPatient_16
+    21300034: ExperimentPatient_17
+    21300036: ExperimentPatient_18
+    21300038: ExperimentPatient_19
+    21300040: ExperimentPatient_20
+    21300042: ExperimentPatient_21
+    21300044: ExperimentPatient_22
+    21300046: ExperimentPatient_23
+    21300048: ExperimentPatient_24
+    21300050: ExperimentPatient_25
+    21300052: ExperimentPatient_26
+    21300054: ExperimentPatient_27
+    21300056: ExperimentPatient_28
+    21300058: ExperimentPatient_29
+    21300060: ExperimentPatient_30
+    21300062: ExperimentPatient_31
+    21300064: ExperimentPatient_32
+    21300066: ExperimentPatient_33
+    21300068: ExperimentPatient_34
+    21300070: ExperimentPatient_35
+    21300072: ExperimentPatient_36
+    21300074: ExperimentPatient_37
+    21300076: ExperimentPatient_38
+    21300078: ExperimentPatient_39
+    21300080: ExperimentPatient_40
+    21300082: ExperimentPatient_41
+    21300084: ExperimentPatient_42
+    21300086: ExperimentPatient_43
+    21300088: ExperimentPatient_44
+    21300090: ExperimentPatient_45
+    21300092: ExperimentPatient_46
+    21300094: ExperimentPatient_47
+    21300096: ExperimentPatient_48
+    21300098: ExperimentPatient_49
+    21300100: ExperimentPatient_50
+    21300102: ExperimentPatient_51
+    21300104: ExperimentPatient_52
+    21300106: ExperimentPatient_53
+    21300108: ExperimentPatient_54
+    21300110: ExperimentPatient_55
+    21300112: ExperimentPatient_56
+    21300114: ExperimentPatient_57
+    21300116: ExperimentPatient_58
+    21300118: ExperimentPatient_59
+    21300120: ExperimentPatient_60
+    21300122: ExperimentPatient_61
+    21300124: ExperimentPatient_62
+    21300126: ExperimentPatient_63
+    21300128: ExperimentPatient_64
+    21300130: ExperimentPatient_65
+    21300132: ExperimentPatient_66
+    21300134: ExperimentPatient_67
+    21300136: ExperimentPatient_68
+    21300138: ExperimentPatient_69
+    21300140: ExperimentPatient_70
+    21300142: ExperimentPatient_71
+    21300144: ExperimentPatient_72
+    21300146: ExperimentPatient_73
+    21300148: ExperimentPatient_74
+    21300150: ExperimentPatient_75
+    21300152: ExperimentPatient_76
+    21300154: ExperimentPatient_77
+    21300156: ExperimentPatient_78
+    21300158: ExperimentPatient_79
+    21300160: ExperimentPatient_80
+    21300162: ExperimentPatient_81
+    21300164: ExperimentPatient_82
+    21300166: ExperimentPatient_83
+    21300168: ExperimentPatient_84
+    21300170: ExperimentPatient_85
+    21300172: ExperimentPatient_86
+    21300174: ExperimentPatient_87
+    21300176: ExperimentPatient_88
+    21300178: ExperimentPatient_89
+    21300180: ExperimentPatient_90
+    21300182: ExperimentPatient_91
+    21300184: ExperimentPatient_92
+    21300186: ExperimentPatient_93
+    21300188: ExperimentPatient_94
+    21300190: ExperimentPatient_95
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ExperimentPatient_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 336
+        width: 29
+        height: 44
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 336
+        width: 31
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 336
+        width: 29
+        height: 44
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 336
+        width: 29
+        height: 41
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_4
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 336
+        width: 31
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 336
+        width: 29
+        height: 41
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_6
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 336
+        width: 23
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_7
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 336
+        width: 23
+        height: 43
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_8
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 336
+        width: 23
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_9
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 336
+        width: 29
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 336
+        width: 31
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_11
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 336
+        width: 29
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_12
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 288
+        width: 21
+        height: 44
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_13
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 288
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_14
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 288
+        width: 21
+        height: 44
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_15
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 288
+        width: 20
+        height: 41
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_16
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 288
+        width: 20
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_17
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 288
+        width: 20
+        height: 41
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_18
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 288
+        width: 20
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_19
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 288
+        width: 20
+        height: 43
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_20
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 288
+        width: 19
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_21
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 288
+        width: 28
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_22
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 288
+        width: 26
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_23
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 288
+        width: 28
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_24
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 240
+        width: 21
+        height: 44
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_25
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 240
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_26
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 240
+        width: 21
+        height: 44
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_27
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 240
+        width: 20
+        height: 41
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_28
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 240
+        width: 20
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_29
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 240
+        width: 20
+        height: 41
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_30
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 240
+        width: 20
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_31
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 240
+        width: 20
+        height: 43
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_32
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 240
+        width: 19
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_33
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 240
+        width: 28
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_34
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 240
+        width: 26
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_35
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 240
+        width: 28
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 29
+        height: 44
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 31
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_38
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 192
+        width: 29
+        height: 44
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_39
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 192
+        width: 29
+        height: 41
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_40
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 192
+        width: 31
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_41
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 192
+        width: 29
+        height: 41
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_42
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 192
+        width: 21
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_43
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 192
+        width: 23
+        height: 43
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_44
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 192
+        width: 21
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_45
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 192
+        width: 29
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_46
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 31
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_47
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 192
+        width: 29
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_48
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 144
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_49
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 144
+        width: 23
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_50
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 144
+        width: 23
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_51
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 144
+        width: 20
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_52
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 144
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_53
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 144
+        width: 19
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_54
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 144
+        width: 25
+        height: 44
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_55
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 144
+        width: 25
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_56
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 144
+        width: 25
+        height: 44
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_57
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 144
+        width: 23
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_58
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 144
+        width: 23
+        height: 43
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_59
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 144
+        width: 23
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_60
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 97
+        width: 19
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_61
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 97
+        width: 20
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_62
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 96
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_63
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 97
+        width: 19
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_64
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 97
+        width: 20
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_65
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 96
+        width: 19
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_66
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 96
+        width: 20
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_67
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 96
+        width: 20
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_68
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 96
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_69
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 97
+        width: 20
+        height: 40
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_70
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 97
+        width: 21
+        height: 41
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_71
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 96
+        width: 22
+        height: 41
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_72
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 49
+        width: 19
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_73
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 49
+        width: 20
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_74
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 48
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_75
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 49
+        width: 19
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_76
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 49
+        width: 20
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_77
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 48
+        width: 19
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_78
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 48
+        width: 20
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_79
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 48
+        width: 20
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_80
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 48
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_81
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 49
+        width: 21
+        height: 40
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_82
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 49
+        width: 21
+        height: 41
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_83
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 48
+        width: 22
+        height: 41
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_84
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_85
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_86
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_87
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 0
+        width: 20
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_88
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_89
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 19
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_90
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 0
+        width: 25
+        height: 44
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_91
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 0
+        width: 25
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_92
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0
+        width: 25
+        height: 44
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_93
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 0
+        width: 24
+        height: 41
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_94
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 0
+        width: 25
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExperimentPatient_95
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 0
+        width: 24
+        height: 41
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
