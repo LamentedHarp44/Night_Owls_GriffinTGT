@@ -56,7 +56,6 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		mainSpawn = GameObject.FindGameObjectWithTag ("Main Spawn").transform;
 		moveSpeed = 5.0f;
 		onLadder = false;
 		usable = null;
@@ -266,7 +265,7 @@ public class PlayerController : MonoBehaviour {
 		if (col.gameObject.tag != "Enemy" && col.gameObject.tag != "Floor")
 			usable = col.gameObject;
 
-		if (col.gameObject.tag == "Floor" || col.gameObject.tag == "chest") 
+		if (col.gameObject.tag == "Floor" || col.gameObject.tag == "chest" || col.gameObject.tag == "Crate") 
 		{
 			jumpNumber = 0;
 			grounded = true;
