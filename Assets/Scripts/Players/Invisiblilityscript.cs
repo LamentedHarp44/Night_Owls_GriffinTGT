@@ -52,6 +52,11 @@ public class Invisiblilityscript : MonoBehaviour {
 		curLight = i;
 	}
 
+	public bool IsActive()
+	{
+		return invisActive;
+	}
+
 	public void Invisibility()
 	{
 		if (!onCooldown && !invisActive) 

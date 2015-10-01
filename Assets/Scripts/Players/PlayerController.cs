@@ -15,10 +15,12 @@ public class PlayerController : MonoBehaviour {
 	public int lightExpo;
 	Transform mainSpawn;
 	public LVL_CMPLT lastCompleted = LVL_CMPLT.NONE;
-
+	public int ratCount;
 	public int lives;
 	//public int lightLevel;
-
+	
+	//  Little Timmy needs to know how many times Griffin has pushed him down
+	public int numPush;
 	//Jump variables
 	float jumpForce = 600f;
 	public bool grounded;
@@ -54,6 +56,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		mainSpawn = GameObject.FindGameObjectWithTag ("Main Spawn").transform;
 		moveSpeed = 5.0f;
 		onLadder = false;
 		usable = null;
@@ -70,7 +73,11 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		
+		if (mainSpawn == null) 
+		{
+			mainSpawn = GameObject.FindGameObjectWithTag ("Main Spawn").transform;
+			transform.position = mainSpawn.transform.position;
+		}
 		if(GetComponentInChildren<GrappleHookScript>().shot == false)
 			Movement ();
 
@@ -81,7 +88,7 @@ public class PlayerController : MonoBehaviour {
 			GetComponent<Invisiblilityscript> ().Invisibility ();
 			//cooled=true;
 			//Debug.Log("pressed");
-			cooldown.GetComponent<CoolDownHud> ().coolDown ();
+			//cooldown.GetComponent<CoolDownHud> ().coolDown ();
 		}
 
 		//call plug menu
@@ -237,10 +244,20 @@ public class PlayerController : MonoBehaviour {
 		if (usable == null)
 			return;
 
-		if (usable.tag == "chest") 
+		if (usable.tag == "chest") {
+			if (usable.GetComponent<containerscript> ().inUse () <= 0)
+				loot += usable.GetComponent<containerscript> ().Payout ();
+		} 
+		else if (usable.tag == "Little Timmy") 
 		{
-			if(usable.GetComponent<containerscript>().inUse() <= 0)
-				loot += usable.GetComponent<containerscript>().Payout();
+			int temp = 0;
+			temp += usable.GetComponent<LittleTimmy>().KnockDown();
+			if (temp > 0)
+			{
+				loot += temp;
+				
+				numPush += 1;
+			}
 		}
 	}
 
@@ -254,11 +271,21 @@ public class PlayerController : MonoBehaviour {
 			jumpNumber = 0;
 			grounded = true;
 		}
+
+
 	}
 
 	void OnCollisionExit2D(Collision2D col)
 	{
 		usable = null;
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.CompareTag("Little Timmy")) 
+		{
+			usable = other.gameObject;
+		}
 	}
 
 	void OnTriggerStay2D(Collider2D other)
