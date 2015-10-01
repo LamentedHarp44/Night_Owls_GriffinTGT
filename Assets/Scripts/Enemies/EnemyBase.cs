@@ -31,7 +31,7 @@ public abstract class EnemyBase : MonoBehaviour {
 	//  which behaviors each unit needs to use.
 	//  Parameters:		All functions take a GameObject reference to access
 	//					the player's light exposure, position, and invisibility
-	//					perk informaation.
+	//					perk information.
 	//  The PatrolBehavior() must always be overwritten by the child
 	public abstract void PatrolBehavior (GameObject player);
 

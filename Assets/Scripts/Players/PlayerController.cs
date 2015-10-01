@@ -7,6 +7,7 @@ public enum LVL_CMPLT {TUTORIAL, LVL_ONE, LVL_TWO, LVL_THREE, LVL_FOUR, LVL_FIVE
 
 public class PlayerController : MonoBehaviour {
 	public float moveSpeed;
+	public bool moving;
 	public bool onLadder;
 	public int loot;
 	public GameObject usable;
@@ -62,7 +63,8 @@ public class PlayerController : MonoBehaviour {
 		//lightLevel = 0;
 		grounded = true;
 		level = Application.loadedLevel;
-
+		lightExpo = 0;
+		moving = false;
 	}
 	
 	// Update is called once per frame
@@ -152,20 +154,20 @@ public class PlayerController : MonoBehaviour {
 		//  If there is anything limiting the player's horizontal movement
 		//		(i.e. being on a ladder)
 		//  lock their horizontal controls
-		if (Input.GetKey ("a")) 
-		{
+		if (Input.GetKey ("a")) {
 			temp.x -= moveSpeed * Time.fixedDeltaTime;
 
 			facingRight = false;
-			Flip(facingRight);
-		} 
-		else if (Input.GetKey ("d")) 
-		{
+			Flip (facingRight);
+			moving = true;
+		} else if (Input.GetKey ("d")) {
 			temp.x += moveSpeed * Time.fixedDeltaTime;
 
 			facingRight = true;
-			Flip(facingRight);
-		}
+			Flip (facingRight);
+			moving = true;
+		} else
+			moving = false;
 
 		if (Input.GetKey("w"))
 			ladMove = LAD_MOVEMENT.UP;
