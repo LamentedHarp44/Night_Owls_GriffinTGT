@@ -7,12 +7,13 @@ public enum LVL_CMPLT {TUTORIAL, LVL_ONE, LVL_TWO, LVL_THREE, LVL_FOUR, LVL_FIVE
 
 public class PlayerController : MonoBehaviour {
 	public float moveSpeed;
+	public bool moving;
 	public bool onLadder;
 	public int loot;
 	public GameObject usable, timmy;
 	char upgrades;
 	public int lightExpo;
-	public Transform mainSpawn;
+	Transform mainSpawn;
 	public LVL_CMPLT lastCompleted = LVL_CMPLT.NONE;
 	public int ratCount;
 	public int lives;
@@ -29,6 +30,8 @@ public class PlayerController : MonoBehaviour {
 	bool facingRight;
 
 	int level;
+
+	public AudioSource SFXVolume;
 
 	//  The us of a ladder involves locking x-axis movement
 	//bool horizLock;
@@ -57,11 +60,14 @@ public class PlayerController : MonoBehaviour {
 		moveSpeed = 5.0f;
 		onLadder = false;
 		usable = null;
+		mainSpawn = GameObject.FindWithTag ("Main Spawn").GetComponent<Transform>();
 		transform.position = mainSpawn.transform.position;
 		lives = 3;
 		//lightLevel = 0;
 		grounded = true;
 		level = Application.loadedLevel;
+		lightExpo = 0;
+		moving = false;
 	}
 	
 	// Update is called once per frame
@@ -155,20 +161,20 @@ public class PlayerController : MonoBehaviour {
 		//  If there is anything limiting the player's horizontal movement
 		//		(i.e. being on a ladder)
 		//  lock their horizontal controls
-		if (Input.GetKey ("a")) 
-		{
+		if (Input.GetKey ("a")) {
 			temp.x -= moveSpeed * Time.fixedDeltaTime;
 
 			facingRight = false;
-			Flip(facingRight);
-		} 
-		else if (Input.GetKey ("d")) 
-		{
+			Flip (facingRight);
+			moving = true;
+		} else if (Input.GetKey ("d")) {
 			temp.x += moveSpeed * Time.fixedDeltaTime;
 
 			facingRight = true;
-			Flip(facingRight);
-		}
+			Flip (facingRight);
+			moving = true;
+		} else
+			moving = false;
 
 		if (Input.GetKey("w"))
 			ladMove = LAD_MOVEMENT.UP;
@@ -206,7 +212,13 @@ public class PlayerController : MonoBehaviour {
 		//if (method == TYPE_DEATH.MELEE)
 		  //this.GetComponent<Invisiblilityscript> ().SetExposure (0);
 
+		if (method == TYPE_DEATH.TRAP)
+			GetComponentInChildren<ParticleSystem> ().startColor = Color.green;
+		else
+			GetComponentInChildren<ParticleSystem> ().startColor = Color.red;
+
 		GetComponentInChildren<ParticleSystem> ().Play ();
+		SFXVolume.Play ();
 
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
 		lives--;

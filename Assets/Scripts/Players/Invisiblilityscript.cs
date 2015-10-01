@@ -14,14 +14,15 @@ public class Invisiblilityscript : MonoBehaviour {
 	public float fullCooldown = 30;
 	
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+	{
+		
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		curLight = GetComponent<PlayerController> ().lightExpo;
+		//curLight = GetComponent<PlayerController> ().lightExpo;
 
 
 		if (invisActive) 
