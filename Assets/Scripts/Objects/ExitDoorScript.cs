@@ -7,7 +7,8 @@ public class ExitDoorScript : MonoBehaviour {
 	public bool Lock = true;
 	public AudioClip sound;
 	float playCount = 0f;
-	public int nxtlvl;
+	public string nxtlvl = "Hub World";
+	public LVL_CMPLT currLvl;
 
 	// Use this for initialization
 	void Start () 
@@ -31,9 +32,9 @@ public class ExitDoorScript : MonoBehaviour {
 	{
 		if (other.tag == "Player" && Lock == false) 
 		{
-			other.GetComponent<PlayerController>().lastCompleted = LVL_CMPLT.TUTORIAL;
-
-			Application.LoadLevel(nxtlvl);
+			other.GetComponent<PlayerController>().lastCompleted = currLvl;
+			GameObject.FindGameObjectWithTag("Loader").GetComponent<SceneLoader>().lvl = nxtlvl;
+			Application.LoadLevel("Loading Screen");
 		}
 	}
 
