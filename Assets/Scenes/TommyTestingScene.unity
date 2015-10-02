@@ -1901,11 +1901,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 413356, guid: 52078642029c6664ab9989a34200c9f8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 11.3900003
+      value: 8.18000031
       objectReference: {fileID: 0}
     - target: {fileID: 413356, guid: 52078642029c6664ab9989a34200c9f8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.39999998
+      value: -.579999983
       objectReference: {fileID: 0}
     - target: {fileID: 413356, guid: 52078642029c6664ab9989a34200c9f8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2760,6 +2760,7 @@ MonoBehaviour:
   onLadder: 0
   loot: 0
   usable: {fileID: 0}
+  timmy: {fileID: 0}
   lightExpo: 0
   lastCompleted: 10
   ratCount: 0
