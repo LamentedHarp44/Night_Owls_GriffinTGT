@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 921f2cd251fba9645a3a11e376a5dd32
-timeCreated: 1443131223
+timeCreated: 1443846638
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -59,7 +59,7 @@ TextureImporter:
         width: 115
         height: 289
       alignment: 9
-      pivot: {x: .0399712175, y: .302317649}
+      pivot: {x: .50000006, y: .0295387693}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CheckPoints_1
       rect:
@@ -69,7 +69,7 @@ TextureImporter:
         width: 104
         height: 286
       alignment: 9
-      pivot: {x: .0453831591, y: .311724305}
+      pivot: {x: .496843189, y: .0252565034}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

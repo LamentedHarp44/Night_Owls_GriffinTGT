@@ -23,7 +23,7 @@ public class Invisiblilityscript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		//curLight = GetComponent<PlayerController> ().lightExpo;
+		curLight = GetComponent<PlayerController> ().lightExpo;
 
 
 		if (invisActive) 

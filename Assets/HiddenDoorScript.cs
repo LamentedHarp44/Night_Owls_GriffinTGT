@@ -8,12 +8,14 @@ public class HiddenDoorScript : MonoBehaviour {
 	GameObject grappleGun;
 	GameObject grappleHook;
 	bool goHiding;
+	public bool hiding;
 	float inputCount;
 
 	// Use this for initialization
 	void Start () 
 	{
 		goHiding = false;
+		hiding = false;
 		inputCount = 0;
 		player = GameObject.FindWithTag ("Player");
 		anim = player.GetComponent<Animator> ();
@@ -25,15 +27,20 @@ public class HiddenDoorScript : MonoBehaviour {
 	void Update () 
 	{
 
+
+
 		if (goHiding == true) 
 		{
 			if(Input.GetKeyDown(KeyCode.E) && inputCount == 0)
 			{
 				ActivateHiding();
+				hiding = true;
+				player.GetComponent<PlayerController> ().lightExpo = 0;
 			}
 			else if (Input.GetKeyDown(KeyCode.E) && inputCount == 1)
 			{
 				DeactivateHiding();
+				hiding = false;
 			}
 
 		}
@@ -72,7 +79,7 @@ public class HiddenDoorScript : MonoBehaviour {
 		grappleHook.GetComponent<GrappleHookScript>().enabled = false;
 	}
 
-	void DeactivateHiding()
+	public void DeactivateHiding()
 	{
 		anim.SetBool("Hidden", false);
 		inputCount = 0;
