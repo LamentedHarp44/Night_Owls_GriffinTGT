@@ -12,11 +12,12 @@ public class Invisiblilityscript : MonoBehaviour {
 	public float fullDuration = 3;
 	public float cooldown = 0;
 	public float fullCooldown = 30;
+	Animator anim;
 	
 	// Use this for initialization
 	void Start () 
 	{
-		
+		anim = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -28,8 +29,10 @@ public class Invisiblilityscript : MonoBehaviour {
 		if (invisActive) 
 		{
 			duration -= Time.deltaTime;
+			anim.SetBool("Invisible", true);
 			if(duration <= 0)
 			{
+				anim.SetBool("Invisible", false);
 				invisActive = false;
 				duration = fullDuration;
 				onCooldown = true;

@@ -17,6 +17,13 @@ TagManager:
   - Railing
   - Anchor
   - Little Timmy
+  - VerticalAnchor
+  - ADRange
+  - Crate
+  - CraneTop
+  - HiddenDoor
+  - GrappleGun
+  - GrappleHook
   layers:
   - Default
   - TransparentFX
