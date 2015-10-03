@@ -238,7 +238,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 406046, guid: 16f3d4189c3fe1c45a165b21f53d1be6, type: 2}
       propertyPath: m_RootOrder
-      value: 24
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 130376, guid: 16f3d4189c3fe1c45a165b21f53d1be6, type: 2}
       propertyPath: m_Name
@@ -469,7 +469,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 448276, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 180260, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
       propertyPath: m_Name
@@ -547,7 +547,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 412462, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 190740, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
       propertyPath: m_Name
@@ -635,7 +635,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413356, guid: 52078642029c6664ab9989a34200c9f8, type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52078642029c6664ab9989a34200c9f8, type: 2}
@@ -892,7 +892,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 426992, guid: 0d342ffa94e88e04abe70ecc25180dca, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11409638, guid: 0d342ffa94e88e04abe70ecc25180dca, type: 2}
       propertyPath: spawnpoint
@@ -1005,7 +1005,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 490688, guid: 96543900ac6559e47b0ddae534c00cbb, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 148324, guid: 96543900ac6559e47b0ddae534c00cbb, type: 2}
       propertyPath: m_Name
@@ -1018,7 +1018,7 @@ Prefab:
     - target: {fileID: 11429368, guid: 96543900ac6559e47b0ddae534c00cbb, type: 2}
       propertyPath: soundEFX
       value: 
-      objectReference: {fileID: 2019914438}
+      objectReference: {fileID: 1151557729}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 96543900ac6559e47b0ddae534c00cbb, type: 2}
   m_IsPrefabParent: 0
@@ -1059,7 +1059,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 412462, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
@@ -1101,7 +1101,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 490688, guid: 96543900ac6559e47b0ddae534c00cbb, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11429368, guid: 96543900ac6559e47b0ddae534c00cbb, type: 2}
       propertyPath: trapDoor
@@ -1110,7 +1110,7 @@ Prefab:
     - target: {fileID: 11429368, guid: 96543900ac6559e47b0ddae534c00cbb, type: 2}
       propertyPath: soundEFX
       value: 
-      objectReference: {fileID: 2019914438}
+      objectReference: {fileID: 1151557729}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 96543900ac6559e47b0ddae534c00cbb, type: 2}
   m_IsPrefabParent: 0
@@ -1151,7 +1151,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 448276, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 180260, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
       propertyPath: m_Name
@@ -1208,7 +1208,7 @@ GameObject:
   - 61: {fileID: 489293736}
   m_Layer: 5
   m_Name: Floor (4)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1301,7 +1301,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 412462, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 190740, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
       propertyPath: m_Name
@@ -1415,7 +1415,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 404830, guid: c38babb644894dd4f940e904afbbed36, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 147952, guid: c38babb644894dd4f940e904afbbed36, type: 2}
       propertyPath: m_Name
@@ -1520,7 +1520,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 461206, guid: 3271e255daa6b1c42a43cc49c5d0772c, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 140248, guid: 3271e255daa6b1c42a43cc49c5d0772c, type: 2}
       propertyPath: m_Name
@@ -1561,56 +1561,6 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 461206, guid: 3271e255daa6b1c42a43cc49c5d0772c, type: 2}
   m_PrefabInternal: {fileID: 1533493608}
---- !u!1001 &726674425
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 870344875}
-    m_Modifications:
-    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 4.06000042
-      objectReference: {fileID: 0}
-    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: .0700000226
-      objectReference: {fileID: 0}
-    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 119754, guid: 3269292b335994244bae485f5d5486a5, type: 2}
-      propertyPath: m_Name
-      value: Sound EFX Volume (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5, type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 0e22da06a6accb644aba27aa45d5a5e3, type: 3}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 3269292b335994244bae485f5d5486a5, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &752444352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,7 +1658,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 458146, guid: 8884163dd59413b4e925aab2e9b4cc97, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 11493886, guid: 8884163dd59413b4e925aab2e9b4cc97, type: 2}
       propertyPath: nxtlvl
@@ -1763,10 +1713,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8659f65cfd320242a096d5cee651f88, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &870344875 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 426992, guid: 0d342ffa94e88e04abe70ecc25180dca, type: 2}
-  m_PrefabInternal: {fileID: 331721195}
 --- !u!1 &871011509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,7 +1872,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 403932, guid: 097c230df6f415d459b07d7bb97bc7b7, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 140674, guid: 097c230df6f415d459b07d7bb97bc7b7, type: 2}
       propertyPath: m_Name
@@ -2121,6 +2067,10 @@ Prefab:
       propertyPath: m_Name
       value: Sound EFX Volume check point
       objectReference: {fileID: 0}
+    - target: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0e22da06a6accb644aba27aa45d5a5e3, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3269292b335994244bae485f5d5486a5, type: 2}
   m_IsPrefabParent: 0
@@ -2136,7 +2086,7 @@ GameObject:
   - 61: {fileID: 1058310504}
   m_Layer: 5
   m_Name: Floor (6)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2322,6 +2272,11 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5daa90b162b305f489c6e6a45fddb485, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!82 &1151557729 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1361855654}
 --- !u!1 &1164950419 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 147952, guid: c38babb644894dd4f940e904afbbed36, type: 2}
@@ -2363,7 +2318,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 404830, guid: c38babb644894dd4f940e904afbbed36, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 404830, guid: c38babb644894dd4f940e904afbbed36, type: 2}
       propertyPath: m_LocalScale.y
@@ -2464,7 +2419,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 446438, guid: a82bf2d1734999b40b863dc7986f4ace, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 11493730, guid: a82bf2d1734999b40b863dc7986f4ace, type: 2}
       propertyPath: soundEFX
@@ -2709,12 +2664,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
       propertyPath: m_RootOrder
-      value: 26
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 119754, guid: 3269292b335994244bae485f5d5486a5, type: 2}
       propertyPath: m_Name
       value: Sound EFX Volume Switch
       objectReference: {fileID: 0}
+    - target: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c4ddf852a7e3b09448a5378206784a41, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3269292b335994244bae485f5d5486a5, type: 2}
   m_IsPrefabParent: 0
@@ -2810,7 +2769,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 448712, guid: b8659f65cfd320242a096d5cee651f88, type: 2}
       propertyPath: m_RootOrder
-      value: 29
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8659f65cfd320242a096d5cee651f88, type: 2}
@@ -2985,6 +2944,10 @@ Prefab:
       propertyPath: m_Name
       value: Sound EFX Volume potion
       objectReference: {fileID: 0}
+    - target: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a6bf388314d46247b77e333b721f641, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3269292b335994244bae485f5d5486a5, type: 2}
   m_IsPrefabParent: 0
@@ -3135,7 +3098,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 403932, guid: 097c230df6f415d459b07d7bb97bc7b7, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 403932, guid: 097c230df6f415d459b07d7bb97bc7b7, type: 2}
       propertyPath: m_LocalScale.x
@@ -3399,7 +3362,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 478870, guid: b25dbd1f0ff714f45b521bb85b076c99, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 11480538, guid: b25dbd1f0ff714f45b521bb85b076c99, type: 2}
       propertyPath: Player
@@ -3445,7 +3408,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 448276, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 10893896, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
       propertyPath: m_Intensity
@@ -3474,7 +3437,7 @@ GameObject:
   - 61: {fileID: 1782822055}
   m_Layer: 5
   m_Name: Floor (5)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3873,7 +3836,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 461206, guid: 3271e255daa6b1c42a43cc49c5d0772c, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11450516, guid: 3271e255daa6b1c42a43cc49c5d0772c, type: 2}
       propertyPath: prefab
