@@ -26,11 +26,14 @@ public class LadderBehavior : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		if (!coll.CompareTag ("Untagged")) 
+		if (!coll.CompareTag ("GrappleGun") && !coll.CompareTag("GrappleHook") && !coll.CompareTag("Untagged")) 
 		{
+			if (elevators.Count != 0)
+			{
 			for (int i = 0; i < elevators.Count; ++i) {
-				if (elevators [i].gameObject.GetComponent<ElevatorBehavior> ().user == coll.gameObject)
+				if (elevators[i] != null && elevators[i] != null && elevators [i].gameObject.GetComponent<ElevatorBehavior> ().user == coll.gameObject)
 					return;
+			}
 			}
 			//  The temporary elevator will spawn at the unit's feet, and then
 			//  be added to the elevators array.
@@ -55,21 +58,25 @@ public class LadderBehavior : MonoBehaviour {
 		}
 	}
 
+
 	void OnTriggerExit2D(Collider2D coll)
 	{
-		if (!coll.CompareTag("Untagged"))
-			for (int i = 0; i <= elevators.Count; ++i) 
-			{
-				if (elevators [i].gameObject.GetComponent<ElevatorBehavior> ().user == coll.gameObject) {
-					DestroyElevator (elevators [i]);
+		if (!coll.CompareTag ("GrappleGun") && !coll.CompareTag("GrappleHook") && !coll.CompareTag("Untagged"))
+		if (elevators.Count > 0) {
+			for (int i = 0; i < elevators.Count; ++i) {
+				if (elevators [i] != null && elevators [i].gameObject.GetComponent<ElevatorBehavior> ().user != null) {
+					if (elevators [i].gameObject.GetComponent<ElevatorBehavior> ().user == coll.gameObject) {
+						DestroyElevator (elevators [i], i);
+					}
 				}
 			}
+		}
 	}
 
 	//  This function will delete an elevator that is no longer in use
-	void DestroyElevator(GameObject elev)
+	void DestroyElevator(GameObject elev, int index)
 	{
 		Destroy (elev);
-		elevators.Remove (elev);
+		elevators.RemoveAt (index);
 	}
 }

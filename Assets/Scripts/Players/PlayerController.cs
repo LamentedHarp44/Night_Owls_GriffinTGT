@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour {
 
 	int level;
 
-	public AudioSource SFXVolume;
+	AudioSource SFXVolume;
 
 	//  The us of a ladder involves locking x-axis movement
 	//bool horizLock;
@@ -76,6 +76,9 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		if (SFXVolume == null)
+			SFXVolume = GameObject.FindGameObjectWithTag ("Player Audio").GetComponentInChildren<AudioSource> ();
+
 		//Telling the player script it is hiding in a hidden door.
 		if(hiddenDoor != null)
 			hiding = hiddenDoor.GetComponent<HiddenDoorScript> ().hiding;
@@ -226,14 +229,15 @@ public class PlayerController : MonoBehaviour {
 			GetComponentInChildren<ParticleSystem> ().startColor = Color.red;
 
 		GetComponentInChildren<ParticleSystem> ().Play ();
-		SFXVolume.Play ();
+		if (SFXVolume != null)
+			SFXVolume.Play ();
 
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
 		lives--;
 		StartCoroutine (PlayerDeadRespawn());
 		if (lives == 0) 
 		{
-			Destroy(this);
+			//Destroy(this);
 			Application.LoadLevel(level);
 			lives = 3;
 		}
@@ -296,9 +300,9 @@ public class PlayerController : MonoBehaviour {
 		if (other.gameObject.CompareTag("Little Timmy"))
 			timmy = other.gameObject;
 
-		if (other.tag == "HiddenDoor") 
+		if (other.CompareTag ("HiddenDoor")) 
 		{
-			hiddenDoor = GameObject.FindWithTag ("HiddenDoor");
+			hiddenDoor = other.gameObject;
 		}
 	}
 
@@ -308,12 +312,17 @@ public class PlayerController : MonoBehaviour {
 		{
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		}
+
+
 	}
 
 	void OnTriggerExit2D(Collider2D other)
 	{
 		if (other.gameObject.CompareTag("Little Timmy"))
 			timmy = null;
+
+		if (other.CompareTag ("HiddenDoor"))
+			hiddenDoor = null;
 	}
 
 
