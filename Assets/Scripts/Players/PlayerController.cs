@@ -8,9 +8,11 @@ public enum LVL_CMPLT {TUTORIAL, LVL_ONE, LVL_TWO, LVL_THREE, LVL_FOUR, LVL_FIVE
 public class PlayerController : MonoBehaviour {
 	public float moveSpeed;
 	public bool moving;
+	public bool hiding;
 	public bool onLadder;
 	public int loot;
 	public GameObject usable, timmy;
+	GameObject hiddenDoor;
 	char upgrades;
 	public int lightExpo;
 	Transform mainSpawn;
@@ -68,11 +70,16 @@ public class PlayerController : MonoBehaviour {
 		level = Application.loadedLevel;
 		lightExpo = 0;
 		moving = false;
+		hiding = false;
+		hiddenDoor = GameObject.FindWithTag ("HiddenDoor");
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		//Telling the player script it is hiding in a hidden door.
+		hiding = hiddenDoor.GetComponent<HiddenDoorScript> ().hiding;
+
 		if (mainSpawn == null) 
 		{
 			mainSpawn = GameObject.FindGameObjectWithTag ("Main Spawn").transform;
@@ -236,6 +243,7 @@ public class PlayerController : MonoBehaviour {
 	{
 
 		yield return new WaitForSeconds (.5f);
+		hiddenDoor.GetComponent<HiddenDoorScript> ().DeactivateHiding ();
 		transform.position = mainSpawn.transform.position;
 	}
 
@@ -266,7 +274,7 @@ public class PlayerController : MonoBehaviour {
 		if (col.gameObject.tag != "Enemy" && col.gameObject.tag != "Floor")
 			usable = col.gameObject;
 
-		if (col.gameObject.tag == "Floor" || col.gameObject.tag == "chest") 
+		if (col.gameObject.tag == "Floor" || col.gameObject.tag == "chest" || col.gameObject.tag == "Crate") 
 		{
 			jumpNumber = 0;
 			grounded = true;
