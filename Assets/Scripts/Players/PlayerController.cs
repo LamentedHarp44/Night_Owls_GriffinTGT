@@ -56,13 +56,13 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		mainSpawn = GameObject.FindGameObjectWithTag ("Main Spawn").transform;
 		moveSpeed = 5.0f;
 		onLadder = false;
 		usable = null;
 		mainSpawn = GameObject.FindWithTag ("Main Spawn").GetComponent<Transform>();
 		transform.position = mainSpawn.transform.position;
 		lives = 3;
+		SFXVolume = GetComponentInChildren<AudioSource> ();
 		//lightLevel = 0;
 		grounded = true;
 		level = Application.loadedLevel;
