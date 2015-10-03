@@ -24,6 +24,7 @@ TagManager:
   - HiddenDoor
   - GrappleGun
   - GrappleHook
+  - Player Audio
   layers:
   - Default
   - TransparentFX

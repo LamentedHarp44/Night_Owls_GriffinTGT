@@ -26,12 +26,12 @@ public class LadderBehavior : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		if (!coll.CompareTag ("Untagged")) 
+		if (!coll.CompareTag ("GrappleGun") && !coll.CompareTag("GrappleHook") && !coll.CompareTag("Untagged")) 
 		{
 			if (elevators.Count != 0)
 			{
 			for (int i = 0; i < elevators.Count; ++i) {
-				if (elevators[i] != null && elevators [i].gameObject.GetComponent<ElevatorBehavior> ().user == coll.gameObject)
+				if (elevators[i] != null && elevators[i] != null && elevators [i].gameObject.GetComponent<ElevatorBehavior> ().user == coll.gameObject)
 					return;
 			}
 			}
@@ -61,7 +61,7 @@ public class LadderBehavior : MonoBehaviour {
 
 	void OnTriggerExit2D(Collider2D coll)
 	{
-		if (!coll.CompareTag ("Untagged"))
+		if (!coll.CompareTag ("GrappleGun") && !coll.CompareTag("GrappleHook") && !coll.CompareTag("Untagged"))
 		if (elevators.Count > 0) {
 			for (int i = 0; i < elevators.Count; ++i) {
 				if (elevators [i] != null && elevators [i].gameObject.GetComponent<ElevatorBehavior> ().user != null) {

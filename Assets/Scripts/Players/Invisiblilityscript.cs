@@ -5,7 +5,7 @@ public enum LIGHT_LEVEL {invisible = 0, dark =1, shadow = 2, normal = 3, full = 
 
 public class Invisiblilityscript : MonoBehaviour {
 
-	public int curLight;
+	PlayerController controller;
 	bool invisActive = false;
 	bool onCooldown = false;
 	public float duration = 3;
@@ -23,7 +23,8 @@ public class Invisiblilityscript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		curLight = GetComponent<PlayerController> ().lightExpo;
+		if (controller == null)
+			controller = gameObject.GetComponent<PlayerController> ();
 
 
 		if (invisActive) 
@@ -36,7 +37,7 @@ public class Invisiblilityscript : MonoBehaviour {
 				invisActive = false;
 				duration = fullDuration;
 				onCooldown = true;
-				curLight += 1;
+				controller.lightExpo += 1;
 			}
 		}
 		if (onCooldown) 
@@ -52,7 +53,7 @@ public class Invisiblilityscript : MonoBehaviour {
 
 	public void SetExposure(int i)
 	{
-		curLight = i;
+		controller.lightExpo = i;
 	}
 
 	public bool IsActive()
@@ -65,16 +66,19 @@ public class Invisiblilityscript : MonoBehaviour {
 		if (!onCooldown && !invisActive) 
 		{
 			invisActive = true;
-			curLight -= 1;
-			if (curLight < 0)
-				curLight = 0;
+			controller.lightExpo -= 1;
+			if (controller.lightExpo < 0)
+				controller.lightExpo = 0;
 		}
 
 	}
 
 	public int LightExposure()
 	{
-		return curLight;
+		if (controller != null)
+			return controller.lightExpo;
+		else
+			return 0;
 	}
 
 	public bool IsOnCoolDown(){

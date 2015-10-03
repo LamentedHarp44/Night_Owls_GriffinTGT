@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour {
 
 	int level;
 
-	public AudioSource SFXVolume;
+	AudioSource SFXVolume;
 
 	//  The us of a ladder involves locking x-axis movement
 	//bool horizLock;
@@ -64,20 +64,23 @@ public class PlayerController : MonoBehaviour {
 		mainSpawn = GameObject.FindWithTag ("Main Spawn").GetComponent<Transform>();
 		transform.position = mainSpawn.transform.position;
 		lives = 3;
-		SFXVolume = GetComponentInChildren<AudioSource> ();
 		//lightLevel = 0;
 		grounded = true;
 		level = Application.loadedLevel;
 		lightExpo = 0;
 		moving = false;
 		hiding = false;
-		hiddenDoor = GameObject.FindWithTag ("HiddenDoor");
+		//hiddenDoor = GameObject.FindWithTag ("HiddenDoor");
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		if (SFXVolume == null)
+			SFXVolume = GameObject.FindGameObjectWithTag ("Player Audio").GetComponentInChildren<AudioSource> ();
+
 		//Telling the player script it is hiding in a hidden door.
+		if (hiddenDoor != null)
 		hiding = hiddenDoor.GetComponent<HiddenDoorScript> ().hiding;
 
 		if (mainSpawn == null) 
@@ -225,6 +228,7 @@ public class PlayerController : MonoBehaviour {
 			GetComponentInChildren<ParticleSystem> ().startColor = Color.red;
 
 		GetComponentInChildren<ParticleSystem> ().Play ();
+		if (SFXVolume != null)
 		SFXVolume.Play ();
 
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
@@ -232,7 +236,7 @@ public class PlayerController : MonoBehaviour {
 		StartCoroutine (PlayerDeadRespawn());
 		if (lives == 0) 
 		{
-			Destroy(this);
+			//Destroy(this);
 			Application.LoadLevel(level);
 			lives = 3;
 		}
@@ -243,7 +247,8 @@ public class PlayerController : MonoBehaviour {
 	{
 
 		yield return new WaitForSeconds (.5f);
-		hiddenDoor.GetComponent<HiddenDoorScript> ().DeactivateHiding ();
+		if(hiddenDoor != null)
+			hiddenDoor.GetComponent<HiddenDoorScript> ().DeactivateHiding ();
 		transform.position = mainSpawn.transform.position;
 	}
 
@@ -292,6 +297,11 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag("Little Timmy"))
 			timmy = other.gameObject;
+
+		if (other.CompareTag ("HiddenDoor")) 
+		{
+			hiddenDoor = other.gameObject;
+		}
 	}
 
 	void OnTriggerStay2D(Collider2D other)
@@ -300,12 +310,17 @@ public class PlayerController : MonoBehaviour {
 		{
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		}
+
+
 	}
 
 	void OnTriggerExit2D(Collider2D other)
 	{
 		if (other.gameObject.CompareTag("Little Timmy"))
 			timmy = null;
+
+		if (other.CompareTag ("HiddenDoor"))
+			hiddenDoor = null;
 	}
 
 
