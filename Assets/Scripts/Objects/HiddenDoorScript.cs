@@ -17,17 +17,18 @@ public class HiddenDoorScript : MonoBehaviour {
 		goHiding = false;
 		hiding = false;
 		inputCount = 0;
-		player = GameObject.FindWithTag ("Player");
-		anim = player.GetComponent<Animator> ();
-		grappleGun = GameObject.FindWithTag ("GrappleGun");
-		grappleHook = GameObject.FindWithTag ("GrappleHook");
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-
-
+		if(player == null)
+		{
+			player = GameObject.FindWithTag ("Player");
+			grappleGun = GameObject.FindWithTag ("GrappleGun");
+			grappleHook = GameObject.FindWithTag ("GrappleHook");
+			anim = player.GetComponent<Animator> ();
+		}
 
 		if (goHiding == true) 
 		{
