@@ -41,6 +41,8 @@ public class GrappleHookScript : MonoBehaviour {
 			collided = false;
 			timer = 0;
 			verticalAnchorStruck = false;
+			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+			player.GetComponent<Rigidbody2D>().gravityScale = 1;
 		}
 
 

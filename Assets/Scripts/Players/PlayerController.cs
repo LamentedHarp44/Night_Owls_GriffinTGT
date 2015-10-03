@@ -70,14 +70,15 @@ public class PlayerController : MonoBehaviour {
 		lightExpo = 0;
 		moving = false;
 		hiding = false;
-		hiddenDoor = GameObject.FindWithTag ("HiddenDoor");
+
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
 		//Telling the player script it is hiding in a hidden door.
-		hiding = hiddenDoor.GetComponent<HiddenDoorScript> ().hiding;
+		if(hiddenDoor != null)
+			hiding = hiddenDoor.GetComponent<HiddenDoorScript> ().hiding;
 
 		if (mainSpawn == null) 
 		{
@@ -115,12 +116,13 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		//Jumping
-		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space) && grounded == true
-		    && GetComponentInChildren<GrappleHookScript>().shot == false) 
+		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space) && grounded == true)
+		    //&& GetComponentInChildren<GrappleHookScript>().shot == false) 
 		{
 			jumpNumber = 1;
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
 			grounded = false;
+			GetComponentInChildren<GrappleHookScript>().shot = false;
 		}
 
 		// call pause menu
@@ -242,7 +244,9 @@ public class PlayerController : MonoBehaviour {
 	{
 
 		yield return new WaitForSeconds (.5f);
-		hiddenDoor.GetComponent<HiddenDoorScript> ().DeactivateHiding ();
+		if(hiddenDoor != null)
+			hiddenDoor.GetComponent<HiddenDoorScript> ().DeactivateHiding ();
+
 		transform.position = mainSpawn.transform.position;
 	}
 
@@ -291,6 +295,11 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag("Little Timmy"))
 			timmy = other.gameObject;
+
+		if (other.tag == "HiddenDoor") 
+		{
+			hiddenDoor = GameObject.FindWithTag ("HiddenDoor");
+		}
 	}
 
 	void OnTriggerStay2D(Collider2D other)
