@@ -25,6 +25,7 @@ TagManager:
   - GrappleGun
   - GrappleHook
   - Player Audio
+  - VAInfo
   layers:
   - Default
   - TransparentFX
