@@ -5,7 +5,7 @@ public class GrappleHookScript : MonoBehaviour {
 
 
 	public float shootSpeed = 500;
-	public float shootDistance = 5f;
+	//public float shootDistance = 5f;
 	public bool shot = false;
 	bool collided = false;
 	float playerReachedHook;
@@ -20,7 +20,11 @@ public class GrappleHookScript : MonoBehaviour {
 
 	//Vertical Attachment Variables
 	public bool verticalAnchorStruck = false;
-	//bool UGPurchased = false;
+	public bool VAPurchased = false;
+	//Grab Attachment Variables.
+	public bool GAPurchased = false;
+	//Blade Attachment Variables.
+	public bool BAPurchased = false;
 
 	// Use this for initialization
 	void Start () 
@@ -31,8 +35,6 @@ public class GrappleHookScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		//Sets the hook's fire range.
-		GetComponent<DistanceJoint2D> ().distance = shootDistance;
 
 		//Setting hook to start position.
 		if (shot == false) 
@@ -72,7 +74,7 @@ public class GrappleHookScript : MonoBehaviour {
 
 
 		//Vertical attachment behavior if the upgrade is purchased.
-		if (shot == true && verticalAnchorStruck == true) //&& UGPurchased == true
+		if (shot == true && verticalAnchorStruck == true && VAPurchased == true)
 		{
 			//Raising player and lowering hook(hook is a child and moves with parent so needed to offset position).
 			if(Input.GetKey(KeyCode.W))
@@ -142,7 +144,7 @@ public class GrappleHookScript : MonoBehaviour {
 		}
 
 		//Initiating vertical attachment behavior.
-		if (other.tag == "VerticalAnchor" && shot == true)// && UGPurchased == true) 
+		if (other.tag == "VerticalAnchor" && shot == true && VAPurchased == true) 
 		{
 			verticalAnchorStruck = true;
 			collided = true;

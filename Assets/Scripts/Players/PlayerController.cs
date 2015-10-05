@@ -345,4 +345,22 @@ public class PlayerController : MonoBehaviour {
 	{
 		return lastCompleted;
 	}
+
+
+	//Shop Menu Upgrade Functions**********************************************************************************************************
+	public void PurchaseVerticalAttachment()
+	{
+		GetComponentInChildren<GrappleHookScript> ().VAPurchased = true;
+	}
+
+	public void PurchaseGrabAttachment()
+	{
+		GetComponentInChildren<GrappleHookScript> ().GAPurchased = true;
+	}
+
+	public void PurchaseBladeAttachment()
+	{
+		GetComponentInChildren<GrappleHookScript> ().BAPurchased = true;
+	}
+
 }
