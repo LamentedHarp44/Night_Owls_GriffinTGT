@@ -25,6 +25,9 @@ TagManager:
   - GrappleGun
   - GrappleHook
   - Player Audio
+  - Malformed Patient
+  - Floor Hazard
+  - Dog
   layers:
   - Default
   - TransparentFX

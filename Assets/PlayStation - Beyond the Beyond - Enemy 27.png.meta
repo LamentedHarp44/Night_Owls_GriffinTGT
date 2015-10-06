@@ -1,0 +1,671 @@
+fileFormatVersion: 2
+guid: 338b5b946a75cf04b834435b526be364
+timeCreated: 1444147242
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PlayStation - Beyond the Beyond - Enemy 27_0
+    21300002: PlayStation - Beyond the Beyond - Enemy 27_1
+    21300004: PlayStation - Beyond the Beyond - Enemy 27_2
+    21300006: PlayStation - Beyond the Beyond - Enemy 27_3
+    21300008: PlayStation - Beyond the Beyond - Enemy 27_5
+    21300010: PlayStation - Beyond the Beyond - Enemy 27_6
+    21300012: PlayStation - Beyond the Beyond - Enemy 27_13
+    21300014: PlayStation - Beyond the Beyond - Enemy 27_14
+    21300016: PlayStation - Beyond the Beyond - Enemy 27_15
+    21300018: PlayStation - Beyond the Beyond - Enemy 27_17
+    21300020: PlayStation - Beyond the Beyond - Enemy 27_18
+    21300022: PlayStation - Beyond the Beyond - Enemy 27_19
+    21300024: PlayStation - Beyond the Beyond - Enemy 27_26
+    21300026: PlayStation - Beyond the Beyond - Enemy 27_27
+    21300028: PlayStation - Beyond the Beyond - Enemy 27_28
+    21300030: PlayStation - Beyond the Beyond - Enemy 27_30
+    21300032: PlayStation - Beyond the Beyond - Enemy 27_31
+    21300034: PlayStation - Beyond the Beyond - Enemy 27_32
+    21300036: PlayStation - Beyond the Beyond - Enemy 27_39
+    21300038: PlayStation - Beyond the Beyond - Enemy 27_40
+    21300040: PlayStation - Beyond the Beyond - Enemy 27_41
+    21300042: PlayStation - Beyond the Beyond - Enemy 27_42
+    21300044: PlayStation - Beyond the Beyond - Enemy 27_44
+    21300046: PlayStation - Beyond the Beyond - Enemy 27_45
+    21300048: PlayStation - Beyond the Beyond - Enemy 27_52
+    21300050: PlayStation - Beyond the Beyond - Enemy 27_55
+    21300052: PlayStation - Beyond the Beyond - Enemy 27_65
+    21300054: PlayStation - Beyond the Beyond - Enemy 27_68
+    21300056: PlayStation - Beyond the Beyond - Enemy 27_4
+    21300058: PlayStation - Beyond the Beyond - Enemy 27_7
+    21300060: PlayStation - Beyond the Beyond - Enemy 27_8
+    21300062: PlayStation - Beyond the Beyond - Enemy 27_9
+    21300064: PlayStation - Beyond the Beyond - Enemy 27_10
+    21300066: PlayStation - Beyond the Beyond - Enemy 27_11
+    21300068: PlayStation - Beyond the Beyond - Enemy 27_12
+    21300070: PlayStation - Beyond the Beyond - Enemy 27_16
+    21300072: PlayStation - Beyond the Beyond - Enemy 27_20
+    21300074: PlayStation - Beyond the Beyond - Enemy 27_21
+    21300076: PlayStation - Beyond the Beyond - Enemy 27_22
+    21300078: PlayStation - Beyond the Beyond - Enemy 27_23
+    21300080: PlayStation - Beyond the Beyond - Enemy 27_24
+    21300082: PlayStation - Beyond the Beyond - Enemy 27_25
+    21300084: PlayStation - Beyond the Beyond - Enemy 27_29
+    21300086: PlayStation - Beyond the Beyond - Enemy 27_33
+    21300088: PlayStation - Beyond the Beyond - Enemy 27_34
+    21300090: PlayStation - Beyond the Beyond - Enemy 27_35
+    21300092: PlayStation - Beyond the Beyond - Enemy 27_36
+    21300094: PlayStation - Beyond the Beyond - Enemy 27_37
+    21300096: PlayStation - Beyond the Beyond - Enemy 27_38
+    21300098: PlayStation - Beyond the Beyond - Enemy 27_43
+    21300100: PlayStation - Beyond the Beyond - Enemy 27_46
+    21300102: PlayStation - Beyond the Beyond - Enemy 27_47
+    21300104: PlayStation - Beyond the Beyond - Enemy 27_48
+    21300106: PlayStation - Beyond the Beyond - Enemy 27_49
+    21300108: PlayStation - Beyond the Beyond - Enemy 27_50
+    21300110: PlayStation - Beyond the Beyond - Enemy 27_51
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: PlayStation - Beyond the Beyond - Enemy 27_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 428
+        width: 63
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 430
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_2
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 427
+        width: 70
+        height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_3
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 428
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_5
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 428
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_6
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 427
+        width: 73
+        height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_13
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 345
+        width: 64
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_14
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 344
+        width: 64
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_15
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 344
+        width: 69
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_17
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 345
+        width: 64
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_18
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 342
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_19
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 345
+        width: 75
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_26
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 261
+        width: 66
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_27
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 261
+        width: 71
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_28
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 261
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_30
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 260
+        width: 64
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_31
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 262
+        width: 72
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_32
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 260
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_39
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 173
+        width: 69
+        height: 82
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_40
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 178
+        width: 81
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_41
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 176
+        width: 84
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_42
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 173
+        width: 72
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_44
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 176
+        width: 84
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_45
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 175
+        width: 80
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_52
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 91
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_55
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 87
+        width: 69
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_65
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 4
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_68
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 4
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_4
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 430
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_7
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 428
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_8
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 426
+        width: 73
+        height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_9
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 344
+        width: 64
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_10
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 343
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_11
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 342
+        width: 75
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_12
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 260
+        width: 64
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_16
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 258
+        width: 72
+        height: 81
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_20
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 259
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_21
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 172
+        width: 72
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_22
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 174
+        width: 84
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_23
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 175
+        width: 80
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_24
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 89
+        width: 69
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_25
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 4
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_29
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 429
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_33
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 427
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_34
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 427
+        width: 73
+        height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_35
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 344
+        width: 64
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_36
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 343
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_37
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 344
+        width: 75
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_38
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 261
+        width: 64
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_43
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 261
+        width: 72
+        height: 81
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_46
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 258
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_47
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 174
+        width: 72
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_48
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 174
+        width: 84
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_49
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 175
+        width: 80
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_50
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 88
+        width: 69
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayStation - Beyond the Beyond - Enemy 27_51
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 3
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
