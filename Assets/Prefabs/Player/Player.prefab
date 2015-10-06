@@ -336,6 +336,8 @@ MonoBehaviour:
   timer: 0
   verticalAnchorStruck: 0
   VAPurchased: 0
+  GAPurchased: 0
+  BAPurchased: 0
 --- !u!198 &19855804
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1555,6 +1557,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300004, guid: 5017aa173d4d1b54faa0a606269b2791,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: lightExpo
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 189654}

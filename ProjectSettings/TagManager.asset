@@ -26,6 +26,18 @@ TagManager:
   - GrappleHook
   - Player Audio
   - VAInfo
+  - VAButton
+  - GAButton
+  - BAButton
+  - CRButton
+  - DIButton
+  - TrueIButton
+  - CRButton2
+  - DIButton2
+  - UndetectedSButton
+  - CRButton3
+  - DIButton3
+  - TransparencyButton
   layers:
   - Default
   - TransparentFX

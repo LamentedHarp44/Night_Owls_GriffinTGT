@@ -10,9 +10,14 @@ public class Invisiblilityscript : MonoBehaviour {
 	bool onCooldown = false;
 	public float duration = 3;
 	public float fullDuration = 3;
+	int DurationIncreasePurchaseTracker = 0;
 	public float cooldown = 0;
 	public float fullCooldown = 30;
+	int CooldownReductionPurchaseTracker = 0;
+	int TrueInvisiblePurachaseTracker = 0;
+	bool trueInvisiblePurchased = false;
 	Animator anim;
+	public int invisLevel;
 	
 	// Use this for initialization
 	void Start () 
@@ -23,6 +28,36 @@ public class Invisiblilityscript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		if (trueInvisiblePurchased == true) {
+			invisLevel = 20;
+		} else
+			invisLevel = 1;
+
+
+		CooldownReductionPurchaseTracker = PlayerPrefs.GetInt ("CooldownReduction");
+		if (CooldownReductionPurchaseTracker == 1) 
+		{
+			fullCooldown -= 6;
+			cooldown -= 6;
+			PlayerPrefs.SetInt("CooldownReduction", 0);
+		}
+
+		DurationIncreasePurchaseTracker = PlayerPrefs.GetInt ("DurationIncrease");
+		if (DurationIncreasePurchaseTracker == 1) 
+		{
+			fullDuration += 1;
+			duration += 1;
+			PlayerPrefs.SetInt("DurationIncrease", 0);
+		}
+
+		TrueInvisiblePurachaseTracker = PlayerPrefs.GetInt ("TrueInvisible");
+		if (TrueInvisiblePurachaseTracker == 1) 
+		{
+			trueInvisiblePurchased = true;
+			PlayerPrefs.SetInt("TrueInvisible", 0);
+		}
+
+
 		if (controller == null)
 			controller = gameObject.GetComponent<PlayerController> ();
 
@@ -37,7 +72,8 @@ public class Invisiblilityscript : MonoBehaviour {
 				invisActive = false;
 				duration = fullDuration;
 				onCooldown = true;
-				controller.lightExpo += 1;
+				controller.lightExpo += invisLevel;
+
 			}
 		}
 		if (onCooldown) 
@@ -66,9 +102,8 @@ public class Invisiblilityscript : MonoBehaviour {
 		if (!onCooldown && !invisActive) 
 		{
 			invisActive = true;
-			controller.lightExpo -= 1;
-			if (controller.lightExpo < 0)
-				controller.lightExpo = 0;
+			controller.lightExpo -= invisLevel;
+
 		}
 
 	}
