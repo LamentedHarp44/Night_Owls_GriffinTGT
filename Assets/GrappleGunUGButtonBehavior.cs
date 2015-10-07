@@ -65,7 +65,7 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 
 	public void OnVAButtonPress()
 	{
-		if (VAPressed == false) 
+		if (VAPressed == false && playersLoot >= 200) 
 		{
 			player.GetComponent<PlayerController> ().loot -= 200;
 			VAPressed = true;

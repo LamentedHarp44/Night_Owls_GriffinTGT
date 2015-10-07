@@ -378,17 +378,17 @@ public class PlayerController : MonoBehaviour {
 
 	public void PurchaseCooldownReduction()
 	{
-		PlayerPrefs.SetInt ("CooldownReduction", 1);
+		//PlayerPrefs.SetInt ("CooldownReduction", 1);
 	}
 
 	public void PurchaseDurationIncrease()
 	{
-		PlayerPrefs.SetInt ("DurationIncrease", 1);
+		//PlayerPrefs.SetInt ("DurationIncrease", 1);
 	}
 
 	public void PurchaseTrueInvisible()
 	{
-		PlayerPrefs.SetInt ("TrueInvisible", 1);
+		//PlayerPrefs.SetInt ("TrueInvisible", 1);
 	}
 
 	public void PurchaseUndetectedSearch()
@@ -398,7 +398,7 @@ public class PlayerController : MonoBehaviour {
 
 	public void PurchaseTransparency()
 	{
-		PlayerPrefs.SetInt ("LightExpo", 1);
+		//PlayerPrefs.SetInt ("LightExpo", 1);
 	}
 
 }
