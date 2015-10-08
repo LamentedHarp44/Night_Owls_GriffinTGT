@@ -11,6 +11,7 @@ public class LanternScript : MonoBehaviour {
 	GameObject lightLayer3;
 	bool lightOut = false;
 	float timer = 0;
+	public AudioSource SoundEFX;
 
 	// Use this for initialization
 	void Start () 
@@ -21,6 +22,7 @@ public class LanternScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+
 		if (player == null)
 			player = GameObject.FindWithTag ("Player");
 		if (grappleHook == null)
@@ -56,7 +58,7 @@ public class LanternScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.tag == "GrappleHook" && grappleHook.GetComponent<GrappleHookScript>().shot == true && BladeAttachmentPurchased == true) 
+		if (other.tag == "GrappleHook" && grappleHook.GetComponent<GrappleHookScript>().shot == true && BladeAttachmentPurchased == true)
 		{
 			GetComponentInChildren<Light>().enabled = false;
 			lightLayer1.GetComponent<BoxCollider2D>().enabled = false;
@@ -71,6 +73,8 @@ public class LanternScript : MonoBehaviour {
 			grappleHook.GetComponent<GrappleHookScript>().shot = false;
 
 			lightOut = true;
+
+			SoundEFX.Play();
 		}
 
 	}

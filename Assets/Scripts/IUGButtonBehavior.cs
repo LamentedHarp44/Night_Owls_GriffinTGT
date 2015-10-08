@@ -123,7 +123,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 
 	public void OnDIButtonPress()
 	{
-		if (DIButtonPressed == false && CRButtonPressed == true) 
+		if (DIButtonPressed == false && CRButtonPressed == true && playersLoot >= 100) 
 		{
 			player.GetComponent<PlayerController> ().loot -= 100;
 			DIButtonPressed = true;
@@ -137,7 +137,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 
 	public void OnTrueIButtonPress()
 	{
-		if (TrueIButtonPressed == false && DIButtonPressed == true) 
+		if (TrueIButtonPressed == false && DIButtonPressed == true && playersLoot >= 200) 
 		{
 			player.GetComponent<PlayerController> ().loot -= 200;
 			TrueIButtonPressed = true;
@@ -151,7 +151,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 
 	public void OnCRButtonPress2()
 	{
-		if (CRButtonPressed2 == false && TrueIButtonPressed == true) 
+		if (CRButtonPressed2 == false && TrueIButtonPressed == true && playersLoot >= 100) 
 		{
 			player.GetComponent<PlayerController> ().loot -= 100;
 			CRButtonPressed2 = true;
@@ -165,7 +165,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 
 	public void OnDIButtonPress2()
 	{
-		if (DIButtonPressed2 == false && CRButtonPressed2 == true) 
+		if (DIButtonPressed2 == false && CRButtonPressed2 == true && playersLoot >= 100) 
 		{
 			player.GetComponent<PlayerController> ().loot -= 100;
 			DIButtonPressed2 = true;
@@ -179,7 +179,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 
 	public void OnUndetectedSButtonPress()
 	{
-		if (UndetectedSButtonPressed == false && DIButtonPressed2 == true) 
+		if (UndetectedSButtonPressed == false && DIButtonPressed2 == true && playersLoot >= 200) 
 		{
 			player.GetComponent<PlayerController> ().loot -= 200;
 			UndetectedSButtonPressed = true;
@@ -193,7 +193,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 
 	public void OnCRButtonPress3()
 	{
-		if (CRButtonPressed3 == false && UndetectedSButtonPressed == true) 
+		if (CRButtonPressed3 == false && UndetectedSButtonPressed == true && playersLoot >= 100) 
 		{
 			player.GetComponent<PlayerController> ().loot -= 100;
 			CRButtonPressed3 = true;
@@ -207,7 +207,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 
 	public void OnDIButtonPress3()
 	{
-		if (DIButtonPressed3 == false && CRButtonPressed3 == true) 
+		if (DIButtonPressed3 == false && CRButtonPressed3 == true && playersLoot >= 100) 
 		{
 			player.GetComponent<PlayerController> ().loot -= 100;
 			DIButtonPressed3 = true;
@@ -221,7 +221,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 
 	public void OnTransparencyButtonPress()
 	{
-		if (TransparencyButtonPressed == false && DIButtonPressed3 == true) 
+		if (TransparencyButtonPressed == false && DIButtonPressed3 == true && playersLoot >= 200) 
 		{
 			player.GetComponent<PlayerController> ().loot -= 200;
 			TransparencyButtonPressed = true;
