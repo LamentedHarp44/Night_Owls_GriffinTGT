@@ -17,7 +17,7 @@ public class CashScript : MonoBehaviour {
 			player = GameObject.FindGameObjectWithTag ("Player");
 
 
-		GetComponent<Text>().text = player.GetComponent<PlayerController>().loot.ToString();
+		GetComponent<Text>().text = "Money: $ " + player.GetComponent<PlayerController>().loot.ToString();
 
 
 	}
