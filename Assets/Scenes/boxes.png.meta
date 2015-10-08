@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: f298eeda25b602a4f8c67f65bc1536d7
-timeCreated: 1444144964
+guid: a9d1b45b68f57944c9318aaf16dca5fe
+timeCreated: 1444145879
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: WoodenCrate_0
-    21300002: WoodenCrate_1
+    21300000: boxes_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -42,8 +41,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 2
-  spritePivot: {x: .5, y: 1}
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
@@ -51,23 +50,13 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: WoodenCrate_0
+    - name: boxes_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 300
-        height: 301
-      alignment: 2
-      pivot: {x: .5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: WoodenCrate_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 300
-        height: 301
+        x: 385
+        y: 163
+        width: 125
+        height: 91
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

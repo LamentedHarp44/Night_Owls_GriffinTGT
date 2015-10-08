@@ -35,7 +35,7 @@ public class RatBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		Launcher ();
+		//Launcher ();
 
 		if (GetComponent<CircleCollider2D> ().enabled == false)
 		{
@@ -84,11 +84,13 @@ public class RatBehavior : MonoBehaviour {
 			if (killTimer <= 0) 
 			{
 				player.GetComponent<PlayerController> ().PlayerDeath (TYPE_DEATH.SWARM);
+				player.GetComponent<PlayerController> ().ratCount = 0;
+				player.GetComponent<PlayerController> ().moveSpeed = 5.0f;
 			}
 		} 
 		else
 		{
-			killTimer = 30.0f;
+			killTimer = 3.0f;
 		}
 	}
 
@@ -172,11 +174,11 @@ public class RatBehavior : MonoBehaviour {
 	public void Launcher()
 	{
 		//test code
-		if (Input.GetKeyDown (KeyCode.Backspace)) {
-			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (1000f, 1000f));
+	//	if (Input.GetKeyDown (KeyCode.Backspace)) {
+			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (2000f, 1000f));
 
 			ground = false;
-		}
+	//	}
 	}
 
 

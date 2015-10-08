@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour {
 		lives = 3;
 		//lightLevel = 0;
 		grounded = true;
-		level = Application.loadedLevel;
+
 		moving = false;
 		hiding = false;
 
@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		level = Application.loadedLevel;
 		//If Transparency upgrade purchased, permanently decrease lightExpo by 2; 
 		lightExpoPurchaseTracker = PlayerPrefs.GetInt ("LightExpo");
 		if (lightExpoPurchaseTracker == 1) 
@@ -227,6 +228,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		//if (method == TYPE_DEATH.MELEE)
 		  //this.GetComponent<Invisiblilityscript> ().SetExposure (0);
+
 
 		if (method == TYPE_DEATH.TRAP)
 			GetComponentInChildren<ParticleSystem> ().startColor = Color.green;
