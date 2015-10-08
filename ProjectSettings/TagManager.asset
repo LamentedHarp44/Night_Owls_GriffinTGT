@@ -45,6 +45,9 @@ TagManager:
   - LightLayer2
   - LightLayer3
   - Lantern
+  - Boss
+  - Barrel
+  - Boss Door
   layers:
   - Default
   - TransparentFX
