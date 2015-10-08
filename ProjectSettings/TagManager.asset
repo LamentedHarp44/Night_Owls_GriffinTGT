@@ -28,6 +28,8 @@ TagManager:
   - Malformed Patient
   - Floor Hazard
   - Dog
+  - Boss
+  - Barrel
   layers:
   - Default
   - TransparentFX

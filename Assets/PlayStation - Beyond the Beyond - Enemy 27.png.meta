@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 338b5b946a75cf04b834435b526be364
-timeCreated: 1444147242
+timeCreated: 1444157222
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -112,8 +112,8 @@ TextureImporter:
         y: 428
         width: 63
         height: 75
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayStation - Beyond the Beyond - Enemy 27_1
       rect:
@@ -122,8 +122,8 @@ TextureImporter:
         y: 430
         width: 64
         height: 72
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayStation - Beyond the Beyond - Enemy 27_2
       rect:
@@ -132,8 +132,8 @@ TextureImporter:
         y: 427
         width: 70
         height: 85
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayStation - Beyond the Beyond - Enemy 27_3
       rect:
