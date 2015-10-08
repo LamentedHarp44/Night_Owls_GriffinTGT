@@ -21,9 +21,32 @@ TagManager:
   - ADRange
   - Crate
   - CraneTop
+<<<<<<< HEAD
   - Hook
   - obst
   - Stop
+=======
+  - HiddenDoor
+  - GrappleGun
+  - GrappleHook
+  - Player Audio
+  - VAInfo
+  - VAButton
+  - GAButton
+  - BAButton
+  - CRButton
+  - DIButton
+  - TrueIButton
+  - CRButton2
+  - DIButton2
+  - UndetectedSButton
+  - CRButton3
+  - DIButton3
+  - TransparencyButton
+  - Malformed Patient
+  - Floor Hazard
+  - Dog
+>>>>>>> a0525607b775280dccabdf3704d6f8fbb5c81d47
   layers:
   - Default
   - TransparentFX

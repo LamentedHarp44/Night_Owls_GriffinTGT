@@ -8,11 +8,15 @@ public enum LVL_CMPLT {TUTORIAL, LVL_ONE, LVL_TWO, LVL_THREE, LVL_FOUR, LVL_FIVE
 public class PlayerController : MonoBehaviour {
 	public float moveSpeed;
 	public bool moving;
+	public bool hiding;
 	public bool onLadder;
 	public int loot;
 	public GameObject usable, timmy;
+	GameObject hiddenDoor;
 	char upgrades;
-	public int lightExpo;
+	public int lightExpo = 0;
+	int lightExpoPurchaseTracker = 0;
+	public bool lightExpoPurchased = false;
 	Transform mainSpawn;
 	public LVL_CMPLT lastCompleted = LVL_CMPLT.NONE;
 	public int ratCount;
@@ -31,7 +35,7 @@ public class PlayerController : MonoBehaviour {
 
 	int level;
 
-	public AudioSource SFXVolume;
+	AudioSource SFXVolume;
 
 	//  The us of a ladder involves locking x-axis movement
 	//bool horizLock;
@@ -56,7 +60,6 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		mainSpawn = GameObject.FindGameObjectWithTag ("Main Spawn").transform;
 		moveSpeed = 5.0f;
 		onLadder = false;
 		usable = null;
@@ -66,13 +69,33 @@ public class PlayerController : MonoBehaviour {
 		//lightLevel = 0;
 		grounded = true;
 		level = Application.loadedLevel;
-		lightExpo = 0;
 		moving = false;
+		hiding = false;
+
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		//If Transparency upgrade purchased, permanently decrease lightExpo by 2; 
+		lightExpoPurchaseTracker = PlayerPrefs.GetInt ("LightExpo");
+		if (lightExpoPurchaseTracker == 1) 
+		{
+			lightExpo = -2;
+			lightExpoPurchased = true;
+			PlayerPrefs.SetInt("LightExpo", 0);
+		}
+
+
+
+		if (SFXVolume == null)
+			SFXVolume = GameObject.FindGameObjectWithTag ("Player Audio").GetComponentInChildren<AudioSource> ();
+
+		//Telling the player script it is hiding in a hidden door.
+		if(hiddenDoor != null)
+			hiding = hiddenDoor.GetComponent<HiddenDoorScript> ().hiding;
+
+
 		if (mainSpawn == null) 
 		{
 			mainSpawn = GameObject.FindGameObjectWithTag ("Main Spawn").transform;
@@ -109,12 +132,13 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		//Jumping
-		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space) && grounded == true
-		    && GetComponentInChildren<GrappleHookScript>().shot == false) 
+		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space) && grounded == true)
+		    //&& GetComponentInChildren<GrappleHookScript>().shot == false) 
 		{
 			jumpNumber = 1;
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
 			grounded = false;
+			GetComponentInChildren<GrappleHookScript>().shot = false;
 		}
 
 		// call pause menu
@@ -219,14 +243,15 @@ public class PlayerController : MonoBehaviour {
 			GetComponentInChildren<ParticleSystem> ().startColor = Color.red;
 
 		GetComponentInChildren<ParticleSystem> ().Play ();
-		SFXVolume.Play ();
+		if (SFXVolume != null)
+			SFXVolume.Play ();
 
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
 		lives--;
 		StartCoroutine (PlayerDeadRespawn());
 		if (lives == 0) 
 		{
-			Destroy(this);
+			//Destroy(this);
 			Application.LoadLevel(level);
 			lives = 3;
 		}
@@ -237,6 +262,9 @@ public class PlayerController : MonoBehaviour {
 	{
 
 		yield return new WaitForSeconds (.5f);
+		if(hiddenDoor != null)
+			hiddenDoor.GetComponent<HiddenDoorScript> ().DeactivateHiding ();
+
 		transform.position = mainSpawn.transform.position;
 	}
 
@@ -267,7 +295,7 @@ public class PlayerController : MonoBehaviour {
 		if (col.gameObject.tag != "Enemy" && col.gameObject.tag != "Floor")
 			usable = col.gameObject;
 
-		if (col.gameObject.tag == "Floor" || col.gameObject.tag == "chest") 
+		if (col.gameObject.tag == "Floor" || col.gameObject.tag == "chest" || col.gameObject.tag == "Crate") 
 		{
 			jumpNumber = 0;
 			grounded = true;
@@ -285,6 +313,11 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag("Little Timmy"))
 			timmy = other.gameObject;
+
+		if (other.CompareTag ("HiddenDoor")) 
+		{
+			hiddenDoor = other.gameObject;
+		}
 	}
 
 	void OnTriggerStay2D(Collider2D other)
@@ -293,12 +326,17 @@ public class PlayerController : MonoBehaviour {
 		{
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		}
+
+
 	}
 
 	void OnTriggerExit2D(Collider2D other)
 	{
 		if (other.gameObject.CompareTag("Little Timmy"))
 			timmy = null;
+
+		if (other.CompareTag ("HiddenDoor"))
+			hiddenDoor = null;
 	}
 
 
@@ -321,4 +359,47 @@ public class PlayerController : MonoBehaviour {
 	{
 		return lastCompleted;
 	}
+
+
+	//Shop Menu Upgrade Functions**********************************************************************************************************
+	public void PurchaseVerticalAttachment()
+	{
+		//PlayerPrefs.SetInt ("VAPurchase", 1);
+	}
+
+	public void PurchaseGrabAttachment()
+	{
+		//PlayerPrefs.SetInt ("GAPurchase", 1);
+	}
+
+	public void PurchaseBladeAttachment()
+	{
+		//PlayerPrefs.SetInt ("BAPurchase", 1);
+	}
+
+	public void PurchaseCooldownReduction()
+	{
+		//PlayerPrefs.SetInt ("CooldownReduction", 1);
+	}
+
+	public void PurchaseDurationIncrease()
+	{
+		//PlayerPrefs.SetInt ("DurationIncrease", 1);
+	}
+
+	public void PurchaseTrueInvisible()
+	{
+		//PlayerPrefs.SetInt ("TrueInvisible", 1);
+	}
+
+	public void PurchaseUndetectedSearch()
+	{
+
+	}
+
+	public void PurchaseTransparency()
+	{
+		//PlayerPrefs.SetInt ("LightExpo", 1);
+	}
+
 }

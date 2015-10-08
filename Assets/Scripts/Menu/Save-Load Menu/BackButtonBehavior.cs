@@ -5,16 +5,24 @@ using UnityEngine.UI;
 public class BackButtonBehavior : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+
 	}
 
 	public void ReturnToMain()
 	{
 		Application.LoadLevel ("Main Menu");
+	}
+
+	public void ReturnToHubWorld()
+	{
+		Application.LoadLevel ("Hub World");
 	}
 }

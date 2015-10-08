@@ -103,7 +103,7 @@ public class ExperimentBehavior : MonoBehaviour {
 		transform.position = temp;
 
 		//If the player is in range and he is moving go into attack state.
-		if (inDetectionRange == true && playerMoving == true) 
+		if (inDetectionRange == true && playerMoving == true && player.GetComponent<PlayerController>().hiding == false) 
 		{
 			state = ENMY_STATES.ATTACK;
 			SFXVolume.PlayOneShot(detect);
@@ -126,7 +126,7 @@ public class ExperimentBehavior : MonoBehaviour {
 		
 		transform.position = temp;
 
-		if (playerMoving == false)//inDetectionRange == false || 
+		if (playerMoving == false || player.GetComponent<PlayerController>().hiding == true)//inDetectionRange == false || 
 			state = ENMY_STATES.PATROL;
 	}
 
