@@ -166,88 +166,75 @@ public class DogBehavior : MonoBehaviour {
 
 	void Detect()
 	{
-		float tempRange = detRange * Player.GetComponent<Invisiblilityscript> ().LightExposure ();
-		RaycastHit2D targ;
 
-		if (state == ENMY_STATES.PATROL) 
-		{
-			if (!face)
-				targ = Physics2D.Raycast ((Vector2)transform.position, Vector2.left, tempRange, Physics2D.DefaultRaycastLayers, -1.0f);
-			else
-				targ = Physics2D.Raycast ((Vector2)transform.position, Vector2.right, tempRange, Physics2D.DefaultRaycastLayers, -1.0f);
+		if (Player.GetComponent<PlayerController> ().lightExpo > 0) {
+			float tempRange = detRange * Player.GetComponent<Invisiblilityscript> ().LightExposure ();
+			RaycastHit2D targ;
 
-			if (targ.collider != null && targ.collider.gameObject.tag == "Player")
-			{
-				target = targ.transform.position;
-				state = ENMY_STATES.SEARCH;
-				alertDelay = .5f;
-				GetComponent<AudioSource>().Stop();
-				GetComponent<AudioSource>().PlayOneShot(growl);
-			}
-			else return;
-		} 
-		else if (state == ENMY_STATES.SEARCH) 
-		{
-			if (!face)
-				targ = Physics2D.Raycast ((Vector2)transform.position, Vector2.left, detRange, Physics2D.DefaultRaycastLayers, -1.0f);
-			else 
-				targ = Physics2D.Raycast ((Vector2)transform.position, Vector2.right, detRange, Physics2D.DefaultRaycastLayers, -1.0f);
-
-			if (targ.collider != null && targ.collider.gameObject.tag == "Player")
-			{
-				GetComponent<AudioSource>().Stop ();
-				GetComponent<AudioSource>().PlayOneShot(bark);
-				state = ENMY_STATES.ATTACK;
-				return;
-			}
-			else
-			{
+			if (state == ENMY_STATES.PATROL) {
 				if (!face)
 					targ = Physics2D.Raycast ((Vector2)transform.position, Vector2.left, tempRange, Physics2D.DefaultRaycastLayers, -1.0f);
 				else
 					targ = Physics2D.Raycast ((Vector2)transform.position, Vector2.right, tempRange, Physics2D.DefaultRaycastLayers, -1.0f);
-			}
 
-			if(targ.collider != null && targ.collider.gameObject.tag == "Player")
-			{
-				target = targ.transform.position;
-			}
-			else 
-			{
-				searchTime -= Time.fixedDeltaTime;
-				if (searchTime <= 0) 
-				{
-					searchTime = 5.0f;
-					state = ENMY_STATES.RESET;
-					GetComponent<AudioSource>().Stop ();
-					GetComponent<AudioSource>().PlayOneShot(whimper);
-				}
-				else return;
-			}
-		} 
-		else if (state == ENMY_STATES.ATTACK) 
-		{
-			if (!face)
-				targ = Physics2D.Raycast ((Vector2)transform.position, Vector2.left, detRange, Physics2D.DefaultRaycastLayers, -1.0f);
-			else 
-				targ = Physics2D.Raycast ((Vector2)transform.position, Vector2.right, detRange, Physics2D.DefaultRaycastLayers, -1.0f);
-
-			if(targ.collider == null || targ.collider.gameObject.tag != "Player")
-			{
-				atkTime -= Time.fixedDeltaTime;
-
-				if(atkTime <= 0)
-				{
-					atkTime = 3.0f;
+				if (targ.collider != null && targ.collider.gameObject.tag == "Player") {
+					target = targ.transform.position;
 					state = ENMY_STATES.SEARCH;
-					GetComponent<AudioSource>().Stop();
-					GetComponent<AudioSource>().PlayOneShot(growl);
+					alertDelay = .5f;
+					GetComponent<AudioSource> ().Stop ();
+					GetComponent<AudioSource> ().PlayOneShot (growl);
+				} else
+					return;
+			} else if (state == ENMY_STATES.SEARCH) {
+				if (!face)
+					targ = Physics2D.Raycast ((Vector2)transform.position, Vector2.left, detRange, Physics2D.DefaultRaycastLayers, -1.0f);
+				else 
+					targ = Physics2D.Raycast ((Vector2)transform.position, Vector2.right, detRange, Physics2D.DefaultRaycastLayers, -1.0f);
+
+				if (targ.collider != null && targ.collider.gameObject.tag == "Player") {
+					GetComponent<AudioSource> ().Stop ();
+					GetComponent<AudioSource> ().PlayOneShot (bark);
+					state = ENMY_STATES.ATTACK;
+					return;
+				} else {
+					if (!face)
+						targ = Physics2D.Raycast ((Vector2)transform.position, Vector2.left, tempRange, Physics2D.DefaultRaycastLayers, -1.0f);
+					else
+						targ = Physics2D.Raycast ((Vector2)transform.position, Vector2.right, tempRange, Physics2D.DefaultRaycastLayers, -1.0f);
 				}
+
+				if (targ.collider != null && targ.collider.gameObject.tag == "Player") {
+					target = targ.transform.position;
+				} else {
+					searchTime -= Time.fixedDeltaTime;
+					if (searchTime <= 0) {
+						searchTime = 5.0f;
+						state = ENMY_STATES.RESET;
+						GetComponent<AudioSource> ().Stop ();
+						GetComponent<AudioSource> ().PlayOneShot (whimper);
+					} else
+						return;
+				}
+			} else if (state == ENMY_STATES.ATTACK) {
+				if (!face)
+					targ = Physics2D.Raycast ((Vector2)transform.position, Vector2.left, detRange, Physics2D.DefaultRaycastLayers, -1.0f);
+				else 
+					targ = Physics2D.Raycast ((Vector2)transform.position, Vector2.right, detRange, Physics2D.DefaultRaycastLayers, -1.0f);
+
+				if (targ.collider == null || targ.collider.gameObject.tag != "Player") {
+					atkTime -= Time.fixedDeltaTime;
+
+					if (atkTime <= 0) {
+						atkTime = 3.0f;
+						state = ENMY_STATES.SEARCH;
+						GetComponent<AudioSource> ().Stop ();
+						GetComponent<AudioSource> ().PlayOneShot (growl);
+					}
+				} else
+					return;
 			}
-			else return;
+
 		}
-
-
 	}
 
 	void ScentDetect()

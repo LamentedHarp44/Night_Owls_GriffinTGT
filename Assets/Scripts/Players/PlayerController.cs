@@ -212,6 +212,7 @@ public class PlayerController : MonoBehaviour {
 		//if (method == TYPE_DEATH.MELEE)
 		  //this.GetComponent<Invisiblilityscript> ().SetExposure (0);
 
+
 		if (method == TYPE_DEATH.TRAP)
 			GetComponentInChildren<ParticleSystem> ().startColor = Color.green;
 		else

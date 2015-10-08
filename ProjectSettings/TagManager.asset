@@ -17,6 +17,13 @@ TagManager:
   - Railing
   - Anchor
   - Little Timmy
+  - VerticalAnchor
+  - ADRange
+  - Crate
+  - CraneTop
+  - Hook
+  - obst
+  - Stop
   layers:
   - Default
   - TransparentFX

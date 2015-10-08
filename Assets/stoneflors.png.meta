@@ -1,11 +1,12 @@
 fileFormatVersion: 2
-guid: f298eeda25b602a4f8c67f65bc1536d7
-timeCreated: 1444144964
+guid: 2f388ca550c6a0246b103a30aafc06f8
+timeCreated: 1444155316
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: WoodenCrate_0
-    21300002: WoodenCrate_1
+    21300000: stoneflors_1
+    21300002: stoneflors_2
+    21300004: stoneflors_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -42,8 +43,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 2
-  spritePivot: {x: .5, y: 1}
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
@@ -51,25 +52,35 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: WoodenCrate_0
+    - name: stoneflors_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 300
-        height: 301
-      alignment: 2
-      pivot: {x: .5, y: 1}
+        x: 400
+        y: 240
+        width: 192
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: WoodenCrate_1
+    - name: stoneflors_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 300
-        height: 301
-      alignment: 7
-      pivot: {x: .5, y: 0}
+        x: 400
+        y: 240
+        width: 191
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stoneflors_0
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 343
+        width: 162
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
