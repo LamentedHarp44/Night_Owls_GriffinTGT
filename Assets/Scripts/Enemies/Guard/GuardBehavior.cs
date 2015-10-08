@@ -314,7 +314,7 @@ public class GuardBehavior : EnemyBase {
 	//  and sound alerts to this function.
 	//  Parameters:			The ENMY_STATE is what the currState is reassigned to.
 	//  Returns:		void
-	void ChangeENMYState(ENMY_STATES change)
+	public void ChangeENMYState(ENMY_STATES change)
 	{
 
 		if (change == ENMY_STATES.SEARCH && currState != ENMY_STATES.ATTACK) {

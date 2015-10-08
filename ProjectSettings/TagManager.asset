@@ -38,6 +38,9 @@ TagManager:
   - CRButton3
   - DIButton3
   - TransparencyButton
+  - Malformed Patient
+  - Floor Hazard
+  - Dog
   layers:
   - Default
   - TransparentFX

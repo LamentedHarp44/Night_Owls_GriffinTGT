@@ -14,7 +14,8 @@ public class MalformedPatientDetectScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-	
+		if (player == null)
+			player = GameObject.FindWithTag ("Player");
 	}
 
 	void OnTriggerEnter2D(Collider2D other)

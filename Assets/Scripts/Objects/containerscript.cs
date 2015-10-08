@@ -4,7 +4,7 @@ using System.Collections;
 public class containerscript : MonoBehaviour {
 
 
-	float normDelay;
+	public float normDelay;
 	public float delay;
 	public int value;
 	GameObject loot;
