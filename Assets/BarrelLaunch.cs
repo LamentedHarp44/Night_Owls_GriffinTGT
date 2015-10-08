@@ -4,7 +4,7 @@ using System.Collections;
 public class BarrelLaunch : MonoBehaviour {
 
 	public GameObject launcher;
-
+	public Sprite activeSprite, inactiveSprite;
 	public bool ready, close;
 
 	// Use this for initialization
@@ -14,12 +14,17 @@ public class BarrelLaunch : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (ready == true) {
-			if (close && Input.GetKeyDown(KeyCode.E))
-			{
-				launcher.GetComponent<BarrelSpawn>().BarrelLaunch();
+		if (ready == true) 
+		{
+			GetComponent<SpriteRenderer> ().sprite = activeSprite;
+
+			if (close && Input.GetKeyDown (KeyCode.E)) {
+				launcher.GetComponent<BarrelSpawn> ().BarrelLaunch ();
+				ready = false;
 			}
-		}
+		} 
+		else
+			GetComponent<SpriteRenderer> ().sprite = activeSprite;
 	}
 
 	void OnTriggerEnter2D(Collider2D other)

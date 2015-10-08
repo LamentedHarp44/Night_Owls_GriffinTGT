@@ -102,17 +102,16 @@ public class BigTimmy : MonoBehaviour {
 				    Mathf.Abs(playerRef.transform.position.y - this.transform.position.y) > 2.0f)
 					toOrigin = true;
 
-				else if (Mathf.Abs(playerRef.transform.position.x - this.transform.position.x) < 3.0f &&
+				else if (Mathf.Abs(playerRef.transform.position.x - this.transform.position.x) < 2.0f &&
 				    Mathf.Abs(playerRef.transform.position.y - this.transform.position.y) < 1.5f &&
 				         playerRef.GetComponent<Invisiblilityscript>().LightExposure() > 0)
 				{
 					playerRef.GetComponent<PlayerController>().PlayerDeath(TYPE_DEATH.MELEE);
 
-					playerRef = null;
+
 					GameObject.FindGameObjectWithTag("Boss Door").GetComponent<BoxCollider2D>().enabled = false;
 					GameObject.FindGameObjectWithTag("Boss Door").GetComponent<SpriteRenderer>().sprite = openDoor;
-					inArena = false;
-					this.transform.position = origin;
+					ResetTimmy();
 				}
 
 				if (toOrigin && Mathf.Abs(origin.x - this.transform.position.x) < 0.5f)
@@ -163,10 +162,10 @@ public class BigTimmy : MonoBehaviour {
 						Destroy (temp[i]);
 						}
 
-					if (playerRef.transform.position.y == this.transform.position.y)
+					if (Mathf.Abs(playerRef.transform.position.y - this.transform.position.y) < 0.5f)
 					{
 						//  Stun player
-
+						playerRef.GetComponent<PlayerController>().StunGriffin();
 					}
 				}
 				
@@ -198,12 +197,18 @@ public class BigTimmy : MonoBehaviour {
 			{
 				playerRef.GetComponent<PlayerController>().PlayerDeath(TYPE_DEATH.MELEE);
 			
-				playerRef = null;
 				GameObject.FindGameObjectWithTag("Boss Door").GetComponent<BoxCollider2D>().enabled = false;
 				GameObject.FindGameObjectWithTag("Boss Door").GetComponent<SpriteRenderer>().sprite = openDoor;
-				inArena = false;
-				this.transform.position = origin;
+				ResetTimmy();
 			}
 		}
+	}
+
+	public void ResetTimmy()
+	{
+		playerRef = null;
+		inArena = false;
+		this.transform.position = origin;
+
 	}
 }

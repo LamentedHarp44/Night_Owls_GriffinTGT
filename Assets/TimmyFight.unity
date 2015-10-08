@@ -539,14 +539,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 275316177}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1f33afe16b8fbb4898f9ac9c6acaa26, type: 3}
+  m_Script: {fileID: 11500000, guid: 31b13664f431a7e42adfe65beed17f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barrelPrefab: {fileID: 175910, guid: ab44a93c33e45944ba94f2f70c60a217, type: 2}
+  prefab: {fileID: 175910, guid: ab44a93c33e45944ba94f2f70c60a217, type: 2}
   leftSpawn: {fileID: 1089831185}
+  leftTrigger: {fileID: 1420213208}
   rightSpawn: {fileID: 552665291}
-  lLauncher: {fileID: 1420213208}
-  rLauncher: {fileID: 858946957}
+  rightTrigger: {fileID: 858946957}
 --- !u!4 &275316179
 Transform:
   m_ObjectHideFlags: 0
@@ -857,9 +857,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: .0259564295}
+  m_Offset: {x: 0, y: .349504769}
   serializedVersion: 2
-  m_Size: {x: .629999995, y: .0519110858}
+  m_Size: {x: .629999995, y: .699007809}
 --- !u!114 &538188918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1044,6 +1044,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   launcher: {fileID: 275316177}
+  activeSprite: {fileID: 21300000, guid: ae92384fc1c6e2d419c1b2c680850778, type: 3}
+  inactiveSprite: {fileID: 21300002, guid: ae92384fc1c6e2d419c1b2c680850778, type: 3}
   ready: 0
   close: 0
 --- !u!212 &858946959
@@ -1079,7 +1081,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 858946957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -624.23999, y: -43.0299988, z: .046875}
+  m_LocalPosition: {x: -623.469971, y: -43.0299988, z: .046875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1691,7 +1693,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1420213208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -643.080017, y: -43.0299988, z: .046875}
+  m_LocalPosition: {x: -644.320007, y: -43.0299988, z: .046875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1708,6 +1710,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   launcher: {fileID: 275316177}
+  activeSprite: {fileID: 21300000, guid: ae92384fc1c6e2d419c1b2c680850778, type: 3}
+  inactiveSprite: {fileID: 21300002, guid: ae92384fc1c6e2d419c1b2c680850778, type: 3}
   ready: 0
   close: 0
 --- !u!61 &1420213212
