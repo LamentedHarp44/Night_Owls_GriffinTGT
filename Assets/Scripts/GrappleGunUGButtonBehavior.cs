@@ -79,7 +79,7 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 
 	public void OnGAButtonPress()
 	{
-		if (GAPressed == false && VAPressed == true) 
+		if (GAPressed == false && VAPressed == true && playersLoot >= 200) 
 		{
 			player.GetComponent<PlayerController> ().loot -= 200;
 			GAPressed = true;
@@ -93,7 +93,7 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 
 	public void OnBAButtonPress()
 	{
-		if (BAPressed == false && GAPressed == true) 
+		if (BAPressed == false && GAPressed == true && playersLoot >= 200) 
 		{
 			player.GetComponent<PlayerController> ().loot -= 200;
 			BAPressed = true;
