@@ -26,7 +26,7 @@ public class LadderBehavior : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		if (!coll.CompareTag ("GrappleGun") && !coll.CompareTag("GrappleHook") && !coll.CompareTag("Untagged")) 
+		if (!coll.CompareTag ("GrappleGun") && !coll.CompareTag("GrappleHook") && !coll.CompareTag("Untagged") && !coll.CompareTag("Boss")) 
 		{
 			if (elevators.Count != 0)
 			{
