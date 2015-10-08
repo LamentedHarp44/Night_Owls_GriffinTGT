@@ -68,7 +68,6 @@ public class PlayerController : MonoBehaviour {
 		lives = 3;
 		//lightLevel = 0;
 		grounded = true;
-		level = Application.loadedLevel;
 		moving = false;
 		hiding = false;
 
@@ -77,6 +76,8 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		level = Application.loadedLevel;
+
 		//If Transparency upgrade purchased, permanently decrease lightExpo by 2; 
 		lightExpoPurchaseTracker = PlayerPrefs.GetInt ("LightExpo");
 		if (lightExpoPurchaseTracker == 1) 
@@ -378,27 +379,27 @@ public class PlayerController : MonoBehaviour {
 
 	public void PurchaseCooldownReduction()
 	{
-		//PlayerPrefs.SetInt ("CooldownReduction", 1);
+		PlayerPrefs.SetInt ("CooldownReduction", 1);
 	}
 
 	public void PurchaseDurationIncrease()
 	{
-		//PlayerPrefs.SetInt ("DurationIncrease", 1);
+		PlayerPrefs.SetInt ("DurationIncrease", 1);
 	}
 
 	public void PurchaseTrueInvisible()
 	{
-		//PlayerPrefs.SetInt ("TrueInvisible", 1);
+		PlayerPrefs.SetInt ("TrueInvisible", 1);
 	}
 
 	public void PurchaseUndetectedSearch()
 	{
-
+		PlayerPrefs.SetInt ("UndetectedSearch", 1);
 	}
 
 	public void PurchaseTransparency()
 	{
-		//PlayerPrefs.SetInt ("LightExpo", 1);
+		PlayerPrefs.SetInt ("LightExpo", 1);
 	}
 
 }

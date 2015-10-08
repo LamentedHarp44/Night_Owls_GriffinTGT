@@ -117,6 +117,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			ColorBlock temp = IButtons [0].colors;
 			temp.disabledColor = Color.green;
 			IButtons [0].colors = temp;
+			player.GetComponent<PlayerController>().PurchaseCooldownReduction();
 		}
 	}
 
@@ -130,6 +131,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			ColorBlock temp = IButtons [1].colors;
 			temp.disabledColor = Color.green;
 			IButtons [1].colors = temp;
+			player.GetComponent<PlayerController>().PurchaseDurationIncrease();
 		}
 	}
 
@@ -143,6 +145,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			ColorBlock temp = IButtons [2].colors;
 			temp.disabledColor = Color.green;
 			IButtons [2].colors = temp;
+			player.GetComponent<PlayerController>().PurchaseTrueInvisible();
 		}
 	}
 
@@ -156,6 +159,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			ColorBlock temp = IButtons [3].colors;
 			temp.disabledColor = Color.green;
 			IButtons [3].colors = temp;
+			player.GetComponent<PlayerController>().PurchaseCooldownReduction();
 		}
 	}
 
@@ -169,6 +173,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			ColorBlock temp = IButtons [4].colors;
 			temp.disabledColor = Color.green;
 			IButtons [4].colors = temp;
+			player.GetComponent<PlayerController>().PurchaseDurationIncrease();
 		}
 	}
 
@@ -182,6 +187,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			ColorBlock temp = IButtons [5].colors;
 			temp.disabledColor = Color.green;
 			IButtons [5].colors = temp;
+			player.GetComponent<PlayerController>().PurchaseUndetectedSearch();
 		}
 	}
 
@@ -195,6 +201,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			ColorBlock temp = IButtons [6].colors;
 			temp.disabledColor = Color.green;
 			IButtons [6].colors = temp;
+			player.GetComponent<PlayerController>().PurchaseCooldownReduction();
 		}
 	}
 
@@ -208,6 +215,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			ColorBlock temp = IButtons [7].colors;
 			temp.disabledColor = Color.green;
 			IButtons [7].colors = temp;
+			player.GetComponent<PlayerController>().PurchaseDurationIncrease();
 		}
 	}
 
@@ -221,6 +229,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			ColorBlock temp = IButtons [8].colors;
 			temp.disabledColor = Color.green;
 			IButtons [8].colors = temp;
+			player.GetComponent<PlayerController>().PurchaseTransparency();
 		}
 	}
 

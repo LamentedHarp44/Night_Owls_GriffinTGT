@@ -73,6 +73,7 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 			ColorBlock temp = GGButtons [0].colors;
 			temp.disabledColor = Color.green;
 			GGButtons [0].colors = temp;
+			player.GetComponent<PlayerController>().PurchaseVerticalAttachment();
 		}
 	}
 
@@ -86,6 +87,7 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 			ColorBlock temp = GGButtons [1].colors;
 			temp.disabledColor = Color.green;
 			GGButtons [1].colors = temp;
+			player.GetComponent<PlayerController>().PurchaseGrabAttachment();
 		}
 	}
 
@@ -99,6 +101,7 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 			ColorBlock temp = GGButtons [2].colors;
 			temp.disabledColor = Color.green;
 			GGButtons [2].colors = temp;
+			player.GetComponent<PlayerController>().PurchaseBladeAttachment();
 		}
 	}
 
