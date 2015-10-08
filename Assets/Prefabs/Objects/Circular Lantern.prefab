@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11474496}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: LightLayer2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,24 @@ GameObject:
   - 114: {fileID: 11411926}
   m_Layer: 0
   m_Name: GameObject (1)
-  m_TagString: Untagged
+  m_TagString: LightLayer3
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &140972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 441942}
+  - 61: {fileID: 6163418}
+  - 114: {fileID: 11412640}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: LightLayer1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,10 +77,10 @@ GameObject:
   - 4: {fileID: 478368}
   - 212: {fileID: 21241464}
   - 61: {fileID: 6131092}
-  - 114: {fileID: 11458982}
+  - 114: {fileID: 11475536}
   m_Layer: 0
   m_Name: Circular Lantern
-  m_TagString: Untagged
+  m_TagString: Lantern
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,6 +109,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 478368}
   m_RootOrder: 1
+--- !u!4 &441942
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .300000012, y: -.300000012, z: 10.5833111}
+  m_LocalScale: {x: 25.2030487, y: 25.2030487, z: 25.2030487}
+  m_Children: []
+  m_Father: {fileID: 478368}
+  m_RootOrder: 3
 --- !u!4 &478368
 Transform:
   m_ObjectHideFlags: 1
@@ -99,12 +128,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199426}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -612.609985, y: -50.9199982, z: -.419921875}
+  m_LocalPosition: {x: 6.61761761, y: -.949999988, z: -.419921875}
   m_LocalScale: {x: .0396777391, y: .0396777391, z: .0396777391}
   m_Children:
   - {fileID: 401736}
   - {fileID: 409114}
   - {fileID: 486112}
+  - {fileID: 441942}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &486112
@@ -142,9 +172,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: .379953176, y: 5.54595137}
+  m_Offset: {x: .379953176, y: 2.02523732}
   serializedVersion: 2
-  m_Size: {x: 47.8123856, y: 25.0619087}
+  m_Size: {x: 5.62082195, y: 18.0204811}
 --- !u!61 &6136992
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -158,6 +188,19 @@ BoxCollider2D:
   m_Offset: {x: .802977979, y: 13.7135029}
   serializedVersion: 2
   m_Size: {x: 82.2168808, y: 41.100563}
+--- !u!61 &6163418
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140972}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -.00414327439, y: .232047781}
+  serializedVersion: 2
+  m_Size: {x: 1.83703136, y: .966849804}
 --- !u!108 &10870284
 Light:
   m_ObjectHideFlags: 1
@@ -201,12 +244,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27deef87e8fb26b4f9a73e52f6c9abf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11458982
+--- !u!114 &11412640
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 199426}
+  m_GameObject: {fileID: 140972}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27deef87e8fb26b4f9a73e52f6c9abf2, type: 3}
@@ -221,6 +264,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27deef87e8fb26b4f9a73e52f6c9abf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11475536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a031276c8bbc1a4282e83cfb8c03a33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &21241464

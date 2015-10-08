@@ -364,17 +364,17 @@ public class PlayerController : MonoBehaviour {
 	//Shop Menu Upgrade Functions**********************************************************************************************************
 	public void PurchaseVerticalAttachment()
 	{
-		//PlayerPrefs.SetInt ("VAPurchase", 1);
+		PlayerPrefs.SetInt ("VAPurchase", 1);
 	}
 
 	public void PurchaseGrabAttachment()
 	{
-		//PlayerPrefs.SetInt ("GAPurchase", 1);
+		PlayerPrefs.SetInt ("GAPurchase", 1);
 	}
 
 	public void PurchaseBladeAttachment()
 	{
-		//PlayerPrefs.SetInt ("BAPurchase", 1);
+		PlayerPrefs.SetInt ("BAPurchase", 1);
 	}
 
 	public void PurchaseCooldownReduction()

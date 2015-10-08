@@ -33,7 +33,8 @@ public class Invisiblilityscript : MonoBehaviour {
 		} else
 			invisLevel = 1;
 
-
+		//Shop menu upgrades. Setting variables appropriatly per upgrade purchased.
+		//-------------------------------------------------------------------------
 		CooldownReductionPurchaseTracker = PlayerPrefs.GetInt ("CooldownReduction");
 		if (CooldownReductionPurchaseTracker == 1) 
 		{
@@ -56,6 +57,7 @@ public class Invisiblilityscript : MonoBehaviour {
 			trueInvisiblePurchased = true;
 			PlayerPrefs.SetInt("TrueInvisible", 0);
 		}
+		//-------------------------------------------------------------------------
 
 
 		if (controller == null)

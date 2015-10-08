@@ -41,16 +41,20 @@ public class GrappleHookScript : MonoBehaviour {
 		//Checking if upgrade has been purchased in the shop menu, if so then apply grapple functionality.
 		//----------------------------------------------------
 		VAPurchaseTracker = PlayerPrefs.GetInt ("VAPurchase");
-		if (VAPurchaseTracker == 1)
+		if (VAPurchaseTracker == 1) {
 			VAPurchased = true;
-
+			PlayerPrefs.SetInt("VAPurchase", 0);
+		}
 		GAPurchaseTracker = PlayerPrefs.GetInt ("GAPurchase");
-		if (GAPurchaseTracker == 1)
+		if (GAPurchaseTracker == 1) {
 			GAPurchased = true;
-
+			PlayerPrefs.SetInt("GAPurchase", 0);
+		}
 		BAPurchaseTracker = PlayerPrefs.GetInt ("BAPurchase");
-		if (BAPurchaseTracker == 1)
+		if (BAPurchaseTracker == 1) {
 			BAPurchased = true;
+			PlayerPrefs.SetInt("BAPurchase", 0);
+		}
 		//----------------------------------------------------
 
 

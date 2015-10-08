@@ -41,6 +41,10 @@ TagManager:
   - Malformed Patient
   - Floor Hazard
   - Dog
+  - LightLayer1
+  - LightLayer2
+  - LightLayer3
+  - Lantern
   layers:
   - Default
   - TransparentFX
