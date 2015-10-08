@@ -1,10 +1,17 @@
 fileFormatVersion: 2
 guid: c70d098eedfe9244f92ef52dc188d103
-timeCreated: 1444311785
+timeCreated: 1444322869
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: DS - Castlevania Order of Ecclesia - Barrel Door_0
+    21300002: DS - Castlevania Order of Ecclesia - Barrel Door_1
+    21300004: DS - Castlevania Order of Ecclesia - Barrel Door_2
+    21300006: DS - Castlevania Order of Ecclesia - Barrel Door_3
+    21300008: DS - Castlevania Order of Ecclesia - Barrel Door_4
+    21300010: DS - Castlevania Order of Ecclesia - Barrel Door_5
+    21300012: DS - Castlevania Order of Ecclesia - Barrel Door_6
+    21300014: DS - Castlevania Order of Ecclesia - Barrel Door_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,6 +64,76 @@ TextureImporter:
         y: 278
         width: 38
         height: 38
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DS - Castlevania Order of Ecclesia - Barrel Door_1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 186
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DS - Castlevania Order of Ecclesia - Barrel Door_2
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 186
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DS - Castlevania Order of Ecclesia - Barrel Door_3
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 186
+        width: 33
+        height: 56
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DS - Castlevania Order of Ecclesia - Barrel Door_4
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 186
+        width: 33
+        height: 56
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DS - Castlevania Order of Ecclesia - Barrel Door_5
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 130
+        width: 33
+        height: 56
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DS - Castlevania Order of Ecclesia - Barrel Door_6
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 130
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DS - Castlevania Order of Ecclesia - Barrel Door_7
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 267
+        width: 76
+        height: 49
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

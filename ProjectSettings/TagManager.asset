@@ -30,6 +30,7 @@ TagManager:
   - Dog
   - Boss
   - Barrel
+  - Boss Door
   layers:
   - Default
   - TransparentFX
