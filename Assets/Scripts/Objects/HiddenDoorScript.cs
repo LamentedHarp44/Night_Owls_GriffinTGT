@@ -32,6 +32,7 @@ public class HiddenDoorScript : MonoBehaviour {
 
 		if (goHiding == true) 
 		{
+
 			if(Input.GetKeyDown(KeyCode.E) && inputCount == 0)
 			{
 				ActivateHiding();
@@ -42,6 +43,10 @@ public class HiddenDoorScript : MonoBehaviour {
 			{
 				DeactivateHiding();
 				hiding = false;
+				if(player.GetComponent<PlayerController>().lightExpoPurchased == false)
+					player.GetComponent<PlayerController> ().lightExpo = 0;
+				else
+					player.GetComponent<PlayerController> ().lightExpo = -2;
 			}
 
 		}

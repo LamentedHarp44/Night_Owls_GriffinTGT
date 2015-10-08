@@ -14,7 +14,9 @@ public class PlayerController : MonoBehaviour {
 	public GameObject usable, timmy;
 	GameObject hiddenDoor;
 	char upgrades;
-	public int lightExpo;
+	public int lightExpo = 0;
+	int lightExpoPurchaseTracker = 0;
+	public bool lightExpoPurchased = false;
 	Transform mainSpawn;
 	public LVL_CMPLT lastCompleted = LVL_CMPLT.NONE;
 	public int ratCount;
@@ -67,7 +69,6 @@ public class PlayerController : MonoBehaviour {
 		//lightLevel = 0;
 		grounded = true;
 		level = Application.loadedLevel;
-		lightExpo = 0;
 		moving = false;
 		hiding = false;
 
@@ -76,12 +77,24 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		//If Transparency upgrade purchased, permanently decrease lightExpo by 2; 
+		lightExpoPurchaseTracker = PlayerPrefs.GetInt ("LightExpo");
+		if (lightExpoPurchaseTracker == 1) 
+		{
+			lightExpo = -2;
+			lightExpoPurchased = true;
+			PlayerPrefs.SetInt("LightExpo", 0);
+		}
+
+
+
 		if (SFXVolume == null)
 			SFXVolume = GameObject.FindGameObjectWithTag ("Player Audio").GetComponentInChildren<AudioSource> ();
 
 		//Telling the player script it is hiding in a hidden door.
 		if(hiddenDoor != null)
 			hiding = hiddenDoor.GetComponent<HiddenDoorScript> ().hiding;
+
 
 		if (mainSpawn == null) 
 		{
@@ -345,4 +358,47 @@ public class PlayerController : MonoBehaviour {
 	{
 		return lastCompleted;
 	}
+
+
+	//Shop Menu Upgrade Functions**********************************************************************************************************
+	public void PurchaseVerticalAttachment()
+	{
+		//PlayerPrefs.SetInt ("VAPurchase", 1);
+	}
+
+	public void PurchaseGrabAttachment()
+	{
+		//PlayerPrefs.SetInt ("GAPurchase", 1);
+	}
+
+	public void PurchaseBladeAttachment()
+	{
+		//PlayerPrefs.SetInt ("BAPurchase", 1);
+	}
+
+	public void PurchaseCooldownReduction()
+	{
+		//PlayerPrefs.SetInt ("CooldownReduction", 1);
+	}
+
+	public void PurchaseDurationIncrease()
+	{
+		//PlayerPrefs.SetInt ("DurationIncrease", 1);
+	}
+
+	public void PurchaseTrueInvisible()
+	{
+		//PlayerPrefs.SetInt ("TrueInvisible", 1);
+	}
+
+	public void PurchaseUndetectedSearch()
+	{
+
+	}
+
+	public void PurchaseTransparency()
+	{
+		//PlayerPrefs.SetInt ("LightExpo", 1);
+	}
+
 }

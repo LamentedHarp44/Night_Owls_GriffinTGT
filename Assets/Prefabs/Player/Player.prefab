@@ -99,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.39787364, y: .120309755, z: .099999994}
+  m_LocalPosition: {x: -2.39787364, y: .120309755, z: -.100000001}
   m_LocalScale: {x: -2.68819857, y: 2.79789472, z: 1}
   m_Children: []
   m_Father: {fileID: 455950}
@@ -123,7 +123,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.3676624, y: -2.20021987, z: 0}
+  m_LocalPosition: {x: 10.7799997, y: -1.222, z: 0}
   m_LocalScale: {x: 1, y: 1, z: .454765975}
   m_Children:
   - {fileID: 410226}
@@ -151,7 +151,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.41669106, y: .12310762, z: 0}
+  m_LocalPosition: {x: -2.41669106, y: .12310762, z: -.100000001}
   m_LocalScale: {x: 1.22639525, y: .928669691, z: 1}
   m_Children: []
   m_Father: {fileID: 455950}
@@ -329,13 +329,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootSpeed: 15
-  shootDistance: 7
   shot: 0
   grappleGun: {fileID: 133728}
   startPos: {fileID: 159294}
   player: {fileID: 189654}
   timer: 0
   verticalAnchorStruck: 0
+  VAPurchased: 0
+  GAPurchased: 0
+  BAPurchased: 0
 --- !u!198 &19855804
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1509,7 +1511,7 @@ DistanceJoint2D:
   m_ConnectedRigidBody: {fileID: 5044120}
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
-  m_Distance: 5
+  m_Distance: 7
   m_MaxDistanceOnly: 1
 --- !u!1001 &100100000
 Prefab:

@@ -5,7 +5,7 @@ public class GrappleHookScript : MonoBehaviour {
 
 
 	public float shootSpeed = 500;
-	public float shootDistance = 5f;
+	//public float shootDistance = 5f;
 	public bool shot = false;
 	bool collided = false;
 	float playerReachedHook;
@@ -20,7 +20,14 @@ public class GrappleHookScript : MonoBehaviour {
 
 	//Vertical Attachment Variables
 	public bool verticalAnchorStruck = false;
-	//bool UGPurchased = false;
+	public bool VAPurchased = false;
+	int VAPurchaseTracker = 0;
+	//Grab Attachment Variables.
+	public bool GAPurchased = false;
+	int GAPurchaseTracker = 0;
+	//Blade Attachment Variables.
+	public bool BAPurchased = false;
+	int BAPurchaseTracker = 0;
 
 	// Use this for initialization
 	void Start () 
@@ -31,8 +38,21 @@ public class GrappleHookScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		//Sets the hook's fire range.
-		GetComponent<DistanceJoint2D> ().distance = shootDistance;
+		//Checking if upgrade has been purchased in the shop menu, if so then apply grapple functionality.
+		//----------------------------------------------------
+		VAPurchaseTracker = PlayerPrefs.GetInt ("VAPurchase");
+		if (VAPurchaseTracker == 1)
+			VAPurchased = true;
+
+		GAPurchaseTracker = PlayerPrefs.GetInt ("GAPurchase");
+		if (GAPurchaseTracker == 1)
+			GAPurchased = true;
+
+		BAPurchaseTracker = PlayerPrefs.GetInt ("BAPurchase");
+		if (BAPurchaseTracker == 1)
+			BAPurchased = true;
+		//----------------------------------------------------
+
 
 		//Setting hook to start position.
 		if (shot == false) 
@@ -72,7 +92,7 @@ public class GrappleHookScript : MonoBehaviour {
 
 
 		//Vertical attachment behavior if the upgrade is purchased.
-		if (shot == true && verticalAnchorStruck == true) //&& UGPurchased == true
+		if (shot == true && verticalAnchorStruck == true && VAPurchased == true)
 		{
 			//Raising player and lowering hook(hook is a child and moves with parent so needed to offset position).
 			if(Input.GetKey(KeyCode.W))
@@ -142,7 +162,7 @@ public class GrappleHookScript : MonoBehaviour {
 		}
 
 		//Initiating vertical attachment behavior.
-		if (other.tag == "VerticalAnchor" && shot == true)// && UGPurchased == true) 
+		if (other.tag == "VerticalAnchor" && shot == true && VAPurchased == true) 
 		{
 			verticalAnchorStruck = true;
 			collided = true;
@@ -164,8 +184,6 @@ public class GrappleHookScript : MonoBehaviour {
 
 
 	}
-
-
 
 
 }
