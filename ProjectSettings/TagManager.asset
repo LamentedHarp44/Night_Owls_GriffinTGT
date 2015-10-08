@@ -3,7 +3,44 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Loader
+  - Wall
+  - Floor
+  - PatrollingGuard
+  - Ladder
+  - Elevator
+  - Main Spawn
+  - chest
+  - Trap Door
+  - Exit
+  - Railing
+  - Anchor
+  - Little Timmy
+  - VerticalAnchor
+  - ADRange
+  - Crate
+  - CraneTop
+  - HiddenDoor
+  - GrappleGun
+  - GrappleHook
+  - Player Audio
+  - VAInfo
+  - VAButton
+  - GAButton
+  - BAButton
+  - CRButton
+  - DIButton
+  - TrueIButton
+  - CRButton2
+  - DIButton2
+  - UndetectedSButton
+  - CRButton3
+  - DIButton3
+  - TransparencyButton
+  - Malformed Patient
+  - Floor Hazard
+  - Dog
   layers:
   - Default
   - TransparentFX
@@ -38,6 +75,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackgroundBack
+    uniqueID: 4050235771
+    locked: 0
+  - name: Background
+    uniqueID: 3279468875
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
