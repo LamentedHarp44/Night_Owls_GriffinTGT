@@ -23,8 +23,7 @@ public class PlayerController : MonoBehaviour {
 	public int lives;
 	//public int lightLevel;
 	
-	//  Little Timmy needs to know how many times Griffin has pushed him down
-	public int numPush;
+
 	//Jump variables
 	float jumpForce = 600f;
 	public bool grounded;
@@ -47,14 +46,17 @@ public class PlayerController : MonoBehaviour {
 	public bool pauseMenuToggle=false;
 	public GameObject pauseMenu;
 
-	//variable for plugMenu the game
-	public bool plugMenuToggle=false;
-	public GameObject plugMenu;
 	
 	//variable for cooling down
 	public bool cooled;
 	//public float cooldown;
-	public GameObject cooldown; 
+	public GameObject cooldown;
+
+
+	//  Timmy Fight Related Stuff
+	//  Little Timmy needs to know how many times Griffin has pushed him down
+	public int numPush;
+	float stunDurration = 0.0f;
 
 
 	// Use this for initialization
@@ -115,22 +117,7 @@ public class PlayerController : MonoBehaviour {
 			//cooldown.GetComponent<CoolDownHud> ().coolDown ();
 		}
 
-		//call plug menu
-		else if (Input.GetKeyDown ("z")) {
-			plugMenuToggle=!plugMenuToggle;
-			
-			
-			if (plugMenuToggle){
-				plugMenu.GetComponent<CanvasGroup>().alpha=1;
-				plugMenu.GetComponent<CanvasGroup>().interactable=true;
-				
-				
-			}
-			else{
-				plugMenu.GetComponent<CanvasGroup>().alpha=0;
-				plugMenu.GetComponent<CanvasGroup>().interactable=false;
-			}
-		}
+
 
 		//Jumping
 		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space) && grounded == true)
@@ -180,6 +167,11 @@ public class PlayerController : MonoBehaviour {
 
 	void Movement()
 	{
+		if (stunDurration > 0.0f) {
+			stunDurration -= Time.deltaTime;
+
+			return;
+		}
 		//Movement
 		Vector3 temp = transform.position;
 
@@ -340,13 +332,11 @@ public class PlayerController : MonoBehaviour {
 			hiddenDoor = null;
 	}
 
+	public void StunGriffin()
+	{
+		stunDurration = 1.0f;
+	}
 
-	//  This function is a setter for the horizMove bool
-	//  Parameters:			bool, F = canMove, T = can'tMove
-	//public void LockHorizontalMovement(bool b)
-	//{
-	//	horizLock = b;
-	//}
 
 	//  This function is what all units who can move vertically
 	//  on a ladder will have to inform the elevator of what movement
@@ -402,5 +392,6 @@ public class PlayerController : MonoBehaviour {
 	{
 		//PlayerPrefs.SetInt ("LightExpo", 1);
 	}
+
 
 }
