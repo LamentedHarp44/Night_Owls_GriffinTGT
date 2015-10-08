@@ -13,26 +13,53 @@ public class DeathWall : MonoBehaviour {
 	public GameObject cannon;
 	Vector3 home;
 	public List<GameObject> ratSpawn;
+	public int livesCounter;
+	public int tempLives;
 	// Use this for initialization
 	void Start () 
 	{
+		if (player == null)
+			player = GameObject.FindGameObjectWithTag ("Player");
+
+		livesCounter = player.GetComponent<PlayerController> ().lives;
+		tempLives = livesCounter;
 		home = transform.position;
 		slowed = false;
-		delayTimer = 1.0f;
+		delayTimer = 2.0f;
 		shotTime = 2.0f;
-		moveSpeed = 4.1f;
+		moveSpeed = 5.1f;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		
+		if (player == null)
+			player = GameObject.FindGameObjectWithTag ("Player");
+
+
+		livesCounter = player.GetComponent<PlayerController> ().lives;
+
+		if (tempLives != livesCounter) 
+		{
+			tempLives = livesCounter;
+
+			for (int i = 0; i < ratSpawn.Count; i++)
+				Destroy (ratSpawn [i]);
+			moveSpeed = 5.1f;
+			
+			transform.position = home;
+			player.GetComponent<PlayerController> ().ratCount = 0;
+			player.GetComponent<PlayerController> ().moveSpeed = 5.0f;
+		}
+
 		if (slowed) 
 		{
 			delayTimer -= Time.fixedDeltaTime;
 			if(delayTimer <= 0)
 			{
 				slowed = false;
-				delayTimer = 1.0f;
+				delayTimer = 2.0f;
 				moveSpeed = 5.1f;
 			}
 		}
@@ -47,8 +74,6 @@ public class DeathWall : MonoBehaviour {
 		transform.position = temp;
 
 
-		if (player == null)
-			player = GameObject.FindGameObjectWithTag ("Player");
 
 		shotTime -= Time.fixedDeltaTime;
 		if (shotTime <= 0) 
@@ -61,11 +86,11 @@ public class DeathWall : MonoBehaviour {
 
 
 			if(Vector2.Distance((Vector2)transform.position, (Vector2)player.transform.position) < 20)
-				shotTime = 7;
-			else if(Vector2.Distance((Vector2)transform.position, (Vector2)player.transform.position) < 40)
 				shotTime = 5;
-			else
+			else if(Vector2.Distance((Vector2)transform.position, (Vector2)player.transform.position) < 40)
 				shotTime = 3;
+			else
+				shotTime = 1;
 
 			ratSpawn.Add(shot);
 
@@ -85,7 +110,7 @@ public class DeathWall : MonoBehaviour {
 
 			for (int i = 0; i < ratSpawn.Count; i++)
 				Destroy (ratSpawn [i]);
-			moveSpeed = 4.1f;
+			moveSpeed = 5.1f;
 
 			transform.position = home;
 			player.GetComponent<PlayerController> ().ratCount = 0;

@@ -16,7 +16,7 @@ public class RopeScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "Hook") 
+		if (col.gameObject.tag == "GrappleHook") 
 		{
 			GetComponentInParent<Rigidbody2D>().gravityScale = 1;
 			Destroy(this.gameObject);
