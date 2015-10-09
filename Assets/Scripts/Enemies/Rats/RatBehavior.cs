@@ -83,9 +83,11 @@ public class RatBehavior : MonoBehaviour {
 
 			if (killTimer <= 0) 
 			{
-				player.GetComponent<PlayerController> ().PlayerDeath (TYPE_DEATH.SWARM);
 				player.GetComponent<PlayerController> ().ratCount = 0;
 				player.GetComponent<PlayerController> ().moveSpeed = 5.0f;
+				attacking = false;
+				this.transform.position = home;
+				player.GetComponent<PlayerController> ().PlayerDeath (TYPE_DEATH.SWARM);
 			}
 		} 
 		else

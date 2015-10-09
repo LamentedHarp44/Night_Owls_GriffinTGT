@@ -50,7 +50,8 @@ public class DrunkGuardScript : MonoBehaviour {
 		audSnore.mute = false;
 		idle = false;
 		audSnore.Play ();
-		playerLight = player.GetComponent<Invisiblilityscript> ().LightExposure ();
+		if (player != null)
+			playerLight = player.GetComponent<Invisiblilityscript> ().LightExposure ();
 
 		//aniController.SetFloat ("Speed",0.3f);
 		//*awakeAnim.SetFloat("Speed_f",0.3f);*//
@@ -58,7 +59,8 @@ public class DrunkGuardScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+        if (player == null)
+			player = GameObject.FindGameObjectWithTag ("Player");
 		animaterTimer += Time.deltaTime;
 
 		//Sleeping to awake

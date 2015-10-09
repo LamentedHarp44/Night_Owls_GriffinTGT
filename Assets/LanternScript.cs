@@ -58,7 +58,7 @@ public class LanternScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.tag == "GrappleHook" && grappleHook.GetComponent<GrappleHookScript>().shot == true && BladeAttachmentPurchased == true
+		if (other.tag == "GrappleHook" && other.GetComponent<GrappleHookScript>().shot == true && BladeAttachmentPurchased == true
 		    && lightOut == false)
 		{
 			GetComponentInChildren<Light>().enabled = false;

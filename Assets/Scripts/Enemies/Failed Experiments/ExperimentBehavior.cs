@@ -8,7 +8,7 @@ public class ExperimentBehavior : MonoBehaviour {
 	public ENMY_STATES state;
 	GameObject player;
 	public SpriteRenderer xMark;
-	public float leash;
+	public float leash = 5.0f;
 	bool face;
 	public Vector3 anchor;
 	public bool inDetectionRange;
@@ -26,7 +26,6 @@ public class ExperimentBehavior : MonoBehaviour {
 		anchor = transform.position;
 		walkSpd = 1.5f;
 		attackSpd = 5.5f;
-		leash = 5.0f;
 		face = true;
 		state = ENMY_STATES.PATROL;
 		inDetectionRange = false;
