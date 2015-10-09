@@ -288,7 +288,8 @@ public class PlayerController : MonoBehaviour {
 		if (col.gameObject.tag != "Enemy" && col.gameObject.tag != "Floor")
 			usable = col.gameObject;
 
-		if (col.gameObject.tag == "Floor" || col.gameObject.tag == "chest" || col.gameObject.tag == "Crate") 
+		if (col.gameObject.tag == "Floor" || col.gameObject.tag == "chest" || col.gameObject.tag == "Crate"
+		    || col.gameObject.tag == "GrabCrate") 
 		{
 			jumpNumber = 0;
 			grounded = true;
