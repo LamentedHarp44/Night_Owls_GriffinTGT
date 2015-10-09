@@ -139,9 +139,9 @@ public class ExperimentBehavior : MonoBehaviour {
 //		}
 //	}
 
-	void OnTriggerStay2D(Collider2D other)
+	void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.tag == "Player" && playerMoving == true)
+		if (other.gameObject.tag == "Player" && playerMoving == true)
 		{
 			GetComponent<BoxCollider2D>().enabled = false;
 			player.GetComponent<PlayerController>().PlayerDeath(TYPE_DEATH.MELEE);

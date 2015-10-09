@@ -13,6 +13,7 @@ public class GrappleHookScript : MonoBehaviour {
 	public GameObject grappleGun;
 	public GameObject startPos;
 	public GameObject player;
+	GameObject grabCrate;
 	//float distanceShot = 0;
 	public float timer = 0;
 	Vector2 position;
@@ -38,6 +39,10 @@ public class GrappleHookScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+
+		if (grabCrate == null)
+			grabCrate = GameObject.FindWithTag ("GrabCrate");
+
 		//Checking if upgrade has been purchased in the shop menu, if so then apply grapple functionality.
 		//----------------------------------------------------
 		VAPurchaseTracker = PlayerPrefs.GetInt ("VAPurchase");
@@ -124,6 +129,14 @@ public class GrappleHookScript : MonoBehaviour {
 			}
 		}
 
+		//Grab Attachment functionality. If the hook hits the crate, lock its position to the crates.
+		if (grabCrate != null) 
+		{
+			if (grabCrate.GetComponent<GrabCrateScript> ().dragToPlayer == true) 
+			{
+				transform.position = grabCrate.transform.position;
+			}
+		}
 
 		//If the hook is fired and hits nothing set back to starting position.
 		if(shot == true && collided == false)
@@ -186,6 +199,11 @@ public class GrappleHookScript : MonoBehaviour {
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		}
 
+		if (other.tag == "GrabCrate" && shot == true && GAPurchased == true) 
+		{
+			collided = true;
+			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		}
 
 	}
 

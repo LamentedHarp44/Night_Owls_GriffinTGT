@@ -8,7 +8,7 @@ public class FloorNoiseScript : MonoBehaviour {
 	float cd;
 	// Use this for initialization
 	void Start () {
-		cd = 1.5f;
+		cd = .5f;
 	}
 	
 	// Update is called once per frame
@@ -20,7 +20,7 @@ public class FloorNoiseScript : MonoBehaviour {
 			{
 				steppedOn = false;
 
-				cd = 1.5f;
+				cd = .5f;
 			}
 		}
 	}
