@@ -20,12 +20,12 @@ public class CraneScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (player == null) {
-			player = GameObject.FindGameObjectWithTag("Player");
-		}
-		if (grappleHook == null) {
-			grappleHook = GameObject.FindGameObjectWithTag("GrappleHook");
-		}
+		if(player == null)
+			player = GameObject.FindGameObjectWithTag ("Player");
+
+		if(grappleHook == null)
+			grappleHook = GameObject.FindGameObjectWithTag ("GrappleHook");
+
 		if (trigger == true) 
 		{
 			if(Input.GetKeyDown(KeyCode.E) && inputNumber == 0)
@@ -72,7 +72,6 @@ public class CraneScript : MonoBehaviour {
 		if (other.tag == "Player") 
 		{
 			trigger = true;
-			player = other.gameObject;
 		}
 	}
 
