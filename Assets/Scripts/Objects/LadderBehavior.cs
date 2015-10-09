@@ -26,7 +26,7 @@ public class LadderBehavior : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		if (!coll.CompareTag ("GrappleGun") && !coll.CompareTag("GrappleHook") && !coll.CompareTag("Untagged") && !coll.CompareTag("Boss")) 
+		if (!coll.CompareTag ("GrappleGun") && !coll.CompareTag("GrappleHook") && !coll.CompareTag("Untagged") && !coll.CompareTag("Boss") && !coll.CompareTag("GrappleHookStart")) 
 		{
 			if (elevators.Count != 0)
 			{
@@ -61,7 +61,7 @@ public class LadderBehavior : MonoBehaviour {
 
 	void OnTriggerExit2D(Collider2D coll)
 	{
-		if (!coll.CompareTag ("GrappleGun") && !coll.CompareTag("GrappleHook") && !coll.CompareTag("Untagged"))
+		if (!coll.CompareTag ("GrappleGun") && !coll.CompareTag("GrappleHook") && !coll.CompareTag("Untagged") && !coll.CompareTag("GrappleHookStart")&& !coll.CompareTag("Boss"))
 		if (elevators.Count > 0) {
 			for (int i = 0; i < elevators.Count; ++i) {
 				if (elevators [i] != null && elevators [i].gameObject.GetComponent<ElevatorBehavior> ().user != null) {
