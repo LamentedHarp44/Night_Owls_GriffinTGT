@@ -10,8 +10,10 @@ public class InteractionAlertBehavior : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (parent.CompareTag("chest"))
-		previousDelay = GetComponentInParent<containerscript> ().normDelay;
+		if (parent.CompareTag ("chest"))
+			previousDelay = GetComponentInParent<containerscript> ().normDelay;
+		else
+			previousDelay = 0.0f;
 	}
 	
 	// Update is called once per frame
@@ -28,8 +30,8 @@ public class InteractionAlertBehavior : MonoBehaviour {
 		{
 			if (parent.CompareTag ("chest")) {
 
-				if (GetComponentInParent<containerscript> ().delay < GetComponentInParent<containerscript> ().normDelay &&
-					GetComponentInParent<containerscript> ().delay >= 0.0f && GetComponentInParent<containerscript> ().delay < previousDelay) {
+				if (parent.GetComponent<containerscript> ().delay < parent.GetComponent<containerscript> ().normDelay &&
+					parent.GetComponent<containerscript> ().delay >= 0.0f && parent.GetComponent<containerscript> ().delay < previousDelay) {
 					inUse = true;
 				} else
 					inUse = false;
@@ -37,9 +39,11 @@ public class InteractionAlertBehavior : MonoBehaviour {
 
 				previousDelay = GetComponentInParent<containerscript> ().delay;
 			} else if (parent.CompareTag ("Floor Hazard")) {
-				if (parent.GetComponent<FloorNoiseScript> ().steppedOn == true) {
+				if (parent.GetComponent<FloorNoiseScript> ().steppedOn == true) 
+				{
 					inUse = true;
-				} else
+				} 
+				else
 					inUse = false;
 			}	
 		}
@@ -48,44 +52,59 @@ public class InteractionAlertBehavior : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (UndetectedSearchPurchased == false) 
+		if (!other.gameObject.CompareTag ("Player") && !other.gameObject.CompareTag ("Untagged")
+		    && !other.gameObject.CompareTag ("Floor") && !other.gameObject.CompareTag("GrappleHook") && !other.gameObject.CompareTag("GrappleGun")) 
 		{
-			if (other.CompareTag ("PatrollingGuard") && inUse && 
-				(other.gameObject.GetComponent<GuardBehavior> ().currState != ENMY_STATES.SEARCH 
-				|| other.gameObject.GetComponent<GuardBehavior> ().currState != ENMY_STATES.ATTACK)) {
-				other.gameObject.GetComponent<GuardBehavior> ().targPos = this.transform.position;
+			if (UndetectedSearchPurchased == false) 
+			{
+				if (other.CompareTag ("PatrollingGuard") && inUse && 
+					(other.gameObject.GetComponent<GuardBehavior> ().currState != ENMY_STATES.SEARCH 
+					|| other.gameObject.GetComponent<GuardBehavior> ().currState != ENMY_STATES.ATTACK)) 
+				{
+					other.gameObject.GetComponent<GuardBehavior> ().targPos = this.transform.position;
 
-				other.gameObject.GetComponent<GuardBehavior> ().ChangeENMYState (ENMY_STATES.SEARCH);
-			} else if (other.CompareTag ("Malformed Patient") && inUse &&
-				(other.gameObject.GetComponent<ExperimentBehavior> ().state != ENMY_STATES.ATTACK)) {
-				other.gameObject.GetComponent<ExperimentBehavior> ().state = ENMY_STATES.ATTACK;
-			} else if (other.CompareTag ("Dog") && inUse && (other.gameObject.GetComponent<DogBehavior> ().state != ENMY_STATES.SEARCH ||
-				other.gameObject.GetComponent<DogBehavior> ().state != ENMY_STATES.ATTACK)) {
-				other.gameObject.GetComponent<DogBehavior> ().target = this.transform.position;
+					other.gameObject.GetComponent<GuardBehavior> ().ChangeENMYState (ENMY_STATES.SEARCH);
+				} 
+				else if (other.CompareTag ("Malformed Patient") && inUse && other.gameObject.GetComponent<ExperimentBehavior>().state != ENMY_STATES.ATTACK) {
+					other.gameObject.GetComponent<ExperimentBehavior> ().state = ENMY_STATES.ATTACK;
+				}
+				else if (other.CompareTag ("Dog") && inUse && (other.gameObject.GetComponentInParent<DogBehavior> ().state != ENMY_STATES.SEARCH ||
+					other.gameObject.GetComponentInParent<DogBehavior> ().state != ENMY_STATES.ATTACK)) 
+				{
+					other.gameObject.GetComponentInParent<DogBehavior> ().target = this.transform.position;
 			
-				other.gameObject.GetComponent<DogBehavior> ().state = ENMY_STATES.SEARCH;
+					other.gameObject.GetComponentInParent<DogBehavior> ().state = ENMY_STATES.SEARCH;
+				}
 			}
 		}
 	}
 
 	void OnTriggerStay2D(Collider2D other)
 	{
-		if (UndetectedSearchPurchased == false) 
+		if (!other.gameObject.CompareTag ("Player") && !other.gameObject.CompareTag ("Untagged")
+			&& !other.gameObject.CompareTag ("Floor") && !other.gameObject.CompareTag("GrappleHook") && !other.gameObject.CompareTag("GrappleGun")) 
 		{
-			if (other.CompareTag ("PatrollingGuard") && inUse &&
-				other.gameObject.GetComponent<GuardBehavior> ().currState != ENMY_STATES.SEARCH 
-				&& other.gameObject.GetComponent<GuardBehavior> ().currState != ENMY_STATES.ATTACK) {
-				other.gameObject.GetComponent<GuardBehavior> ().targPos = this.transform.position;
+			if (UndetectedSearchPurchased == false) 
+			{
+				if (other.CompareTag ("PatrollingGuard") && inUse &&
+					other.gameObject.GetComponent<GuardBehavior> ().currState != ENMY_STATES.SEARCH 
+					&& other.gameObject.GetComponent<GuardBehavior> ().currState != ENMY_STATES.ATTACK) 
+				{
+					other.gameObject.GetComponent<GuardBehavior> ().targPos = this.transform.position;
 			
-				other.gameObject.GetComponent<GuardBehavior> ().ChangeENMYState (ENMY_STATES.SEARCH);
-			} else if (other.CompareTag ("Malformed Patient") && inUse &&
-				other.gameObject.GetComponent<ExperimentBehavior> ().state != ENMY_STATES.ATTACK) {
-				other.gameObject.GetComponent<ExperimentBehavior> ().state = ENMY_STATES.ATTACK;
-			} else if (other.CompareTag ("Dog") && inUse && other.gameObject.GetComponent<DogBehavior> ().state != ENMY_STATES.SEARCH &&
-				other.gameObject.GetComponent<DogBehavior> ().state != ENMY_STATES.ATTACK) {
-				other.gameObject.GetComponent<DogBehavior> ().target = this.transform.position;
+					other.gameObject.GetComponent<GuardBehavior> ().ChangeENMYState (ENMY_STATES.SEARCH);
+				} 
+				else if (other.CompareTag ("Malformed Patient") && inUse && other.gameObject.GetComponent<ExperimentBehavior>().state != ENMY_STATES.ATTACK) 
+				{
+					other.gameObject.GetComponent<ExperimentBehavior> ().state = ENMY_STATES.ATTACK;
+				} 
+				else if (other.CompareTag ("Dog") && inUse && other.gameObject.GetComponentInParent<DogBehavior> ().state != ENMY_STATES.SEARCH &&
+					other.gameObject.GetComponentInParent<DogBehavior> ().state != ENMY_STATES.ATTACK) 
+				{
+					other.gameObject.GetComponentInParent<DogBehavior> ().target = this.transform.position;
 			
-				other.gameObject.GetComponent<DogBehavior> ().state = ENMY_STATES.SEARCH;
+					other.gameObject.GetComponentInParent<DogBehavior> ().state = ENMY_STATES.SEARCH;
+				}
 			}
 		}
 	}

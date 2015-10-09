@@ -13,7 +13,7 @@ public class HubWorldJunkBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (condition <= FindObjectOfType<PlayerController> ().GetCompletedLevel ())
+		if (condition <= FindObjectOfType<PlayerController> ().GetCompletedLevel ()  && FindObjectOfType<PlayerController>().GetCompletedLevel() != LVL_CMPLT.NONE)
 			Destroy (this.gameObject);
 	}
 }
