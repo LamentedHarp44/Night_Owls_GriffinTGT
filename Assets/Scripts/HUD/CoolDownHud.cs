@@ -46,7 +46,7 @@ public class CoolDownHud : MonoBehaviour {
 			}
 		}*/
 		coolDown ();
-		coolText.GetComponent<Text> ().text = "Cool Down: "+((int)cooldown).ToString()+"   Duration: "+ ((int)duration).ToString();
+		//coolText.GetComponent<Text> ().text = "Cool Down: "+((int)cooldown).ToString()+"   Duration: "+ ((int)duration).ToString();
 
 	}
 

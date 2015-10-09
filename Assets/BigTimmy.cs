@@ -24,6 +24,8 @@ public class BigTimmy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
 		//  This will only happen once, when the player is first found in the scene.
 		if (playerRef == null && inArena) 
 		{
@@ -31,6 +33,10 @@ public class BigTimmy : MonoBehaviour {
 			playerRef = GameObject.FindGameObjectWithTag ("Player");
 			//  tHealth = the number of times that Little Timmy was tripped by the player + 3
 			tHealth = playerRef.GetComponent<PlayerController> ().numPush + 3;
+		}
+		if (tHealth < 1  && inArena) {
+			GameObject.FindGameObjectWithTag("Loader").GetComponent<SceneLoader>().lvl = "Main Menu";
+			Application.LoadLevel("Loading Screen");
 		}
 
 		if (playerRef != null) 
