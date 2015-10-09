@@ -46,7 +46,7 @@ GameObject:
   - 61: {fileID: 6173372}
   m_Layer: 0
   m_Name: Grapple Hook Start
-  m_TagString: Untagged
+  m_TagString: GrappleHookStart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,15 +283,13 @@ MonoBehaviour:
   lastCompleted: 10
   ratCount: 0
   lives: 3
-  numPush: 0
   grounded: 0
   ladMove: 1
   pauseMenuToggle: 0
   pauseMenu: {fileID: 0}
-  plugMenuToggle: 0
-  plugMenu: {fileID: 0}
   cooled: 0
   cooldown: {fileID: 0}
+  numPush: 0
 --- !u!114 &11448392
 MonoBehaviour:
   m_ObjectHideFlags: 1

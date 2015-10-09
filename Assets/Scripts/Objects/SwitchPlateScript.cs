@@ -7,6 +7,7 @@ public class SwitchPlateScript : MonoBehaviour {
 	public GameObject trapDoor;
 	bool triggered = false;
 	public AudioSource soundEFX;
+	bool play = false;
 	
 	// Use this for initialization
 	void Start () 
@@ -24,7 +25,11 @@ public class SwitchPlateScript : MonoBehaviour {
 			if(Input.GetKeyDown(KeyCode.E))
 			{
 				anim.SetBool("Triggered", true);
-				soundEFX.Play();
+				if(play)
+				{
+					soundEFX.Play();
+					play = false;
+				}
 				trapDoor.GetComponent<BoxCollider2D>().enabled = false;
 				trapDoor.GetComponent<SpriteRenderer>().enabled = false;
 			}
@@ -37,6 +42,7 @@ public class SwitchPlateScript : MonoBehaviour {
 		{
 
 			triggered = true;
+			play = true;
 		}
 
 	}

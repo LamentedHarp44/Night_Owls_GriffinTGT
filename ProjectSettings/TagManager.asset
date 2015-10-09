@@ -48,6 +48,9 @@ TagManager:
   - Boss
   - Barrel
   - Boss Door
+  - EnterBossFight
+  - GrappleHookStart
+  - GrabCrate
   layers:
   - Default
   - TransparentFX
