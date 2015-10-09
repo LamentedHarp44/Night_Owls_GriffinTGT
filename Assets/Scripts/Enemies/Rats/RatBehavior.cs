@@ -16,9 +16,13 @@ public class RatBehavior : MonoBehaviour {
 	public Color starter;
 	public AudioClip clip;
 	public float colideTimer;
+	public int livesCounter;
+	public int tempLives;
 	// Use this for initialization
 	void Start () 
 	{
+
+		tempLives = 3;
 		colideTimer = 2.0f;
 		clip = GetComponent<AudioSource> ().clip;
 		starter = GetComponentInChildren<ParticleSystem> ().startColor;
@@ -35,6 +39,24 @@ public class RatBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+
+		if(player == null)
+			player = GameObject.FindGameObjectWithTag ("Player");
+
+
+		livesCounter = player.GetComponent<PlayerController> ().lives;
+		
+		if (tempLives != livesCounter) 
+		{
+			tempLives = livesCounter;
+			transform.position = home;
+			player.GetComponent<PlayerController> ().ratCount = 0;
+			player.GetComponent<PlayerController> ().moveSpeed = 5.0f;
+		}
+
+
+
+
 		//Launcher ();
 
 		if (GetComponent<CircleCollider2D> ().enabled == false)
@@ -48,8 +70,7 @@ public class RatBehavior : MonoBehaviour {
 			}
 		}
 
-		if(player == null)
-			player = GameObject.FindGameObjectWithTag ("Player");
+
 
 		if (moveDist <= 0)
 			moveDist = Random.Range (0.0f, leash);

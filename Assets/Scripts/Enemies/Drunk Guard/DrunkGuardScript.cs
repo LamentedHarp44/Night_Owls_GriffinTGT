@@ -3,193 +3,76 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class DrunkGuardScript : MonoBehaviour {
-	GameObject player;
-	BoxCollider2D myColliders;
-	//GameObject approachAlert;
-	public GameObject drunkenGuard;
-	public bool awake;
-	public bool threaten;
-	public float drunkTime;
-	public float awakeTime;
-	public float alertDistance;
-	public float shotDistance;
-	public AudioSource audSnore;
-	public AudioSource audShot;
-	public AudioSource alert;
-	public bool shot;
-	/**public Animator drunkenAnim;
-	public Animator shotAnim;
-	public Animator awakeAnim;**/
 
-	Animator aniController;
-	float animaterTimer;
-	public bool idle;
-	public float dt;
-	int playerLight;
-	bool destroyU;
-	/*Player.GetComponent<Invisiblilityscript> ().VisCheck();
-	 */
+	public float sleepTimer;
+	public float awakeTimer;
+	public float attackTimer;
+	public float detRange;
+	public bool sighted;
+	public bool asleep;
+	public GameObject player;
+	public bool face;
 
-	// Use this for initialization
-	void Start () {
-		aniController=drunkenGuard.GetComponent<Animator>();
-		myColliders=drunkenGuard.GetComponent<BoxCollider2D>();
-		myColliders.enabled = true;
-		player=GameObject.FindGameObjectWithTag("Player");
-		//approachAlert=GameObject.FindWithTag ("approachAlert");
-		//approachAlert.GetComponent<Text> ().text = "";
-		shot = false;
-		awake=false;
-		threaten=false;
-		drunkTime = 5.0f;
-		awakeTime = 50.0f;
-		alertDistance = 10.0f;
-		shotDistance = 2.5f;
-		//InvokeRepeating("ChangeState",5.0f,awakeTime);
-		animaterTimer = 0;
-		audSnore.mute = false;
-		idle = false;
-		audSnore.Play ();
-		playerLight = player.GetComponent<Invisiblilityscript> ().LightExposure ();
 
-		//aniController.SetFloat ("Speed",0.3f);
-		//*awakeAnim.SetFloat("Speed_f",0.3f);*//
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        
-		animaterTimer += Time.deltaTime;
+	public void Update()
+	{
+		if(player == null)
+			player = GameObject.FindGameObjectWithTag ("Player");
 
-		//Sleeping to awake
-		if (animaterTimer >=5 && !awake && !idle) {
-			idle=false;
-			awake = true;
-			animaterTimer=0;
-			//aniController.SetBool ("awake", awake);
+		if (asleep)
+		{
+			sleepTimer -= Time.fixedDeltaTime;
+			if (sleepTimer <= 0) {
+				asleep = false;
+				sleepTimer = 4.0f;
+			}
 		}
-
-		//Awake to idle
-		if (awake && !idle && animaterTimer==0) {
-			idle = true;
-			//animaterTimer =0;
-			//audSnore.mute = true;
-			//animaterTimer=0;
-
-		} 
-
-		if (animaterTimer >=5  && awake && idle) {
-			animaterTimer = 0;
-			awake = false;
-			idle=false;
-			//aniController.SetBool ("awake", awake);
+		else if (!asleep) 
+		{
+			awakeTimer -= Time.fixedDeltaTime;
+			Detect();
+			if(awakeTimer <= 0 && !sighted)
+			{
+				asleep = true;
+				awakeTimer = 3.0f;
+			}
+			else if(sighted)
+			{
+				attackTimer -= Time.fixedDeltaTime;
+				if(attackTimer <= 0 && sighted)
+				{
+					player.GetComponent<PlayerController>().PlayerDeath(TYPE_DEATH.RANGED);
+				}
+			}
 		}
-	
-
-		aniController.SetBool ("awake", awake);
-		aniController.SetFloat ("Timer", animaterTimer);
-		aniController.SetBool ("Idle", idle);
-
-
-		if (awake){
-			audSnore.mute = true;
-			playerLight = player.GetComponent<Invisiblilityscript> ().LightExposure ();
-			if(playerLight > 0)
-				DetectPlayer ();}
-
-		else{
-			audSnore.mute = false;
-			threaten = false;}
-
-	   
-		if (awake && threaten)
-			alert.mute = false;
-		else {
-			alert.mute = true;
-			alert.Play ();
-		}
-
-		if (shot) {
-			audSnore.mute = true;
-			Shot ();
-			GetComponentInChildren<ParticleSystem> ().Play ();
-
-			shot=false;
-			//destroyU=true;
-			//destroyU(this.gameObject);
-		}
-		//DetectCollision (player);
-		//*aniController.SetBool ("Timer", time);*//
 	}
 
 
+	void Detect()
+	{
+		float tempRange = detRange * player.GetComponent<PlayerController> ().lightExpo;
+		RaycastHit2D target;
 
-	void Shot(){
-		audShot.mute = false;
-		audShot.Play();
-		aniController.SetBool ("Fire",true);
-		//*shotAnim.SetFloat("Speed_f",0.3f);*//
-		//accessAnimator("ShotAni_0");
-		//aniController.SetFloat ("Speed",0.3f);
-		/*shotAnim.Play ("Shot");*/
-		player.GetComponent<PlayerController> ().PlayerDeath (TYPE_DEATH.MELEE);
-		//player.GetComponent<PlayerController> ().lives -= 1;
-		//if (player.GetComponent<PlayerController> ().lives < 0)
-		//player.GetComponent<PlayerController> ().lives = 3;
 
-		//  WTF	
 
-		//DestroyObject (player);
+		if (tempRange < 0)
+			tempRange = 0;
 
-	}
-
-	void DetectPlayer(){
-		float distance;
-		//int a = 0;
-		distance= Vector3.Distance (player.transform.position, this.transform.position);
-
-		/**awakeAnim.SetFloat("Speed_f",0.0f);**/
-		if (distance < alertDistance) {
-			threaten = true;
-			//approachAlert.GetComponent<Text> ().text = "Alert!!";
-		} else {
-			threaten = false;
-			//approachAlert.GetComponent<Text> ().text = " ";
+		if (face) 
+			target = Physics2D.Raycast ((Vector2)transform.position, Vector2.left, tempRange, Physics2D.DefaultRaycastLayers, -1.0f);
+		else
+			target = Physics2D.Raycast ((Vector2)transform.position, Vector2.right, tempRange, Physics2D.DefaultRaycastLayers, -1.0f);
+			
+		if (target.collider != null && target.collider.gameObject.tag == "Player")
+			sighted = true;
+		else 
+		{
+			sighted = false;
+			attackTimer = 1.0f;
 		}
-		float playerY = player.transform.position.y;
-		float GuardY= this.transform.position.y;
-		if (threaten && distance < shotDistance && Mathf.Abs(playerY-GuardY)<2.0f) {
-			shot=true;
-		}
+
 	
 	}
-
-
-
-	void OnTriggerEnter2D(Collider2D coll)
-	{   Vector3 tempG = transform.position;
-		Vector3 tempP = player.transform.position;
-		playerLight = player.GetComponent<Invisiblilityscript> ().LightExposure ();
- 	    if (coll.CompareTag ("Player") && playerLight <= 0)
-			myColliders.enabled = false;
-
-		else if (coll.CompareTag ("Player") && playerLight > 0) {
-
-			if (player.transform.position.x>=this.transform.position.x)
-				tempP.x = tempG.x + 2.0f;
-
-			else
-				tempP.x = tempG.x - 2.0f;
-			player.transform.position=tempP;
-		}
-	}
-
-
-
-
-
-
-
 
 
 }
