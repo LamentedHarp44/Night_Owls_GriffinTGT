@@ -41,6 +41,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Level Scenes/level9.unity
   - enabled: 1
     path: Assets/Scenes/Level Scenes/TimmyFight.unity
+  - enabled: 1
+    path: Assets/RatBoss.unity
   - enabled: 0
     path: Assets/Scenes/TommyTestingScene.unity
   - enabled: 0
