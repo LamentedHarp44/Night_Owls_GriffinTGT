@@ -1858,7 +1858,7 @@ Transform:
   - {fileID: 430470908}
   - {fileID: 658276223}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 31
 --- !u!1 &34901602
 GameObject:
   m_ObjectHideFlags: 0
@@ -3378,7 +3378,7 @@ Transform:
   - {fileID: 506933648}
   - {fileID: 1853305605}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 27
 --- !u!1 &80680357
 GameObject:
   m_ObjectHideFlags: 0
@@ -4343,6 +4343,14 @@ Prefab:
     - target: {fileID: 458146, guid: 8884163dd59413b4e925aab2e9b4cc97, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493886, guid: 8884163dd59413b4e925aab2e9b4cc97, type: 2}
+      propertyPath: currLvl
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493886, guid: 8884163dd59413b4e925aab2e9b4cc97, type: 2}
+      propertyPath: nxtlvl
+      value: level9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8884163dd59413b4e925aab2e9b4cc97, type: 2}
@@ -20207,7 +20215,7 @@ Transform:
   - {fileID: 781025537}
   - {fileID: 2033233106}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 28
 --- !u!1 &420720706
 GameObject:
   m_ObjectHideFlags: 0
