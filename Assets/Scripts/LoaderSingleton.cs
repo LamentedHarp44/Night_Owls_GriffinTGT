@@ -7,8 +7,7 @@ public class LoaderSingleton : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (!GameObject.FindGameObjectWithTag ("Loader")) {
-			//  Then instantiate one at the spawnpoint
+		if (GameObject.FindGameObjectWithTag ("Loader") == null) {
 			Instantiate (prefab);
 		}
 		

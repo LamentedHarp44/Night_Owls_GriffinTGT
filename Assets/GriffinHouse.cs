@@ -3,9 +3,9 @@ using System.Collections;
 
 public class GriffinHouse : MonoBehaviour {
 
+	public string nxtLvl = "TimmyFight";
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
@@ -17,7 +17,7 @@ public class GriffinHouse : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag ("Player")) 
 		{
-			GameObject.FindGameObjectWithTag("Loader").GetComponent<SceneLoader>().lvl = "TimmyFight";
+			GameObject.FindGameObjectWithTag("Loader").GetComponent<SceneLoader>().lvl = nxtLvl;
 
 			Application.LoadLevel("Loading Screen");
 		}
