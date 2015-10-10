@@ -6,7 +6,7 @@ using System.Collections;
 
 public class DogBehavior : MonoBehaviour {
 
-	bool face;
+	public bool face;
 	// facing left = false, right = true
 	float walkSpeed;
 	float srchSpeed;

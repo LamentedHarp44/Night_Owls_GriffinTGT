@@ -11,7 +11,7 @@ public class SceneLoader : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		DontDestroyOnLoad (gameObject);
+		DontDestroyOnLoad (this.gameObject);
 	}
 
 	public void DoStuff()

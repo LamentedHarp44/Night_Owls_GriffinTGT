@@ -287,6 +287,7 @@ public class GuardBehavior : EnemyBase {
 				GetComponentInChildren<ParticleSystem>().Play();
 				attkPause = 0.6f;
 
+				this.transform.position = anchor.transform.position;
 				ChangeENMYState(ENMY_STATES.PATROL);
 			}
 
