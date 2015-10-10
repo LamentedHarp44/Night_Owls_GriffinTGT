@@ -27,7 +27,7 @@ public class LoadGameBehavior : MonoBehaviour {
 		PlayerPrefs.SetInt ("UndetectedSearch", PlayerPrefs.GetInt ("SavedUndetectedSearch"));
 		PlayerPrefs.SetInt ("LightExpo", PlayerPrefs.GetInt ("SavedLightExpo"));
 
-		GameObject.FindGameObjectWithTag ("Loader").GetComponent<SceneLoader> ().lvl = "Tutorial";
+		GameObject.FindGameObjectWithTag ("Loader").GetComponent<SceneLoader> ().lvl = "Hub World";
 		Application.LoadLevel("Loading Screen");
 	}
 }
