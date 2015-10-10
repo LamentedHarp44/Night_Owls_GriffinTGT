@@ -8,7 +8,7 @@ public class ExperimentBehavior : MonoBehaviour {
 	public ENMY_STATES state;
 	GameObject player;
 	public SpriteRenderer xMark;
-	public float leash = 5.0f;
+	public float leash = 5;
 	bool face;
 	public Vector3 anchor;
 	public bool inDetectionRange;
