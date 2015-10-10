@@ -283,7 +283,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11409902, guid: 3e7e045e6f94c1e4b8c1a2a46680241f, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11424168, guid: 3e7e045e6f94c1e4b8c1a2a46680241f, type: 2}
       propertyPath: m_Enabled
@@ -323,7 +323,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11496268, guid: 3e7e045e6f94c1e4b8c1a2a46680241f, type: 2}
       propertyPath: toLvl
-      value: level3
+      value: RatBoss
       objectReference: {fileID: 0}
     - target: {fileID: 11409902, guid: 3e7e045e6f94c1e4b8c1a2a46680241f, type: 2}
       propertyPath: toLvl
@@ -331,7 +331,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11496268, guid: 3e7e045e6f94c1e4b8c1a2a46680241f, type: 2}
       propertyPath: condition
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11499056, guid: 3e7e045e6f94c1e4b8c1a2a46680241f, type: 2}
       propertyPath: condition
