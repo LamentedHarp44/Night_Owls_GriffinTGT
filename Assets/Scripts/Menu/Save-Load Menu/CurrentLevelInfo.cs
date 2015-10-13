@@ -15,6 +15,10 @@ public class CurrentLevelInfo : MonoBehaviour {
 	void Update () {
 		currentLevel = (int)GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().GetCompletedLevel();
 
-		GetComponent<Text> ().text = currentLevel.ToString();
+		if (currentLevel == 10) {
+			GetComponent<Text>().text = "None";
+		}
+		else
+			GetComponent<Text> ().text = currentLevel.ToString();
 	}
 }

@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour {
 	bool flip;
 	bool facingRight;
 
-	int level;
+	//int level;
 
 	AudioSource SFXVolume;
 
@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		level = Application.loadedLevel;
+		//level = Application.loadedLevel;
 
 		//If Transparency upgrade purchased, permanently decrease lightExpo by 2; 
 		lightExpoPurchaseTracker = PlayerPrefs.GetInt ("LightExpo");
@@ -244,8 +244,7 @@ public class PlayerController : MonoBehaviour {
 		StartCoroutine (PlayerDeadRespawn());
 		if (lives == 0) 
 		{
-			//Destroy(this);
-			Application.LoadLevel(level);
+			Application.LoadLevel("ContinuePage");
 			lives = 3;
 		}
 	}
@@ -254,7 +253,7 @@ public class PlayerController : MonoBehaviour {
 	public IEnumerator PlayerDeadRespawn()
 	{
 
-		yield return new WaitForSeconds (.5f);
+		yield return new WaitForSeconds (.2f);
 		if(hiddenDoor != null)
 			hiddenDoor.GetComponent<HiddenDoorScript> ().DeactivateHiding ();
 
