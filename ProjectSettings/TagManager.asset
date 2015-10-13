@@ -53,6 +53,7 @@ TagManager:
   - GrabCrate
   - Waypoint
   - obst
+  - Pause
   layers:
   - Default
   - TransparentFX

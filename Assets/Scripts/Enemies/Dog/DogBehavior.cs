@@ -52,25 +52,27 @@ public class DogBehavior : MonoBehaviour {
 		if (Player == null)
 			Player = GameObject.FindGameObjectWithTag ("Player");
 
-		if (!scent)
-			Detect ();
-		else 
-			ScentDetect ();
+		if (!GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
-		switch (state) 
-		{
-		case ENMY_STATES.PATROL:
-			PatrolBehavior();
-			break;
-		case ENMY_STATES.SEARCH:
-			SearchBehavior();
-			break;
-		case ENMY_STATES.ATTACK:
-			AttackBehavior();
-			break;
-		case ENMY_STATES.RESET:
-			Reset();
-			break;
+			if (!scent)
+				Detect ();
+			else 
+				ScentDetect ();
+
+			switch (state) {
+			case ENMY_STATES.PATROL:
+				PatrolBehavior ();
+				break;
+			case ENMY_STATES.SEARCH:
+				SearchBehavior ();
+				break;
+			case ENMY_STATES.ATTACK:
+				AttackBehavior ();
+				break;
+			case ENMY_STATES.RESET:
+				Reset ();
+				break;
+			}
 		}
 	}
 

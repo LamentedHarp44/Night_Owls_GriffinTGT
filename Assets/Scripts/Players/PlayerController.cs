@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour {
 	bool flip;
 	bool facingRight;
 
-	int level;
+	//int level;
 
 	AudioSource SFXVolume;
 
@@ -78,44 +78,42 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		level = Application.loadedLevel;
-
-		//If Transparency upgrade purchased, permanently decrease lightExpo by 2; 
-		lightExpoPurchaseTracker = PlayerPrefs.GetInt ("LightExpo");
-		if (lightExpoPurchaseTracker == 1) 
-		{
-			lightExpo = -2;
-			lightExpoPurchased = true;
-			PlayerPrefs.SetInt("LightExpo", 0);
-		}
-
+		//level = Application.loadedLevel;
+		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
+			//If Transparency upgrade purchased, permanently decrease lightExpo by 2; 
+			lightExpoPurchaseTracker = PlayerPrefs.GetInt ("LightExpo");
+			if (lightExpoPurchaseTracker == 1) {
+				lightExpo = -2;
+				lightExpoPurchased = true;
+				PlayerPrefs.SetInt ("LightExpo", 0);
+			}
 
 
-		if (SFXVolume == null)
-			SFXVolume = GameObject.FindGameObjectWithTag ("Player Audio").GetComponentInChildren<AudioSource> ();
 
-		//Telling the player script it is hiding in a hidden door.
-		if(hiddenDoor != null)
-			hiding = hiddenDoor.GetComponent<HiddenDoorScript> ().hiding;
+			if (SFXVolume == null)
+				SFXVolume = GameObject.FindGameObjectWithTag ("Player Audio").GetComponentInChildren<AudioSource> ();
+
+			//Telling the player script it is hiding in a hidden door.
+			if (hiddenDoor != null)
+				hiding = hiddenDoor.GetComponent<HiddenDoorScript> ().hiding;
 
 
-		if (mainSpawn == null) 
-		{
-			mainSpawn = GameObject.FindGameObjectWithTag ("Main Spawn").transform;
-			transform.position = mainSpawn.transform.position;
-		}
-		if(GetComponentInChildren<GrappleHookScript>().shot == false)
-			Movement ();
+			if (mainSpawn == null) {
+				mainSpawn = GameObject.FindGameObjectWithTag ("Main Spawn").transform;
+				transform.position = mainSpawn.transform.position;
+			}
+			if (GetComponentInChildren<GrappleHookScript> ().shot == false)
+				Movement ();
 
-		if (Input.GetKey ("e"))
-			Use ();
+			if (Input.GetKey ("e"))
+				Use ();
 		//cooldownEffect
 		else if (Input.GetKeyDown ("q")) {
-			GetComponent<Invisiblilityscript> ().Invisibility ();
-			//cooled=true;
-			//Debug.Log("pressed");
-			//cooldown.GetComponent<CoolDownHud> ().coolDown ();
-		}
+				GetComponent<Invisiblilityscript> ().Invisibility ();
+				//cooled=true;
+				//Debug.Log("pressed");
+				//cooldown.GetComponent<CoolDownHud> ().coolDown ();
+			}
 
 
 
@@ -128,31 +126,31 @@ public class PlayerController : MonoBehaviour {
 			grounded = false;
 		}
 
-		// call pause menu
-		if (Input.GetKeyDown (KeyCode.Escape)) {
-			pauseMenuToggle=!pauseMenuToggle;
+			// call pause menu
+			if (Input.GetKeyDown (KeyCode.Escape)) {
+				pauseMenuToggle = !pauseMenuToggle;
 			
 			
-			if (pauseMenuToggle){
-				pauseMenu.GetComponent<CanvasGroup>().alpha=1;
-				pauseMenu.GetComponent<CanvasGroup>().interactable=true;
+				if (pauseMenuToggle) {
+					pauseMenu.GetComponent<CanvasGroup> ().alpha = 1;
+					pauseMenu.GetComponent<CanvasGroup> ().interactable = true;
 				
 				
+				} else {
+					pauseMenu.GetComponent<CanvasGroup> ().alpha = 0;
+					pauseMenu.GetComponent<CanvasGroup> ().interactable = false;
+				}
 			}
-			else{
-				pauseMenu.GetComponent<CanvasGroup>().alpha=0;
-				pauseMenu.GetComponent<CanvasGroup>().interactable=false;
-			}
+
+
+			if (gamePause)
+				Time.timeScale = 0;
+			else
+				Time.timeScale = 1;
+
+
+			DontDestroyOnLoad (this);
 		}
-
-
-		if (gamePause)
-			Time.timeScale = 0;
-		else
-			Time.timeScale = 1;
-
-
-		DontDestroyOnLoad (this);
 
 	}
 
@@ -240,12 +238,18 @@ public class PlayerController : MonoBehaviour {
 
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
 		lives--;
-		StartCoroutine (PlayerDeadRespawn());
+		//StartCoroutine (PlayerDeadRespawn());
 		if (lives == 0) 
 		{
-			//Destroy(this);
-			Application.LoadLevel(level);
+			Application.LoadLevel ("ContinuePage");
 			lives = 3;
+		} 
+		else 
+		{
+			if (hiddenDoor != null)
+				hiddenDoor.GetComponent<HiddenDoorScript> ().DeactivateHiding ();
+			
+			transform.position = mainSpawn.transform.position;
 		}
 	}
 
@@ -253,7 +257,7 @@ public class PlayerController : MonoBehaviour {
 	public IEnumerator PlayerDeadRespawn()
 	{
 
-		yield return new WaitForSeconds (.5f);
+		yield return new WaitForSeconds (.2f);
 		if(hiddenDoor != null)
 			hiddenDoor.GetComponent<HiddenDoorScript> ().DeactivateHiding ();
 

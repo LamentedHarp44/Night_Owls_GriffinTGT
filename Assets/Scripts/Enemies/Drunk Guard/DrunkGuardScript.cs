@@ -4,44 +4,59 @@ using System.Collections;
 
 public class DrunkGuardScript : MonoBehaviour {
 
-	public float sleepTimer;
-	public float awakeTimer;
+	float sleepTimer, awakeTimer;
 	public float attackTimer;
 	public float detRange;
 	public bool sighted;
 	public bool asleep;
-	public GameObject player;
-	public bool face;
+	GameObject player;
 
+	//  true = left.  false = right.
+	public bool face;
+	public AudioClip gunShot;
+
+
+	void Start()
+	{
+		asleep = true;
+		sleepTimer = awakeTimer = 7.0f;
+	}
 
 	public void Update()
 	{
 		if(player == null)
 			player = GameObject.FindGameObjectWithTag ("Player");
 
-		if (asleep)
-		{
-			sleepTimer -= Time.fixedDeltaTime;
-			if (sleepTimer <= 0) {
-				asleep = false;
-				sleepTimer = 4.0f;
-			}
+		if (GameObject.FindGameObjectWithTag ("Pause").GetComponent <PauseMenu> ().gPause) {
+			GetComponent<Animator>().SetBool("awake", true);
+			asleep = false;
 		}
-		else if (!asleep) 
-		{
-			awakeTimer -= Time.fixedDeltaTime;
-			Detect();
-			if(awakeTimer <= 0 && !sighted)
-			{
-				asleep = true;
-				awakeTimer = 3.0f;
-			}
-			else if(sighted)
-			{
-				attackTimer -= Time.fixedDeltaTime;
-				if(attackTimer <= 0 && sighted)
-				{
-					player.GetComponent<PlayerController>().PlayerDeath(TYPE_DEATH.RANGED);
+
+		else {
+			if (asleep) {
+				sleepTimer -= Time.fixedDeltaTime;
+				if (sleepTimer <= 0) {
+					asleep = false;
+					sleepTimer = 7.0f;
+					GetComponent<Animator> ().SetBool ("awake", true);
+				}
+			} else if (!asleep) {
+				if (!sighted) {
+					awakeTimer -= Time.fixedDeltaTime;
+					attackTimer = 1.5f;
+				}
+				Detect ();
+				if (awakeTimer <= 0 && !sighted) {
+					asleep = true;
+					awakeTimer = 7.0f;
+					GetComponent<Animator> ().SetBool ("awake", false);
+				} else if (sighted) {
+					attackTimer -= Time.fixedDeltaTime;
+					if (attackTimer <= 0 && sighted) {
+						GetComponentInChildren<AudioSource> ().PlayOneShot (gunShot);
+						player.GetComponent<PlayerController> ().PlayerDeath (TYPE_DEATH.RANGED);
+						attackTimer = 1.5f;
+					}
 				}
 			}
 		}
@@ -50,27 +65,48 @@ public class DrunkGuardScript : MonoBehaviour {
 
 	void Detect()
 	{
-		float tempRange = detRange * player.GetComponent<PlayerController> ().lightExpo;
-		RaycastHit2D target;
-
-
-
-		if (tempRange < 0)
-			tempRange = 0;
-
-		if (face) 
-			target = Physics2D.Raycast ((Vector2)transform.position, Vector2.left, tempRange, Physics2D.DefaultRaycastLayers, -1.0f);
-		else
-			target = Physics2D.Raycast ((Vector2)transform.position, Vector2.right, tempRange, Physics2D.DefaultRaycastLayers, -1.0f);
-			
-		if (target.collider != null && target.collider.gameObject.tag == "Player")
-			sighted = true;
+		if (!face)
+		{
+			if (Mathf.Abs (player.transform.position.x - this.transform.position.x) < detRange 
+				&& Mathf.Abs (player.transform.position.y - this.transform.position.y) < 1.0f
+				&& player.transform.position.x > this.transform.position.x) 
+			{
+				if (player.GetComponent<Invisiblilityscript> ().LightExposure () > 1)
+				{
+					sighted = true;
+					GetComponent<Animator> ().SetBool ("Fire", true);
+				}
+				else
+				{
+					sighted = false;
+					GetComponent<Animator>().SetBool("Fire", false);
+				}
+			} else {
+				sighted = false;
+				GetComponent<Animator>().SetBool("Fire", false);
+			}
+		}
 		else 
 		{
-			sighted = false;
-			attackTimer = 1.0f;
+			if (Mathf.Abs (player.transform.position.x - this.transform.position.x) < detRange 
+			    && Mathf.Abs (player.transform.position.y - this.transform.position.y) < 1.0f
+			    && player.transform.position.x < this.transform.position.x) 
+			{
+				if (player.GetComponent<Invisiblilityscript> ().LightExposure () > 1)
+				{
+					sighted = true;
+					GetComponent<Animator> ().SetBool ("Fire", true);
+				}
+				else
+				{
+					sighted = false;
+					GetComponent<Animator>().SetBool("Fire", false);
+				}
+			} else {
+				sighted = false;
+				GetComponent<Animator>().SetBool("Fire", false);
+			}
 		}
-
 	
 	}
 

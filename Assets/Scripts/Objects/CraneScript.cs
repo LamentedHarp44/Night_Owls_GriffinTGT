@@ -23,48 +23,40 @@ public class CraneScript : MonoBehaviour {
 		if(player == null)
 			player = GameObject.FindGameObjectWithTag ("Player");
 
-		if(grappleHook == null)
-			grappleHook = GameObject.FindGameObjectWithTag ("GrappleHook");
+		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
-		if (trigger == true) 
-		{
-			if(Input.GetKeyDown(KeyCode.E) && inputNumber == 0)
-			{
-			player.GetComponent<PlayerController>().moveSpeed = 0;
-				grappleHook.GetComponent<GrappleHookScript>().enabled = false;
-				inputNumber = 1;
-			}
-			else if(Input.GetKeyDown(KeyCode.E) && inputNumber == 1)
-			{
-				player.GetComponent<PlayerController>().moveSpeed = 5;
-				grappleHook.GetComponent<GrappleHookScript>().enabled = true;
-				inputNumber = 0;
-			}
-		}
+			if (grappleHook == null)
+				grappleHook = GameObject.FindGameObjectWithTag ("GrappleHook");
 
-		if (inputNumber == 1) 
-		{
-			if(Input.GetKey(KeyCode.W))
-			{
-				if(crate.GetComponent<CrateScript>().moveUp == true)
-				{
-					Vector3 temp = rope.transform.localScale;
-					temp.y = temp.y - .005f;
-					rope.transform.localScale = temp;
+			if (trigger == true) {
+				if (Input.GetKeyDown (KeyCode.E) && inputNumber == 0) {
+					player.GetComponent<PlayerController> ().moveSpeed = 0;
+					grappleHook.GetComponent<GrappleHookScript> ().enabled = false;
+					inputNumber = 1;
+				} else if (Input.GetKeyDown (KeyCode.E) && inputNumber == 1) {
+					player.GetComponent<PlayerController> ().moveSpeed = 5;
+					grappleHook.GetComponent<GrappleHookScript> ().enabled = true;
+					inputNumber = 0;
 				}
 			}
-			else if (Input.GetKey(KeyCode.S))
-			{
-				if(crate.GetComponent<CrateScript>().moveDown == true)
-				{
-					Vector3 temp = rope.transform.localScale;
-					temp.y = temp.y + .005f;
-					rope.transform.localScale = temp;
+
+			if (inputNumber == 1) {
+				if (Input.GetKey (KeyCode.W)) {
+					if (crate.GetComponent<CrateScript> ().moveUp == true) {
+						Vector3 temp = rope.transform.localScale;
+						temp.y = temp.y - .005f;
+						rope.transform.localScale = temp;
+					}
+				} else if (Input.GetKey (KeyCode.S)) {
+					if (crate.GetComponent<CrateScript> ().moveDown == true) {
+						Vector3 temp = rope.transform.localScale;
+						temp.y = temp.y + .005f;
+						rope.transform.localScale = temp;
+					}
 				}
 			}
+
 		}
-
-
 	}
 
 	void OnTriggerEnter2D(Collider2D other)

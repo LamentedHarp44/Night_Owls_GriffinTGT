@@ -14,9 +14,9 @@ public class SavedLevelInfo : MonoBehaviour {
 	void Update () {
 		savedLevel = PlayerPrefs.GetInt ("Level");
 
-		if (savedLevel >= 0 && savedLevel <= 10) {
+		if (savedLevel >= 0 && savedLevel < 10) {
 			GetComponent<Text> ().text = savedLevel.ToString ();
 		} else
-			GetComponent<Text> ().text = "No Save";
+			GetComponent<Text> ().text = "None";
 	}
 }

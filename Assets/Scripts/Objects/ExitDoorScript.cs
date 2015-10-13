@@ -30,7 +30,7 @@ public class ExitDoorScript : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.tag == "Player" && Lock == false) 
+		if (other.CompareTag("Player") && Lock == false) 
 		{
 			other.GetComponent<PlayerController>().lastCompleted = currLvl;
 			GameObject.FindGameObjectWithTag("Loader").GetComponent<SceneLoader>().lvl = nxtlvl;
