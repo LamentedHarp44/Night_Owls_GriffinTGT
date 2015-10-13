@@ -37,6 +37,7 @@ public class DeathWall : MonoBehaviour {
 		if (player == null)
 			player = GameObject.FindGameObjectWithTag ("Player");
 
+		if (!GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
 		livesCounter = player.GetComponent<PlayerController> ().lives;
 
@@ -97,7 +98,7 @@ public class DeathWall : MonoBehaviour {
 			shot = null;
 
 
-
+			}
 		}
 	}
 

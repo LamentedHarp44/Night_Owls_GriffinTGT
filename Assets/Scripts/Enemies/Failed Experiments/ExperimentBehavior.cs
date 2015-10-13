@@ -40,46 +40,43 @@ public class ExperimentBehavior : MonoBehaviour {
 		//If player doesn't exist set him.
 		if(player == null)
 			player = GameObject.FindWithTag ("Player");
+		if (!GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
-		//Set attack state alert image.
-		if (state == ENMY_STATES.ATTACK)
-			xMark.enabled = true;
-		else
-			xMark.enabled = false;
+			//Set attack state alert image.
+			if (state == ENMY_STATES.ATTACK)
+				xMark.enabled = true;
+			else
+				xMark.enabled = false;
 
-		//Resetting player killed variables for malformed patient.
-		if (killedPlayer == true)
-			timer += Time.deltaTime;
-		if (timer > 1.0f) 
-		{
-			GetComponent<BoxCollider2D> ().enabled = true;
-			killedPlayer = false;
-			timer = 0;
-		}
+			//Resetting player killed variables for malformed patient.
+			if (killedPlayer == true)
+				timer += Time.fixedDeltaTime;
+			if (timer > 1.0f) {
+				GetComponent<BoxCollider2D> ().enabled = true;
+				killedPlayer = false;
+				timer = 0;
+			}
 
-		//Setting A.I. behavior.
-		switch (state) 
-		{
-		case ENMY_STATES.PATROL:
-			PatrolBehavior();
-			break;
-		case ENMY_STATES.ATTACK:
-			AttackBehavior();
-			break;
-		}
+			//Setting A.I. behavior.
+			switch (state) {
+			case ENMY_STATES.PATROL:
+				PatrolBehavior ();
+				break;
+			case ENMY_STATES.ATTACK:
+				AttackBehavior ();
+				break;
+			}
 
-		//This just flips the image.
-		if (face) 
-		{
-			Vector3 temp = transform.localScale;
-			 temp.x = -3;
-			transform.localScale = temp;
-		} 
-		else 
-		{
-			Vector3 temp = transform.localScale;
-			temp.x = 3;
-			transform.localScale = temp;
+			//This just flips the image.
+			if (face) {
+				Vector3 temp = transform.localScale;
+				temp.x = -3;
+				transform.localScale = temp;
+			} else {
+				Vector3 temp = transform.localScale;
+				temp.x = 3;
+				transform.localScale = temp;
+			}
 		}
 	}
 

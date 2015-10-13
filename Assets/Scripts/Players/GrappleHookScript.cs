@@ -39,114 +39,99 @@ public class GrappleHookScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
-		if (grabCrate == null)
-			grabCrate = GameObject.FindWithTag ("GrabCrate");
+			if (grabCrate == null)
+				grabCrate = GameObject.FindWithTag ("GrabCrate");
 
-		//Checking if upgrade has been purchased in the shop menu, if so then apply grapple functionality.
-		//----------------------------------------------------
-		VAPurchaseTracker = PlayerPrefs.GetInt ("VAPurchase");
-		if (VAPurchaseTracker == 1) {
-			VAPurchased = true;
-			PlayerPrefs.SetInt("VAPurchase", 0);
-		}
-		GAPurchaseTracker = PlayerPrefs.GetInt ("GAPurchase");
-		if (GAPurchaseTracker == 1) {
-			GAPurchased = true;
-			PlayerPrefs.SetInt("GAPurchase", 0);
-		}
-		BAPurchaseTracker = PlayerPrefs.GetInt ("BAPurchase");
-		if (BAPurchaseTracker == 1) {
-			BAPurchased = true;
-			PlayerPrefs.SetInt("BAPurchase", 0);
-		}
-		//----------------------------------------------------
-
-
-		//Setting hook to start position.
-		if (shot == false) 
-		{
-			transform.position = startPos.transform.position;
-			collided = false;
-			timer = 0;
-			verticalAnchorStruck = false;
-			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-			player.GetComponent<Rigidbody2D>().gravityScale = 1;
-		}
-
-
-		//Shooting the gun
-		if (Input.GetKeyDown (KeyCode.Mouse0) && shot == false && player.GetComponent<PlayerController> ().grounded == true) 
-		{
-			if(player.transform.localScale.x > 0)
-			{
-				GetComponent<Rigidbody2D> ().AddForce (transform.right * 500);
+			//Checking if upgrade has been purchased in the shop menu, if so then apply grapple functionality.
+			//----------------------------------------------------
+			VAPurchaseTracker = PlayerPrefs.GetInt ("VAPurchase");
+			if (VAPurchaseTracker == 1) {
+				VAPurchased = true;
+				PlayerPrefs.SetInt ("VAPurchase", 0);
 			}
-			else
-			{
-				Vector3 temp = transform.right;
-				temp.y = transform.right.y * -1;
+			GAPurchaseTracker = PlayerPrefs.GetInt ("GAPurchase");
+			if (GAPurchaseTracker == 1) {
+				GAPurchased = true;
+				PlayerPrefs.SetInt ("GAPurchase", 0);
+			}
+			BAPurchaseTracker = PlayerPrefs.GetInt ("BAPurchase");
+			if (BAPurchaseTracker == 1) {
+				BAPurchased = true;
+				PlayerPrefs.SetInt ("BAPurchase", 0);
+			}
+			//----------------------------------------------------
 
-				GetComponent<Rigidbody2D> ().AddForce (temp * -500);
+
+			//Setting hook to start position.
+			if (shot == false) {
+				transform.position = startPos.transform.position;
+				collided = false;
+				timer = 0;
+				verticalAnchorStruck = false;
+				GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+				player.GetComponent<Rigidbody2D> ().gravityScale = 1;
 			}
 
-			shot = true;
-		} 
-		else if (Input.GetKeyDown (KeyCode.Mouse0) && shot == true)//Canceling the shot (Helps with bad grapple usage).
-		{
-			shot = false;
-			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-			player.GetComponent<Rigidbody2D>().gravityScale = 1;
-		}
 
+			//Shooting the gun
+			if (Input.GetKeyDown (KeyCode.Mouse0) && shot == false && player.GetComponent<PlayerController> ().grounded == true) {
+				if (player.transform.localScale.x > 0) {
+					GetComponent<Rigidbody2D> ().AddForce (transform.right * 500);
+				} else {
+					Vector3 temp = transform.right;
+					temp.y = transform.right.y * -1;
 
-		//Vertical attachment behavior if the upgrade is purchased.
-		if (shot == true && verticalAnchorStruck == true && VAPurchased == true)
-		{
-			//Raising player and lowering hook(hook is a child and moves with parent so needed to offset position).
-			if(Input.GetKey(KeyCode.W))
-			{
-				Vector3 temp = player.transform.position;
-				temp.y += .08f;
-				player.transform.position = temp;
-				Vector3 temp1 = transform.position;
-				temp1.y -= .08f;
-				transform.position = temp1;
-			}
-			else if(Input.GetKey(KeyCode.S))//Lowering player and raising hook
-			{
-				Vector3 temp = player.transform.position;
-				temp.y -= .08f;
-				player.transform.position = temp;
-				Vector3 temp1 = transform.position;
-				temp1.y += .08f;
-				transform.position = temp1;
-			}
-			else if (Input.GetKeyDown (KeyCode.Mouse0))//Detaches the vertical attach mode.
-			{
+					GetComponent<Rigidbody2D> ().AddForce (temp * -500);
+				}
+
+				shot = true;
+			} else if (Input.GetKeyDown (KeyCode.Mouse0) && shot == true) {//Canceling the shot (Helps with bad grapple usage).
 				shot = false;
-				player.GetComponent<Rigidbody2D>().gravityScale = 1;
+				GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+				player.GetComponent<Rigidbody2D> ().gravityScale = 1;
+			}
+
+
+			//Vertical attachment behavior if the upgrade is purchased.
+			if (shot == true && verticalAnchorStruck == true && VAPurchased == true) {
+				//Raising player and lowering hook(hook is a child and moves with parent so needed to offset position).
+				if (Input.GetKey (KeyCode.W)) {
+					Vector3 temp = player.transform.position;
+					temp.y += .08f;
+					player.transform.position = temp;
+					Vector3 temp1 = transform.position;
+					temp1.y -= .08f;
+					transform.position = temp1;
+				} else if (Input.GetKey (KeyCode.S)) {//Lowering player and raising hook
+					Vector3 temp = player.transform.position;
+					temp.y -= .08f;
+					player.transform.position = temp;
+					Vector3 temp1 = transform.position;
+					temp1.y += .08f;
+					transform.position = temp1;
+				} else if (Input.GetKeyDown (KeyCode.Mouse0)) {//Detaches the vertical attach mode.
+					shot = false;
+					player.GetComponent<Rigidbody2D> ().gravityScale = 1;
+				}
+			}
+
+			//Grab Attachment functionality. If the hook hits the crate, lock its position to the crates.
+			if (grabCrate != null) {
+				if (grabCrate.GetComponent<GrabCrateScript> ().dragToPlayer == true) {
+					transform.position = grabCrate.transform.position;
+				}
+			}
+
+			//If the hook is fired and hits nothing set back to starting position.
+			if (shot == true && collided == false)
+				timer += Time.deltaTime;
+
+			if (timer >= .90f && shot == true && collided == false) {
+				shot = false;
 			}
 		}
-
-		//Grab Attachment functionality. If the hook hits the crate, lock its position to the crates.
-		if (grabCrate != null) 
-		{
-			if (grabCrate.GetComponent<GrabCrateScript> ().dragToPlayer == true) 
-			{
-				transform.position = grabCrate.transform.position;
-			}
-		}
-
-		//If the hook is fired and hits nothing set back to starting position.
-		if(shot == true && collided == false)
-			timer += Time.deltaTime;
-
-		if (timer >= .90f && shot == true && collided == false) 
-		{
-			shot = false;
-		}
-
 
 	}
 

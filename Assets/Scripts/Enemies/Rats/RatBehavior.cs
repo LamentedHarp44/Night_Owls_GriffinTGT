@@ -43,77 +43,70 @@ public class RatBehavior : MonoBehaviour {
 		if(player == null)
 			player = GameObject.FindGameObjectWithTag ("Player");
 
+		if (!GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
-		livesCounter = player.GetComponent<PlayerController> ().lives;
+			livesCounter = player.GetComponent<PlayerController> ().lives;
 		
-		if (tempLives != livesCounter) 
-		{
-			tempLives = livesCounter;
-			transform.position = home;
-			player.GetComponent<PlayerController> ().ratCount = 0;
-			player.GetComponent<PlayerController> ().moveSpeed = 5.0f;
-		}
-
-
-
-
-		//Launcher ();
-
-		if (GetComponent<CircleCollider2D> ().enabled == false)
-		{
-			colideTimer-= Time.fixedDeltaTime;
-
-			if(colideTimer <= 0)
-			{
-				colideTimer = 2.0f;
-				GetComponent<CircleCollider2D>().enabled = true;
+			if (tempLives != livesCounter) {
+				tempLives = livesCounter;
+				transform.position = home;
+				player.GetComponent<PlayerController> ().ratCount = 0;
+				player.GetComponent<PlayerController> ().moveSpeed = 5.0f;
 			}
-		}
 
 
 
-		if (moveDist <= 0)
-			moveDist = Random.Range (0.0f, leash);
 
-		if(ground)
+			//Launcher ();
+
+			if (GetComponent<CircleCollider2D> ().enabled == false) {
+				colideTimer -= Time.fixedDeltaTime;
+
+				if (colideTimer <= 0) {
+					colideTimer = 2.0f;
+					GetComponent<CircleCollider2D> ().enabled = true;
+				}
+			}
+
+
+
+			if (moveDist <= 0)
+				moveDist = Random.Range (0.0f, leash);
+
+			if (ground)
 			if (attacking)
 				Attack ();
 			else
 				Movement ();
 
 
-		if (attacking)
-		{
-			particle -= Time.fixedDeltaTime;
+			if (attacking) {
+				particle -= Time.fixedDeltaTime;
 
-			if (particle <= 0)
-			{
-				particle = 2.0f;
-				GetComponentInChildren<ParticleSystem>().startColor = starter;
-				GetComponentInChildren<ParticleSystem>().Play();
+				if (particle <= 0) {
+					particle = 2.0f;
+					GetComponentInChildren<ParticleSystem> ().startColor = starter;
+					GetComponentInChildren<ParticleSystem> ().Play ();
+				}
+
 			}
 
-		}
 
 
+			if (player.GetComponent<PlayerController> ().ratCount >= 5 && player.GetComponent<Invisiblilityscript> ().LightExposure () < 4) {
+				GetComponentInChildren<ParticleSystem> ().startColor = Color.red;
+				killTimer -= Time.fixedDeltaTime;
 
-		if (player.GetComponent<PlayerController> ().ratCount >= 5 && player.GetComponent<Invisiblilityscript> ().LightExposure() < 4) 
-		{
-			GetComponentInChildren<ParticleSystem>().startColor = Color.red;
-			killTimer -= Time.fixedDeltaTime;
-
-			if (killTimer <= 0) 
-			{
-				player.GetComponent<PlayerController> ().ratCount = 0;
-				player.GetComponent<PlayerController> ().moveSpeed = 5.0f;
-				attacking = false;
-				this.transform.position = home;
-				player.GetComponent<PlayerController> ().PlayerDeath (TYPE_DEATH.SWARM);
+				if (killTimer <= 0) {
+					player.GetComponent<PlayerController> ().ratCount = 0;
+					player.GetComponent<PlayerController> ().moveSpeed = 5.0f;
+					attacking = false;
+					this.transform.position = home;
+					player.GetComponent<PlayerController> ().PlayerDeath (TYPE_DEATH.SWARM);
+				}
+			} else {
+				killTimer = 3.0f;
 			}
-		} 
-		else
-		{
-			killTimer = 3.0f;
 		}
 	}
 

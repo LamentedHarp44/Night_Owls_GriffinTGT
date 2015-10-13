@@ -22,35 +22,32 @@ public class HiddenDoorScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if(player == null)
-		{
-			player = GameObject.FindWithTag ("Player");
-			grappleGun = GameObject.FindWithTag ("GrappleGun");
-			grappleHook = GameObject.FindWithTag ("GrappleHook");
-			anim = player.GetComponent<Animator> ();
-		}
+		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
-		if (goHiding == true) 
-		{
-
-			if(Input.GetKeyDown(KeyCode.E) && inputCount == 0)
-			{
-				ActivateHiding();
-				hiding = true;
-				player.GetComponent<PlayerController> ().lightExpo = 0;
+			if (player == null) {
+				player = GameObject.FindWithTag ("Player");
+				grappleGun = GameObject.FindWithTag ("GrappleGun");
+				grappleHook = GameObject.FindWithTag ("GrappleHook");
+				anim = player.GetComponent<Animator> ();
 			}
-			else if (Input.GetKeyDown(KeyCode.E) && inputCount == 1)
-			{
-				DeactivateHiding();
-				hiding = false;
-				if(player.GetComponent<PlayerController>().lightExpoPurchased == false)
+
+			if (goHiding == true) {
+
+				if (Input.GetKeyDown (KeyCode.E) && inputCount == 0) {
+					ActivateHiding ();
+					hiding = true;
 					player.GetComponent<PlayerController> ().lightExpo = 0;
-				else
-					player.GetComponent<PlayerController> ().lightExpo = -2;
+				} else if (Input.GetKeyDown (KeyCode.E) && inputCount == 1) {
+					DeactivateHiding ();
+					hiding = false;
+					if (player.GetComponent<PlayerController> ().lightExpoPurchased == false)
+						player.GetComponent<PlayerController> ().lightExpo = 0;
+					else
+						player.GetComponent<PlayerController> ().lightExpo = -2;
+				}
+
 			}
-
 		}
-
 	}
 
 

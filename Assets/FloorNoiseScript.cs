@@ -14,7 +14,7 @@ public class FloorNoiseScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (steppedOn) {
-			cd -= Time.deltaTime;
+			cd -= Time.fixedDeltaTime;
 
 			if (cd <= 0)
 			{

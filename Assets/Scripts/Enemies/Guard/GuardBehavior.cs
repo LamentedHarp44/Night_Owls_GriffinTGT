@@ -72,29 +72,32 @@ public class GuardBehavior : EnemyBase {
 		if (playRef == null)
 			playRef = GameObject.FindGameObjectWithTag ("Player");
 
-		if (attkPause > 0.0f) {
-			attkPause -= Time.fixedDeltaTime;
-		} else {
-			switch (currState) {
-			case ENMY_STATES.PATROL:
-				PatrolBehavior (playRef);
-				break;
+		if (!GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
-			case ENMY_STATES.SEARCH:
-				SearchBehavior (playRef);
-				break;
+			if (attkPause > 0.0f) {
+				attkPause -= Time.fixedDeltaTime;
+			} else {
+				switch (currState) {
+				case ENMY_STATES.PATROL:
+					PatrolBehavior (playRef);
+					break;
 
-			case ENMY_STATES.ATTACK:
-				AttackBehavior (playRef);
-				break;
+				case ENMY_STATES.SEARCH:
+					SearchBehavior (playRef);
+					break;
 
-			case ENMY_STATES.COORD:
-				CoordinatedBehavior (playRef);
-				break;
+				case ENMY_STATES.ATTACK:
+					AttackBehavior (playRef);
+					break;
 
-			default:
-				PatrolBehavior (playRef);
-				break;
+				case ENMY_STATES.COORD:
+					CoordinatedBehavior (playRef);
+					break;
+
+				default:
+					PatrolBehavior (playRef);
+					break;
+				}
 			}
 		}
 	}
