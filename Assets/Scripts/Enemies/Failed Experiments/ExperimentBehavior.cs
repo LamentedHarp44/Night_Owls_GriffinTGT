@@ -122,18 +122,26 @@ public class ExperimentBehavior : MonoBehaviour {
 		
 		transform.position = temp;
 
-		if (playerMoving == false || player.GetComponent<PlayerController>().hiding == true)//inDetectionRange == false || 
+		if (playerMoving == false || player.GetComponent<PlayerController>().hiding == true) 
 			state = ENMY_STATES.PATROL;
 	}
 
 
-//	void OnTriggerEnter2D(Collider2D other)
-//	{
-//		if (other.tag == "Player" && playerMoving == true) 
-//		{
-//			player.GetComponent<PlayerController>().PlayerDeath(TYPE_DEATH.MELEE);
-//		}
-//	}
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.CompareTag ("Waypoint")) 
+		{
+			if (state == ENMY_STATES.PATROL)
+				face = !face;
+			
+			else
+			{
+				inDetectionRange = false;
+				state = ENMY_STATES.PATROL;
+				face = !face;
+			}
+		}
+	}
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
@@ -144,6 +152,7 @@ public class ExperimentBehavior : MonoBehaviour {
 			killedPlayer = true;
 		}
 	}
+
 
 
 }

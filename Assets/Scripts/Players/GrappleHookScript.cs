@@ -178,7 +178,7 @@ public class GrappleHookScript : MonoBehaviour {
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		}
 
-		if (other.tag == "Floor") 
+		if (other.tag == "Floor" || other.tag == "chest") 
 		{
 			shot = false;
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;

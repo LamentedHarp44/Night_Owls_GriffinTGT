@@ -117,14 +117,14 @@ public class PlayerController : MonoBehaviour {
 
 
 
-			//Jumping
-			if (jumpNumber == 0 && Input.GetKeyDown (KeyCode.Space) && grounded == true) {
-		    //&& GetComponentInChildren<GrappleHookScript>().shot == false)
-				jumpNumber = 1;
-				GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, jumpForce));
-				grounded = false;
-				GetComponentInChildren<GrappleHookScript> ().shot = false;
-			}
+		//Jumping
+		if (jumpNumber == 0 && Input.GetKeyDown(KeyCode.Space) && grounded == true
+		    && GetComponentInChildren<GrappleHookScript>().shot == false) 
+		{
+			jumpNumber = 1;
+			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+			grounded = false;
+		}
 
 			// call pause menu
 			if (Input.GetKeyDown (KeyCode.Escape)) {

@@ -72,7 +72,9 @@ public class GuardBehavior : EnemyBase {
 		if (playRef == null)
 			playRef = GameObject.FindGameObjectWithTag ("Player");
 
-		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
+
+
+		if (GameObject.FindGameObjectWithTag ("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
 			if (attkPause > 0.0f) {
 				attkPause -= Time.fixedDeltaTime;
@@ -562,7 +564,7 @@ public class GuardBehavior : EnemyBase {
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
-		if (collider.CompareTag ("Railing")) {
+		if (collider.CompareTag ("Waypoint")) {
 			if (currState == ENMY_STATES.PATROL)
 				wlkSpd = -wlkSpd;
 

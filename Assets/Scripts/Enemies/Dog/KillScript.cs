@@ -31,4 +31,21 @@ public class KillScript : MonoBehaviour {
 			GetComponentInParent<DogBehavior>().face = !GetComponentInParent<DogBehavior>().face;
 		}
 	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.CompareTag ("Waypoint")) 
+		{
+			if (GetComponentInParent<DogBehavior>().state == ENMY_STATES.PATROL)
+				GetComponentInParent<DogBehavior>().face = !GetComponentInParent<DogBehavior>().face;
+			
+			else
+			{
+				GetComponentInParent<DogBehavior>().state = ENMY_STATES.PATROL;
+				
+				GetComponentInParent<DogBehavior>().face = !GetComponentInParent<DogBehavior>().face;
+			}
+		}
+	}
+
 }
