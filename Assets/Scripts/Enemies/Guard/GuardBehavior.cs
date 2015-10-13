@@ -72,7 +72,7 @@ public class GuardBehavior : EnemyBase {
 		if (playRef == null)
 			playRef = GameObject.FindGameObjectWithTag ("Player");
 
-		if (!GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
+		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
 			if (attkPause > 0.0f) {
 				attkPause -= Time.fixedDeltaTime;

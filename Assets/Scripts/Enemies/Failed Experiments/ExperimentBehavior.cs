@@ -40,7 +40,7 @@ public class ExperimentBehavior : MonoBehaviour {
 		//If player doesn't exist set him.
 		if(player == null)
 			player = GameObject.FindWithTag ("Player");
-		if (!GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
+		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
 			//Set attack state alert image.
 			if (state == ENMY_STATES.ATTACK)
