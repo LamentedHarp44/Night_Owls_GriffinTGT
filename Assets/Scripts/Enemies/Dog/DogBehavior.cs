@@ -8,7 +8,7 @@ public class DogBehavior : MonoBehaviour {
 
 	public bool face;
 	// facing left = false, right = true
-	float walkSpeed;
+	public float walkSpeed = 3;
 	float srchSpeed;
 	float atkSpeed;
 	public ENMY_STATES state;
@@ -32,7 +32,7 @@ public class DogBehavior : MonoBehaviour {
 	{
 		anchor = transform.position;
 		state = ENMY_STATES.PATROL;
-		walkSpeed = 3;
+		//walkSpeed = 3;
 		srchSpeed = 2;
 		atkSpeed = 5;
 		face = true;

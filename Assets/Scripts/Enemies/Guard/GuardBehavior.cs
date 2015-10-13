@@ -559,7 +559,7 @@ public class GuardBehavior : EnemyBase {
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
-		if (collider.CompareTag ("Railing")) {
+		if (collider.CompareTag ("Waypoint")) {
 			if (currState == ENMY_STATES.PATROL)
 				wlkSpd = -wlkSpd;
 

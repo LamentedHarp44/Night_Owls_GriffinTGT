@@ -51,6 +51,8 @@ TagManager:
   - EnterBossFight
   - GrappleHookStart
   - GrabCrate
+  - Waypoint
+  - obst
   layers:
   - Default
   - TransparentFX

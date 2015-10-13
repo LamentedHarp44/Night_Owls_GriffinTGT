@@ -38,11 +38,13 @@ public class HiddenDoorScript : MonoBehaviour {
 				ActivateHiding();
 				hiding = true;
 				player.GetComponent<PlayerController> ().lightExpo = 0;
+				player.GetComponent<SpriteRenderer>().sortingOrder = 1;
 			}
 			else if (Input.GetKeyDown(KeyCode.E) && inputCount == 1)
 			{
 				DeactivateHiding();
 				hiding = false;
+				player.GetComponent<SpriteRenderer>().sortingOrder = 5;
 				if(player.GetComponent<PlayerController>().lightExpoPurchased == false)
 					player.GetComponent<PlayerController> ().lightExpo = 0;
 				else
