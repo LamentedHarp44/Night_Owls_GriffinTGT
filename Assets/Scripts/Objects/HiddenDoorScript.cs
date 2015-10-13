@@ -22,39 +22,36 @@ public class HiddenDoorScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
+		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) 
+		{
 
-			if (player == null) {
+			if (player == null) 
+			{
 				player = GameObject.FindWithTag ("Player");
 				grappleGun = GameObject.FindWithTag ("GrappleGun");
 				grappleHook = GameObject.FindWithTag ("GrappleHook");
 				anim = player.GetComponent<Animator> ();
 			}
 
-			if(Input.GetKeyDown(KeyCode.E) && inputCount == 0)
+			if(goHiding == true)
 			{
-				ActivateHiding();
-				hiding = true;
-				player.GetComponent<PlayerController> ().lightExpo = 0;
-				player.GetComponent<SpriteRenderer>().sortingOrder = 1;
-			}
-			else if (Input.GetKeyDown(KeyCode.E) && inputCount == 1)
-			{
-				DeactivateHiding();
-				hiding = false;
-				player.GetComponent<SpriteRenderer>().sortingOrder = 5;
-				if(player.GetComponent<PlayerController>().lightExpoPurchased == false)
+				if(Input.GetKeyDown(KeyCode.E) && inputCount == 0)
+				{
+					ActivateHiding();
+					hiding = true;
 					player.GetComponent<PlayerController> ().lightExpo = 0;
-				} else if (Input.GetKeyDown (KeyCode.E) && inputCount == 1) {
-					DeactivateHiding ();
-					hiding = false;
-					if (player.GetComponent<PlayerController> ().lightExpoPurchased == false)
-						player.GetComponent<PlayerController> ().lightExpo = 0;
-					else
-						player.GetComponent<PlayerController> ().lightExpo = -2;
+					player.GetComponent<SpriteRenderer>().sortingOrder = 1;
 				}
-
+				else if (Input.GetKeyDown(KeyCode.E) && inputCount == 1)
+				{
+					DeactivateHiding();
+					hiding = false;
+					player.GetComponent<SpriteRenderer>().sortingOrder = 5;
+					if(player.GetComponent<PlayerController>().lightExpoPurchased == false)
+						player.GetComponent<PlayerController> ().lightExpo = 0;
+				} 
 			}
+
 		}
 	}
 

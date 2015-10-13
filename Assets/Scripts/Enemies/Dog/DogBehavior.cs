@@ -52,7 +52,7 @@ public class DogBehavior : MonoBehaviour {
 		if (Player == null)
 			Player = GameObject.FindGameObjectWithTag ("Player");
 
-		if (!GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
+		if (GameObject.FindGameObjectWithTag ("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
 			if (!scent)
 				Detect ();
