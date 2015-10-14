@@ -31115,6 +31115,10 @@ Prefab:
       propertyPath: m_Name
       value: Player Sound EFX
       objectReference: {fileID: 0}
+    - target: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b0949ebdc8ed6894ca3e92ee2d34b385, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3269292b335994244bae485f5d5486a5, type: 2}
   m_IsPrefabParent: 0

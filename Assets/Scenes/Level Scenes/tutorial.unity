@@ -1182,7 +1182,7 @@ Prefab:
     - target: {fileID: 11429368, guid: 96543900ac6559e47b0ddae534c00cbb, type: 2}
       propertyPath: soundEFX
       value: 
-      objectReference: {fileID: 2019914438}
+      objectReference: {fileID: 465762093}
     - target: {fileID: 490688, guid: 96543900ac6559e47b0ddae534c00cbb, type: 2}
       propertyPath: m_LocalScale.x
       value: 1.23414218
@@ -1360,7 +1360,7 @@ Prefab:
     - target: {fileID: 11429368, guid: 96543900ac6559e47b0ddae534c00cbb, type: 2}
       propertyPath: soundEFX
       value: 
-      objectReference: {fileID: 2019914438}
+      objectReference: {fileID: 465762093}
     - target: {fileID: 490688, guid: 96543900ac6559e47b0ddae534c00cbb, type: 2}
       propertyPath: m_LocalScale.x
       value: 1.23414218
@@ -1430,6 +1430,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3269292b335994244bae485f5d5486a5, type: 2}
   m_IsPrefabParent: 0
+--- !u!82 &465762093 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1361855654}
 --- !u!1 &489293734
 GameObject:
   m_ObjectHideFlags: 0
@@ -2907,6 +2912,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.23414207
       objectReference: {fileID: 0}
+    - target: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0e22da06a6accb644aba27aa45d5a5e3, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3269292b335994244bae485f5d5486a5, type: 2}
   m_IsPrefabParent: 0
@@ -3726,6 +3735,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.23414207
       objectReference: {fileID: 0}
+    - target: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c4ddf852a7e3b09448a5378206784a41, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3269292b335994244bae485f5d5486a5, type: 2}
   m_IsPrefabParent: 0
@@ -3956,6 +3969,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.23414207
       objectReference: {fileID: 0}
+    - target: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a6bf388314d46247b77e333b721f641, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3269292b335994244bae485f5d5486a5, type: 2}
   m_IsPrefabParent: 0

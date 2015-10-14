@@ -15,7 +15,7 @@ public class DogBehavior : MonoBehaviour {
 	public GameObject Player;
 	public GameObject Alert;
 	public float delay;
-	public float leash;
+	public float leash = 3;
 	public float alertDelay;
 	public Vector3 anchor;
 	public bool scent;
@@ -37,7 +37,7 @@ public class DogBehavior : MonoBehaviour {
 		atkSpeed = 5;
 		face = true;
 		delay = 30.0f;
-		leash = 3;
+		//leash = 3;
 		scent = false;
 		detRange = 2.0f;
 		searchTime = 5.0f;
