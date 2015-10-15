@@ -4335,6 +4335,10 @@ Prefab:
       propertyPath: SFXVolume
       value: 
       objectReference: {fileID: 1595755396}
+    - target: {fileID: 21276196, guid: b25dbd1f0ff714f45b521bb85b076c99, type: 2}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b25dbd1f0ff714f45b521bb85b076c99, type: 2}
   m_IsPrefabParent: 0

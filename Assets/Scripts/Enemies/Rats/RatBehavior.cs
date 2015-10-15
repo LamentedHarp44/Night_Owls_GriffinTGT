@@ -40,21 +40,23 @@ public class RatBehavior : MonoBehaviour {
 	void Update () 
 	{
 
-		if(player == null)
+		if (player == null)
 			player = GameObject.FindGameObjectWithTag ("Player");
 
-		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
-		if (SFXVolume == null) 
+		if (GameObject.FindGameObjectWithTag ("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) 
 		{
-			SFXVolume = GameObject.FindWithTag("RatAudio").GetComponent<AudioSource>();
-			clip = SFXVolume.clip;
-		}
+			if (SFXVolume == null) 
+			{
+				SFXVolume = GameObject.FindWithTag ("RatAudio").GetComponent<AudioSource> ();
+				clip = SFXVolume.clip;
+			}
 
-		if (!GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
+
 
 			livesCounter = player.GetComponent<PlayerController> ().lives;
 		
-			if (tempLives != livesCounter) {
+			if (tempLives != livesCounter) 
+			{
 				tempLives = livesCounter;
 				transform.position = home;
 				player.GetComponent<PlayerController> ().ratCount = 0;
@@ -66,10 +68,12 @@ public class RatBehavior : MonoBehaviour {
 
 			//Launcher ();
 
-			if (GetComponent<CircleCollider2D> ().enabled == false) {
+			if (GetComponent<CircleCollider2D> ().enabled == false) 
+			{
 				colideTimer -= Time.fixedDeltaTime;
 
-				if (colideTimer <= 0) {
+				if (colideTimer <= 0) 
+				{
 					colideTimer = 2.0f;
 					GetComponent<CircleCollider2D> ().enabled = true;
 				}
@@ -87,10 +91,12 @@ public class RatBehavior : MonoBehaviour {
 				Movement ();
 
 
-			if (attacking) {
+			if (attacking) 
+			{
 				particle -= Time.fixedDeltaTime;
 
-				if (particle <= 0) {
+				if (particle <= 0) 
+				{
 					particle = 2.0f;
 					GetComponentInChildren<ParticleSystem> ().startColor = starter;
 					GetComponentInChildren<ParticleSystem> ().Play ();
@@ -100,20 +106,25 @@ public class RatBehavior : MonoBehaviour {
 
 
 
-			if (player.GetComponent<PlayerController> ().ratCount >= 5 && player.GetComponent<Invisiblilityscript> ().LightExposure () < 4) {
+			if (player.GetComponent<PlayerController> ().ratCount >= 5 && player.GetComponent<Invisiblilityscript> ().LightExposure () < 4) 
+			{
 				GetComponentInChildren<ParticleSystem> ().startColor = Color.red;
 				killTimer -= Time.fixedDeltaTime;
 
-				if (killTimer <= 0) {
+				if (killTimer <= 0) 
+				{
 					player.GetComponent<PlayerController> ().ratCount = 0;
 					player.GetComponent<PlayerController> ().moveSpeed = 5.0f;
 					attacking = false;
 					this.transform.position = home;
 					player.GetComponent<PlayerController> ().PlayerDeath (TYPE_DEATH.SWARM);
 				}
-			} else {
+			} 
+			else 
+			{
 				killTimer = 3.0f;
 			}
+		
 		}
 	}
 
