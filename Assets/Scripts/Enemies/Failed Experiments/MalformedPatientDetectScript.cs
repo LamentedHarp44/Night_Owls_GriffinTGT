@@ -32,6 +32,7 @@ public class MalformedPatientDetectScript : MonoBehaviour {
 		if (other.tag == "Player") 
 		{
 			GetComponentInParent<ExperimentBehavior>().inDetectionRange = false;
+			GetComponentInParent<ExperimentBehavior>().playerMoving = false;
 		}
 	}
 

@@ -87,88 +87,6 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &36693529
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &50591729
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,8 +297,11 @@ Transform:
   - {fileID: 1365081571}
   - {fileID: 313039641}
   - {fileID: 1067786508}
+  - {fileID: 2045115860}
+  - {fileID: 1077089999}
+  - {fileID: 1433047623}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 30
 --- !u!1 &132095400
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +314,7 @@ GameObject:
   - 61: {fileID: 132095401}
   m_Layer: 0
   m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (11)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -444,8 +365,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 132095400}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
-  m_LocalPosition: {x: -.0340087898, y: 2.00215006, z: 90}
-  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
+  m_LocalPosition: {x: -.0340087898, y: 2.00900006, z: 90}
+  m_LocalScale: {x: 1.2100836, y: 1.20000005, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 29
@@ -490,6 +411,48 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9f2d6483aa04704b8a52ed97f48117c, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &193672408
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 424344, guid: 5f54186774fa87a49a01c13e79d86be1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -654.54071
+      objectReference: {fileID: 0}
+    - target: {fileID: 424344, guid: 5f54186774fa87a49a01c13e79d86be1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -43.7999992
+      objectReference: {fileID: 0}
+    - target: {fileID: 424344, guid: 5f54186774fa87a49a01c13e79d86be1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424344, guid: 5f54186774fa87a49a01c13e79d86be1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424344, guid: 5f54186774fa87a49a01c13e79d86be1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424344, guid: 5f54186774fa87a49a01c13e79d86be1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424344, guid: 5f54186774fa87a49a01c13e79d86be1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424344, guid: 5f54186774fa87a49a01c13e79d86be1, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5f54186774fa87a49a01c13e79d86be1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &301335403
 GameObject:
@@ -625,8 +588,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 313039640}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
-  m_LocalPosition: {x: -1.19000006, y: .958000004, z: 90}
-  m_LocalScale: {x: .349999875, y: .799999833, z: 1}
+  m_LocalPosition: {x: -1.19000006, y: .75999999, z: 90}
+  m_LocalScale: {x: .614100754, y: .799999833, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 47
@@ -986,8 +949,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 347957777}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
-  m_LocalPosition: {x: -.606005847, y: 1.89414978, z: 90}
-  m_LocalScale: {x: .349999994, y: .800000012, z: 1}
+  m_LocalPosition: {x: -.617999971, y: 1.94299996, z: 90}
+  m_LocalScale: {x: .554587841, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 11
@@ -1054,66 +1017,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 372308787}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
-  m_LocalPosition: {x: .633996606, y: .354000002, z: 90}
+  m_LocalPosition: {x: .40200001, y: .354000002, z: 90}
   m_LocalScale: {x: 1, y: 1.19999981, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 43
---- !u!1 &440280744
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 194192, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 440280745}
-  - 212: {fileID: 440280746}
-  m_Layer: 0
-  m_Name: WindowGlare
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &440280745
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 412684, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 440280744}
-  m_LocalRotation: {x: -.5565449, y: -.0338321179, z: .0408480838, w: .829122841}
-  m_LocalPosition: {x: .344262004, y: .545171499, z: 1.41011095}
-  m_LocalScale: {x: 1, y: 1.0746001, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1845684633}
-  m_RootOrder: 1
---- !u!212 &440280746
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 21270710, guid: 3d92c68c5f1bf564e9db86338496eb63,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 440280744}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4f860189053954d4293f14298579d03e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: .122000001}
 --- !u!1 &442095839
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,7 +1102,7 @@ GameObject:
   - 61: {fileID: 442960583}
   m_Layer: 0
   m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (38)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1427,7 +1335,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 465051732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.44600844, y: 2.34414983, z: 90}
+  m_LocalPosition: {x: -2.44600844, y: 2.33999991, z: 90}
   m_LocalScale: {x: 1.30000007, y: 1.20000005, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
@@ -1444,7 +1352,7 @@ GameObject:
   - 61: {fileID: 477387833}
   m_Layer: 0
   m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (37)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1748,11 +1656,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3269292b335994244bae485f5d5486a5, type: 2}
   m_IsPrefabParent: 0
---- !u!82 &586958467 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5,
-    type: 2}
-  m_PrefabInternal: {fileID: 586958466}
 --- !u!1 &610664827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,7 +1668,7 @@ GameObject:
   - 61: {fileID: 610664828}
   m_Layer: 0
   m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (19)
-  m_TagString: Wall
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1845,8 +1748,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 641280210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .916000009, y: .537999988, z: 90}
-  m_LocalScale: {x: 1, y: 1.20000005, z: 1}
+  m_LocalPosition: {x: .796000004, y: .537999988, z: 90}
+  m_LocalScale: {x: 1.49959302, y: 1.20000005, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 44
@@ -1889,6 +1792,81 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300020, guid: 4d8eea3f7add39747bbd65509063bff4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &702183808
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -643.140015
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -45.7700005
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6136746, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_Offset.x
+      value: .300749302
+      objectReference: {fileID: 0}
+    - target: {fileID: 6136746, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_Offset.y
+      value: -2.12371349
+      objectReference: {fileID: 0}
+    - target: {fileID: 6136746, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_Size.x
+      value: .751003981
+      objectReference: {fileID: 0}
+    - target: {fileID: 21221110, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d3792e79c978144ab8bb91171faef17,
+        type: 3}
+    - target: {fileID: 21221110, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .544903636
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .588327587
+      objectReference: {fileID: 0}
+    - target: {fileID: 6136746, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_Size.y
+      value: 1.55749083
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &732384928
 Prefab:
   m_ObjectHideFlags: 0
@@ -1902,7 +1880,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 458146, guid: 8884163dd59413b4e925aab2e9b4cc97, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -40.1322403
+      value: -40.2299995
       objectReference: {fileID: 0}
     - target: {fileID: 458146, guid: 8884163dd59413b4e925aab2e9b4cc97, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1977,62 +1955,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27024aaf8eb56d743834f40350c8e018, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &850028450
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 197386, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 850028451}
-  - 61: {fileID: 850028453}
-  - 114: {fileID: 850028452}
-  m_Layer: 0
-  m_Name: Fading Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &850028451
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 463010, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 850028450}
-  m_LocalRotation: {x: -.5565449, y: -.0338321179, z: .0408480838, w: .829122841}
-  m_LocalPosition: {x: .0396741256, y: .555734158, z: .653561831}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1845684633}
-  m_RootOrder: 0
---- !u!114 &850028452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11497320, guid: 3d92c68c5f1bf564e9db86338496eb63,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 850028450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9338197de873a214aad1191100064e7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightLvl: 1
---- !u!61 &850028453
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6133974, guid: 3d92c68c5f1bf564e9db86338496eb63,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 850028450}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: .281947106, y: -1.20975816}
-  serializedVersion: 2
-  m_Size: {x: 5.02326822, y: 1.19731283}
 --- !u!1 &860881308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2045,7 +1967,7 @@ GameObject:
   - 61: {fileID: 860881309}
   m_Layer: 0
   m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (17)
-  m_TagString: Wall
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2096,11 +2018,61 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 860881308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.14599609, y: 1.76414955, z: 90}
+  m_LocalPosition: {x: 1.72800004, y: 1.15400004, z: 90}
   m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 24
+--- !u!1001 &982435544
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.00999975204
+      objectReference: {fileID: 0}
+    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .410000026
+      objectReference: {fileID: 0}
+    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 119754, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_Name
+      value: Checkpoint Sound EFX Volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0e22da06a6accb644aba27aa45d5a5e3, type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1035652616
 Prefab:
   m_ObjectHideFlags: 0
@@ -2144,6 +2116,10 @@ Prefab:
       propertyPath: m_Name
       value: Sound EFX Volume (potion)
       objectReference: {fileID: 0}
+    - target: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a6bf388314d46247b77e333b721f641, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3269292b335994244bae485f5d5486a5, type: 2}
   m_IsPrefabParent: 0
@@ -2164,7 +2140,7 @@ GameObject:
   - 61: {fileID: 1035728223}
   m_Layer: 0
   m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (9)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2312,8 +2288,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1067786507}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
-  m_LocalPosition: {x: -1.51199996, y: 1.89414978, z: 90}
-  m_LocalScale: {x: .349999934, y: .799999952, z: 1}
+  m_LocalPosition: {x: -1.551, y: 1.95099998, z: 90}
+  m_LocalScale: {x: .587321043, y: .799999952, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 48
@@ -2419,11 +2395,79 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1074213726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.81800544, y: 2.34414983, z: 90}
+  m_LocalPosition: {x: -1.82200003, y: 2.34414983, z: 90}
   m_LocalScale: {x: 1.30000007, y: 1.20000005, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 6
+--- !u!1 &1077089998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1077089999}
+  - 212: {fileID: 1077090001}
+  - 61: {fileID: 1077090000}
+  m_Layer: 0
+  m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (44)
+  m_TagString: Wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1077089999
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1077089998}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
+  m_LocalPosition: {x: 2.83100009, y: 1.95000005, z: 90}
+  m_LocalScale: {x: .614100337, y: .799999714, z: 1}
+  m_Children: []
+  m_Father: {fileID: 81209238}
+  m_RootOrder: 50
+--- !u!61 &1077090000
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1077089998}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: .479999989, y: .0799999982}
+--- !u!212 &1077090001
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1077089998}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 0a30000ee2e65534baa60ccc7cca94bf, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300020, guid: 4d8eea3f7add39747bbd65509063bff4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1079532659
 Prefab:
   m_ObjectHideFlags: 0
@@ -2433,11 +2477,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 426992, guid: 0d342ffa94e88e04abe70ecc25180dca, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -638.640442
+      value: -645.119995
       objectReference: {fileID: 0}
     - target: {fileID: 426992, guid: 0d342ffa94e88e04abe70ecc25180dca, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -41.3462639
+      value: -47.4500008
       objectReference: {fileID: 0}
     - target: {fileID: 426992, guid: 0d342ffa94e88e04abe70ecc25180dca, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2461,7 +2505,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 426992, guid: 0d342ffa94e88e04abe70ecc25180dca, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 11409638, guid: 0d342ffa94e88e04abe70ecc25180dca, type: 2}
       propertyPath: spawnpoint
@@ -2470,7 +2514,7 @@ Prefab:
     - target: {fileID: 11409638, guid: 0d342ffa94e88e04abe70ecc25180dca, type: 2}
       propertyPath: soundEFX
       value: 
-      objectReference: {fileID: 586958467}
+      objectReference: {fileID: 1085890895}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d342ffa94e88e04abe70ecc25180dca, type: 2}
   m_IsPrefabParent: 0
@@ -2498,8 +2542,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1080539270}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
-  m_LocalPosition: {x: .640999973, y: .675000012, z: 90}
-  m_LocalScale: {x: .349999934, y: .799999952, z: 1}
+  m_LocalPosition: {x: .393000007, y: .737999976, z: 90}
+  m_LocalScale: {x: .614100456, y: .799999952, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 45
@@ -2542,6 +2586,53 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300020, guid: 4d8eea3f7add39747bbd65509063bff4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!82 &1085890895 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5,
+    type: 2}
+  m_PrefabInternal: {fileID: 982435544}
+--- !u!1001 &1096075981
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 443800, guid: ad08408d4f76d6348a1eae9c23b78122, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -637.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 443800, guid: ad08408d4f76d6348a1eae9c23b78122, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -42.0800018
+      objectReference: {fileID: 0}
+    - target: {fileID: 443800, guid: ad08408d4f76d6348a1eae9c23b78122, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 443800, guid: ad08408d4f76d6348a1eae9c23b78122, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 443800, guid: ad08408d4f76d6348a1eae9c23b78122, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 443800, guid: ad08408d4f76d6348a1eae9c23b78122, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 443800, guid: ad08408d4f76d6348a1eae9c23b78122, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 443800, guid: ad08408d4f76d6348a1eae9c23b78122, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ad08408d4f76d6348a1eae9c23b78122, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1109365023
 GameObject:
   m_ObjectHideFlags: 0
@@ -2619,11 +2710,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 429656, guid: 26557cc8c33506c4fae2b4b415553d8e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -641.98999
+      value: -642.219971
       objectReference: {fileID: 0}
     - target: {fileID: 429656, guid: 26557cc8c33506c4fae2b4b415553d8e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -45.7099991
+      value: -45.7599983
       objectReference: {fileID: 0}
     - target: {fileID: 429656, guid: 26557cc8c33506c4fae2b4b415553d8e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2647,7 +2738,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 429656, guid: 26557cc8c33506c4fae2b4b415553d8e, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 429656, guid: 26557cc8c33506c4fae2b4b415553d8e, type: 2}
       propertyPath: m_LocalScale.z
@@ -2738,7 +2829,7 @@ GameObject:
   - 61: {fileID: 1189399600}
   m_Layer: 0
   m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (4)
-  m_TagString: Wall
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2929,7 +3020,7 @@ GameObject:
   - 61: {fileID: 1251990139}
   m_Layer: 0
   m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (12)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2980,7 +3071,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1251990138}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
-  m_LocalPosition: {x: .633996606, y: 1.43014991, z: 90}
+  m_LocalPosition: {x: .35800001, y: 1.43014991, z: 90}
   m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
@@ -3163,7 +3254,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 29
 --- !u!1001 &1286402283
 Prefab:
   m_ObjectHideFlags: 0
@@ -3273,8 +3364,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1341365468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .393994153, y: 1.09614944, z: 90}
-  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
+  m_LocalPosition: {x: .252999991, y: 1.09614944, z: 90}
+  m_LocalScale: {x: .613147974, y: 1.20000005, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 17
@@ -3426,7 +3517,7 @@ GameObject:
   - 61: {fileID: 1366798644}
   m_Layer: 0
   m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (8)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3477,8 +3568,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1366798643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.35000002, y: 2.34614944, z: 0}
-  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
+  m_LocalPosition: {x: 1.34000003, y: 2.34614944, z: 0}
+  m_LocalScale: {x: 1.24007964, y: 1.20000005, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 32
@@ -3494,7 +3585,7 @@ GameObject:
   - 61: {fileID: 1393832288}
   m_Layer: 0
   m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (7)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3545,8 +3636,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1393832287}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.92799079, y: 2.35014963, z: 0}
-  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
+  m_LocalPosition: {x: 1.92200005, y: 2.35014963, z: 0}
+  m_LocalScale: {x: 1.22672832, y: 1.20000005, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 33
@@ -3618,6 +3709,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 14
+--- !u!1 &1433047622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1433047623}
+  - 212: {fileID: 1433047625}
+  - 61: {fileID: 1433047624}
+  m_Layer: 0
+  m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (47)
+  m_TagString: Wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1433047623
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433047622}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
+  m_LocalPosition: {x: 2.72399998, y: 1.18600011, z: 90}
+  m_LocalScale: {x: .614100337, y: .799999714, z: 1}
+  m_Children: []
+  m_Father: {fileID: 81209238}
+  m_RootOrder: 51
+--- !u!61 &1433047624
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433047622}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: .479999989, y: .0799999982}
+--- !u!212 &1433047625
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433047622}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 0a30000ee2e65534baa60ccc7cca94bf, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300020, guid: 4d8eea3f7add39747bbd65509063bff4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1514124947
 GameObject:
   m_ObjectHideFlags: 0
@@ -3695,7 +3854,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 413356, guid: 52078642029c6664ab9989a34200c9f8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -666.429993
+      value: -666.049988
       objectReference: {fileID: 0}
     - target: {fileID: 413356, guid: 52078642029c6664ab9989a34200c9f8, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3727,6 +3886,56 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52078642029c6664ab9989a34200c9f8, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1552175027
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 412462, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -640.400024
+      objectReference: {fileID: 0}
+    - target: {fileID: 412462, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -44.0999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 412462, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412462, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412462, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412462, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412462, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 412462, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 190740, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
+      propertyPath: m_Name
+      value: Chest (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 412462, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: -3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: bf95574d292aa264fa0adb5bd688d79e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1555033303
 GameObject:
@@ -3945,6 +4154,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 11480538, guid: b25dbd1f0ff714f45b521bb85b076c99, type: 2}
+      propertyPath: leash
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b25dbd1f0ff714f45b521bb85b076c99, type: 2}
   m_IsPrefabParent: 0
@@ -4059,8 +4272,58 @@ Prefab:
       propertyPath: m_TagString
       value: Player Audio
       objectReference: {fileID: 0}
+    - target: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b0949ebdc8ed6894ca3e92ee2d34b385, type: 3}
+    - target: {fileID: 119754, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_Name
+      value: Player Sound EFX Volume
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1625745493
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 461372, guid: df00c2ff7f4e804499103f5c0ac35441, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.104216769
+      objectReference: {fileID: 0}
+    - target: {fileID: 461372, guid: df00c2ff7f4e804499103f5c0ac35441, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -10.8669281
+      objectReference: {fileID: 0}
+    - target: {fileID: 461372, guid: df00c2ff7f4e804499103f5c0ac35441, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 461372, guid: df00c2ff7f4e804499103f5c0ac35441, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461372, guid: df00c2ff7f4e804499103f5c0ac35441, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461372, guid: df00c2ff7f4e804499103f5c0ac35441, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461372, guid: df00c2ff7f4e804499103f5c0ac35441, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 461372, guid: df00c2ff7f4e804499103f5c0ac35441, type: 2}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: df00c2ff7f4e804499103f5c0ac35441, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1628854762 stripped
 Transform:
@@ -4112,6 +4375,47 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 302f7ee71de2b7742bbe37c2d1d9671e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1696746101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1696746103}
+  - 61: {fileID: 1696746102}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1696746102
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1696746101}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 3.64045715}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 8.28090477}
+--- !u!4 &1696746103
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1696746101}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -667.679993, y: -49.3800011, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
 --- !u!1 &1699466117
 GameObject:
   m_ObjectHideFlags: 0
@@ -4260,7 +4564,7 @@ GameObject:
   - 61: {fileID: 1707097146}
   m_Layer: 0
   m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (6)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4311,8 +4615,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1707097145}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5059936, y: 2.35414958, z: 0}
-  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
+  m_LocalPosition: {x: 2.50099993, y: 2.35414958, z: 0}
+  m_LocalScale: {x: 1.22003996, y: 1.20000005, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 34
@@ -4328,7 +4632,7 @@ GameObject:
   - 61: {fileID: 1708962677}
   m_Layer: 0
   m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (26)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4379,8 +4683,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1708962676}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
-  m_LocalPosition: {x: -1.55999756, y: 1.43414998, z: 90}
-  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
+  m_LocalPosition: {x: -1.55999756, y: 1.42999995, z: 90}
+  m_LocalScale: {x: 1.2163682, y: 1.20000005, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 13
@@ -4396,7 +4700,7 @@ GameObject:
   - 61: {fileID: 1833600899}
   m_Layer: 0
   m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (20)
-  m_TagString: Wall
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4452,69 +4756,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 22
---- !u!1 &1845684631
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 180260, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1845684633}
-  - 108: {fileID: 1845684632}
-  m_Layer: 0
-  m_Name: WindowLight
-  m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &1845684632
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 10893896, guid: 3d92c68c5f1bf564e9db86338496eb63,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1845684631}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_Type: 0
-  m_Color: {r: .488640994, g: .640069842, b: .647058845, a: 1}
-  m_Intensity: 8
-  m_Range: 5
-  m_SpotAngle: 129.916504
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: .0500000007
-    m_NormalBias: .400000006
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_BounceIntensity: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_AreaSize: {x: 1, y: 1}
---- !u!4 &1845684633
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 448276, guid: 3d92c68c5f1bf564e9db86338496eb63, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1845684631}
-  m_LocalRotation: {x: .5565449, y: .0338321179, z: -.0408480838, w: .829122841}
-  m_LocalPosition: {x: -651.575562, y: -39.0067024, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 850028451}
-  - {fileID: 440280745}
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
 --- !u!1 &1902795173
 GameObject:
   m_ObjectHideFlags: 0
@@ -4527,7 +4768,7 @@ GameObject:
   - 61: {fileID: 1902795174}
   m_Layer: 0
   m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (5)
-  m_TagString: Wall
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4578,11 +4819,90 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1902795173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.08599854, y: 2.35414958, z: 0}
-  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
+  m_LocalPosition: {x: 3.07599998, y: 2.35414958, z: 0}
+  m_LocalScale: {x: 1.24010515, y: 1.20000005, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 35
+--- !u!1001 &1919161167
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -643.289978
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -44.0999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6136746, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_Offset.x
+      value: .6447348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6136746, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_Offset.y
+      value: -4.91055536
+      objectReference: {fileID: 0}
+    - target: {fileID: 6136746, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_Size.x
+      value: .819763243
+      objectReference: {fileID: 0}
+    - target: {fileID: 21221110, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b45e3460afb96f4ea2979f722cd3340,
+        type: 3}
+    - target: {fileID: 21221110, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .544903636
+      objectReference: {fileID: 0}
+    - target: {fileID: 412680, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .588327587
+      objectReference: {fileID: 0}
+    - target: {fileID: 6136746, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_Size.y
+      value: 1.78045213
+      objectReference: {fileID: 0}
+    - target: {fileID: 193620, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+      propertyPath: m_Name
+      value: Info Trigger (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3cfd223a96a403f4d81bcbaac6b06e69, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1949707615
 GameObject:
   m_ObjectHideFlags: 0
@@ -4651,6 +4971,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 10
+--- !u!1001 &1958434792
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 443582, guid: 302f7ee71de2b7742bbe37c2d1d9671e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -653.690002
+      objectReference: {fileID: 0}
+    - target: {fileID: 443582, guid: 302f7ee71de2b7742bbe37c2d1d9671e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -41.6300011
+      objectReference: {fileID: 0}
+    - target: {fileID: 443582, guid: 302f7ee71de2b7742bbe37c2d1d9671e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.419921875
+      objectReference: {fileID: 0}
+    - target: {fileID: 443582, guid: 302f7ee71de2b7742bbe37c2d1d9671e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 443582, guid: 302f7ee71de2b7742bbe37c2d1d9671e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 443582, guid: 302f7ee71de2b7742bbe37c2d1d9671e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 443582, guid: 302f7ee71de2b7742bbe37c2d1d9671e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 443582, guid: 302f7ee71de2b7742bbe37c2d1d9671e, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 179586, guid: 302f7ee71de2b7742bbe37c2d1d9671e, type: 2}
+      propertyPath: m_Name
+      value: Circular Lantern(boss fight) (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 302f7ee71de2b7742bbe37c2d1d9671e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1959384329
 GameObject:
   m_ObjectHideFlags: 0
@@ -4718,7 +5084,7 @@ GameObject:
   - 61: {fileID: 1966331033}
   m_Layer: 0
   m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (22)
-  m_TagString: Wall
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4769,8 +5135,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1966331032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.37199712, y: .978149414, z: 90}
-  m_LocalScale: {x: .349999994, y: .800000012, z: 1}
+  m_LocalPosition: {x: 2.92000008, y: 1.00800002, z: 90}
+  m_LocalScale: {x: .96714139, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 21
@@ -4837,8 +5203,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1983106909}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .876001, y: 1.76414955, z: 90}
-  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
+  m_LocalPosition: {x: .736999989, y: 1.76414955, z: 90}
+  m_LocalScale: {x: 1.78036702, y: 1.20000005, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 28
@@ -4909,7 +5275,7 @@ GameObject:
   - 61: {fileID: 2041789463}
   m_Layer: 0
   m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (10)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4960,11 +5326,79 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2041789462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .131994635, y: 2.33415008, z: 0}
+  m_LocalPosition: {x: .131994635, y: 2.34599996, z: 0}
   m_LocalScale: {x: 1.80000007, y: 1.20000005, z: 1}
   m_Children: []
   m_Father: {fileID: 81209238}
   m_RootOrder: 30
+--- !u!1 &2045115859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2045115860}
+  - 212: {fileID: 2045115862}
+  - 61: {fileID: 2045115861}
+  m_Layer: 0
+  m_Name: DS - Castlevania Portrait of Ruin - Platforms_10 (43)
+  m_TagString: Wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2045115860
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2045115859}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
+  m_LocalPosition: {x: 3.11899996, y: 1.18599999, z: 90}
+  m_LocalScale: {x: .614100397, y: .799999833, z: 1}
+  m_Children: []
+  m_Father: {fileID: 81209238}
+  m_RootOrder: 49
+--- !u!61 &2045115861
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2045115859}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: .479999989, y: .0799999982}
+--- !u!212 &2045115862
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2045115859}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 0a30000ee2e65534baa60ccc7cca94bf, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300020, guid: 4d8eea3f7add39747bbd65509063bff4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2058269482
 GameObject:
   m_ObjectHideFlags: 0
@@ -5105,7 +5539,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 21
 --- !u!114 &2128705602
 MonoBehaviour:
   m_ObjectHideFlags: 0
