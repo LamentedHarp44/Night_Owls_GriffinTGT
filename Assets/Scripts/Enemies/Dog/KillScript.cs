@@ -16,8 +16,7 @@ public class KillScript : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "Player") 
-		{
+		if (col.gameObject.tag == "Player") {
 			GetComponentInParent<AudioSource> ().Stop ();
 			GetComponentInParent<AudioSource> ().PlayOneShot (GetComponentInParent<AudioSource> ().clip);
 			GetComponentInParent<DogBehavior> ().Player.GetComponent<PlayerController> ().PlayerDeath (TYPE_DEATH.SWARM);
@@ -25,11 +24,11 @@ public class KillScript : MonoBehaviour {
 			//TEST CODE ONLY, DO NOT USE FOR FINAL TURN IN
 			//GetComponentInParent<DogBehavior>().Player.SetActive(false);
 			GetComponentInParent<DogBehavior> ().state = ENMY_STATES.PATROL;
-		} 
-		else if (col.gameObject.CompareTag("Wall"))
-		{
-			GetComponentInParent<DogBehavior>().face = !GetComponentInParent<DogBehavior>().face;
-			GetComponentInParent<DogBehavior>().state = ENMY_STATES.PATROL;
+		} else if (col.gameObject.CompareTag ("Wall")) {
+			GetComponentInParent<DogBehavior> ().face = !GetComponentInParent<DogBehavior> ().face;
+			GetComponentInParent<DogBehavior> ().state = ENMY_STATES.PATROL;
+		} else if (col.gameObject.CompareTag ("chest")) {
+			GetComponentInParent<DogBehavior> ().state = ENMY_STATES.RESET;
 		}
 	}
 

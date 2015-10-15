@@ -40,8 +40,8 @@ public class DogBehavior : MonoBehaviour {
 		//leash = 3;
 		scent = false;
 		detRange = 2.0f;
-		searchTime = 5.0f;
-		atkTime = 3.0f;
+		searchTime = 0.0f;
+		atkTime = 0.0f;
 		alertDelay = .5f;
 
 	}
@@ -51,6 +51,11 @@ public class DogBehavior : MonoBehaviour {
 	{
 		if (Player == null)
 			Player = GameObject.FindGameObjectWithTag ("Player");
+
+		if (face)
+			transform.localScale = new Vector3(-3.7024f, 3.7024f, 1.0f);
+		else
+			transform.localScale = new Vector3(3.7024f, 3.7024f, 1.0f);
 
 		if (GameObject.FindGameObjectWithTag ("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
@@ -213,7 +218,7 @@ public class DogBehavior : MonoBehaviour {
 				} else {
 					searchTime -= Time.fixedDeltaTime;
 					if (searchTime <= 0) {
-						searchTime = 5.0f;
+						searchTime = 0.0f;
 						state = ENMY_STATES.RESET;
 						GetComponent<AudioSource> ().Stop ();
 						GetComponent<AudioSource> ().PlayOneShot (whimper);
