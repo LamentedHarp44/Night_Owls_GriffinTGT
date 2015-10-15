@@ -26,9 +26,10 @@ public class KillScript : MonoBehaviour {
 			//GetComponentInParent<DogBehavior>().Player.SetActive(false);
 			GetComponentInParent<DogBehavior> ().state = ENMY_STATES.PATROL;
 		} 
-		else if (col.gameObject.tag == "Wall") 
+		else if (col.gameObject.CompareTag("Wall"))
 		{
 			GetComponentInParent<DogBehavior>().face = !GetComponentInParent<DogBehavior>().face;
+			GetComponentInParent<DogBehavior>().state = ENMY_STATES.PATROL;
 		}
 	}
 

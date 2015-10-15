@@ -87,6 +87,88 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &36693529
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439086, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 02e3f7cb9ffdab749955dc7f26db9b88, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &50591729
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +380,7 @@ Transform:
   - {fileID: 313039641}
   - {fileID: 1067786508}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
 --- !u!1 &132095400
 GameObject:
   m_ObjectHideFlags: 0
@@ -3081,7 +3163,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!1001 &1286402283
 Prefab:
   m_ObjectHideFlags: 0
@@ -4432,7 +4514,7 @@ Transform:
   - {fileID: 850028451}
   - {fileID: 440280745}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
 --- !u!1 &1902795173
 GameObject:
   m_ObjectHideFlags: 0
@@ -5023,7 +5105,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
 --- !u!114 &2128705602
 MonoBehaviour:
   m_ObjectHideFlags: 0

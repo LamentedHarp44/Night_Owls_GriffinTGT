@@ -54,10 +54,13 @@ public class DogBehavior : MonoBehaviour {
 
 		if (GameObject.FindGameObjectWithTag ("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
+			if (state != ENMY_STATES.RESET)
+			{
 			if (!scent)
 				Detect ();
 			else 
 				ScentDetect ();
+			}
 
 			switch (state) {
 			case ENMY_STATES.PATROL:

@@ -4543,6 +4543,14 @@ Prefab:
       propertyPath: walkSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6182780, guid: b25dbd1f0ff714f45b521bb85b076c99, type: 2}
+      propertyPath: m_Offset.y
+      value: -.0569501109
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182780, guid: b25dbd1f0ff714f45b521bb85b076c99, type: 2}
+      propertyPath: m_Size.y
+      value: .0821002722
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b25dbd1f0ff714f45b521bb85b076c99, type: 2}
   m_IsPrefabParent: 0
