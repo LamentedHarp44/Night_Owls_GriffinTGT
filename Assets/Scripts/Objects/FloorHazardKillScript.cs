@@ -3,18 +3,18 @@ using System.Collections;
 
 public class FloorHazardKillScript : MonoBehaviour {
 
-	GameObject player;
+	public GameObject player;
 
 	// Use this for initialization
 	void Start () 
 	{
-		player = GameObject.FindWithTag ("Player");
+
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-	
+		player = GameObject.FindGameObjectWithTag ("Player");
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
