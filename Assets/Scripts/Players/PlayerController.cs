@@ -88,7 +88,8 @@ public class PlayerController : MonoBehaviour {
 				PlayerPrefs.SetInt ("LightExpo", 0);
 			}
 
-
+			if(moveSpeed > 5)
+				moveSpeed = 5;
 
 			if (SFXVolume == null)
 				SFXVolume = GameObject.FindGameObjectWithTag ("Player Audio").GetComponentInChildren<AudioSource> ();
@@ -241,7 +242,11 @@ public class PlayerController : MonoBehaviour {
 		//StartCoroutine (PlayerDeadRespawn());
 		if (lives == 0) 
 		{
-			Application.LoadLevel ("ContinuePage");
+
+			if(Application.loadedLevelName == "tutorial")
+				Application.LoadLevel("tutorial");
+			else
+				Application.LoadLevel ("ContinuePage");
 			lives = 3;
 		} 
 		else 

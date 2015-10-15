@@ -43,6 +43,8 @@ public class GuardBehavior : EnemyBase {
 
 	float attkPause = 0.0f;
 
+	public AudioSource SFXVolume;
+
 
 
 	// Use this for initialization
@@ -71,6 +73,8 @@ public class GuardBehavior : EnemyBase {
 		//}
 		if (playRef == null)
 			playRef = GameObject.FindGameObjectWithTag ("Player");
+
+
 
 
 
@@ -325,14 +329,17 @@ public class GuardBehavior : EnemyBase {
 
 		if (change == ENMY_STATES.SEARCH && currState != ENMY_STATES.ATTACK) {
 			GetComponentInChildren<AlertSpritesBehavior> ().ChangeSprite (qMark);
-			GetComponentInChildren<AlertSpritesBehavior> ().PlayClip (qSound);
+			//GetComponentInChildren<AlertSpritesBehavior> ().PlayClip (qSound);//******************************
+			SFXVolume.PlayOneShot(qSound);
 		} else if (change == ENMY_STATES.SEARCH && currState == ENMY_STATES.ATTACK) {
 			GetComponentInChildren<AlertSpritesBehavior> ().ChangeSprite (qMark);
-			GetComponentInChildren<AlertSpritesBehavior> ().PlayClip (fSound);		
+			//GetComponentInChildren<AlertSpritesBehavior> ().PlayClip (fSound);//******************************
+			SFXVolume.PlayOneShot(fSound);
 		}
 		else if (change == ENMY_STATES.ATTACK) {
 			GetComponentInChildren<AlertSpritesBehavior> ().ChangeSprite(xMark);
-			GetComponentInChildren<AlertSpritesBehavior> ().PlayClip(xSound);
+			//GetComponentInChildren<AlertSpritesBehavior> ().PlayClip(xSound);//*******************************
+			SFXVolume.PlayOneShot(xSound);
 
 		} else
 			GetComponentInChildren<AlertSpritesBehavior> ().ChangeSprite(null);

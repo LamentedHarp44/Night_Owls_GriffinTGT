@@ -53,7 +53,7 @@ public class DrunkGuardScript : MonoBehaviour {
 				} else if (sighted) {
 					attackTimer -= Time.fixedDeltaTime;
 					if (attackTimer <= 0 && sighted) {
-						GetComponentInChildren<AudioSource> ().PlayOneShot (gunShot);
+						GetComponentInChildren<AudioSource> ().PlayOneShot (gunShot);//********************************************
 						player.GetComponent<PlayerController> ().PlayerDeath (TYPE_DEATH.RANGED);
 						attackTimer = 1.5f;
 					}

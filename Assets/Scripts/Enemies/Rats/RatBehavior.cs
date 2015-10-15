@@ -15,6 +15,7 @@ public class RatBehavior : MonoBehaviour {
 	public float particle;
 	public Color starter;
 	public AudioClip clip;
+	AudioSource SFXVolume;
 	public float colideTimer;
 	public int livesCounter;
 	public int tempLives;
@@ -24,7 +25,6 @@ public class RatBehavior : MonoBehaviour {
 
 		tempLives = 3;
 		colideTimer = 2.0f;
-		clip = GetComponent<AudioSource> ().clip;
 		starter = GetComponentInChildren<ParticleSystem> ().startColor;
 		home = transform.position;
 		moveSpeed = 2;
@@ -42,6 +42,12 @@ public class RatBehavior : MonoBehaviour {
 
 		if(player == null)
 			player = GameObject.FindGameObjectWithTag ("Player");
+
+		if (SFXVolume == null) 
+		{
+			SFXVolume = GameObject.FindWithTag("RatAudio").GetComponent<AudioSource>();
+			clip = SFXVolume.clip;
+		}
 
 		if (!GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
@@ -142,7 +148,8 @@ public class RatBehavior : MonoBehaviour {
 	}
 	public void Attack()
 	{
-		GetComponent<AudioSource> ().Play ();
+		if(SFXVolume != null)
+			SFXVolume.Play ();
 
 
 			if (player.GetComponent<Invisiblilityscript> ().LightExposure () < 4) {
@@ -176,7 +183,9 @@ public class RatBehavior : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Player") 
 		{
-			GetComponent<AudioSource>().PlayOneShot(clip);
+			if(SFXVolume != null)
+				SFXVolume.PlayOneShot(clip);
+
 			GetComponentInChildren<BoxCollider2D> ().enabled = false;
 			attacking = true;
 			atkTimer = 1.5f;
