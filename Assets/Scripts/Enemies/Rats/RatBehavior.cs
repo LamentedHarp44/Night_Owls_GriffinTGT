@@ -43,6 +43,7 @@ public class RatBehavior : MonoBehaviour {
 		if(player == null)
 			player = GameObject.FindGameObjectWithTag ("Player");
 
+		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 		if (SFXVolume == null) 
 		{
 			SFXVolume = GameObject.FindWithTag("RatAudio").GetComponent<AudioSource>();

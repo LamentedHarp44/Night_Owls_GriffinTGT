@@ -42,9 +42,9 @@ public class PlayerController : MonoBehaviour {
 	public LAD_MOVEMENT ladMove = LAD_MOVEMENT.STAY;
 
 	//variable for pausing the game
-	public static bool gamePause = false; 
-	public bool pauseMenuToggle=false;
-	public GameObject pauseMenu;
+	//public static bool gamePause = false; 
+	//public bool pauseMenuToggle=false;
+	//public GameObject pauseMenu;
 
 	
 	//variable for cooling down
@@ -128,26 +128,26 @@ public class PlayerController : MonoBehaviour {
 		}
 
 			// call pause menu
-			if (Input.GetKeyDown (KeyCode.Escape)) {
-				pauseMenuToggle = !pauseMenuToggle;
-			
-			
-				if (pauseMenuToggle) {
-					pauseMenu.GetComponent<CanvasGroup> ().alpha = 1;
-					pauseMenu.GetComponent<CanvasGroup> ().interactable = true;
-				
-				
-				} else {
-					pauseMenu.GetComponent<CanvasGroup> ().alpha = 0;
-					pauseMenu.GetComponent<CanvasGroup> ().interactable = false;
-				}
-			}
-
-
-			if (gamePause)
-				Time.timeScale = 0;
-			else
-				Time.timeScale = 1;
+		//	if (Input.GetKeyDown (KeyCode.Escape)) {
+		//		pauseMenuToggle = !pauseMenuToggle;
+		//	
+		//	
+		//		if (pauseMenuToggle) {
+		//			pauseMenu.GetComponent<CanvasGroup> ().alpha = 1;
+		//			pauseMenu.GetComponent<CanvasGroup> ().interactable = true;
+		//		
+		//		
+		//		} else {
+		//			pauseMenu.GetComponent<CanvasGroup> ().alpha = 0;
+		//			pauseMenu.GetComponent<CanvasGroup> ().interactable = false;
+		//		}
+		//	}
+		//
+		//
+		//	if (gamePause)
+		//		Time.timeScale = 0;
+		//	else
+		//		Time.timeScale = 1;
 
 
 			DontDestroyOnLoad (this);
