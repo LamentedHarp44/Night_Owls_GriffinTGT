@@ -3,6 +3,8 @@ using System.Collections;
 
 public class ScentController : MonoBehaviour {
 
+	public float reset = 1.5f;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -15,6 +17,7 @@ public class ScentController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
+
 		if (col.gameObject.tag == "Player")
 			if (GetComponentInParent<DogBehavior>().state == ENMY_STATES.PATROL || GetComponentInParent<DogBehavior>().state == ENMY_STATES.RESET) 
 		{

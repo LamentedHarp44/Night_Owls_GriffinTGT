@@ -278,15 +278,13 @@ MonoBehaviour:
   loot: 0
   usable: {fileID: 0}
   timmy: {fileID: 0}
-  lightExpo: 0
+  lightExpo: 2
   lightExpoPurchased: 0
   lastCompleted: 10
   ratCount: 0
   lives: 3
   grounded: 0
   ladMove: 1
-  pauseMenuToggle: 0
-  pauseMenu: {fileID: 0}
   cooled: 0
   cooldown: {fileID: 0}
   numPush: 0

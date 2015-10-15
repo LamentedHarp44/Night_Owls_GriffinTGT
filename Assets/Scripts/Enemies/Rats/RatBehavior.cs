@@ -46,7 +46,7 @@ public class RatBehavior : MonoBehaviour {
 			tempLives = player.GetComponent<PlayerController>().lives;
 			livesCounter = tempLives;
 		}
-		if (!GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
+		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
 			livesCounter = player.GetComponent<PlayerController> ().lives;
 		

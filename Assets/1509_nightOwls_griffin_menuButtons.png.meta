@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: f7b4a94a6aeb87c4ea4d541036ece2b6
+timeCreated: 1444920646
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 1509_nightOwls_griffin_menuButtons_0
+    21300002: 1509_nightOwls_griffin_menuButtons_1
+    21300004: 1509_nightOwls_griffin_menuButtons_2
+    21300006: 1509_nightOwls_griffin_menuButtons_3
+    21300008: 1509_nightOwls_griffin_menuButtons_4
+    21300010: 1509_nightOwls_griffin_menuButtons_5
+    21300012: 1509_nightOwls_griffin_menuButtons_6
+    21300014: 1509_nightOwls_griffin_menuButtons_7
+    21300016: 1509_nightOwls_griffin_menuButtons_8
+    21300018: 1509_nightOwls_griffin_menuButtons_9
+    21300020: 1509_nightOwls_griffin_menuButtons_10
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 1509_nightOwls_griffin_menuButtons_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 420
+        width: 234
+        height: 89
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1509_nightOwls_griffin_menuButtons_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 291
+        width: 248
+        height: 101
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1509_nightOwls_griffin_menuButtons_2
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 190
+        width: 215
+        height: 87
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1509_nightOwls_griffin_menuButtons_3
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 108
+        width: 219
+        height: 79
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1509_nightOwls_griffin_menuButtons_4
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 11
+        width: 228
+        height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1509_nightOwls_griffin_menuButtons_5
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 437
+        width: 75
+        height: 59
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1509_nightOwls_griffin_menuButtons_6
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 370
+        width: 83
+        height: 53
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1509_nightOwls_griffin_menuButtons_7
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 304
+        width: 83
+        height: 55
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1509_nightOwls_griffin_menuButtons_8
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 252
+        width: 82
+        height: 46
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1509_nightOwls_griffin_menuButtons_9
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 192
+        width: 83
+        height: 55
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1509_nightOwls_griffin_menuButtons_10
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 137
+        width: 66
+        height: 33
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
