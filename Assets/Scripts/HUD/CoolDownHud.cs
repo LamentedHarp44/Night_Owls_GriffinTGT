@@ -14,7 +14,7 @@ public class CoolDownHud : MonoBehaviour {
 	float duration;
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindWithTag ("Player");
+
 		//coolText=GameObject.FindWithTag ("Cooldown");
 		//coolDownTimer = 0.0f;
 		//cstartTimer = 0.0f;
@@ -22,7 +22,11 @@ public class CoolDownHud : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		if(player == null)
+		player = GameObject.FindWithTag ("Player");
+
 		/*if (targetTime > 0) {
 
 			

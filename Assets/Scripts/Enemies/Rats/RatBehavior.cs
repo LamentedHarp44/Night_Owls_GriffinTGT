@@ -18,11 +18,11 @@ public class RatBehavior : MonoBehaviour {
 	public float colideTimer;
 	public int livesCounter;
 	public int tempLives;
+	GameObject respawn;
 	// Use this for initialization
 	void Start () 
 	{
-
-		tempLives = 3;
+		player = null;
 		colideTimer = 2.0f;
 		clip = GetComponent<AudioSource> ().clip;
 		starter = GetComponentInChildren<ParticleSystem> ().startColor;
@@ -40,18 +40,20 @@ public class RatBehavior : MonoBehaviour {
 	void Update () 
 	{
 
-		if(player == null)
+		if (player == null) 
+		{
 			player = GameObject.FindGameObjectWithTag ("Player");
-
+			tempLives = player.GetComponent<PlayerController>().lives;
+			livesCounter = tempLives;
+		}
 		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
 			livesCounter = player.GetComponent<PlayerController> ().lives;
 		
 			if (tempLives != livesCounter) {
-				tempLives = livesCounter;
-				transform.position = home;
-				player.GetComponent<PlayerController> ().ratCount = 0;
-				player.GetComponent<PlayerController> ().moveSpeed = 5.0f;
+				livesCounter = tempLives;
+
+				Die();
 			}
 
 
@@ -98,10 +100,7 @@ public class RatBehavior : MonoBehaviour {
 				killTimer -= Time.fixedDeltaTime;
 
 				if (killTimer <= 0) {
-					player.GetComponent<PlayerController> ().ratCount = 0;
-					player.GetComponent<PlayerController> ().moveSpeed = 5.0f;
-					attacking = false;
-					this.transform.position = home;
+					Die ();
 					player.GetComponent<PlayerController> ().PlayerDeath (TYPE_DEATH.SWARM);
 				}
 			} else {
@@ -142,34 +141,33 @@ public class RatBehavior : MonoBehaviour {
 	}
 	public void Attack()
 	{
+		GetComponent<AudioSource> ().enabled = true;
 		GetComponent<AudioSource> ().Play ();
 
 
-			if (player.GetComponent<Invisiblilityscript> ().LightExposure () < 4) {
+		if (player.GetComponent<Invisiblilityscript> ().LightExposure () < 4) 
+		{
 				Vector3 temp = transform.position;
 				temp.x = player.transform.position.x + Random.Range (-0.1f, 0.1f);
 				temp.y = player.transform.position.y + Random.Range (0.1f, 0.3f);
 				transform.position = temp;
-			} else {
+		}
+		else 
+		{
 				atkTimer -= Time.fixedDeltaTime;
-				if (atkTimer <= 0) {
-					attacking = false;
-				Vector3 temp = transform.position;
-				temp.x = player.transform.position.x - .2f;
-				temp.y = player.transform.position.y + .2f;
-				GetComponent<CircleCollider2D>().enabled = false;
-				GetComponentInChildren<BoxCollider2D>().enabled = true;
-				GetComponent<Rigidbody2D>().gravityScale = 1;
-				player.GetComponent<PlayerController> ().moveSpeed += .5f;
-				player.GetComponent<PlayerController> ().ratCount -= 1;
-				transform.position = temp;
-				} else {
+				
+			if (atkTimer <= 0) 
+			{
+				Die ();
+			} 
+			else 
+			{
 					Vector3 temp = transform.position;
 					temp.x = player.transform.position.x + Random.Range (-0.1f, 0.1f);
 					temp.y = player.transform.position.y + Random.Range (.1f, 0.3f);
 					transform.position = temp;
-				}
 			}
+		}
 
 	}
 	void OnTriggerEnter2D(Collider2D col)
@@ -191,11 +189,18 @@ public class RatBehavior : MonoBehaviour {
 	{
 		//test code
 	//	if (Input.GetKeyDown (KeyCode.Backspace)) {
-			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (2000f, 1000f));
+			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (3000f, 1000f));
 
 			ground = false;
 	//	}
 	}
 
-
+	void Die()
+	{
+		player.GetComponent<PlayerController> ().moveSpeed = 5.0f;
+		player.GetComponent<PlayerController> ().ratCount = 0;
+		respawn = Instantiate (this.gameObject);
+		respawn.transform.position = home;
+		Destroy (this.gameObject);
+	}
 }

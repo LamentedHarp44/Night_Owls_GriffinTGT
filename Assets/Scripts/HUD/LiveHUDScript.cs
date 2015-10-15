@@ -9,15 +9,19 @@ public class LiveHUDScript : MonoBehaviour {
 
 
 	void Start () {
-		player = GameObject.FindWithTag ("Player");
+	
 		/*inputTexture = (Texture2D)UnityEditor.AssetDatabase.LoadAssetAtPath(texture, typeof(Texture2D));*/
-		lives=player.GetComponent<PlayerController>().lives;
+	//	lives=player.GetComponent<PlayerController>().lives;
 	
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		if(player == null)
+			player = GameObject.FindWithTag ("Player");
+
 		lives=player.GetComponent<PlayerController>().lives;
 
 	}

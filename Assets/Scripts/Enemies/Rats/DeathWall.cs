@@ -87,11 +87,11 @@ public class DeathWall : MonoBehaviour {
 
 
 			if(Vector2.Distance((Vector2)transform.position, (Vector2)player.transform.position) < 20)
-				shotTime = 5;
+				shotTime = 3f;
 			else if(Vector2.Distance((Vector2)transform.position, (Vector2)player.transform.position) < 40)
-				shotTime = 3;
+				shotTime = 1.5f;
 			else
-				shotTime = 1;
+				shotTime = .5f;
 
 			ratSpawn.Add(shot);
 
