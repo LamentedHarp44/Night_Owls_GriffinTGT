@@ -234,8 +234,10 @@ public class PlayerController : MonoBehaviour {
 			GetComponentInChildren<ParticleSystem> ().startColor = Color.red;
 
 		GetComponentInChildren<ParticleSystem> ().Play ();
+
 		if (SFXVolume != null)
 			SFXVolume.Play ();
+
 
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
 		lives--;
