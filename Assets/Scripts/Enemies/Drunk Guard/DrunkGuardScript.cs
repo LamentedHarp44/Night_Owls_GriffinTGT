@@ -27,7 +27,7 @@ public class DrunkGuardScript : MonoBehaviour {
 		if(player == null)
 			player = GameObject.FindGameObjectWithTag ("Player");
 
-		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
+		if (GameObject.FindGameObjectWithTag("Pause") != null && GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 			GetComponent<Animator>().SetBool("awake", true);
 			asleep = false;
 		}
