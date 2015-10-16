@@ -1757,7 +1757,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11491962, guid: d7bcda9377525f84babd4233cd91419c, type: 2}
       propertyPath: m_Text
-      value: New GAme
+      value: New Game
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7bcda9377525f84babd4233cd91419c, type: 2}
