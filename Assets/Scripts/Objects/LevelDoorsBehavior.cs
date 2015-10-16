@@ -19,7 +19,7 @@ public class LevelDoorsBehavior : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (condition == FindObjectOfType<PlayerController> ().GetCompletedLevel () && !open) {
+		if ((condition == FindObjectOfType<PlayerController> ().GetCompletedLevel () && !open) || (toLvl == "Shop Menu")) {
 			//open the door
 			open = true;
 			GetComponentInChildren<AudioSource>().Play ();
