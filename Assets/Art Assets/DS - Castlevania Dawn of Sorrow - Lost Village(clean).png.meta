@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c639892eb37cfec4bbf0a9b829497995
-timeCreated: 1443220264
+timeCreated: 1445007805
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -11,6 +11,7 @@ TextureImporter:
     21300008: room5
     21300010: room6
     21300012: Background sprite1
+    21300014: Wall
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -123,6 +124,16 @@ TextureImporter:
         y: 3487
         width: 257
         height: 119
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wall
+      rect:
+        serializedVersion: 2
+        x: 3167
+        y: 3153
+        width: 96
+        height: 302
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
