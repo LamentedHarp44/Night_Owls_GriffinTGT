@@ -1,10 +1,11 @@
 fileFormatVersion: 2
 guid: 69a2f05a3846bd34d90bd6845dd98dd2
-timeCreated: 1445006631
+timeCreated: 1445022659
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: ground
+    21300002: basic_ground_tileset_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,6 +58,16 @@ TextureImporter:
         y: 135
         width: 50
         height: 50
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: basic_ground_tileset_0
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 16
+        width: 113
+        height: 62
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

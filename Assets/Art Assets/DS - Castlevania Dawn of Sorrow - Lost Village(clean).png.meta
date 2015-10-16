@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c639892eb37cfec4bbf0a9b829497995
-timeCreated: 1445007805
+timeCreated: 1445023459
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,13 @@ TextureImporter:
     21300010: room6
     21300012: Background sprite1
     21300014: Wall
+    21300016: DS - Castlevania Dawn of Sorrow - Lost Village(clean)_0
+    21300018: Mansion floor
+    21300020: background
+    21300022: wall
+    21300024: DS - Castlevania Dawn of Sorrow - Lost Village(clean)_1
+    21300026: wallpaper
+    21300028: window
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -62,7 +69,7 @@ TextureImporter:
         serializedVersion: 2
         x: 2017
         y: 1987
-        width: 235
+        width: 378
         height: 125
       alignment: 0
       pivot: {x: .5, y: .5}
@@ -134,6 +141,76 @@ TextureImporter:
         y: 3153
         width: 96
         height: 302
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DS - Castlevania Dawn of Sorrow - Lost Village(clean)_0
+      rect:
+        serializedVersion: 2
+        x: 2462
+        y: 2096
+        width: 108
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mansion floor
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 2402
+        width: 207
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 2, w: 0}
+    - name: background
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 2561
+        width: 254
+        height: 191
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wall
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 2221
+        width: 15
+        height: 177
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DS - Castlevania Dawn of Sorrow - Lost Village(clean)_1
+      rect:
+        serializedVersion: 2
+        x: 1987
+        y: 2419
+        width: 155
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wallpaper
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 2417
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: window
+      rect:
+        serializedVersion: 2
+        x: 2276
+        y: 2416
+        width: 55
+        height: 48
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

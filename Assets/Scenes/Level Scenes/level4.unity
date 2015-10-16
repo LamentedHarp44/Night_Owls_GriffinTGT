@@ -3908,6 +3908,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 22461226, guid: df00c2ff7f4e804499103f5c0ac35441, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -7.38999987
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461226, guid: df00c2ff7f4e804499103f5c0ac35441, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -20.4200001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df00c2ff7f4e804499103f5c0ac35441, type: 2}
   m_IsPrefabParent: 0
