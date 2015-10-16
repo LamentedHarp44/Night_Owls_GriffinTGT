@@ -27,6 +27,7 @@ public class DogBehavior : MonoBehaviour {
 	public AudioClip bark;
 	public AudioClip sniff;
 	public AudioClip whimper;
+	public AudioSource SFXVolume;
 	// Use this for initialization
 	void Start () 
 	{
@@ -165,8 +166,10 @@ public class DogBehavior : MonoBehaviour {
 		if (transform.position.x + .1 > anchor.x || transform.position.x - .1 < anchor.x) 
 		{
 			state = ENMY_STATES.PATROL;
-			GetComponent<AudioSource>().Stop ();
-			GetComponent<AudioSource>().PlayOneShot(sniff);
+			//GetComponent<AudioSource>().Stop ();
+			//GetComponent<AudioSource>().PlayOneShot(sniff);
+			SFXVolume.Stop();
+			SFXVolume.PlayOneShot(sniff);
 		}
 	}
 
@@ -191,8 +194,10 @@ public class DogBehavior : MonoBehaviour {
 					target = targ.transform.position;
 					state = ENMY_STATES.SEARCH;
 					alertDelay = .5f;
-					GetComponent<AudioSource> ().Stop ();
-					GetComponent<AudioSource> ().PlayOneShot (growl);
+					//GetComponent<AudioSource> ().Stop ();
+					//GetComponent<AudioSource> ().PlayOneShot (growl);
+					SFXVolume.Stop();
+					SFXVolume.PlayOneShot(growl);
 				} else
 					return;
 			} else if (state == ENMY_STATES.SEARCH) {
@@ -202,8 +207,10 @@ public class DogBehavior : MonoBehaviour {
 					targ = Physics2D.Raycast ((Vector2)transform.position, Vector2.right, detRange, Physics2D.DefaultRaycastLayers, -1.0f);
 
 				if (targ.collider != null && targ.collider.gameObject.tag == "Player") {
-					GetComponent<AudioSource> ().Stop ();
-					GetComponent<AudioSource> ().PlayOneShot (bark);
+					//GetComponent<AudioSource> ().Stop ();
+					//GetComponent<AudioSource> ().PlayOneShot (bark);
+					SFXVolume.Stop();
+					SFXVolume.PlayOneShot(bark);
 					state = ENMY_STATES.ATTACK;
 					return;
 				} else {
@@ -220,8 +227,10 @@ public class DogBehavior : MonoBehaviour {
 					if (searchTime <= 0) {
 						searchTime = 0.0f;
 						state = ENMY_STATES.RESET;
-						GetComponent<AudioSource> ().Stop ();
-						GetComponent<AudioSource> ().PlayOneShot (whimper);
+						//GetComponent<AudioSource> ().Stop ();
+						//GetComponent<AudioSource> ().PlayOneShot (whimper);
+						SFXVolume.Stop();
+						SFXVolume.PlayOneShot(whimper);
 					} else
 						return;
 				}
@@ -237,8 +246,10 @@ public class DogBehavior : MonoBehaviour {
 					if (atkTime <= 0) {
 						atkTime = 3.0f;
 						state = ENMY_STATES.SEARCH;
-						GetComponent<AudioSource> ().Stop ();
-						GetComponent<AudioSource> ().PlayOneShot (growl);
+						//GetComponent<AudioSource> ().Stop ();
+						//GetComponent<AudioSource> ().PlayOneShot (growl);
+						SFXVolume.Stop();
+						SFXVolume.PlayOneShot(growl);
 					}
 				} else
 					return;

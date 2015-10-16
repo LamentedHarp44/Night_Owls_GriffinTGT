@@ -49,6 +49,8 @@ public class HiddenDoorScript : MonoBehaviour {
 					player.GetComponent<SpriteRenderer>().sortingOrder = 5;
 					if(player.GetComponent<PlayerController>().lightExpoPurchased == false)
 						player.GetComponent<PlayerController> ().lightExpo = 0;
+					else
+						player.GetComponent<PlayerController> ().lightExpo = -2;
 				} 
 			}
 

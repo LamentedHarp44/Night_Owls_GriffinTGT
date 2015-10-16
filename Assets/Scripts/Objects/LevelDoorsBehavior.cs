@@ -29,6 +29,11 @@ public class LevelDoorsBehavior : MonoBehaviour {
 		if (player != null) {
 			if (player.GetComponent<PlayerController>().GetLadMovement() == LAD_MOVEMENT.UP)
 			{
+				if(player.GetComponent<PlayerController>().lightExpoPurchased == false)
+					player.GetComponent<PlayerController> ().lightExpo = 0;
+				else
+					player.GetComponent<PlayerController> ().lightExpo = -2;
+
 				GameObject.FindGameObjectWithTag("Loader").GetComponent<SceneLoader>().lvl = toLvl;
 				Application.LoadLevel("Loading Screen");
 			}

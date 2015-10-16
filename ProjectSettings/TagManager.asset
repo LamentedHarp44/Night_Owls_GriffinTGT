@@ -54,6 +54,10 @@ TagManager:
   - Waypoint
   - obst
   - Pause
+  - RatAudio
+  - Stop
+  - Cooldown
+  - CrateAudio
   layers:
   - Default
   - TransparentFX
