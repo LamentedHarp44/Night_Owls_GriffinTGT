@@ -13,7 +13,7 @@ public class Percentage : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//float percent = (Application.GetStreamProgressForLevel (lvl) * 100);
-		//GetComponent<Text> ().text = percent.ToString () + "%";
+		float percent = (Application.GetStreamProgressForLevel (lvl) * 100);
+		GetComponent<Text> ().text = percent.ToString () + "%";
 	}
 }
