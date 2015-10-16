@@ -278,7 +278,7 @@ MonoBehaviour:
   loot: 0
   usable: {fileID: 0}
   timmy: {fileID: 0}
-  lightExpo: 2
+  lightExpo: 0
   lightExpoPurchased: 0
   lastCompleted: 10
   ratCount: 0
@@ -1558,6 +1558,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_SortingOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: lightExpo
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

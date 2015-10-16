@@ -27,7 +27,7 @@ public class DrunkGuardScript : MonoBehaviour {
 		if(player == null)
 			player = GameObject.FindGameObjectWithTag ("Player");
 
-		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
+		if (GameObject.FindGameObjectWithTag("Pause") != null && GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 			GetComponent<Animator>().SetBool("awake", true);
 			asleep = false;
 		}
@@ -53,7 +53,7 @@ public class DrunkGuardScript : MonoBehaviour {
 				} else if (sighted) {
 					attackTimer -= Time.fixedDeltaTime;
 					if (attackTimer <= 0 && sighted) {
-						GetComponentInChildren<AudioSource> ().PlayOneShot (gunShot);
+						GetComponentInChildren<AudioSource> ().PlayOneShot (gunShot);//********************************************
 						player.GetComponent<PlayerController> ().PlayerDeath (TYPE_DEATH.RANGED);
 						attackTimer = 1.5f;
 					}

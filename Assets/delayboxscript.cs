@@ -6,6 +6,7 @@ public class delayboxscript : MonoBehaviour {
 	public GameObject smashedCrate;
 	public GameObject newCrate;
 	public AudioClip clip;
+	AudioSource SFXVolume;
 
 
 	// Use this for initialization
@@ -15,7 +16,10 @@ public class delayboxscript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		if (SFXVolume == null)
+			SFXVolume = GameObject.FindWithTag ("CrateAudio").GetComponent<AudioSource> ();
 	
 	}
 
@@ -25,7 +29,8 @@ public class delayboxscript : MonoBehaviour {
 		{
 			newCrate = Instantiate(smashedCrate);
 			newCrate.transform.position = transform.position;
-			newCrate.GetComponent<AudioSource>().Play();
+			//newCrate.GetComponent<AudioSource>().Play();//*****************************************
+			SFXVolume.Play();
 			Destroy(this.gameObject);
 
 		}

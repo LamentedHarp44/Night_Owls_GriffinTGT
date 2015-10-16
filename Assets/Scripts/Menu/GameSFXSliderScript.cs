@@ -22,9 +22,7 @@ public class GameSFXSliderScript : MonoBehaviour, IDragHandler {
 
 	public void OnDrag(PointerEventData eventData)		
 	{
-		if(volumeSlider.value == .1f || volumeSlider.value == .3f || volumeSlider.value == .5f || volumeSlider.value == .7f 
-		   || volumeSlider.value == .9f)
-			GetComponent<AudioSource> ().Play ();
+		GetComponent<AudioSource> ().Play ();
 		PlayerPrefs.SetFloat ("SFXVolume", volumeSlider.value);
 	} 
 	

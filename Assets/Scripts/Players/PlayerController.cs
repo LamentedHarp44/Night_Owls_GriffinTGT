@@ -88,7 +88,8 @@ public class PlayerController : MonoBehaviour {
 				PlayerPrefs.SetInt ("LightExpo", 0);
 			}
 
-
+			if(moveSpeed > 5)
+				moveSpeed = 5;
 
 			if (SFXVolume == null)
 				SFXVolume = GameObject.FindGameObjectWithTag ("Player Audio").GetComponentInChildren<AudioSource> ();
@@ -233,15 +234,21 @@ public class PlayerController : MonoBehaviour {
 			GetComponentInChildren<ParticleSystem> ().startColor = Color.red;
 
 		GetComponentInChildren<ParticleSystem> ().Play ();
+
 		if (SFXVolume != null)
 			SFXVolume.Play ();
+
 
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
 		lives--;
 		//StartCoroutine (PlayerDeadRespawn());
 		if (lives == 0) 
 		{
-			Application.LoadLevel ("ContinuePage");
+
+			if(Application.loadedLevelName == "tutorial")
+				Application.LoadLevel("tutorial");
+			else
+				Application.LoadLevel ("ContinuePage");
 			lives = 3;
 		} 
 		else 
