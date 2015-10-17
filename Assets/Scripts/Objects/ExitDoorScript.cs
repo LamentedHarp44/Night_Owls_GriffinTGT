@@ -32,6 +32,10 @@ public class ExitDoorScript : MonoBehaviour {
 	{
 		if (other.CompareTag("Player") && Lock == false) 
 		{
+			if(other.GetComponent<PlayerController>().lightExpoPurchased == false)
+				other.GetComponent<PlayerController> ().lightExpo = 0;
+			else
+				other.GetComponent<PlayerController> ().lightExpo = -2;
 			other.GetComponent<PlayerController>().lastCompleted = currLvl;
 			GameObject.FindGameObjectWithTag("Loader").GetComponent<SceneLoader>().lvl = nxtlvl;
 			Application.LoadLevel("Loading Screen");
