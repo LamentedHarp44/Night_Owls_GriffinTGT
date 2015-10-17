@@ -36,7 +36,8 @@ public class ExitDoorScript : MonoBehaviour {
 				other.GetComponent<PlayerController> ().lightExpo = 0;
 			else
 				other.GetComponent<PlayerController> ().lightExpo = -2;
-			other.GetComponent<PlayerController>().lastCompleted = currLvl;
+			other.GetComponent<Invisiblilityscript>().cooldown = 0.0f;
+			other.GetComponent<PlayerController>().lastCompleted = (int)currLvl;
 			GameObject.FindGameObjectWithTag("Loader").GetComponent<SceneLoader>().lvl = nxtlvl;
 			Application.LoadLevel("Loading Screen");
 		}

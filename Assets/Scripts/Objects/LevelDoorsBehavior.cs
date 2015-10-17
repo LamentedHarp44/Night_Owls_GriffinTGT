@@ -7,7 +7,7 @@ public class LevelDoorsBehavior : MonoBehaviour {
 	public string toLvl;
 
 	//  This is the condition that needs to be met for the door to open
-	public LVL_CMPLT condition;
+	public int condition;
 
 	bool open;
 	GameObject player = null;
