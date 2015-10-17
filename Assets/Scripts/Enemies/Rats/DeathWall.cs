@@ -6,7 +6,7 @@ public class DeathWall : MonoBehaviour {
 	public float moveSpeed;
 	public float shotTime;
 	GameObject player;
-	public GameObject rat;
+	GameObject rat;
 	public GameObject shot;
 	public float delayTimer;
 	public bool slowed;
@@ -36,6 +36,10 @@ public class DeathWall : MonoBehaviour {
 		
 		if (player == null)
 			player = GameObject.FindGameObjectWithTag ("Player");
+
+		if (rat == null)
+			rat = GameObject.FindGameObjectWithTag ("rat");
+
 
 		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 

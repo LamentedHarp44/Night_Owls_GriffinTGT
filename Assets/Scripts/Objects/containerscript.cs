@@ -17,7 +17,7 @@ public class containerscript : MonoBehaviour {
 	// Use this for initialization
 	public void SetUp () 
 	{
-
+		delay = 0;
 	}
 	
 	// Update is called once per frame
@@ -26,8 +26,7 @@ public class containerscript : MonoBehaviour {
 
 		if (GameObject.FindGameObjectWithTag("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
-		if (normDelay == 0)
-			normDelay = delay = Random.Range (1.0f, 3.0f);
+		
 
 		if (value == 0 && !is_open)
 			value = Random.Range (1, 3) * 50;
