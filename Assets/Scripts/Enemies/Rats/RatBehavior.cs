@@ -209,7 +209,7 @@ public class RatBehavior : MonoBehaviour {
 	{
 		//test code
 	//	if (Input.GetKeyDown (KeyCode.Backspace)) {
-			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (3000f, 1000f));
+			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (2000f, 1000f));
 
 			ground = false;
 	//	}
@@ -221,6 +221,7 @@ public class RatBehavior : MonoBehaviour {
 		player.GetComponent<PlayerController> ().ratCount = 0;
 		respawn = Instantiate (this.gameObject);
 		respawn.transform.position = home;
+		GetComponent<CircleCollider2D> ().enabled = false;
 		Destroy (this.gameObject);
 	}
 }
