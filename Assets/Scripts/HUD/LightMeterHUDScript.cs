@@ -23,6 +23,7 @@ public class LightMeterHUDScript : MonoBehaviour {
 
 	void OnGUI()
 	{
+		if (!GameObject.FindGameObjectWithTag("Pause").GetComponent<PauseMenu>().gPause)
 		for (int i=0; i<lightLevel; i++) {
 			GUI.DrawTexture (new Rect (350, 50, 40*lightLevel,20 ), inputTexture);
 		}
