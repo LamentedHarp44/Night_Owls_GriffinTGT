@@ -218,6 +218,34 @@ Prefab:
       propertyPath: m_Name
       value: Hub World Layout
       objectReference: {fileID: 0}
+    - target: {fileID: 11496268, guid: 3e7e045e6f94c1e4b8c1a2a46680241f, type: 2}
+      propertyPath: toLvl
+      value: level3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499056, guid: 3e7e045e6f94c1e4b8c1a2a46680241f, type: 2}
+      propertyPath: condition
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11424168, guid: 3e7e045e6f94c1e4b8c1a2a46680241f, type: 2}
+      propertyPath: condition
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443968, guid: 3e7e045e6f94c1e4b8c1a2a46680241f, type: 2}
+      propertyPath: condition
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415566, guid: 3e7e045e6f94c1e4b8c1a2a46680241f, type: 2}
+      propertyPath: condition
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 11424168, guid: 3e7e045e6f94c1e4b8c1a2a46680241f, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443968, guid: 3e7e045e6f94c1e4b8c1a2a46680241f, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e7e045e6f94c1e4b8c1a2a46680241f, type: 2}
   m_IsPrefabParent: 0

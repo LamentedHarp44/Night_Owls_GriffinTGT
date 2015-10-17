@@ -3,7 +3,7 @@ using System.Collections;
 
 public enum TYPE_DEATH {MELEE = 0, RANGED, SWARM, TRAP};
 public enum LAD_MOVEMENT {DOWN, STAY, UP};
-public enum LVL_CMPLT {TUTORIAL, LVL_ONE, LVL_TWO, LVL_THREE, LVL_FOUR, LVL_FIVE, LVL_SIX, LVL_SEVEN, LVL_EIGHT, LVL_NINE, NONE}
+public enum LVL_CMPLT {TUTORIAL, LVL_ONE, LVL_TWO, LVL_THREE, RatBoss, LVL_FOUR, LVL_FIVE, LVL_SIX, LVL_SEVEN, LVL_EIGHT, LVL_NINE, NONE}
 
 public class PlayerController : MonoBehaviour {
 	public float moveSpeed;
