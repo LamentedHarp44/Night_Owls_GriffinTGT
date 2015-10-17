@@ -28,6 +28,8 @@ public class LiveHUDScript : MonoBehaviour {
 
 	void OnGUI()
 	{
+		if (!GameObject.FindGameObjectWithTag("Pause").GetComponent<PauseMenu>().gPause)
+		if (!GameObject.FindGameObjectWithTag("Pause").GetComponent<PauseMenu>().gPause)
 		for (int i=0; i<lives; i++) {
 			GUI.DrawTexture (new Rect (i * 40 + 45, 45, 40, 33), inputTexture);
 		}
