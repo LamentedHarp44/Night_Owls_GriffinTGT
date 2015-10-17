@@ -39,6 +39,19 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 		if (player == null)
 			player = GameObject.FindWithTag ("Player");
 
+		if (PlayerPrefs.GetString ("VAPressed") == "true") 
+			VAPressed = true;
+		else
+			VAPressed = false;
+		if (PlayerPrefs.GetString ("GAPressed") == "true")
+			GAPressed = true;
+		else
+			GAPressed = false;
+		if (PlayerPrefs.GetString ("BAPressed") == "true")
+			BAPressed = true;
+		else
+			BAPressed = false;
+
 		playersLoot = player.GetComponent<PlayerController> ().loot;
 
 
@@ -69,6 +82,7 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 		{
 			player.GetComponent<PlayerController> ().loot -= 200;
 			VAPressed = true;
+			PlayerPrefs.SetString("VAPressed", "true");
 			GGButtons [0].interactable = false;
 			ColorBlock temp = GGButtons [0].colors;
 			temp.disabledColor = Color.green;
@@ -83,6 +97,7 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 		{
 			player.GetComponent<PlayerController> ().loot -= 200;
 			GAPressed = true;
+			PlayerPrefs.SetString("GAPressed", "true");
 			GGButtons [1].interactable = false;
 			ColorBlock temp = GGButtons [1].colors;
 			temp.disabledColor = Color.green;
@@ -97,6 +112,7 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 		{
 			player.GetComponent<PlayerController> ().loot -= 200;
 			BAPressed = true;
+			PlayerPrefs.SetString("BAPressed", "true");
 			GGButtons [2].interactable = false;
 			ColorBlock temp = GGButtons [2].colors;
 			temp.disabledColor = Color.green;
