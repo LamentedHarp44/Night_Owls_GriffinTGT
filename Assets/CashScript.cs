@@ -16,7 +16,10 @@ public class CashScript : MonoBehaviour {
 		if(player == null)
 			player = GameObject.FindGameObjectWithTag ("Player");
 
-
+		if (GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
+			GetComponent<Text>().text = "";
+		}
+		else
 		GetComponent<Text>().text = "Money: $ " + player.GetComponent<PlayerController>().loot.ToString();
 
 
