@@ -37,7 +37,7 @@ public class DogBehavior : MonoBehaviour {
 		srchSpeed = 2;
 		atkSpeed = 5;
 		face = true;
-		delay = 30.0f;
+		delay = .8f;
 		//leash = 3;
 		scent = false;
 		detRange = 2.0f;
@@ -60,13 +60,14 @@ public class DogBehavior : MonoBehaviour {
 
 		if (GameObject.FindGameObjectWithTag ("Pause") != null && !GameObject.FindGameObjectWithTag ("Pause").GetComponent<PauseMenu> ().gPause) {
 
-			if (state != ENMY_STATES.RESET)
+			if (state != ENMY_STATES.RESET  && Player.GetComponent<PlayerController>().hiding == false)
 			{
 			if (!scent)
 				Detect ();
 			else 
 				ScentDetect ();
 			}
+			else state = ENMY_STATES.PATROL;
 
 			switch (state) {
 			case ENMY_STATES.PATROL:
@@ -132,6 +133,10 @@ public class DogBehavior : MonoBehaviour {
 	}
 	void AttackBehavior ()
 	{
+		if (Player.GetComponent<PlayerController> ().hiding == true) {
+			state = ENMY_STATES.RESET;
+			return;
+		}
 		Vector3 temp = transform.position;
 		
 		if (transform.position.x < Player.transform.position.x && !face)

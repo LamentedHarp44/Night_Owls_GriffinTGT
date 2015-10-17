@@ -208,13 +208,13 @@ public class PlayerController : MonoBehaviour {
 		if (facing_right == true) 
 		{
 			Vector3 scale = transform.localScale;
-			scale.x = 1;
+			scale.x = Mathf.Abs(scale.x);
 			transform.localScale = scale;
 		} 
 		else 
 		{
 			Vector3 scale = transform.localScale;
-			scale.x = -1;
+			scale.x = -Mathf.Abs(scale.x);
 			transform.localScale = scale;
 		}
 	}
