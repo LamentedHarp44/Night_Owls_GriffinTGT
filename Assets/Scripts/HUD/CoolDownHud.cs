@@ -11,7 +11,7 @@ public class CoolDownHud : MonoBehaviour {
 	float targetTime;
 	public GameObject coolText;
 	//float cooldown;
-	float duration;
+	//float duration;
 	// Use this for initialization
 	void Start () {
 
@@ -60,6 +60,6 @@ public class CoolDownHud : MonoBehaviour {
 		//targetTime = cstartTimer + countDown;
 		//player.GetComponent<Invisiblilityscript>().cooldown;
 		//cooldown=player.GetComponent<Invisiblilityscript>().cooldown;
-		duration=player.GetComponent<Invisiblilityscript>().duration;
+		//duration=player.GetComponent<Invisiblilityscript>().duration;
 	}
 }
