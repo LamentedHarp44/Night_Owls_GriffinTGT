@@ -22,7 +22,7 @@ public class PauseMenuButtons : MonoBehaviour {
 	{
 		PlayerController temp = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController>();
 		
-		PlayerPrefs.SetInt ("Level", (int)temp.GetCompletedLevel ());
+		PlayerPrefs.SetInt ("Level", (int)temp.GetCompletedLevel());
 		PlayerPrefs.SetInt ("Money", temp.loot);
 		PlayerPrefs.SetInt ("Lives", temp.lives);
 		PlayerPrefs.SetInt ("SavedVAPurchase", PlayerPrefs.GetInt ("VAPurchase"));

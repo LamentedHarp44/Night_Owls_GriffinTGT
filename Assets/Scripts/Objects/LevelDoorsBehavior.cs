@@ -7,7 +7,7 @@ public class LevelDoorsBehavior : MonoBehaviour {
 	public string toLvl;
 
 	//  This is the condition that needs to be met for the door to open
-	public LVL_CMPLT condition;
+	public int condition;
 
 	bool open;
 	GameObject player = null;
@@ -22,7 +22,7 @@ public class LevelDoorsBehavior : MonoBehaviour {
 		if ((condition == FindObjectOfType<PlayerController> ().GetCompletedLevel () && !open) || (toLvl == "Shop Menu")) {
 			//open the door
 			open = true;
-			GetComponentInChildren<AudioSource>().Play ();
+			//GetComponentInChildren<AudioSource>().Play ();
 			this.GetComponent<Animator>().SetTrigger("OpenUp");
 		}
 

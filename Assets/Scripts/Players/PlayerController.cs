@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour {
 	int lightExpoPurchaseTracker = 0;
 	public bool lightExpoPurchased = false;
 	Transform mainSpawn;
-	public LVL_CMPLT lastCompleted = LVL_CMPLT.NONE;
+	public int lastCompleted = (int)LVL_CMPLT.NONE;
 	public int ratCount;
 	public int lives;
 	//public int lightLevel;
@@ -238,6 +238,7 @@ public class PlayerController : MonoBehaviour {
 		if (SFXVolume != null)
 			SFXVolume.Play ();
 
+		GetComponent<Invisiblilityscript> ().cooldown = 0.0f;
 
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
 		lives--;
@@ -357,7 +358,7 @@ public class PlayerController : MonoBehaviour {
 		return ladMove;
 	}
 
-	public LVL_CMPLT GetCompletedLevel()
+	public int GetCompletedLevel()
 	{
 		return lastCompleted;
 	}
