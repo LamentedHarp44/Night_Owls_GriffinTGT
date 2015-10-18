@@ -14,6 +14,7 @@ public class GrappleHookScript : MonoBehaviour {
 	public GameObject startPos;
 	public GameObject player;
 	GameObject grabCrate;
+	public bool grabbedCrate = false;
 	//float distanceShot = 0;
 	public float timer = 0;
 	Vector2 position;
@@ -135,7 +136,7 @@ public class GrappleHookScript : MonoBehaviour {
 				shot = false;
 			}
 
-			if(shot == true && collided == true)//New improved way to move the player to the hook
+			if(shot == true && collided == true && grabbedCrate == false)//New improved way to move the player to the hook
 			{
 				transform.position = shotLocation;
 				player.transform.position = Vector3.MoveTowards(player.transform.position, transform.position, 10 * Time.deltaTime);
