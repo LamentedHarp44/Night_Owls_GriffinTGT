@@ -14,10 +14,13 @@ public class GrappleHookScript : MonoBehaviour {
 	public GameObject startPos;
 	public GameObject player;
 	GameObject grabCrate;
+	public bool grabbedCrate = false;
 	//float distanceShot = 0;
 	public float timer = 0;
 	Vector2 position;
 	Vector2 direction;
+
+	Vector2 shotLocation;
 
 	//Vertical Attachment Variables
 	public bool verticalAnchorStruck = false;
@@ -76,7 +79,8 @@ public class GrappleHookScript : MonoBehaviour {
 
 
 			//Shooting the gun
-			if (Input.GetKeyDown (KeyCode.Mouse0) && shot == false && player.GetComponent<PlayerController> ().grounded == true) {
+			if (Input.GetKeyDown (KeyCode.Mouse0) && shot == false)// && player.GetComponent<PlayerController> ().grounded == true) 
+			{
 				if (player.transform.localScale.x > 0) {
 					GetComponent<Rigidbody2D> ().AddForce (transform.right * 500);
 				} else {
@@ -125,12 +129,19 @@ public class GrappleHookScript : MonoBehaviour {
 			}
 
 			//If the hook is fired and hits nothing set back to starting position.
-			if (shot == true && collided == false)
+			if (shot == true && collided == false && verticalAnchorStruck == false)
 				timer += Time.deltaTime;
 
-			if (timer >= .90f && shot == true && collided == false) {
+			if (timer >= .90f && shot == true && collided == false && verticalAnchorStruck == false) {
 				shot = false;
 			}
+
+			if(shot == true && collided == true && grabbedCrate == false)//New improved way to move the player to the hook
+			{
+				transform.position = shotLocation;
+				player.transform.position = Vector3.MoveTowards(player.transform.position, transform.position, 10 * Time.deltaTime);
+			}
+
 		}
 
 	}
@@ -142,15 +153,17 @@ public class GrappleHookScript : MonoBehaviour {
 		if (other.tag == "Wall" && shot == true) 
 		{
 			player.GetComponent<Rigidbody2D>().gravityScale = 0;
+			player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
-			if(player.transform.localScale.x > 0)
-				player.GetComponent<Rigidbody2D>().AddForce(transform.right * 500);
-			else
-			{
-				Vector3 temp = transform.right;
-				temp.y = transform.right.y * -1;
-				player.GetComponent<Rigidbody2D>().AddForce(temp * -500);
-			}
+			shotLocation = transform.position;
+//			if(player.transform.localScale.x > 0)
+//				player.GetComponent<Rigidbody2D>().AddForce(transform.right * 500);
+//			else
+//			{
+//				Vector3 temp = transform.right;
+//				temp.y = transform.right.y * -1;
+//				player.GetComponent<Rigidbody2D>().AddForce(temp * -500);
+//			}
 
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 			collided = true;
@@ -159,8 +172,15 @@ public class GrappleHookScript : MonoBehaviour {
 		//Once the player moves towards the hook and collides with it, set player's gravity and hook position back.
 		if (other.tag == "Player") 
 		{
-			shot = false;
-			player.GetComponent<Rigidbody2D>().gravityScale = 1;
+			if(verticalAnchorStruck == false)
+			{
+				shot = false;
+				player.GetComponent<Rigidbody2D>().gravityScale = 1;
+			}
+			else
+			{
+				collided = false;
+			}
 		}
 
 		//Initiating vertical attachment behavior.
@@ -169,11 +189,12 @@ public class GrappleHookScript : MonoBehaviour {
 			verticalAnchorStruck = true;
 			collided = true;
 			player.GetComponent<Rigidbody2D>().gravityScale = 0;
+			shotLocation = transform.position;
 
-			if(player.transform.localScale.x > 0)
-				player.GetComponent<Rigidbody2D>().velocity = new Vector2(10, 0);
-			else
-				player.GetComponent<Rigidbody2D>().velocity = new Vector2(-10, 0);
+//			if(player.transform.localScale.x > 0)
+//				player.GetComponent<Rigidbody2D>().velocity = new Vector2(10, 0);
+//			else
+//				player.GetComponent<Rigidbody2D>().velocity = new Vector2(-10, 0);
 
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		}
