@@ -46,6 +46,7 @@ public class GrabCrateScript : MonoBehaviour {
 		{
 			dragToPlayer = true;
 			player.GetComponent<PlayerController>().moveSpeed = 0;
+			grappleHook.GetComponent<GrappleHookScript>().grabbedCrate = true;
 		}
 
 		if (other.tag == "GrappleHookStart") 
@@ -54,6 +55,7 @@ public class GrabCrateScript : MonoBehaviour {
 			GetComponent<Rigidbody2D>().gravityScale = 1;
 			player.GetComponent<PlayerController>().moveSpeed = 5;
 			grappleHook.GetComponent<GrappleHookScript>().shot = false;
+			grappleHook.GetComponent<GrappleHookScript>().grabbedCrate = false;
 		}
 	}
 
