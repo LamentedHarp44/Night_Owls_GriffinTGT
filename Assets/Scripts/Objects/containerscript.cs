@@ -12,12 +12,13 @@ public class containerscript : MonoBehaviour {
 	public AudioClip pick;
 	public AudioClip open;
 	public AudioClip hit;
-	bool is_playing;
+//	bool is_playing;
 	bool is_open = false;
 	// Use this for initialization
 	public void SetUp () 
 	{
 		delay = 0;
+		GetComponent<AudioSource> ().playOnAwake = false;
 	}
 	
 	// Update is called once per frame
@@ -35,6 +36,7 @@ public class containerscript : MonoBehaviour {
 
 	public float inUse () 
 	{
+		/*
 		if (!is_playing) 
 		{
 			GetComponent<AudioSource>().loop = true;
@@ -42,7 +44,7 @@ public class containerscript : MonoBehaviour {
 			GetComponent<AudioSource> ().Play ();
 			is_playing = true;
 		}
-
+*/
 		delay -= Time.deltaTime;
 		return delay;
 	}
@@ -50,9 +52,7 @@ public class containerscript : MonoBehaviour {
 	public int Payout()
 	{
 		GetComponent<AudioSource> ().Stop ();
-		GetComponent<AudioSource> ().clip = open;
-		GetComponent<AudioSource> ().Play ();
-		GetComponent<AudioSource> ().loop = false;
+		GetComponent<AudioSource> ().PlayOneShot(open);
 		int temp = value;
 		value = 0;
 		is_open = true;
@@ -64,15 +64,13 @@ public class containerscript : MonoBehaviour {
 	{
 		delay = normDelay;
 		GetComponent<AudioSource> ().Stop ();
-		is_playing = false;
+		//is_playing = false;
 	}
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
 		if (col.gameObject.tag == "Player") {
-			GetComponent<AudioSource> ().clip = hit;
-			GetComponent<AudioSource> ().Play ();
-			GetComponent<AudioSource> ().loop = false;
+			GetComponent<AudioSource> ().PlayOneShot (hit);
 		}
 	}
 
