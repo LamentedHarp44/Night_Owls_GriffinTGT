@@ -71,40 +71,58 @@ public class IUGButtonBehavior : MonoBehaviour {
 		if (player == null)
 			player = GameObject.FindWithTag ("Player");
 
-		if (PlayerPrefs.GetString ("CRButtonPressed") == "true") 
+		if (PlayerPrefs.GetString ("CRButtonPressed") == "true") {
 			CRButtonPressed = true;
+			IButtons[0].animationTriggers.disabledTrigger = "Bought";
+		}
 		else
 			CRButtonPressed = false;
-		if (PlayerPrefs.GetString ("DIButtonPressed") == "true")
+		if (PlayerPrefs.GetString ("DIButtonPressed") == "true") {
 			DIButtonPressed = true;
+			IButtons[1].animationTriggers.disabledTrigger = "Bought";
+		}
 		else
 			DIButtonPressed = false;
-		if (PlayerPrefs.GetString ("TrueIButtonPressed") == "true")
+		if (PlayerPrefs.GetString ("TrueIButtonPressed") == "true") {
 			TrueIButtonPressed = true;
+			IButtons[2].animationTriggers.disabledTrigger = "Bought";
+		}
 		else
 			TrueIButtonPressed = false;
-		if (PlayerPrefs.GetString ("CRButtonPressed2") == "true")
+		if (PlayerPrefs.GetString ("CRButtonPressed2") == "true") {
 			CRButtonPressed2 = true;
+			IButtons[3].animationTriggers.disabledTrigger = "Bought";
+		}
 		else
 			CRButtonPressed2 = false;
-		if (PlayerPrefs.GetString ("DIButtonPressed2") == "true")
+		if (PlayerPrefs.GetString ("DIButtonPressed2") == "true") {
 			DIButtonPressed2 = true;
+			IButtons[4].animationTriggers.disabledTrigger = "Bought";
+		}
 		else
 			DIButtonPressed2 = false;
-		if (PlayerPrefs.GetString ("UndetectedSButtonPressed") == "true")
+		if (PlayerPrefs.GetString ("UndetectedSButtonPressed") == "true") {
 			UndetectedSButtonPressed = true;
+			IButtons[5].animationTriggers.disabledTrigger = "Bought";
+		}
 		else
 			UndetectedSButtonPressed = false;
-		if (PlayerPrefs.GetString ("CRButtonPressed3") == "true")
+		if (PlayerPrefs.GetString ("CRButtonPressed3") == "true") {
 			CRButtonPressed3 = true;
+			IButtons[6].animationTriggers.disabledTrigger = "Bought";
+		}
 		else
 			CRButtonPressed3 = false;
-		if (PlayerPrefs.GetString ("DIButtonPressed3") == "true")
+		if (PlayerPrefs.GetString ("DIButtonPressed3") == "true") {
 			DIButtonPressed3 = true;
+			IButtons[7].animationTriggers.disabledTrigger = "Bought";
+		}
 		else
 			DIButtonPressed3 = false;
-		if (PlayerPrefs.GetString ("TransparencyButtonPressed") == "true")
+		if (PlayerPrefs.GetString ("TransparencyButtonPressed") == "true") {
 			TransparencyButtonPressed = true;
+			IButtons[8].animationTriggers.disabledTrigger = "Bought";
+		}
 		else
 			TransparencyButtonPressed = false;
 
@@ -153,6 +171,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			CRButtonPressed = true;
 			PlayerPrefs.SetString("CRButtonPressed", "true");
 			IButtons [0].interactable = false;
+			IButtons[0].animationTriggers.disabledTrigger = "Bought";
 			ColorBlock temp = IButtons [0].colors;
 			temp.disabledColor = Color.green;
 			IButtons [0].colors = temp;
@@ -168,6 +187,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			DIButtonPressed = true;
 			PlayerPrefs.SetString("DIButtonPressed", "true");
 			IButtons [1].interactable = false;
+			IButtons[1].animationTriggers.disabledTrigger = "Bought";
 			ColorBlock temp = IButtons [1].colors;
 			temp.disabledColor = Color.green;
 			IButtons [1].colors = temp;
@@ -183,6 +203,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			TrueIButtonPressed = true;
 			PlayerPrefs.SetString("TrueIButtonPressed", "true");
 			IButtons [2].interactable = false;
+			IButtons[2].animationTriggers.disabledTrigger = "Bought";
 			ColorBlock temp = IButtons [2].colors;
 			temp.disabledColor = Color.green;
 			IButtons [2].colors = temp;
@@ -198,6 +219,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			CRButtonPressed2 = true;
 			PlayerPrefs.SetString("CRButtonPressed2", "true");
 			IButtons [3].interactable = false;
+			IButtons[3].animationTriggers.disabledTrigger = "Bought";
 			ColorBlock temp = IButtons [3].colors;
 			temp.disabledColor = Color.green;
 			IButtons [3].colors = temp;
@@ -213,6 +235,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			DIButtonPressed2 = true;
 			PlayerPrefs.SetString("DIButtonPressed2", "true");
 			IButtons [4].interactable = false;
+			IButtons[4].animationTriggers.disabledTrigger = "Bought";
 			ColorBlock temp = IButtons [4].colors;
 			temp.disabledColor = Color.green;
 			IButtons [4].colors = temp;
@@ -228,6 +251,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			UndetectedSButtonPressed = true;
 			PlayerPrefs.SetString("UndetectedSButtonPressed", "true");
 			IButtons [5].interactable = false;
+			IButtons[5].animationTriggers.disabledTrigger = "Bought";
 			ColorBlock temp = IButtons [5].colors;
 			temp.disabledColor = Color.green;
 			IButtons [5].colors = temp;
@@ -243,6 +267,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			CRButtonPressed3 = true;
 			PlayerPrefs.SetString("CRButtonPressed3", "true");
 			IButtons [6].interactable = false;
+			IButtons[6].animationTriggers.disabledTrigger = "Bought";
 			ColorBlock temp = IButtons [6].colors;
 			temp.disabledColor = Color.green;
 			IButtons [6].colors = temp;
@@ -258,6 +283,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			DIButtonPressed3 = true;
 			PlayerPrefs.SetString("DIButtonPressed3", "true");
 			IButtons [7].interactable = false;
+			IButtons[7].animationTriggers.disabledTrigger = "Bought";
 			ColorBlock temp = IButtons [7].colors;
 			temp.disabledColor = Color.green;
 			IButtons [7].colors = temp;
@@ -273,6 +299,7 @@ public class IUGButtonBehavior : MonoBehaviour {
 			TransparencyButtonPressed = true;
 			PlayerPrefs.SetString("TransparencyButtonPressed", "true");
 			IButtons [8].interactable = false;
+			IButtons[8].animationTriggers.disabledTrigger = "Bought";
 			ColorBlock temp = IButtons [8].colors;
 			temp.disabledColor = Color.green;
 			IButtons [8].colors = temp;

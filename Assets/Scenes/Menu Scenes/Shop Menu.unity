@@ -1947,6 +1947,14 @@ Prefab:
       propertyPath: m_Name
       value: VA Button
       objectReference: {fileID: 0}
+    - target: {fileID: 11429364, guid: d7bcda9377525f84babd4233cd91419c, type: 2}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11429364, guid: d7bcda9377525f84babd4233cd91419c, type: 2}
+      propertyPath: m_AnimationTriggers.m_DisabledTrigger
+      value: Disabled
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11438074, guid: d7bcda9377525f84babd4233cd91419c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d7bcda9377525f84babd4233cd91419c, type: 2}

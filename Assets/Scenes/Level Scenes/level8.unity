@@ -606,6 +606,10 @@ Prefab:
       propertyPath: m_Name
       value: Circular Lantern (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 11475536, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
+      propertyPath: SoundEFX
+      value: 
+      objectReference: {fileID: 1271327552}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
   m_IsPrefabParent: 0
@@ -7045,6 +7049,10 @@ Prefab:
       propertyPath: m_Name
       value: Circular Lantern (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 11475536, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
+      propertyPath: SoundEFX
+      value: 
+      objectReference: {fileID: 1271327552}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
   m_IsPrefabParent: 0
@@ -13570,6 +13578,10 @@ Prefab:
       propertyPath: m_Name
       value: Circular Lantern (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 11475536, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
+      propertyPath: SoundEFX
+      value: 
+      objectReference: {fileID: 1271327552}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
   m_IsPrefabParent: 0
@@ -16980,6 +16992,10 @@ Prefab:
       propertyPath: m_Name
       value: Circular Lantern (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 11475536, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
+      propertyPath: SoundEFX
+      value: 
+      objectReference: {fileID: 1271327552}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
   m_IsPrefabParent: 0
@@ -21354,6 +21370,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 11475536, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
+      propertyPath: SoundEFX
+      value: 
+      objectReference: {fileID: 1271327552}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
   m_IsPrefabParent: 0
@@ -33886,6 +33906,10 @@ Prefab:
       propertyPath: m_Name
       value: Circular Lantern (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 11475536, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
+      propertyPath: SoundEFX
+      value: 
+      objectReference: {fileID: 1271327552}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
   m_IsPrefabParent: 0
@@ -37858,6 +37882,10 @@ Prefab:
       propertyPath: m_Name
       value: Circular Lantern (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 11475536, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
+      propertyPath: SoundEFX
+      value: 
+      objectReference: {fileID: 1271327552}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
   m_IsPrefabParent: 0
@@ -50061,7 +50089,7 @@ Transform:
   - {fileID: 1645165380}
   - {fileID: 2017721825}
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 43
 --- !u!1 &1021974950
 GameObject:
   m_ObjectHideFlags: 0
@@ -61417,6 +61445,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1240815116}
   m_RootOrder: 21
+--- !u!1001 &1271327550
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1582688142}
+    m_Modifications:
+    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.00999975204
+      objectReference: {fileID: 0}
+    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .410000026
+      objectReference: {fileID: 0}
+    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 119754, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_Name
+      value: LightSource Sound EFX Volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a99123d662d7f8e4583c527e476bf74f, type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1271327551 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 428772, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+  m_PrefabInternal: {fileID: 1271327550}
+--- !u!82 &1271327552 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1271327550}
 --- !u!1 &1271867177
 GameObject:
   m_ObjectHideFlags: 0
@@ -62330,6 +62417,10 @@ Prefab:
     - target: {fileID: 119754, guid: 3269292b335994244bae485f5d5486a5, type: 2}
       propertyPath: m_Name
       value: Malformed Sound EFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265760, guid: 3269292b335994244bae485f5d5486a5, type: 2}
+      propertyPath: m_audioClip
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3269292b335994244bae485f5d5486a5, type: 2}
@@ -75154,6 +75245,7 @@ Transform:
   - {fileID: 2001841205}
   - {fileID: 866441004}
   - {fileID: 1182872954}
+  - {fileID: 1271327551}
   m_Father: {fileID: 0}
   m_RootOrder: 34
 --- !u!1 &1583392440
@@ -82297,6 +82389,10 @@ Prefab:
       propertyPath: m_Name
       value: Circular Lantern (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 11475536, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
+      propertyPath: SoundEFX
+      value: 
+      objectReference: {fileID: 1271327552}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
   m_IsPrefabParent: 0
@@ -93357,6 +93453,10 @@ Prefab:
       propertyPath: m_Name
       value: Circular Lantern (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 11475536, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
+      propertyPath: SoundEFX
+      value: 
+      objectReference: {fileID: 1271327552}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
   m_IsPrefabParent: 0
@@ -95573,6 +95673,10 @@ Prefab:
       propertyPath: m_Name
       value: Circular Lantern (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 11475536, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
+      propertyPath: SoundEFX
+      value: 
+      objectReference: {fileID: 1271327552}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
   m_IsPrefabParent: 0
@@ -100348,6 +100452,10 @@ Prefab:
       propertyPath: m_Name
       value: Circular Lantern (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 11475536, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
+      propertyPath: SoundEFX
+      value: 
+      objectReference: {fileID: 1271327552}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0a8d51996e63d64ebe3c523e075aead, type: 2}
   m_IsPrefabParent: 0

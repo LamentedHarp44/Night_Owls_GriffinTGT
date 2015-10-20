@@ -7,6 +7,7 @@ public class GrappleHookScript : MonoBehaviour {
 	public float shootSpeed = 500;
 	//public float shootDistance = 5f;
 	public bool shot = false;
+	bool upAgainstWall = false;
 	bool collided = false;
 	float playerReachedHook;
 
@@ -79,7 +80,7 @@ public class GrappleHookScript : MonoBehaviour {
 
 
 			//Shooting the gun
-			if (Input.GetKeyDown (KeyCode.Mouse0) && shot == false)// && player.GetComponent<PlayerController> ().grounded == true) 
+			if (Input.GetKeyDown (KeyCode.Mouse0) && shot == false && upAgainstWall == false)// && player.GetComponent<PlayerController> ().grounded == true) 
 			{
 				if (player.transform.localScale.x > 0) {
 					GetComponent<Rigidbody2D> ().AddForce (transform.right * 500);
@@ -168,6 +169,11 @@ public class GrappleHookScript : MonoBehaviour {
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 			collided = true;
 		}
+
+		if (other.tag == "Wall" && shot == false) 
+		{
+			upAgainstWall = true;
+		}
 		
 		//Once the player moves towards the hook and collides with it, set player's gravity and hook position back.
 		if (other.tag == "Player") 
@@ -211,6 +217,14 @@ public class GrappleHookScript : MonoBehaviour {
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		}
 
+	}
+
+	void OnTriggerExit2D(Collider2D other)
+	{
+		if (other.tag == "Wall" && shot == false) 
+		{
+			upAgainstWall = false;
+		}
 	}
 
 

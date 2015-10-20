@@ -15,6 +15,7 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 	int playersLoot = 0;
 
 
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -39,16 +40,22 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 		if (player == null)
 			player = GameObject.FindWithTag ("Player");
 
-		if (PlayerPrefs.GetString ("VAPressed") == "true") 
+		if (PlayerPrefs.GetString ("VAPressed") == "true") {
 			VAPressed = true;
+			GGButtons[0].animationTriggers.disabledTrigger = "Bought";
+		}
 		else
 			VAPressed = false;
-		if (PlayerPrefs.GetString ("GAPressed") == "true")
+		if (PlayerPrefs.GetString ("GAPressed") == "true") {
 			GAPressed = true;
+			GGButtons[1].animationTriggers.disabledTrigger = "Bought";
+		}
 		else
 			GAPressed = false;
-		if (PlayerPrefs.GetString ("BAPressed") == "true")
+		if (PlayerPrefs.GetString ("BAPressed") == "true") {
 			BAPressed = true;
+			GGButtons[2].animationTriggers.disabledTrigger = "Bought";
+		}
 		else
 			BAPressed = false;
 
@@ -84,9 +91,7 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 			VAPressed = true;
 			PlayerPrefs.SetString("VAPressed", "true");
 			GGButtons [0].interactable = false;
-			ColorBlock temp = GGButtons [0].colors;
-			temp.disabledColor = Color.green;
-			GGButtons [0].colors = temp;
+			GGButtons[0].animationTriggers.disabledTrigger = "Bought";
 			player.GetComponent<PlayerController>().PurchaseVerticalAttachment();
 		}
 	}
@@ -99,9 +104,7 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 			GAPressed = true;
 			PlayerPrefs.SetString("GAPressed", "true");
 			GGButtons [1].interactable = false;
-			ColorBlock temp = GGButtons [1].colors;
-			temp.disabledColor = Color.green;
-			GGButtons [1].colors = temp;
+			GGButtons[1].animationTriggers.disabledTrigger = "Bought";
 			player.GetComponent<PlayerController>().PurchaseGrabAttachment();
 		}
 	}
@@ -114,9 +117,7 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 			BAPressed = true;
 			PlayerPrefs.SetString("BAPressed", "true");
 			GGButtons [2].interactable = false;
-			ColorBlock temp = GGButtons [2].colors;
-			temp.disabledColor = Color.green;
-			GGButtons [2].colors = temp;
+			GGButtons[2].animationTriggers.disabledTrigger = "Bought";
 			player.GetComponent<PlayerController>().PurchaseBladeAttachment();
 		}
 	}
