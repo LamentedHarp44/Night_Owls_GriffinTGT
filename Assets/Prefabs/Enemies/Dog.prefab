@@ -119,7 +119,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.13999999, y: -9.04199982, z: .234139994}
+  m_LocalPosition: {x: 11.25, y: -17.48069, z: .234139994}
   m_LocalScale: {x: 3.70242643, y: 3.7024262, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -167,7 +167,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &6176218
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -315,6 +315,7 @@ MonoBehaviour:
   bark: {fileID: 8300000, guid: ebf9b9b2122090f4ba622e0e9262a019, type: 3}
   sniff: {fileID: 8300000, guid: 1795f9afd2777a148bb7a017f854ca19, type: 3}
   whimper: {fileID: 8300000, guid: d58130bb73dd91741b8f66d42180d0d1, type: 3}
+  SFXVolume: {fileID: 0}
 --- !u!198 &19867800
 ParticleSystem:
   m_ObjectHideFlags: 1

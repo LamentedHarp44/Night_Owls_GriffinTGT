@@ -62,6 +62,8 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		Application.targetFrameRate = 60;
+
 		moveSpeed = 5.0f;
 		onLadder = false;
 		usable = null;
