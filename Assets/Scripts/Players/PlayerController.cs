@@ -241,6 +241,7 @@ public class PlayerController : MonoBehaviour {
 			SFXVolume.Play ();
 
 		GetComponent<Invisiblilityscript> ().cooldown = 0.0f;
+		GetComponentInChildren<GrappleHookScript> ().shot = false;
 
 		//GetComponent<Transform> ().position = new Vector3 (20.0f, 20.0f, 0.0f);
 		lives--;
