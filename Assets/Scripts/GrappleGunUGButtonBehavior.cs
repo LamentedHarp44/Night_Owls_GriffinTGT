@@ -43,18 +43,21 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 		if (PlayerPrefs.GetString ("VAPressed") == "true") {
 			VAPressed = true;
 			GGButtons[0].animationTriggers.disabledTrigger = "Bought";
+			GGButtons[0].animator.SetTrigger("Bought");
 		}
 		else
 			VAPressed = false;
 		if (PlayerPrefs.GetString ("GAPressed") == "true") {
 			GAPressed = true;
 			GGButtons[1].animationTriggers.disabledTrigger = "Bought";
+			GGButtons[1].animator.SetTrigger("Bought");
 		}
 		else
 			GAPressed = false;
 		if (PlayerPrefs.GetString ("BAPressed") == "true") {
 			BAPressed = true;
 			GGButtons[2].animationTriggers.disabledTrigger = "Bought";
+			GGButtons[2].animator.SetTrigger("Bought");
 		}
 		else
 			BAPressed = false;
@@ -92,6 +95,7 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 			PlayerPrefs.SetString("VAPressed", "true");
 			GGButtons [0].interactable = false;
 			GGButtons[0].animationTriggers.disabledTrigger = "Bought";
+			GGButtons[0].animator.SetTrigger("Bought");
 			player.GetComponent<PlayerController>().PurchaseVerticalAttachment();
 		}
 	}
@@ -105,6 +109,7 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 			PlayerPrefs.SetString("GAPressed", "true");
 			GGButtons [1].interactable = false;
 			GGButtons[1].animationTriggers.disabledTrigger = "Bought";
+			GGButtons[1].animator.SetTrigger("Bought");
 			player.GetComponent<PlayerController>().PurchaseGrabAttachment();
 		}
 	}
@@ -118,6 +123,7 @@ public class GrappleGunUGButtonBehavior : MonoBehaviour {
 			PlayerPrefs.SetString("BAPressed", "true");
 			GGButtons [2].interactable = false;
 			GGButtons[2].animationTriggers.disabledTrigger = "Bought";
+			GGButtons[2].animator.SetTrigger("Bought");
 			player.GetComponent<PlayerController>().PurchaseBladeAttachment();
 		}
 	}
