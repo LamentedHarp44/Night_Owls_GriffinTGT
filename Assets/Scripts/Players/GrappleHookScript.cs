@@ -133,7 +133,7 @@ public class GrappleHookScript : MonoBehaviour {
 			if (shot == true && collided == false && verticalAnchorStruck == false)
 				timer += Time.deltaTime;
 
-			if (timer >= .90f && shot == true && collided == false && verticalAnchorStruck == false) {
+			if (timer >= .60f && shot == true && collided == false && verticalAnchorStruck == false) {
 				shot = false;
 			}
 
