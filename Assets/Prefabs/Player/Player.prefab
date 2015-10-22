@@ -227,9 +227,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -.0199999996, y: -.00155863166}
+  m_Offset: {x: -.0315850265, y: -.00155865995}
   serializedVersion: 2
-  m_Size: {x: .0590637773, y: .103366792}
+  m_Size: {x: .0822344199, y: .103366792}
 --- !u!61 &6194782
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -280,7 +280,7 @@ MonoBehaviour:
   timmy: {fileID: 0}
   lightExpo: 0
   lightExpoPurchased: 0
-  lastCompleted: 11
+  lastCompleted: 10
   ratCount: 0
   lives: 3
   grounded: 0
@@ -331,6 +331,7 @@ MonoBehaviour:
   grappleGun: {fileID: 133728}
   startPos: {fileID: 159294}
   player: {fileID: 189654}
+  grabbedCrate: 0
   timer: 0
   verticalAnchorStruck: 0
   VAPurchased: 0

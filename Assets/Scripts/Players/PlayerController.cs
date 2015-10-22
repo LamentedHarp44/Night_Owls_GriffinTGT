@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 	public int lastCompleted = (int)LVL_CMPLT.NONE;
 	public int ratCount;
 	public int lives;
+	GameObject ratWarning;
 	//public int lightLevel;
 	
 
@@ -74,7 +75,6 @@ public class PlayerController : MonoBehaviour {
 		grounded = true;
 		moving = false;
 		hiding = false;
-
 	}
 	
 	// Update is called once per frame
@@ -90,8 +90,21 @@ public class PlayerController : MonoBehaviour {
 				PlayerPrefs.SetInt ("LightExpo", 0);
 			}
 
+
+
 			if(moveSpeed > 5)
 				moveSpeed = 5;
+
+			if(ratWarning == null)
+				ratWarning = GameObject.FindWithTag("RatWarning");
+
+			if(ratWarning != null)
+			{
+				if(ratCount >= 5)
+					ratWarning.GetComponent<SpriteRenderer>().enabled = true;
+				else
+					ratWarning.GetComponent<SpriteRenderer>().enabled = false;
+			}
 
 			if (SFXVolume == null)
 				SFXVolume = GameObject.FindGameObjectWithTag ("Player Audio").GetComponentInChildren<AudioSource> ();

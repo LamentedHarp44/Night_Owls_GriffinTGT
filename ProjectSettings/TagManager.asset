@@ -59,6 +59,7 @@ TagManager:
   - Cooldown
   - CrateAudio
   - rat
+  - RatWarning
   layers:
   - Default
   - TransparentFX

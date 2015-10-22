@@ -1,0 +1,286 @@
+fileFormatVersion: 2
+guid: 168b3aa5adee608449f8ea429a291e24
+timeCreated: 1445417250
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SignPlatform_0
+    21300002: SignPlatform_1
+    21300004: SignPlatform_2
+    21300006: SignPlatform_3
+    21300008: SignPlatform_4
+    21300010: SignPlatform_5
+    21300012: SignPlatform_6
+    21300014: SignPlatform_7
+    21300016: SignPlatform_8
+    21300018: SignPlatform_9
+    21300020: SignPlatform_10
+    21300022: SignPlatform_11
+    21300024: SignPlatform_12
+    21300026: SignPlatform_13
+    21300028: SignPlatform_14
+    21300030: SignPlatform_15
+    21300032: SignPlatform_16
+    21300034: SignPlatform_17
+    21300036: SignPlatform_18
+    21300038: SignPlatform_19
+    21300040: SignPlatform_20
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: SignPlatform_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 584
+        width: 94
+        height: 184
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 584
+        width: 94
+        height: 184
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_2
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 583
+        width: 94
+        height: 185
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_3
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 574
+        width: 94
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_4
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 583
+        width: 183
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_5
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 583
+        width: 179
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_6
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 583
+        width: 90
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_7
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 703
+        width: 90
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_8
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 703
+        width: 90
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 478
+        width: 479
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_10
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 580
+        width: 90
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_11
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 580
+        width: 90
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_12
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 382
+        width: 143
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_13
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 409
+        width: 94
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_14
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 0
+        width: 762
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_15
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 382
+        width: 91
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 94
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_17
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 94
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_18
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 0
+        width: 286
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_19
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 0
+        width: 94
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SignPlatform_20
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 0
+        width: 94
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

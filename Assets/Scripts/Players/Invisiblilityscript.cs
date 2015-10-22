@@ -67,7 +67,7 @@ public class Invisiblilityscript : MonoBehaviour {
 		if (invisActive) 
 		{
 			duration -= Time.deltaTime;
-			anim.SetBool("Invisible", true);
+
 			if(duration <= 0)
 			{
 				anim.SetBool("Invisible", false);
@@ -104,6 +104,7 @@ public class Invisiblilityscript : MonoBehaviour {
 		if (!onCooldown && !invisActive) 
 		{
 			invisActive = true;
+			anim.SetBool("Invisible", true);
 			controller.lightExpo -= invisLevel;
 
 		}
