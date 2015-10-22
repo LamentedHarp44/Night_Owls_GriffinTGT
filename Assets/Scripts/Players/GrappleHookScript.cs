@@ -80,7 +80,8 @@ public class GrappleHookScript : MonoBehaviour {
 
 
 			//Shooting the gun
-			if (Input.GetKeyDown (KeyCode.Mouse0) && shot == false && upAgainstWall == false)// && player.GetComponent<PlayerController> ().grounded == true) 
+			if (Input.GetKeyDown (KeyCode.Mouse0) && shot == false && upAgainstWall == false 
+			    && player.GetComponent<PlayerController> ().grounded == true) 
 			{
 				if (player.transform.localScale.x > 0) {
 					GetComponent<Rigidbody2D> ().AddForce (transform.right * 500);
