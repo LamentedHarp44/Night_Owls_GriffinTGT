@@ -5380,7 +5380,7 @@ Prefab:
       objectReference: {fileID: 1792217836}
     - target: {fileID: 11441754, guid: 097c230df6f415d459b07d7bb97bc7b7, type: 2}
       propertyPath: leash
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11441754, guid: 097c230df6f415d459b07d7bb97bc7b7, type: 2}
       propertyPath: wlkSpd
