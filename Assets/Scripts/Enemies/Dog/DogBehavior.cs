@@ -184,6 +184,15 @@ public class DogBehavior : MonoBehaviour {
 
 	void Detect()
 	{
+		if (Player.GetComponent<PlayerController> ().hiding) 
+		{
+			state = ENMY_STATES.PATROL;
+			return;
+		}
+
+
+
+
 
 		if (Player.GetComponent<PlayerController> ().lightExpo > 0) {
 			float tempRange = detRange * Player.GetComponent<Invisiblilityscript> ().LightExposure ();

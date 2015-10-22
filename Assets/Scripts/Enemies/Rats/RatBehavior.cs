@@ -221,7 +221,10 @@ public class RatBehavior : MonoBehaviour {
 		player.GetComponent<PlayerController> ().ratCount = 0;
 		respawn = Instantiate (this.gameObject);
 		respawn.transform.position = home;
+		respawn.GetComponent<Rigidbody2D> ().gravityScale = 1.0f;
+		respawn.GetComponentInChildren<BoxCollider2D> ().enabled = true;
 		GetComponent<CircleCollider2D> ().enabled = false;
+
 		Destroy (this.gameObject);
 	}
 }

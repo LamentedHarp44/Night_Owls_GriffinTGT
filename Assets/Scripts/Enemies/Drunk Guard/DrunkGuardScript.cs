@@ -43,7 +43,7 @@ public class DrunkGuardScript : MonoBehaviour {
 			} else if (!asleep) {
 				if (!sighted) {
 					awakeTimer -= Time.fixedDeltaTime;
-					attackTimer = 1.5f;
+					attackTimer = .75f;
 				}
 				Detect ();
 				if (awakeTimer <= 0 && !sighted) {

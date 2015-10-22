@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour {
 	public int ratCount;
 	public int lives;
 	GameObject ratWarning;
+	bool Door;
 	//public int lightLevel;
 	
 
@@ -239,6 +240,13 @@ public class PlayerController : MonoBehaviour {
 	//					which actions to take.
 	public void PlayerDeath(TYPE_DEATH method)
 	{
+		if (GetComponent<Invisiblilityscript> ().invisActive || GetComponent<Invisiblilityscript> ().onCooldown) 
+		{
+			GetComponent<Invisiblilityscript>().invisActive = false;
+			GetComponent<Invisiblilityscript>().onCooldown = false;
+			GetComponent<Invisiblilityscript>().cooldown = GetComponent<Invisiblilityscript>().fullCooldown;
+			GetComponent<Invisiblilityscript>().duration = GetComponent<Invisiblilityscript>().fullDuration;
+		}
 		//if (method == TYPE_DEATH.MELEE)
 		  //this.GetComponent<Invisiblilityscript> ().SetExposure (0);
 
