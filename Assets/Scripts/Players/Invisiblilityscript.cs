@@ -6,8 +6,8 @@ public enum LIGHT_LEVEL {invisible = 0, dark =1, shadow = 2, normal = 3, full = 
 public class Invisiblilityscript : MonoBehaviour {
 
 	PlayerController controller;
-	bool invisActive = false;
-	bool onCooldown = false;
+	public bool invisActive = false;
+	public bool onCooldown = false;
 	public float duration = 3;
 	public float fullDuration = 3;
 	int DurationIncreasePurchaseTracker = 0;
